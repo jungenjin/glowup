@@ -27,7 +27,7 @@
 <c:set var="visitUrl">${context}/work/board/reservation.do</c:set>
 <c:set var="noitceUrl">${context}/work/board/notice.do</c:set>
 <c:set var="cmmuUrl">${context}/work/board/community.do</c:set>
-<c:set var="boardUrl">${context}/work/board/board.do</c:set>
+<c:set var="eventUrl">${context}/work/board/event.do</c:set>
 <c:set var="FAQUrl">${context}/FAQ/FAQ.jsp</c:set>
 
 <c:set var="eyeUrl">${context}/work/product/retrieveProductList.do?category=E</c:set>

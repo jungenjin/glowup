@@ -9,23 +9,23 @@
 	<title>자유 게시판 - 글 내용보기</title>
 	<script src="${context}/js/jquery-1.9.1.js"></script>
 	<script type="text/javascript">
-		function fn_boardList(){
-			location.href = "${context}/work/board/board.do";
+		function fn_eventList(){
+			location.href = "${context}/work/board/event.do";
 		}
 		//글 삭제
 		function fn_delete(){
-			var boNo = '${dsBoard.BO_NO}';
+			var evNo = '${dsEvent.EV_NO}';
 	
 			if(confirm("정말 글을 삭제하시겠습니까?")){
-				location.href = "${context}/work/board/deleteBoard.do?boNo=" + boNo;
+				location.href = "${context}/work/board/deleteEvent.do?evNo=" + evNo;
 			}
 		}
 		
 		//글 수정
 		function fn_update(){
-			var boNo = '${dsBoard.BO_NO}';
+			var evNo = '${dsEvent.EV_NO}';
 	
-			location.href = "${context}/work/board/boardModify.do?boNo=" + boNo;
+			location.href = "${context}/work/board/eventModify.do?evNo=" + evNo;
 		}
 	</script>
 </head>
@@ -34,8 +34,8 @@
 <!-- title, visual start -->
 <div class="titarea" style='background-image: url("${context}/img/subbg_service.png");'>
 	<div class="boardText">
-		<h3 class="boardTitle">BOARD</h3>
-		<p class="boardSub">자유 게시판</p>
+		<h3 class="boardTitle">EVENT</h3>
+		<p class="boardSub">이벤트 게시판</p>
 	</div>
 </div>
 <!-- title, visual end -->
@@ -46,10 +46,10 @@
 			<div class="row">
 				<div class="col-xs-8">
 					<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-					<h2 class="title eng">자유 게시판</h2>
+					<h2 class="title eng">이벤트 게시판</h2>
 				</div>
 				<div class="col-xs-4 text-right">
-					<button type="button" class="btn btn-lg boardbtn" onclick="fn_boardList()">목록</button>
+					<button type="button" class="btn btn-lg boardbtn" onclick="fn_eventList()">목록</button>
 				</div>
 			</div>
 		</div>
@@ -58,19 +58,19 @@
 			<!-- board view start -->
 			<div class="row title">
 				<div class="col-sm-12 col-md-10">
-					${dsBoard.BO_TITLE}
+					${dsEvent.EV_TITLE}
 				</div>
 				<div class="col-sm-12 col-md-2 user">
-					${dsBoard.USER_NAME}
+					${dsEvent.USER_NAME}
 				</div>
 			</div>
 			<div class="row content">
-				${dsBoard.BO_CONTENT}
+				${dsEvent.EV_CONTENT}
 			</div>
 		</div>
 		<!-- board view end -->
 		<!-- board button area start -->
-		<c:if test="${sessionScope.grade == 'A' || sessionScope.userCode == dsBoard.BO_REG_ID}">
+		<c:if test="${sessionScope.grade == 'A' || sessionScope.userCode == dsEvent.EV_REG_ID}">
 			<div class="row btnarea">
 				<button class="btn btn-lg boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
 				<button class="btn btn-lg boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>

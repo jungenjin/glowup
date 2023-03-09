@@ -17,27 +17,27 @@
 		});
 	
 		function fn_setDetailInfo(){
-			$("#boTitle").val('${dsBoard.BO_TITLE}');
-			$("#boNo").val('${dsBoard.BO_NO}');
+			$("#evTitle").val('${dsEvent.EV_TITLE}');
+			$("#evNo").val('${dsEvent.EV_NO}');
 	
-			var boContent = '${dsBoard.BO_CONTENT}';
+			var evContent = '${dsEvent.EV_CONTENT}';
 	
-			boContent = boContent.replace(/<br ?\/?>/gi, "\n");
+			evContent = evContent.replace(/<br ?\/?>/gi, "\n");
 	
-			$("#boContent").val(boContent);
+			$("#evContent").val(evContent);
 		}
 	
 		function fn_save(){
 			if(!fn_validation()){
 				return;
 			}else{
-				var boContent = String($("#boContent").val());
+				var evContent = String($("#evContent").val());
 	
-				boContent = boContent.replace(/\n/gi, "<br/>");
+				evContent = evContent.replace(/\n/gi, "<br/>");
 	
-				$("#boContent").val(boContent);
+				$("#evContent").val(evContent);
 	
-		 		$("#modifyBoard").submit();
+		 		$("#modifyEvent").submit();
 			}
 		}
 	
@@ -48,8 +48,8 @@
 <!-- title, visual start -->
 <div class="titarea" style='background-image: url("${context}/img/subbg_service.png");'>
 	<div class="boardText">
-		<h3 class="boardTitle">BOARD</h3>
-		<p class="boardSub">자유 게시판</p>
+		<h3 class="boardTitle">EVENT</h3>
+		<p class="boardSub">이벤트 게시판</p>
 	</div>
 </div>
 <!-- title, visual end -->
@@ -60,21 +60,21 @@
 			<div class="row">
 				<div class="col-xs-8">
 					<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-					<h2 class="title eng">자유 게시판</h2>
+					<h2 class="title eng">이벤트 게시판</h2>
 				</div>
 			</div>
 		</div>
 		<!-- board title, buttons end -->
-		<form id="modifyBoard" method="post" action="${context}/work/board/boardModify.do?boNo=${dsBoard.BO_NO}" role="form">
+		<form id="modifyEvent" method="post" action="${context}/work/board/eventModify.do?evNo=${dsEvent.EV_NO}" role="form">
 			<div class="form-horizontal boardwrite">
 				<div class="form-group">
 					<label for="boTitle" class="control-label">제목</label>
-					<input class="form-control" type="text" name="boTitle" id="boTitle" required="required" maxlength="50" autofocus="autofocus">
+					<input class="form-control" type="text" name="evTitle" id="evTitle" required="required" maxlength="50" autofocus="autofocus">
 				</div>
 	
 				<div class="form-group">
-					<label for="boContent" class="control-label">내용</label>
-					<textarea class="form-control" name="boContent" id="boContent" cols="10" rows="15" required="required"></textarea>
+					<label for="evContent" class="control-label">내용</label>
+					<textarea class="form-control" name="evContent" id="evContent" cols="10" rows="15" required="required"></textarea>
 				</div>
 				<!-- board button area start -->
 				<div class="row btnarea">
