@@ -14,6 +14,8 @@
 	<script src="${context}/js/jquery-1.9.1.js"></script>
 	<!-- 필수입력 미입력시 빨간색배경 fadeout 효과 -->
     <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+    <!-- 이미지업로드시 업로드된 이미지로 교체 -->
+	<script src="${context}/js/jquery.form.js"></script>
     <script>
     var productCategoryCd;
     var imageFolder;
@@ -106,24 +108,11 @@
 	</div>
 	<!-- board title, buttons end -->
 	<form id="updateProduct" method="post" action="${context}/work/product/updateProduct.do" role="form">
-		<div class="form-horizontal">
-			<div class="form-group" style="margin-top: 5%;">
-				<label for="productName" class="control-label col-md-2"><b>상품명</b></label>
-				<div class="col-md-4">
-					<input class="form-control" type="text" name="productName" id="productName" required="required" autofocus="autofocus"/>
-				</div>
-			</div>
-			
-			<div class="form-group" style="margin-top: 5%;">
-				<label for="productName" class="control-label col-md-2"><b>상품설명</b></label>
-				<div class="col-md-4">
-					<input class="form-control" type="text" name="productDescription" id="productDescription" required="required" autofocus="autofocus"/>
-				</div>
-			</div>
+		<div class="form-horizontal" style="padding-top: 5%;">
 
 			<div class="form-group">
 				<label for="productCategoryCd" class="control-label col-md-2"><b>분류</b></label>
-				<div class="col-md-2">
+				<div class="col-md-10">
 		        	<select class="form-control" id="productCategoryCd" name="productCategoryCd" required="required" onchange="fn_setProductCategoryCd()">
 						<c:forEach items="${dsCode1}" var="code1">
 							<option value="${code1.commCd}">${code1.commCdNm}</option>
@@ -131,24 +120,39 @@
 		     		</select>
 	     		</div>
 			</div>
+			
+			<div class="form-group">
+				<label for="productName" class="control-label col-md-2"><b>상품명</b></label>
+				<div class="col-md-10">
+					<input class="form-control" type="text" name="productName" id="productName" required="required" autofocus="autofocus"/>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="productName" class="control-label col-md-2"><b>상품설명</b></label>
+				<div class="col-md-10">
+					<input class="form-control" type="text" name="productDescription" id="productDescription" required="required" autofocus="autofocus"/>
+				</div>
+			</div>
 
 			<div class="form-group">
 				<label for="productUnitPrice" class="control-label col-md-2"><b>단가</b></label>
-				<div class="col-md-3">
+				<div class="col-md-10">
 					<input class="form-control" type="text" id="productUnitPrice" name="productUnitPrice" required="required" onkeydown="return fn_showKeyCode(event)"/>
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label for="productCount" class="control-label col-md-2"><b>수량</b></label>
-				<div class="col-md-3">
+				<div class="col-md-10">
 					<input class="form-control" type="text" id="productCount" name="productCount" required="required" onkeydown="return fn_showKeyCode(event)"/>
 				</div>
 			</div>
+
 			<div class="form-group">
 				<label class="control-label col-md-2"><b>상품이미지</b></label>
-				<img id="pic" style="margin-left: 15px;" height="180px" width="150px" src="${context}/admin/product_default.png"><br/>
-				<div class="col-md-6">
+				<div class="col-md-10">
+					<img id="pic" style="width:auto;max-width:100%;min-width:100%"><br/>
 					<input type="hidden" id="productImage" name="productImage" required="required">
 				</div>
 			</div>
@@ -159,7 +163,7 @@
 	<form id="ajaxform" action="${context}/work/product/saveFile.do" method="post" enctype="multipart/form-data" role="form">
 		<div class="form-group">
 		<label class="control-label col-md-2"></label>
-			<div class="col-md-6">
+			<div class="col-md-10">
 				<input class="form-control" type="file" id="imageFile" name="imageFile" onchange="fn_upload()" onclick="return fn_checkCategory()"/>
 				<input type="hidden" id="imageFolder" name="imageFolder">
 			</div>
