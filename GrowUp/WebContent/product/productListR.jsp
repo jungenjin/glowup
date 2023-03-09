@@ -37,6 +37,11 @@
 		</div>
 		<!-- board title, buttons end -->
 			<div class="row">
+				<div class="col-sm-12 col-md-6 col-lg-4">
+					<p>P R O D U C T</p>
+					<p>glow up</p>
+					<p>${dsProductList[0].PRODUCT_CATEGORY_CD_NM} 둘러보기<p>
+				</div>
 			<c:forEach items="${dsProductList}" var="dsProductList" varStatus="dsProductIdx">
 				<div class="col-sm-12 col-md-6 col-lg-4 productitem">
 					<a href="${context}/work/product/retrieveProduct.do?productCode=${dsProductList.PRODUCT_CODE}">
