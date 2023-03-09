@@ -52,7 +52,7 @@
 				<li><a href="${context}/work/board/reservation.do">고객센터</a>
 				<li><a href="${context}/board/notice.do">공지사항</a>
 				<li><a href="${context}/board/community.do">커뮤니티</a>
-				<li><a href="#">회사소개</a>
+				<li><a href="#">회사소개 </a>
 			</ul>
 		</div>
 		<div class="col-sm-4 col-md-3 footer-right">
