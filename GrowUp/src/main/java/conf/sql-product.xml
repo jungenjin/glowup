@@ -59,7 +59,7 @@
 			]]>
 	</select>
 
-	<select id="productListForPerfume" resultType="map">
+	<select id="productListForEye" resultType="map">
 		<![CDATA[
 			/*	productListForPerfume	*/
 			SELECT T.PRODUCT_IMAGE, T.PRODUCT_CATEGORY_CD
@@ -68,14 +68,14 @@
 			  SELECT PRODUCT_IMAGE, PRODUCT_CATEGORY_CD
 			  FROM TB_PRODUCT
 			  WHERE 1=1
-			  AND PRODUCT_CATEGORY_CD = 'P'
+			  AND PRODUCT_CATEGORY_CD = 'E'
 			  ORDER BY PRODUCT_REG_DATE DESC
 			) T
 			WHERE ROWNUM <= 8
 			]]>
 	</select>
 
-	<select id="productListForDiffuser" resultType="map">
+	<select id="productListForFace" resultType="map">
 		<![CDATA[
 			/*	productListForDiffuser	*/
 			SELECT T.PRODUCT_IMAGE, T.PRODUCT_CATEGORY_CD
@@ -84,7 +84,23 @@
 			  SELECT PRODUCT_IMAGE, PRODUCT_CATEGORY_CD
 			  FROM TB_PRODUCT
 			  WHERE 1=1
-			  AND PRODUCT_CATEGORY_CD = 'D'
+			  AND PRODUCT_CATEGORY_CD = 'F'
+			  ORDER BY PRODUCT_REG_DATE DESC
+			) T
+			WHERE ROWNUM <= 6
+			]]>
+	</select>
+
+	<select id="productListForLip" resultType="map">
+		<![CDATA[
+			/*	productListForDiffuser	*/
+			SELECT T.PRODUCT_IMAGE, T.PRODUCT_CATEGORY_CD
+			FROM
+			(
+			  SELECT PRODUCT_IMAGE, PRODUCT_CATEGORY_CD
+			  FROM TB_PRODUCT
+			  WHERE 1=1
+			  AND PRODUCT_CATEGORY_CD = 'L'
 			  ORDER BY PRODUCT_REG_DATE DESC
 			) T
 			WHERE ROWNUM <= 6

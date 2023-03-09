@@ -111,13 +111,15 @@ public class ProductController {
 
 		List<Map<String, String>> dsProductList = productService.retrieveProductListForMain();
 
-		List<Map<String, String>> dsPerfumeList = productService.productListForPerfume();
-		List<Map<String, String>> dsDiffuser = productService.productListForDiffuser();
+		List<Map<String, String>> dsEyeList = productService.productListForEye();
+		List<Map<String, String>> dsFaceList = productService.productListForFace();
+		List<Map<String, String>> dsLipList = productService.productListForLip();
 
 		mv.addObject("dsProductList", dsProductList);
 
-		mv.addObject("dsPerfumeList", dsPerfumeList);
-		mv.addObject("dsDiffuser", dsDiffuser);
+		mv.addObject("dsEyeList", dsEyeList);
+		mv.addObject("dsFaceList", dsFaceList);
+		mv.addObject("dsLipList", dsLipList);
 
 		mv.setViewName("/product/main");
 		return mv;

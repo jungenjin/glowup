@@ -21,12 +21,16 @@ public class ProductDAO {
 		return sqlSession.selectList("product.retrieveProductListForMain");
 	}
 
-	public List<Map<String, String>> productListForPerfume(){
-		return sqlSession.selectList("product.productListForPerfume");
+	public List<Map<String, String>> productListForEye(){
+		return sqlSession.selectList("product.productListForEye");
 	}
 
-	public List<Map<String, String>> productListForDiffuser(){
-		return sqlSession.selectList("product.productListForDiffuser");
+	public List<Map<String, String>> productListForFace(){
+		return sqlSession.selectList("product.productListForFace");
+	}
+
+	public List<Map<String, String>> productListForLip(){
+		return sqlSession.selectList("product.productListForLip");
 	}
 
 	public Map<String, String> retrieveProduct(Map<String, String> productParam){
