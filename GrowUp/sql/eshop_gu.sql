@@ -234,7 +234,7 @@ CREATE TABLE TB_NOTICE(
 
 -- 이벤트 정보
 DROP TABLE TB_EVENT CASCADE CONSTRAINT;
-CREATE TABLE TB_BOARD(
+CREATE TABLE TB_EVENT(
   EV_NO VARCHAR2(20),           	  -- 글번호
   EV_TITLE VARCHAR2(50) NOT NULL, 	  -- 제목
   EV_CONTENT VARCHAR2(4000),   	  	  -- 내용
@@ -277,47 +277,47 @@ CREATE TABLE TB_INQUIRY(
 -- 갤러리 정보
 DROP TABLE TB_GALERY CASCADE CONSTRAINT;
 CREATE TABLE TB_GALERY(
-	GAL_NO VARCHAR2(20)               -- 글번호
-	GAL_UUID VARCHAR2(100)            -- 고유 식별자
-	GAL_UPLOADPATH VARCHAR2(200)      -- 업로드 경로
-	GAL_FILENAME VARCHAR2(100)        -- 파일 이름
-	GAL_FILETYPE CHAR(1)              -- 파일 타입
-	GAL_TITLE VARCHAR2(20)            -- 제목
-	GAL_REG_ID VARCHAR2(20)           -- 등록자
-	GAL_MOD_ID VARCHAR2(20)           -- 수정자
-	GAL_REG_DATE VARCHAR2(20)         -- 등록일자
-	GAL_MOD_DATE VARCHAR2(20)         -- 수벙일자
-	GAL_HIT NUMBER                    -- 조회수
-	CONSTRAINT TB_GALERY_PK PRIMARY KEY(INQ_NO)
+	GAL_NO VARCHAR2(20),              -- 글번호
+	GAL_UUID VARCHAR2(100),           -- 고유 식별자
+	GAL_UPLOADPATH VARCHAR2(200),     -- 업로드 경로
+	GAL_FILENAME VARCHAR2(100),       -- 파일 이름
+	GAL_FILETYPE CHAR(1),             -- 파일 타입
+	GAL_TITLE VARCHAR2(20),           -- 제목
+	GAL_REG_ID VARCHAR2(20),          -- 등록자
+	GAL_MOD_ID VARCHAR2(20),          -- 수정자
+	GAL_REG_DATE VARCHAR2(20),        -- 등록일자
+	GAL_MOD_DATE VARCHAR2(20),        -- 수벙일자
+	GAL_HIT NUMBER,                   -- 조회수
+	CONSTRAINT TB_GALERY_PK PRIMARY KEY(GAL_NO)
 );
 
 -- QNA 정보
 DROP TABLE TB_QNA CASCADE CONSTRAINT;
 CREATE TABLE TB_QNA(
-	QNA_NO VARCHAR2(20)               -- 글번호
-	QNA_TITLE VARCHAR2(20)            -- 제목
-	QNA_CONTENT VARCHAR2(4000)        -- 내용
-	QNA_REG_ID VARCHAR2(20)           -- 등록자
-	QNA_MOD_ID VARCHAR2(20)           -- 수정자
-	QNA_REG_DATE VARCHAR2(20)         -- 등록일자
-	QNA_MOD_DATE VARCHAR2(20)         -- 수정일자
+	QNA_NO VARCHAR2(20),              -- 글번호
+	QNA_TITLE VARCHAR2(20),           -- 제목
+	QNA_CONTENT VARCHAR2(4000),       -- 내용
+	QNA_REG_ID VARCHAR2(20),          -- 등록자
+	QNA_MOD_ID VARCHAR2(20),          -- 수정자
+	QNA_REG_DATE VARCHAR2(20),        -- 등록일자
+	QNA_MOD_DATE VARCHAR2(20),        -- 수정일자
 	CONSTRAINT TB_QNA_PK PRIMARY KEY(QNA_NO)
 );
 
 -- QNA 댓글 정보
 DROP TABLE TB_QNA_REPLY CASCADE CONSTRAINT;
 CREATE TABLE TB_QNA_REPLY(
-	QNA_RNO VARCHAR2(20)              -- 글번호
-	QNA_UUID VARCHAR2(100)            -- 고유 식별자
-	QNA_NO NUMBER(10,0)               -- 글번호
-	QNA_UPLOADPATH VARCHAR2(200)      -- 업로드 경로
-	QNA_FILENAME VARCHAR2(100)        -- 파일 이름
-	QNA_FILETYPE CHAR(1)              -- 파일 타입
-	QNA_REPLY VARCHAR2(1000)          -- 댓글 내용
-	QNA_REPLYER VARCHAR2(50)          -- 댓글 작성자
-	QNA_REPLY_REG_DATE VARCHAR2(20)   -- 등록일자
-	QNA_REPLY_MOD_DATE VARCHAR2(20)   -- 수정일자
-	CONSTRAINT TB_QNA_REPLY_PK PRIMARY KEY(QNA_RNO)
-	CONSTRAINT FK_QNA_NO FOREIGN KEY (QNA_NO) REFERENCES TB_QNA(QNA_NO)
+	QNA_RNO VARCHAR2(20),             -- 글번호
+	QNA_UUID VARCHAR2(100),           -- 고유 식별자
+	QNA_NO NUMBER(10,0),              -- 글번호
+	QNA_UPLOADPATH VARCHAR2(200),     -- 업로드 경로
+	QNA_FILENAME VARCHAR2(100),       -- 파일 이름
+	QNA_FILETYPE CHAR(1),             -- 파일 타입
+	QNA_REPLY VARCHAR2(1000),         -- 댓글 내용
+	QNA_REPLYER VARCHAR2(50),         -- 댓글 작성자
+	QNA_REPLY_REG_DATE VARCHAR2(20),  -- 등록일자
+	QNA_REPLY_MOD_DATE VARCHAR2(20),  -- 수정일자
+	CONSTRAINT TB_QNA_REPLY_PK PRIMARY KEY(QNA_RNO),
+	CONSTRAINT TB_QNA_REPLY_FK_QNA_NO FOREIGN KEY (QNA_NO) REFERENCES TB_QNA(QNA_NO)
 );
 commit;
