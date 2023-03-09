@@ -2,7 +2,7 @@
 DROP SEQUENCE USER_SEQ;
 CREATE SEQUENCE USER_SEQ;
 
--- 물품 시퀀스
+-- 제품 시퀀스
 DROP SEQUENCE PRODUCT_SEQ;
 CREATE SEQUENCE PRODUCT_SEQ;
 
@@ -95,7 +95,8 @@ commit;
 DROP TABLE TB_PRODUCT CASCADE CONSTRAINT;
 CREATE TABLE TB_PRODUCT(
   PRODUCT_CODE VARCHAR2(20),                  -- 제품코드
-  PRODUCT_IMAGE VARCHAR2(70),                 -- 제품이미지
+  PRODUCT_IMAGE VARCHAR2(70),                 -- 제품이미지1
+  PRODUCT_IMAGE2 VARCHAR2(70),                -- 제품이미지2
   PRODUCT_NAME VARCHAR2(200),                 -- 제품명
   PRODUCT_DESCRIPTION VARCHAR2(200),          -- 제품간단설명
   PRODUCT_UNIT_PRICE NUMBER,		    	  -- 제품단가
