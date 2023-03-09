@@ -168,11 +168,11 @@
 			 	var productCategoryCd = '${dsProduct.PRODUCT_CATEGORY_CD}';
 
 			 	if(productCategoryCd == 'E'){
-					imageFolder = "/eyeImg/${dsProductList.PRODUCT_IMAGE}";
+					imageFolder = "/eyeImg/${dsProduct.PRODUCT_IMAGE}";
 				} else if(productCategoryCd == 'F'){
-					imageFolder = "/faceImg/${dsProductList.PRODUCT_IMAGE}";
+					imageFolder = "/faceImg/${dsProduct.PRODUCT_IMAGE}";
 				} else if(productCategoryCd == 'L'){
-					imageFolder = "/lipImg/${dsProductList.PRODUCT_IMAGE}";
+					imageFolder = "/lipImg/${dsProduct.PRODUCT_IMAGE}";
 				}
 				path = $("#image").attr("src");
 
@@ -188,6 +188,10 @@
 					<tr>
 						<td>제품명</td>
 						<td>${dsProduct.PRODUCT_NAME}</td>
+					</tr>
+					<tr>
+						<td>설명</td>
+						<td>${dsProduct.PRODUCT_DESCRIPTION}</td>
 					</tr>
 					<tr>
 						<td>판매가</td>

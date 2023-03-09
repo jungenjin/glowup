@@ -41,7 +41,10 @@
 				<div class="col-sm-12 col-md-6 col-lg-4 productitem">
 					<a href="${context}/work/product/retrieveProduct.do?productCode=${dsProductList.PRODUCT_CODE}">
 						<img name="image" src="${context}" class="img-responsive">
-						<h3 class="itemtitle">${dsProductList.PRODUCT_NAME}</h3>
+						<h3 class="itemtitle">
+							${dsProductList.PRODUCT_NAME}<br>
+							<small>${dsProductList.PRODUCT_DESCRIPTION}</small>
+						</h3>
 					</a>
 					<h4>${dsProductList.PRODUCT_UNIT_PRICE} 원</h4>
 					<h4>
