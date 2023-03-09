@@ -5,6 +5,7 @@
 	<resultMap id="productResult" type="product">
 		<result property="productCode" column="PRODUCT_CODE" />
 		<result property="productImage" column="PRODUCT_IMAGE" />
+		<result property="productImage2" column="PRODUCT_IMAGE2" />
 		<result property="productName" column="PRODUCT_NAME" />
 		<result property="productDescription" column="PRODUCT_DESCRIPTION" />
 		<result property="productUnitPrice" column="PRODUCT_UNIT_PRICE" />
@@ -18,6 +19,7 @@
 			/*	retrieveProductList	*/
 			SELECT PRODUCT.PRODUCT_CODE
 			     , PRODUCT.PRODUCT_IMAGE
+			     , PRODUCT.PRODUCT_IMAGE2
 			     , PRODUCT.PRODUCT_NAME
 			     , PRODUCT.PRODUCT_DESCRIPTION
 			     , PRODUCT.PRODUCT_UNIT_PRICE
@@ -64,10 +66,10 @@
 	<select id="productListForEye" resultType="map">
 		<![CDATA[
 			/*	productListForPerfume	*/
-			SELECT T.PRODUCT_IMAGE, T.PRODUCT_CATEGORY_CD
+			SELECT T.PRODUCT_IMAGE, T.PRODUCT_IMAGE2, T.PRODUCT_CATEGORY_CD
 			FROM
 			(
-			  SELECT PRODUCT_IMAGE, PRODUCT_CATEGORY_CD
+			  SELECT PRODUCT_IMAGE, PRODUCT_IMAGE2,PRODUCT_CATEGORY_CD
 			  FROM TB_PRODUCT
 			  WHERE 1=1
 			  AND PRODUCT_CATEGORY_CD = 'E'
@@ -80,10 +82,10 @@
 	<select id="productListForFace" resultType="map">
 		<![CDATA[
 			/*	productListForDiffuser	*/
-			SELECT T.PRODUCT_IMAGE, T.PRODUCT_CATEGORY_CD
+			SELECT T.PRODUCT_IMAGE, T.PRODUCT_IMAGE2, T.PRODUCT_CATEGORY_CD
 			FROM
 			(
-			  SELECT PRODUCT_IMAGE, PRODUCT_CATEGORY_CD
+			  SELECT PRODUCT_IMAGE, PRODUCT_IMAGE2,PRODUCT_CATEGORY_CD
 			  FROM TB_PRODUCT
 			  WHERE 1=1
 			  AND PRODUCT_CATEGORY_CD = 'F'
@@ -96,10 +98,10 @@
 	<select id="productListForLip" resultType="map">
 		<![CDATA[
 			/*	productListForDiffuser	*/
-			SELECT T.PRODUCT_IMAGE, T.PRODUCT_CATEGORY_CD
+			SELECT T.PRODUCT_IMAGE, T.PRODUCT_IMAGE2, T.PRODUCT_CATEGORY_CD
 			FROM
 			(
-			  SELECT PRODUCT_IMAGE, PRODUCT_CATEGORY_CD
+			  SELECT PRODUCT_IMAGE, PRODUCT_IMAGE2,PRODUCT_CATEGORY_CD
 			  FROM TB_PRODUCT
 			  WHERE 1=1
 			  AND PRODUCT_CATEGORY_CD = 'L'
@@ -113,6 +115,7 @@
 		/*	retrieveProduct	*/
 		SELECT PRODUCT.PRODUCT_CODE
 		     , PRODUCT.PRODUCT_IMAGE
+		     , PRODUCT.PRODUCT_IMAGE2
 		     , PRODUCT.PRODUCT_NAME
 		     , PRODUCT.PRODUCT_DESCRIPTION
 		     , PRODUCT.PRODUCT_UNIT_PRICE
@@ -133,6 +136,7 @@
 		/*	updateProduct	*/
 		UPDATE TB_PRODUCT
 		SET PRODUCT_IMAGE       = #{productImage}
+		  , PRODUCT_IMAGE2      = #{productImage2}
 		  , PRODUCT_NAME        = #{productName}
 		  , PRODUCT_DESCRIPTION = #{productDescription}
 		  , PRODUCT_UNIT_PRICE  = #{productUnitPrice}
@@ -163,6 +167,7 @@
 		INSERT INTO TB_PRODUCT(
 			  PRODUCT_CODE
 			, PRODUCT_IMAGE
+			, PRODUCT_IMAGE2
 			, PRODUCT_NAME
 			, PRODUCT_DESCRIPTION
 			, PRODUCT_UNIT_PRICE
@@ -172,6 +177,7 @@
 		) VALUES (
 			  'P' || LPAD(PRODUCT_SEQ.NEXTVAL, 4, 0)
 			, #{productImage}
+			, #{productImage2}
 			, #{productName}
 			, #{productDescription}
 			, #{productUnitPrice}
