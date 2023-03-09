@@ -309,7 +309,7 @@ DROP TABLE TB_QNA_REPLY CASCADE CONSTRAINT;
 CREATE TABLE TB_QNA_REPLY(
 	QNA_RNO VARCHAR2(20),             -- 글번호
 	QNA_UUID VARCHAR2(100),           -- 고유 식별자
-	QNA_NO NUMBER(10,0),              -- 글번호
+	QNA_NO VARCHAR2(20),              -- 글번호
 	QNA_UPLOADPATH VARCHAR2(200),     -- 업로드 경로
 	QNA_FILENAME VARCHAR2(100),       -- 파일 이름
 	QNA_FILETYPE CHAR(1),             -- 파일 타입
