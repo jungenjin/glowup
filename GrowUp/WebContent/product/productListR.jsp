@@ -69,13 +69,10 @@
 				
 					if(productCategoryCd == 'E'){
 						imageFolder = "/eyeImg/${dsProductList.PRODUCT_IMAGE}";
-						imageOver = "/eyeImg/${dsProductList.PRODUCT_IMAGE2}";
 					} else if(productCategoryCd == 'F'){
 						imageFolder = "/faceImg/${dsProductList.PRODUCT_IMAGE}";
-						imageOver = "/faceImg/${dsProductList.PRODUCT_IMAGE2}";
 					} else if(productCategoryCd == 'L'){
 						imageFolder = "/lipImg/${dsProductList.PRODUCT_IMAGE}";
-						imageOver = "/lipImg/${dsProductList.PRODUCT_IMAGE2}";
 					}
 					path = $("img[name='image']").eq('${dsProductIdx.index}').attr("src");
 				
@@ -91,7 +88,6 @@
 							imageOver = "/lipImg/${dsProductList.PRODUCT_IMAGE2}";
 						}
 						$("img[name='image']").eq('${dsProductIdx.index}').attr("src", path.replace(existFolder, imageOver));
-						//console.log("existFolder",existFolder);
 						//console.log("imageOver",imageOver);
 					});
 					$("img[name='image']").eq('${dsProductIdx.index}').on('mouseout', function(){
