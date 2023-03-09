@@ -61,7 +61,7 @@
             <thead>
                 <tr>
                 	<th style="width:150px;">상품번호</th>
-                       <th style="width: 150px;">상품이미지</th>
+                    <th style="width: 150px;">상품이미지</th>
                    	<th style="">상품명</th>
                     <th style="width:150px;">판매가</th>
                     <th style="width:100px;">재고</th>
@@ -80,19 +80,20 @@
 							var path = '';
 						 	var productCategoryCd = '${dsProductList.PRODUCT_CATEGORY_CD}';
 						
-						 	if(productCategoryCd == 'P'){
-								imageFolder = "/perfumeImg/${dsProductList.PRODUCT_IMAGE}";
-							} else if(productCategoryCd == 'D'){
-								imageFolder = "/diffuserImg/${dsProductList.PRODUCT_IMAGE}";
+						 	if(productCategoryCd == 'E'){
+								imageFolder = "/eyeImg/${dsProductList.PRODUCT_IMAGE}";
+							} else if(productCategoryCd == 'F'){
+								imageFolder = "/faceImg/${dsProductList.PRODUCT_IMAGE}";
+							} else if(productCategoryCd == 'L'){
+								imageFolder = "/lipImg/${dsProductList.PRODUCT_IMAGE}";
 							}
-						 	
 							path = $("img[name='image']").eq('${productIdx.index}').attr("src");
 						
 							existFolder = path.split("/")[0];
 							$("img[name='image']").eq('${productIdx.index}').attr("src", path.replace(existFolder, imageFolder));
 						</script>
                     </td>
-                    <td style="vertical-align: middle;">[${dsProductList.PRODUCT_CATEGORY_CD_NM}]<br>${dsProductList.PRODUCT_NAME}</td>
+                    <td style="vertical-align: middle;">[${dsProductList.PRODUCT_CATEGORY_CD_NM}]<br>${dsProductList.PRODUCT_NAME}<br>${dsProductList.PRODUCT_DESCRIPTION}</td>
                     <td style="text-align: center; vertical-align: middle;">${dsProductList.PRODUCT_UNIT_PRICE}원</td>
                     <td style="text-align: center; vertical-align: middle;">${dsProductList.PRODUCT_COUNT}</td>
                     <td style="text-align: center; vertical-align: middle;">

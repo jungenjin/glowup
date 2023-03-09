@@ -30,6 +30,7 @@
 	function fn_setDetailInfo(){
 		$("#productCode").val('${dsProduct.PRODUCT_CODE}');
 		$("#productName").val('${dsProduct.PRODUCT_NAME}');
+		$("#productDescription").val('${dsProduct.PRODUCT_DESCRIPTION}');
 		$("#productCategoryCd").val('${dsProduct.PRODUCT_CATEGORY_CD}');
 		$("#productUnitPrice").val('${dsProduct.PRODUCT_UNIT_PRICE}');
 		$("#productCount").val('${dsProduct.PRODUCT_COUNT}');
@@ -53,11 +54,13 @@
 
 	function fn_setProductCategoryCd(){
 		productCategoryCd = '${dsProduct.PRODUCT_CATEGORY_CD}';
-		
-		if(productCategoryCd == 'P'){
-			imageFolder = "perfumeImg";
-		} else if(productCategoryCd == 'D'){
-			imageFolder = "diffuserImg";
+
+		if(productCategoryCd == 'E'){
+			imageFolder = "eyeImg";
+		} else if(productCategoryCd == 'F'){
+			imageFolder = "faceImg";
+		} else if(productCategoryCd == 'L'){
+			imageFolder = "lipImg";
 		}
 
 		$("#imageFolder").val(imageFolder);
@@ -108,6 +111,13 @@
 				<label for="productName" class="control-label col-md-2"><b>상품명</b></label>
 				<div class="col-md-4">
 					<input class="form-control" type="text" name="productName" id="productName" required="required" autofocus="autofocus"/>
+				</div>
+			</div>
+			
+			<div class="form-group" style="margin-top: 5%;">
+				<label for="productName" class="control-label col-md-2"><b>상품설명</b></label>
+				<div class="col-md-4">
+					<input class="form-control" type="text" name="productDescription" id="productDescription" required="required" autofocus="autofocus"/>
 				</div>
 			</div>
 
