@@ -70,12 +70,14 @@
 		</div>
 		<!-- board view end -->
 		<!-- board button area start -->
+		
 		<c:if test="${sessionScope.grade == 'A' || sessionScope.userCode == dsEvent.EV_REG_ID}">
 			<div class="row btnarea">
 				<button class="btn btn-lg boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
 				<button class="btn btn-lg boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
 			</div>
 		</c:if>
+		
 		<!-- board button area end -->
 	
 	</div> <!-- container end -->
