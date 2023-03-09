@@ -1,16 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Noto+Sans+KR&display=swap');
+body {font-family: 'Gotu', 'Noto Sans KR', serif, sans-serif;word-break:keep-all}
+
+nav{
+	background : none !important;
+}
+
+
 /* by 김은주, 코드리펙토링 230214 */
 
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=DM+Serif+Display&family=Noto+Sans+KR:wght@400;700&display=swap');
-
-body {font-family: 'DM Serif Display', 'Crimson Pro', 'Noto Sans KR', serif, sans-serif;word-break:keep-all}
 ul, ol, li {list-style: none;}
 a {color:#333;text-decoration: none;}
 a:hover {color:#CC947C;text-decoration: none;}
 
 /* top */
-.navbar-brand {padding-top: 15px; padding-left: 55px;}
-.navbar .fixed-top .navbar-expand-xl {bacground: transperant !important;}
-
 .navbar-header .navbar-brand {font-family: "Crimson Pro";font-size: 30px;font-weight:bold;color:#555; margin-bottom: 8px; margin-top: 8px;}
 .navbar-header .navbar-toggle {padding:10px;margin-top:16px;}
 .nav>li>a {font-family: "Crimson Pro";font-size:16px;font-weight:bold;}
@@ -24,6 +27,7 @@ a:hover {color:#CC947C;text-decoration: none;}
 }
 
 /* foot */
+footer{ background : none !important; z-index: 3;}
 .footer{border-top:1px solid #D9D9D9;padding: 50px;margin-top:100px}
 .footer ul {padding-left: 0;}
 .footer .ftlogo {font-size: 30px; margin-top: 20px; color: #000;font-family: 'Crimson Pro';}
