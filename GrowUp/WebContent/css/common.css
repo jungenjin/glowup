@@ -8,6 +8,9 @@ a {color:#333;text-decoration: none;}
 a:hover {color:#CC947C;text-decoration: none;}
 
 /* top */
+.navbar-brand {padding-top: 15px; padding-left: 55px;}
+.navbar .fixed-top .navbar-expand-xl {bacground: transperant !important;}
+
 .navbar-header .navbar-brand {font-family: "Crimson Pro";font-size: 30px;font-weight:bold;color:#555; margin-bottom: 8px; margin-top: 8px;}
 .navbar-header .navbar-toggle {padding:10px;margin-top:16px;}
 .nav>li>a {font-family: "Crimson Pro";font-size:16px;font-weight:bold;}

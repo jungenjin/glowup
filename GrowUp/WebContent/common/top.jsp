@@ -35,7 +35,7 @@
 <c:set var="faceUrl">${context}/work/product/retrieveProductList.do?category=F</c:set>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg bg-light" >
+    <nav class="navbar fixed-top navbar-expand-xl">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -52,10 +52,9 @@
         <div id="navbar" class="collapse navbar-collapse">
           	<ul class="nav navbar-nav navbar-left member">
 	          	<!--  링크 수정  -->
-					<li><a onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eyeUrl}')">섀도우</a></li>
-					<li><a onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${lipUrl}')">립스틱</a></li>
-					<li><a onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${faceUrl}')">파운데이션</a></li>
-				</ul> 
+				<li><a onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eyeUrl}')">섀도우</a></li>
+				<li><a onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${lipUrl}')">립스틱</a></li>
+				<li><a onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${faceUrl}')">파운데이션</a></li>
 			</ul> 
 			<ul class="nav navbar-nav navbar-right member">
 				<li>
@@ -81,12 +80,12 @@
 				<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
 				    <li><a href="${context}/work/sell/retrieveBuyList.do">구매내역</a></li>
 				    <li><a href="${context}/work/user/updateUser.do">정보수정</a></li>
-		          </ul>
+	          	</ul>
 				</c:if>
-	          </ul>
+          	</ul>
 			</div>
 	        
-			<li class="dropdown">
+				<li class="dropdown">
 				<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">관리자 메뉴<span class="caret"></span></a>
 		          <ul class="dropdown-menu">

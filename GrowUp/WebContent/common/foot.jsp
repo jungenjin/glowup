@@ -28,7 +28,14 @@
 		</script>
 	</c:if>
 </head>
+<!-- 링크 추가 -->
 <c:set var="homeUrl">${context}/work/product/goMain.do</c:set>
+<c:set var="visitUrl">${context}/work/board/reservation.do</c:set>
+<c:set var="noitceUrl">${context}/work/board/notice.do</c:set>
+<c:set var="cmmuUrl">${context}/work/board/community.do</c:set>
+<c:set var="boardUrl">${context}/work/board/board.do</c:set>
+<c:set var="FAQUrl">${context}/FAQ/FAQ.jsp</c:set>
+
 <body>
 <footer class="footer">
 	<div class="container">
@@ -50,8 +57,8 @@
 			<h2>서비스</h2>
 			<ul class="info">
 				<li><a href="${context}/work/board/reservation.do">고객센터</a>
-				<li><a href="${context}/board/notice.do">공지사항</a>
-				<li><a href="${context}/board/community.do">커뮤니티</a>
+				<li><a href="${context}/work/board/notice.do">공지사항</a>
+				<li><a href="${context}/work/board/community.do">커뮤니티</a>
 				<li><a href="#">회사소개 </a>
 			</ul>
 		</div>
