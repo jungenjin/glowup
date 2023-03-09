@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>AROMA, FRAGANCIA</title>
+<title>Glow up</title>
 <!-- 채널톡 챗봇 연동 -->
 	<c:if test="${sessionScope.id == null}">
 		<script>
@@ -34,9 +34,11 @@
 	<div class="container">
 		<div class="row">
 		<div class="col-sm-12 col-md-4">
-			<a href="${homeUrl}" class="ftlogo">AROMA, FRAGANCIA</a>
+			<a href="${homeUrl}" class="ftlogo">
+				<img src="${context}/img/Glowup_logo.png" alt="glowup" width="" height="24">
+			</a>
+			<p>글로우업과 함께 당신만의 팔레트를 완성해보세요. </p>
 			<div class="sns">
-				<p>FOLLOW US ON</p>
 	      		<a href="#"><img src="${context}/img/common/sns_kakao.svg"  alt="kakaolink"></a>
 	      		<a href="#"><img src="${context}/img/common/sns_insta.svg" alt="instalink"></a>
 	      		<a href="#"><img src="${context}/img/common/sns_youtube.svg" alt="youtubelink"></a>
@@ -45,31 +47,33 @@
 			</div>
 		</div>
 		<div class="col-sm-4 col-md-2 footer-right">
-			<h2>SERVICE</h2>
+			<h2>서비스</h2>
 			<ul class="info">
+				<li><a href="${context}/work/board/reservation.do">고객센터</a>
 				<li><a href="${context}/board/notice.do">공지사항</a>
 				<li><a href="${context}/board/community.do">커뮤니티</a>
-				<li><a href="${context}/FAQ/FAQ.jsp">자주묻는질문</a>
-				<li><a href="${context}/work/board/reservation.do">상담예약문의</a>
+				<li><a href="#">회사소개</a>
 			</ul>
 		</div>
 		<div class="col-sm-4 col-md-3 footer-right">
-			<h2>CONTACT</h2>
+			<h2>정보</h2>
 			<ul class="info info2">
-				<li><b>Email</b></li>
-				<li>aromafragancia@aroma.co.kr</li>
-				<li><b>Address</b></li>
-				<li>06035 Gangnam-gu, Seoul, Korea<br>15, Garosu-gil</li>
+				<li><a>이메일</a>
+				<li>glowup@glowup.co.kr</li>
+			</ul>
+			<ul class="info info2">
+				<li><a>문의</a>
+				<li>1577-1234</li>
 			</ul>
 		</div>
 		<div class="col-sm-4 col-md-3 footer-right">
-			<h2>INFO</h2>
+			<h2>고객센터</h2>
 			<ul class="info info2">
-				<li><a>T.02-1234-5678</a>
+				<li><a>상담가능시간</a>
 				<li><a></a>
-				<li><a>Mon-Fri:10am-5pm</a>
+				<li><a>AM 09:00 ~ PM 05:00</a>
 				<li><a></a>
-				<li><a>Weekend Holiday OFF</a>
+				<li><a>주말, 공휴일</a>
 			</ul>
 		</div>
 		</div>
