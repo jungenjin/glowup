@@ -2,7 +2,6 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="context"><%=request.getContextPath()%></c:set>
 <!DOCTYPE html>
 <html>
@@ -55,9 +54,7 @@
 					<h4>${dsProductList.PRODUCT_DESCRIPTION}</h4>
 					<h4>
 						<c:choose>
-							<c:when test="${dsProductList.PRODUCT_COUNT != 0}">
-								₩ <fmt:formatNumber value="${dsProductList.PRODUCT_UNIT_PRICE}" pattern="#,###" />
-							</c:when>
+							<c:when test="${dsProductList.PRODUCT_COUNT != 0}"><h4 class="won"></h4></c:when>
 							<c:otherwise><span class="text-danger">품절</span></c:otherwise>
 						</c:choose>
 					</h4>
@@ -108,7 +105,7 @@
 					//가격에 ₩ 및 , 추가
 					var won = '${dsProductList.PRODUCT_UNIT_PRICE}'.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 					console.log(won)
-					
+					$(".won").text("₩ "+ won);
 				</script>
 			</c:forEach>
 			</div>

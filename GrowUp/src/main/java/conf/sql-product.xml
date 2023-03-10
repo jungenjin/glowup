@@ -141,7 +141,7 @@
 		SET PRODUCT_IMAGE       = #{productImage}
 		  , PRODUCT_IMAGE2      = #{productImage2}
 		  , PRODUCT_NAME        = #{productName}
-		  , PRODUCT_NAME        = #{productNameEng}
+		  , PRODUCT_NAME_ENG    = #{productNameEng}
 		  , PRODUCT_DESCRIPTION = #{productDescription}
 		  , PRODUCT_UNIT_PRICE  = #{productUnitPrice}
 		  , PRODUCT_COUNT       = #{productCount}

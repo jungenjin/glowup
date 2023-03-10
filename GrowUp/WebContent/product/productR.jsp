@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var ="context"><%=request.getContextPath()%></c:set>
 <!DOCTYPE html>
 <html>
@@ -179,6 +178,13 @@
 
 				existFolder = path.split("/")[0];
 				$("#image").attr("src", path.replace(existFolder, imageFolder));
+				
+				$(document).ready(function(){
+					//가격에 ₩ 및 , 추가
+					var won = '${dsProduct.PRODUCT_UNIT_PRICE}'.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+					console.log(won);
+					$("#price").text("₩ "+ won);
+				});
 			</script>
 		</div>
 		<!-- 상품이미지 end -->
@@ -200,7 +206,7 @@
 					</tr>
 					<tr>
 						<td>판매가</td>
-						<td id="price">₩ <fmt:formatNumber value="${dsProduct.PRODUCT_UNIT_PRICE}" pattern="#,###" /></td>
+						<td id="price"></td>
 					</tr>
 					<c:choose>
 						<c:when test="${dsProduct.PRODUCT_COUNT != 0}">

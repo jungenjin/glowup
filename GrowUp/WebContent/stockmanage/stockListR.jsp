@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var ="context"><%=request.getContextPath()%></c:set>
 <!DOCTYPE html>
 <html>
@@ -93,8 +94,13 @@
 							$("img[name='image']").eq('${productIdx.index}').attr("src", path.replace(existFolder, imageFolder));
 						</script>
                     </td>
-                    <td style="vertical-align: middle;">[${dsProductList.PRODUCT_CATEGORY_CD_NM}]<br>${dsProductList.PRODUCT_NAME}<br>${dsProductList.PRODUCT_DESCRIPTION}</td>
-                    <td style="text-align: center; vertical-align: middle;">${dsProductList.PRODUCT_UNIT_PRICE}원</td>
+                    <td style="vertical-align: middle;">
+                    	[${dsProductList.PRODUCT_CATEGORY_CD_NM}]
+                    	<br>${dsProductList.PRODUCT_NAME}
+                    	<br>${dsProductList.PRODUCT_NAME_ENG}
+                    	<br>${dsProductList.PRODUCT_DESCRIPTION}
+                    </td>
+                    <td style="text-align: center; vertical-align: middle;">₩ <fmt:formatNumber value="${dsProductList.PRODUCT_UNIT_PRICE}" pattern="#,###" /></td>
                     <td style="text-align: center; vertical-align: middle;">${dsProductList.PRODUCT_COUNT}</td>
                     <td style="text-align: center; vertical-align: middle;">
                     	<button type="button" class="btn" onclick="fn_modifyProduct('${dsProductList.PRODUCT_CODE}')">수정</button>
