@@ -39,12 +39,7 @@
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_cart.jpg");'>
-	<div class="boardText">
-		<h3 class="boardTitle">Purchase<br>History</h3>
-		<p class="boardSub"></p>
-	</div>
-</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_cart.png");'></div>
 <!-- title, visual end -->
 <div class="container">
 	<!-- board title, buttons start -->

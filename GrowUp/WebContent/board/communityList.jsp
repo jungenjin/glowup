@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>커뮤니티 글 목록</title>
+	<title>커뮤니티 | 글 목록</title>
 	<script src="${context}/js/jquery-1.9.1.js"></script>
 	<script type="text/javascript">
 		function fn_communityWrite(){
@@ -17,11 +17,7 @@
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_service.png");'>
-	<div class="boardText">
-		<h3 class="boardTitle">COMMUNITY</h3>
-		<p class="boardSub">자유 커뮤니티</p>
-	</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_event.png");'>
 </div>
 <!-- title, visual end -->
 <!-- Detail -->

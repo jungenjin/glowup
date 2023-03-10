@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>자유 게시판 - 글 내용보기</title>
+	<title>이벤트 | 내용보기</title>
 	<script src="${context}/js/jquery-1.9.1.js"></script>
 	<script type="text/javascript">
 		function fn_eventList(){
@@ -32,11 +32,7 @@
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_service.png");'>
-	<div class="boardText">
-		<h3 class="boardTitle">EVENT</h3>
-		<p class="boardSub">이벤트 게시판</p>
-	</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_event.png");'>
 </div>
 <!-- title, visual end -->
 <!-- Detail -->

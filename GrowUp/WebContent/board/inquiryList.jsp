@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>글 목록</title>
+	<title>1:1 문의 | 글 목록</title>
 	<script src="${context}/js/jquery-1.9.1.js"></script>
 	<script type="text/javascript">
 		function fn_inquiryWrite(){
@@ -17,11 +17,7 @@
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.jpg");'>
-	<div class="boardText">
-		<h3 class="boardTitle">RESERVATION</h3>
-		<p class="boardSub">상담 예약 문의</p>
-	</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.png");'>
 </div>
 <!-- title, visual end -->
 <!-- Detail -->

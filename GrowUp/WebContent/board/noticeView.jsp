@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>공지사항 - 내용보기</title>
+	<title>공지사항 | 내용보기</title>
 	<script src="${context}/js/jquery-1.9.1.js"></script>
 	<script type="text/javascript">
 		function fn_noticeList(){
@@ -32,11 +32,7 @@
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_service.png");'>
-	<div class="boardText">
-		<h3 class="boardTitle">NOTICE</h3>
-		<p class="boardSub">공지사항</p>
-	</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_notice.png");'>
 </div>
 <!-- title, visual end -->
 <!-- Detail -->

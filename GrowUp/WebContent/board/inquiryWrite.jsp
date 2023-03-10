@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>예약 상세 페이지</title>
+<title>1:1 문의 | 글 쓰기</title>
 <script src="${context}/js/jquery-1.9.1.js"></script>
 <script type="text/javascript">
 		$(document).ready(function(){
@@ -33,11 +33,7 @@
 <jsp:include page="/common/top.jsp"></jsp:include>
 <div class="wrap">
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.jpg");'>
-	<div class="boardText">
-		<h3 class="boardTitle">RESERVATION</h3>
-		<p class="boardSub">상담 예약 문의</p>
-	</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.png");'>
 </div>
 <!-- title, visual end -->
 <!-- Detail -->

@@ -4,7 +4,7 @@
 <c:set var ="context"><%=request.getContextPath()%></c:set>
 <meta charset="UTF-8">
 
-<title>구매내역 페이지</title>
+<title>구매내역</title>
 <link href="${context}/css/bootstrap.min.css" rel="stylesheet">
 <link href="${context}/css/bootstrap-theme.css" rel="stylesheet">
 <link href="${context}/css/common.css" rel="stylesheet">
@@ -17,12 +17,7 @@
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_service.png");'>
-	<div class="boardText">
-		<h3 class="boardTitle">FAQ</h3>
-		<p class="boardSub">자주 묻는 질문</p>
-	</div>
-</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_faq.png");'></div>
 <!-- title, visual end -->
 	<!-- FAQ start -->
 	<div class=FAQ_wrap>
