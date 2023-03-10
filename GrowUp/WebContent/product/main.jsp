@@ -9,30 +9,20 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <title>Glow up</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-   
-   <link href="${context}/css/common.css" rel="stylesheet">
-
-   
-   <!-- fontawesome6.3.0 관리자페이지에 사용 -->
-   <link href="${context}/css/fontawesome6.3.0/solid.css" rel="stylesheet">
-   <link href="${context}/css/fontawesome6.3.0/v4-shims.css" rel="stylesheet" />  
-   
-   <script defer src="${context}/js/fontawesome6.3.0/all.min.js"></script>
-       
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-   <script src="${context}/js/jquery-1.9.1.js"></script>
-   <script src="${context}/js/jquery.tubular.1.0.js"></script>
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   <script src="${context}/js/owl.carousel.js"></script>
-   <script src="${context}/js/common.js"></script>
+	<!-- CSS only -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+	<!-- fontawesome6.3.0 관리자페이지에 사용 -->
+	<link href="${context}/css/fontawesome6.3.0/solid.css" rel="stylesheet">
+	<link href="${context}/css/fontawesome6.3.0/v4-shims.css" rel="stylesheet" />  
+	<script defer src="${context}/js/fontawesome6.3.0/all.min.js"></script>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="${context}/js/jquery-1.9.1.js"></script>
+	<script src="${context}/js/jquery.tubular.1.0.js"></script>
+	<script src="${context}/js/owl.carousel.js"></script>
 
    <script type="text/javascript">
-
-   
 	// 배경 동영상 추가  
 	$('document').ready(function() {
 	var options = { videoId: '_COg3nQ7qcE', start: 0};
@@ -88,21 +78,14 @@
 	        transform: rotate(360deg);
 	    }
 	}
-	
-	
-	
 </style>
 </head>
 <c:set var="productManageUrl">${context}/work/product/retrieveProductListForManage.do</c:set>
 <c:set var="statisticsForProductUrl">${context}/work/sell/retrieveStatisticsForProduct.do</c:set>
 <c:set var="statisticsForStockUrl">${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=P</c:set>
-
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
-	<!-- 메인 백그라운드 배경 튜블라 적용 -->
-
-	
-
+<!-- 메인 백그라운드 배경 튜블라 적용 -->
 <c:if test="${sessionScope.grade != 'A'}">
 	<div id="maintub">
 		<div class="container">
@@ -154,46 +137,42 @@
 			<div><img src="/img/main/maininsta5.png" class="rounded-3"></div>
 		</div>
 	</div>
+	<jsp:include page="${context}/common/foot.jsp"></jsp:include>
 	</div>
 	</c:if>
-
- <!-- 관리자 페이지 -->
-      <c:if test="${sessionScope.grade == 'A'}">
-      <div class="container adminmode">
-          <div class="row">
-               <div class="col-md-4 text-center adminlink" onclick="location.href='${productManageUrl}'">
-               <div class="img-circle">
-                  <span>
-                     <i class="fa-solid fa-store fa-8x" style="color:white;"></i>
-                  </span>
-               </div>
-               <h1>재고관리</h1>
-            </div>
-               <div class="col-md-4 text-center adminlink" onclick="location.href='${statisticsForProductUrl}'">
-                  <div class="img-circle">
-                     <span>
-                        <i class="fa-solid fa-chart-pie fa-8x" style="color:white;"></i>
-                  </span>
-                </div>
-               <h1>매출통계</h1>
-            </div>
-               <div class="col-md-4 text-center adminlink" onclick="location.href='${statisticsForStockUrl}'">
-                  <div class="img-circle">
-                     <span>
-                        <i class="fa-solid fa-boxes-stacked fa-8x" style="color:white;"></i>
-                  </span>
-                 </div>
-               <h1>재고현황</h1>
-            </div> 
-         </div>
-      </div>
-      </c:if>
-   
-<jsp:include page="${context}/common/foot.jsp"></jsp:include>
-
-   <script>
+	<!-- 관리자 페이지 -->
+	<c:if test="${sessionScope.grade == 'A'}">
+	<div class="container adminmode">
+	    <div class="row">
+	         <div class="col-md-4 text-center adminlink" onclick="location.href='${productManageUrl}'">
+	         <div class="img-circle">
+	            <span>
+	               <i class="fa-solid fa-store fa-8x" style="color:white;"></i>
+	            </span>
+	         </div>
+	         <h1>재고관리</h1>
+	      </div>
+	         <div class="col-md-4 text-center adminlink" onclick="location.href='${statisticsForProductUrl}'">
+	            <div class="img-circle">
+	               <span>
+	                  <i class="fa-solid fa-chart-pie fa-8x" style="color:white;"></i>
+	            </span>
+	          </div>
+	         <h1>매출통계</h1>
+	      </div>
+	         <div class="col-md-4 text-center adminlink" onclick="location.href='${statisticsForStockUrl}'">
+	            <div class="img-circle">
+	               <span>
+	                  <i class="fa-solid fa-boxes-stacked fa-8x" style="color:white;"></i>
+	            </span>
+	           </div>
+	         <h1>재고현황</h1>
+	      </div> 
+	   </div>
+	</div>
+	</c:if>
+<script>
   AOS.init();
 </script>
-
 </body>
 </html>

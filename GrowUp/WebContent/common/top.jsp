@@ -84,34 +84,32 @@
 				<li class="nav-item dropdown">
 					<a class="nav-link active nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">마이페이지</a>
 					<ul class="dropdown-menu">
-					
 					    <li class="nav-item"><a class="nav-link active" href="${context}/work/sell/retrieveBuyList.do">구매내역</a></li>
 					    <li class="nav-item"><a class="nav-link active" href="${context}/work/user/updateUser.do">정보수정</a></li>
 		          	</ul>
 				</li>
 				</c:if>
-       		</ul>
-		</div>
-	        
-				<li class="dropdown">
+				<!-- 관리자 메뉴 -->
 				<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
-		          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">관리자 메뉴<span class="caret"></span></a>
-		          <ul class="dropdown-menu">
-		          	<li><a class="nav-link active" href="${context}/work/user/updateUser.do">정보수정</a></li>
-					<li><a class="nav-link active" href="${context}/work/product/retrieveProductListForManage.do">재고관리</a></li>
-					<li><a class="nav-link active" href="${context}/work/sell/retrieveStatisticsForProduct.do">매출통계</a></li>
-					<li><a class="nav-link active" href="${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=P">재고현황</a></li>
-		          </ul>
+				<div class= "container" style="margin-top:65px;">
+					<li class="nav-item dropdown">
+					<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
+				        		<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">관리자 메뉴<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+				          	<li><a class="nav-link active" href="${context}/work/user/updateUser.do">정보수정</a></li>
+							<li><a class="nav-link active" href="${context}/work/product/retrieveProductListForManage.do">재고관리</a></li>
+							<li><a class="nav-link active" href="${context}/work/sell/retrieveStatisticsForProduct.do">매출통계</a></li>
+							<li><a class="nav-link active" href="${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=P">재고현황</a></li>
+				       	</ul>
+					</c:if>
+					</li>
+				</div>
 				</c:if>
-			</li>
-		</ul>
-       </div><!--/.nav-collapse -->
-     </div>
-   </nav>
-	<div class= "container" style="margin-top:65px;">
-	  	<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
-	  		<h1 class="admintitle"><mark>관리자 모드</mark></h1>
-	  	</c:if>
+			</ul>
+		</div>
 	</div>
+</nav>
+<!--/.nav-collapse -->
+	<h1 class="admintitle"><mark>관리자 모드</mark></h1>
 </body>
 </html>
