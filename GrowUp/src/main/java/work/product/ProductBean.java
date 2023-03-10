@@ -5,9 +5,10 @@ import java.io.Serializable;
 public class ProductBean implements Serializable{
 	private String productCode;        //제품코드
 	private String productImage;       //제품이미지
-	private String productImage2;       //제품이미지
-	private String productName;        //제품이름
-	private String productDescription;    //제품설명
+	private String productImage2;      //제품 over 이미지
+	private String productName;        //제품명_한글
+	private String productNameEng;     //제품명_영문
+	private String productDescription; //제품설명
  	private int productUnitPrice;      //제품단가
 	private int productCount;          //제품수량
 	private String productCategoryCd;  //제품분류
@@ -16,93 +17,124 @@ public class ProductBean implements Serializable{
 	public ProductBean() {
 		super();
 	}
+	
 
 	public ProductBean(String productCode, String productImage, String productImage2, String productName,
-			String productDescription, int productUnitPrice, int productCount, String productCategoryCd,
-			String productRegDate) {
+			String productNameEng, String productDescription, int productUnitPrice, int productCount,
+			String productCategoryCd, String productRegDate) {
 		super();
 		this.productCode = productCode;
 		this.productImage = productImage;
 		this.productImage2 = productImage2;
 		this.productName = productName;
+		this.productNameEng = productNameEng;
 		this.productDescription = productDescription;
 		this.productUnitPrice = productUnitPrice;
 		this.productCount = productCount;
 		this.productCategoryCd = productCategoryCd;
 		this.productRegDate = productRegDate;
 	}
+
 
 	public String getProductCode() {
 		return productCode;
 	}
 
+
 	public void setProductCode(String productCode) {
 		this.productCode = productCode;
 	}
+
 
 	public String getProductImage() {
 		return productImage;
 	}
 
+
 	public void setProductImage(String productImage) {
 		this.productImage = productImage;
 	}
+
 
 	public String getProductImage2() {
 		return productImage2;
 	}
 
+
 	public void setProductImage2(String productImage2) {
 		this.productImage2 = productImage2;
 	}
+
 
 	public String getProductName() {
 		return productName;
 	}
 
+
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
+
+
+	public String getProductNameEng() {
+		return productNameEng;
+	}
+
+
+	public void setProductNameEng(String productNameEng) {
+		this.productNameEng = productNameEng;
+	}
+
 
 	public String getProductDescription() {
 		return productDescription;
 	}
 
+
 	public void setProductDescription(String productDescription) {
 		this.productDescription = productDescription;
 	}
+
 
 	public int getProductUnitPrice() {
 		return productUnitPrice;
 	}
 
+
 	public void setProductUnitPrice(int productUnitPrice) {
 		this.productUnitPrice = productUnitPrice;
 	}
+
 
 	public int getProductCount() {
 		return productCount;
 	}
 
+
 	public void setProductCount(int productCount) {
 		this.productCount = productCount;
 	}
+
 
 	public String getProductCategoryCd() {
 		return productCategoryCd;
 	}
 
+
 	public void setProductCategoryCd(String productCategoryCd) {
 		this.productCategoryCd = productCategoryCd;
 	}
+
 
 	public String getProductRegDate() {
 		return productRegDate;
 	}
 
+
 	public void setProductRegDate(String productRegDate) {
 		this.productRegDate = productRegDate;
 	}
+
 
 	@Override
 	public String toString() {

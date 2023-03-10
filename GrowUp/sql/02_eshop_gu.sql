@@ -97,7 +97,8 @@ CREATE TABLE TB_PRODUCT(
   PRODUCT_CODE VARCHAR2(20),                  -- 제품코드
   PRODUCT_IMAGE VARCHAR2(70),                 -- 제품이미지1
   PRODUCT_IMAGE2 VARCHAR2(70),                -- 제품이미지2
-  PRODUCT_NAME VARCHAR2(200),                 -- 제품명
+  PRODUCT_NAME VARCHAR2(200),                 -- 제품명_한글
+  PRODUCT_NAME_ENG VARCHAR2(200),             -- 제품명_영문
   PRODUCT_DESCRIPTION VARCHAR2(200),          -- 제품간단설명
   PRODUCT_UNIT_PRICE NUMBER,		    	  -- 제품단가
   PRODUCT_COUNT NUMBER,						  -- 제품재고수량

@@ -7,6 +7,7 @@
 		<result property="productImage" column="PRODUCT_IMAGE" />
 		<result property="productImage2" column="PRODUCT_IMAGE2" />
 		<result property="productName" column="PRODUCT_NAME" />
+		<result property="productNameEng" column="PRODUCT_NAME_ENG" />
 		<result property="productDescription" column="PRODUCT_DESCRIPTION" />
 		<result property="productUnitPrice" column="PRODUCT_UNIT_PRICE" />
 		<result property="productCount" column="PRODUCT_COUNT" />
@@ -21,6 +22,7 @@
 			     , PRODUCT.PRODUCT_IMAGE
 			     , PRODUCT.PRODUCT_IMAGE2
 			     , PRODUCT.PRODUCT_NAME
+			     , PRODUCT.PRODUCT_NAME_ENG
 			     , PRODUCT.PRODUCT_DESCRIPTION
 			     , PRODUCT.PRODUCT_UNIT_PRICE
 			     , PRODUCT.PRODUCT_COUNT
@@ -117,6 +119,7 @@
 		     , PRODUCT.PRODUCT_IMAGE
 		     , PRODUCT.PRODUCT_IMAGE2
 		     , PRODUCT.PRODUCT_NAME
+		     , PRODUCT.PRODUCT_NAME_ENG
 		     , PRODUCT.PRODUCT_DESCRIPTION
 		     , PRODUCT.PRODUCT_UNIT_PRICE
 		     , PRODUCT.PRODUCT_COUNT
@@ -138,6 +141,7 @@
 		SET PRODUCT_IMAGE       = #{productImage}
 		  , PRODUCT_IMAGE2      = #{productImage2}
 		  , PRODUCT_NAME        = #{productName}
+		  , PRODUCT_NAME        = #{productNameEng}
 		  , PRODUCT_DESCRIPTION = #{productDescription}
 		  , PRODUCT_UNIT_PRICE  = #{productUnitPrice}
 		  , PRODUCT_COUNT       = #{productCount}
@@ -169,6 +173,7 @@
 			, PRODUCT_IMAGE
 			, PRODUCT_IMAGE2
 			, PRODUCT_NAME
+			, PRODUCT_NAME_ENG
 			, PRODUCT_DESCRIPTION
 			, PRODUCT_UNIT_PRICE
 			, PRODUCT_COUNT
@@ -179,6 +184,7 @@
 			, #{productImage}
 			, #{productImage2}
 			, #{productName}
+			, #{productNameEng}
 			, #{productDescription}
 			, #{productUnitPrice}
 			, #{productCount}
