@@ -40,7 +40,9 @@
 	<div class="container">
 	<h4 class="Title">1:1문의</h4>
 		<form id="inquiryWrite" class="form-horizontal boardwrite" method="post" action="${context}/work/board/inquiryWrite.do" role="form">
-		
+		<input type="hidden" class="form-control" id="inqRegId" name="inqRegId">
+		<input type="hidden" class="form-control" id="inqPhone" name="inqPhone">
+		<input type="hidden" class="form-control" id="inqEmail" name="inqEmail">
 		<!--
 		  <div class="form-group">
 		    <label for="inputEmail3" class="col-sm-2 control-label">이름</label>
@@ -73,15 +75,6 @@
 		     <textarea class="form-control" rows="4" style="width: 100%; height: 272px !important;" id="inqContent" name="inqContent" placeholder="내용을 입력해주세요"></textarea>
 		    </div>
 		  </div>
-		  
-		  <!-- 
-		  <div class="form-group">
-		    <label for="exampleInputFile" class="col-sm-2 control-label">파일 선택</label>
-		    <div class="col-sm-12">
-		    <input type="file" id="exampleInputFile" class="form-control">
-		    </div>
-		  </div>
-  		 -->
   		 	<!-- board button area start -->
 			<div class="row btnarea">
 				<button class="btn btn-lg boardbtn" type="button" onclick="fn_save()">글 등록하기</button>

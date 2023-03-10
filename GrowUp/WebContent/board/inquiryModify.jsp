@@ -60,6 +60,9 @@
 <div class="container">
 	<h4 class="Title">1:1문의</h4>
 		<form id="inquiryModify" class="form-horizontal" method="post" action="${context}/work/board/inquiryModify.do?inqNo=${dsInquiry.INQ_NO}" role="form">
+		<input type="hidden" class="form-control" id="inqRegId" name="inqRegId">
+		<input type="hidden" class="form-control" id="inqPhone" name="inqPhone">
+		<input type="hidden" class="form-control" id="inqEmail" name="inqEmail">
 		  <!-- 
 		  <div class="form-group">
 		    <label for="inputEmail3" class="col-sm-2 control-label">이름</label>
