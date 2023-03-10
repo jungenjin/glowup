@@ -15,12 +15,7 @@
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_product.png");'>
-	<div class="boardText">
-		<h3 class="boardTitle">PRODUCT</h3>
-		<p class="boardSub">${dsProductList[0].PRODUCT_CATEGORY_CD_NM}</p>
-	</div>
-</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_product.png");'></div>
 <!-- title, visual end -->
 <!-- 상품 영역 -->		
 	<div class="container productlist">
