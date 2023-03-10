@@ -28,13 +28,14 @@
 		</script>
 	</c:if>
 </head>
-<!-- 링크 추가 -->
+
 <c:set var="homeUrl">${context}/work/product/goMain.do</c:set>
-<c:set var="visitUrl">${context}/work/board/reservation.do</c:set>
+<!-- URL 추가 -->
 <c:set var="noitceUrl">${context}/work/board/notice.do</c:set>
 <c:set var="cmmuUrl">${context}/work/board/community.do</c:set>
-<c:set var="boardUrl">${context}/work/board/board.do</c:set>
+<c:set var="inquiryUrl">${context}/work/board/inquiry.do</c:set>
 <c:set var="FAQUrl">${context}/FAQ/FAQ.jsp</c:set>
+<c:set var="qnaUrl">${context}/work/board/qna.do</c:set>
 
 <body>
 <footer class="footer">
@@ -56,31 +57,28 @@
 		<div class="col-sm-4 col-md-2 footer-right">
 			<h2>서비스</h2>
 			<ul class="info">
-				<li><a href="${context}/work/board/reservation.do">고객센터</a>
 				<li><a href="${context}/work/board/notice.do">공지사항</a>
 				<li><a href="${context}/work/board/community.do">커뮤니티</a>
 				<li><a href="#">회사소개 </a>
 			</ul>
 		</div>
 		<div class="col-sm-4 col-md-3 footer-right">
-			<h2>정보</h2>
+			<h2>고객센터</h2>
 			<ul class="info info2">
-				<li><a>이메일</a>
-				<li>glowup@glowup.co.kr</li>
-			</ul>
-			<ul class="info info2">
-				<li><a>문의</a>
-				<li>1577-1234</li>
+				<li><a href="${context}/work/board/inquiry.do">1 : 1 상담</a>
+				<li><a href="${context}/work/board/qan.do">Q & A</a></li>
+				<li><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
 			</ul>
 		</div>
 		<div class="col-sm-4 col-md-3 footer-right">
-			<h2>고객센터</h2>
+			<h2>정보</h2>
+			<ul class="info info3">
+				<li>email : <a>glowup@glowup.co.kr</a></li>
+				<li>tel : <a>1577-1234</a></li>
+			</ul>
 			<ul class="info info2">
-				<li><a>상담가능시간</a>
-				<li><a></a>
-				<li><a>AM 09:00 ~ PM 05:00</a>
-				<li><a></a>
-				<li><a>주말, 공휴일</a>
+				<li>상담시간 : <a>AM 09:00 ~ PM 05:00</a></li>
+				<li>월 ~ 금 (주말, 공휴일 제외)</li>
 			</ul>
 		</div>
 		</div>
