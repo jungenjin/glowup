@@ -17,16 +17,16 @@
 		});
 	
 		function fn_setDetailInfo(){
-			$("#vstTitle").val('${dsReservation.VST_TITLE}');
-			$("#vstNo").val('${dsReservation.VST_NO}');
-			$("#vstPhone").val('${dsReservation.VST_PHONE}');
-			$("#vstEmail").val('${dsReservation.VST_EMAIL}');
+			$("#inqTitle").val('${dsInquiry.INQ_TITLE}');
+			$("#inqNo").val('${dsInquiry.INQ_NO}');
+			$("#inqPhone").val('${dsInquiry.INQ_PHONE}');
+			$("#inqEmail").val('${dsInquiry.INQ_EMAIL}');
 	
-			var vstContent = '${dsReservation.VST_CONTENT}';
+			var inqContent = '${dsInquiry.INQ_CONTENT}';
 	
-			vstContent = vstContent.replace(/<br ?\/?>/gi, "\n");
+			inqContent = inqContent.replace(/<br ?\/?>/gi, "\n");
 	
-			$("#vstContent").val(vstContent);
+			$("#inqContent").val(inqContent);
 		}
 	
 		function fn_save(){
@@ -35,15 +35,15 @@
 			}else{
 				
 				//alert("ddddd");
-				var vstContent = String($("#vstContent").val());
+				var inqContent = String($("#inqContent").val());
 	
-				vstContent = vstContent.replace(/\n/gi, "<br/>");
+				inqContent = inqContent.replace(/\n/gi, "<br/>");
 	
-				//alert(vstContent);
+				//alert(inqContent);
 				
-				$("#vstContent").val(vstContent);
+				$("#inqContent").val(inqContent);
 	
-		 		$("#reservationModify").submit();
+		 		$("#inquiryModify").submit();
 			}
 		}
 	
@@ -53,47 +53,47 @@
 <jsp:include page="/common/top.jsp"></jsp:include>
 <div class="wrap">
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_reservation.jpg");'>
+<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.jpg");'>
 	<div class="boardText">
 		<h3 class="boardTitle">RESERVATION</h3>
 		<p class="boardSub">상담 예약 문의</p>
 	</div>
 </div>
 <!-- title, visual end -->
-<!-- ReservationWrite -->
+<!-- InquiryWrite -->
 	<div class="container">
 	<h4 class="Title">상담 신청 문의</h4>
-		<form id="reservationModify" class="form-horizontal" method="post" action="${context}/work/board/reservationModify.do?vstNo=${dsReservation.VST_NO}" role="form">
+		<form id="inquiryModify" class="form-horizontal" method="post" action="${context}/work/board/inquiryModify.do?inqNo=${dsInquiry.INQ_NO}" role="form">
 		  <!-- 
 		  <div class="form-group">
 		    <label for="inputEmail3" class="col-sm-2 control-label">이름</label>
 		    <div class="col-sm-12">
-		      <input type="text" class="form-control" id="vstRegId" name="vstRegId">
+		      <input type="text" class="form-control" id="inqRegId" name="inqRegId">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inqPhone" class="col-sm-2 control-label">전화번호</label>
+		    <div class="col-sm-12">
+		      <input type="tel" class="form-control" id="inqPhone" name="inqPhone">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inqEmail" class="col-sm-2 control-label">이메일</label>
+		    <div class="col-sm-12">
+		      <input type="email" class="form-control" id="inqEmail" name="inqEmail">
 		    </div>
 		  </div>
 		   -->
 		  <div class="form-group">
-		    <label for="vstPhone" class="col-sm-2 control-label">전화번호</label>
+		    <label for="inqTilte" class="col-sm-2 control-label">제목</label>
 		    <div class="col-sm-12">
-		      <input type="tel" class="form-control" id="vstPhone" name="vstPhone">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="vstEmail" class="col-sm-2 control-label">이메일</label>
-		    <div class="col-sm-12">
-		      <input type="email" class="form-control" id="vstEmail" name="vstEmail">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="vstTilte" class="col-sm-2 control-label">제목</label>
-		    <div class="col-sm-12">
-		      <input type="text" class="form-control" id="vstTitle" name="vstTitle">
+		      <input type="text" class="form-control" id="inqTitle" name="inqTitle">
 		    </div>
 		  </div>
 		   <div class="form-group">
-		    <label for="vstContent" class="col-sm-2 control-label">내용</label>
+		    <label for="inqContent" class="col-sm-2 control-label">내용</label>
 		    <div class="col-sm-12">
-		     <textarea id="vstContent" name="vstContent" class="form-control" rows="4" style="width: 100%; height: 272px !important;"></textarea>
+		     <textarea id="inqContent" name="inqContent" class="form-control" rows="4" style="width: 100%; height: 272px !important;"></textarea>
 		    </div>
 		  </div>
 		<!-- board button area start -->

@@ -9,15 +9,15 @@
 	<title>글 목록</title>
 	<script src="${context}/js/jquery-1.9.1.js"></script>
 	<script type="text/javascript">
-		function fn_reservationWrite(){
-			location.href = "${context}/work/board/reservationWrite.do";
+		function fn_inquiryWrite(){
+			location.href = "${context}/work/board/inquiryWrite.do";
 		}
 	</script>
 </head>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_reservation.jpg");'>
+<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.jpg");'>
 	<div class="boardText">
 		<h3 class="boardTitle">RESERVATION</h3>
 		<p class="boardSub">상담 예약 문의</p>
@@ -34,7 +34,7 @@
 					<h2 class="title">상담 예약 문의</h2>
 				</div>
 				<div class="col-xs-4 text-right">
-					<button type="button" class="btn btn-lg boardbtn"  onclick="fn_reservationWrite()">새 글 쓰기</button>
+					<button type="button" class="btn btn-lg boardbtn"  onclick="fn_inquiryWrite()">새 글 쓰기</button>
 				</div>
 			</div>
 		</div>
@@ -44,11 +44,11 @@
             <div class="table-responsive">
                 <table class="table table-hover boardlist">
                     <tbody>
-                        <c:forEach items="${dsreservationList}" var="dsreservationList">
+                        <c:forEach items="${dsinquiryList}" var="dsinquiryList">
                          <tr>
                          	<td>
-                         		<div class="col-md-10"><a href ="${context}/work/board/reservationView.do?vstNo=${dsreservationList.VST_NO}">${dsreservationList.VST_TITLE}</a></div>
-								<div class="col-md-2 text-right">${dsreservationList.USER_NAME}</div>
+                         		<div class="col-md-10"><a href ="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a></div>
+								<div class="col-md-2 text-right">${dsinquiryList.USER_NAME}</div>
 								                      
                          	</td>
                          </tr>

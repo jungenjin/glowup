@@ -210,6 +210,7 @@ CREATE TABLE TB_INQUIRY(
   INQ_NO VARCHAR2(20),            	  -- 글번호
   INQ_TITLE VARCHAR2(50) NOT NULL,    -- 제목
   INQ_CONTENT VARCHAR2(4000),  		  -- 내용
+  INQ_EMAIL VARCHAR2(50),             -- 이메일
   INQ_PHONE VARCHAR2(30),         	  -- 전화번호
   INQ_REG_ID VARCHAR2(20),   	      -- 등록자
   INQ_MOD_ID VARCHAR2(20),   	      -- 수정자

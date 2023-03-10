@@ -17,13 +17,13 @@
 			if(!fn_validation()){ 
 				return;
 			}else{
-				var boardContent = String($("#vstContent").val());
+				var boardContent = String($("#inqContent").val());
 	
 				boardContent = boardContent.replace(/\n/gi, "<br/>");
 	
-				$("#vstContent").val(boardContent);
+				$("#inqContent").val(boardContent);
 	
-		 		$("#reservationWrite").submit();
+		 		$("#inquiryWrite").submit();
 			}
 		}
 	
@@ -33,7 +33,7 @@
 <jsp:include page="/common/top.jsp"></jsp:include>
 <div class="wrap">
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_reservation.jpg");'>
+<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.jpg");'>
 	<div class="boardText">
 		<h3 class="boardTitle">RESERVATION</h3>
 		<p class="boardSub">상담 예약 문의</p>
@@ -43,38 +43,38 @@
 <!-- Detail -->
 	<div class="container">
 	<h4 class="Title">상담신청하기</h4>
-		<form id="reservationWrite" class="form-horizontal boardwrite" method="post" action="${context}/work/board/reservationWrite.do" role="form">
+		<form id="inquiryWrite" class="form-horizontal boardwrite" method="post" action="${context}/work/board/inquiryWrite.do" role="form">
 		
 		<!--
 		  <div class="form-group">
 		    <label for="inputEmail3" class="col-sm-2 control-label">이름</label>
 		    <div class="col-sm-12">
-		      <input type="text" class="form-control" id="vstRegId" name="vstRegId" placeholder="이름을 입력해주세요">
+		      <input type="text" class="form-control" id="inqRegId" name="inqRegId" placeholder="이름을 입력해주세요">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inqPhone" class="col-sm-2 control-label">전화번호</label>
+		    <div class="col-sm-12">
+		      <input type="tel" class="form-control" id="inqPhone" name="inqPhone" placeholder="전화번호을 입력해주세요">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inqEmail" class="col-sm-2 control-label">이메일</label>
+		    <div class="col-sm-12">
+		      <input type="email" class="form-control" id="inqEmail" name="inqEmail" placeholder="이메일을 입력해주세요">
 		    </div>
 		  </div>
 		  -->
 		  <div class="form-group">
-		    <label for="vstPhone" class="col-sm-2 control-label">전화번호</label>
+		    <label for="inqTitle" class="col-sm-2 control-label">제목</label>
 		    <div class="col-sm-12">
-		      <input type="tel" class="form-control" id="vstPhone" name="vstPhone" placeholder="전화번호을 입력해주세요">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="vstEmail" class="col-sm-2 control-label">이메일</label>
-		    <div class="col-sm-12">
-		      <input type="email" class="form-control" id="vstEmail" name="vstEmail" placeholder="이메일을 입력해주세요">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="vstTitle" class="col-sm-2 control-label">제목</label>
-		    <div class="col-sm-12">
-		      <input type="text" class="form-control" id="vstTitle" name="vstTitle" placeholder="제목을 입력해주세요">
+		      <input type="text" class="form-control" id="inqTitle" name="inqTitle" placeholder="제목을 입력해주세요">
 		    </div>
 		  </div>
 		   <div class="form-group">
-		    <label for="vstContent" class="col-sm-2 control-label">내용</label>
+		    <label for="inqContent" class="col-sm-2 control-label">내용</label>
 		    <div class="col-sm-12">
-		     <textarea class="form-control" rows="4" style="width: 100%; height: 272px !important;" id="vstContent" name="vstContent" placeholder="내용을 입력해주세요"></textarea>
+		     <textarea class="form-control" rows="4" style="width: 100%; height: 272px !important;" id="inqContent" name="inqContent" placeholder="내용을 입력해주세요"></textarea>
 		    </div>
 		  </div>
 		  

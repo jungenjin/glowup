@@ -9,23 +9,23 @@
 <title>예약 문의 글쓰기</title>
 <script src="${context}/js/jquery-1.9.1.js"></script>
 	<script type="text/javascript">
-		function fn_reservationList(){
-			location.href = "${context}/work/board/reservation.do";
+		function fn_inquiryList(){
+			location.href = "${context}/work/board/inquiry.do";
 		}
 		//글 삭제
 		function fn_delete(){
-			var VstNo = '${dsReservation.VST_NO}';
+			var VstNo = '${dsInquiry.INQ_NO}';
 	
 			if(confirm("정말 글을 삭제하시겠습니까?")){
-				location.href = "${context}/work/board/deleteReservation.do?vstNo=" + VstNo;
+				location.href = "${context}/work/board/deleteInquiry.do?inqNo=" + VstNo;
 			}
 		}
 		
 		//글 수정
 		function fn_update(){
-			var VstNo = '${dsReservation.VST_NO}';
+			var VstNo = '${dsInquiry.INQ_NO}';
 	
-			location.href = "${context}/work/board/reservationModify.do?vstNo=" + VstNo;
+			location.href = "${context}/work/board/inquiryModify.do?inqNo=" + VstNo;
 		}
 	</script>
 </head>
@@ -33,14 +33,14 @@
 <jsp:include page="/common/top.jsp"></jsp:include>
 <div class="wrap">
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_reservation.jpg");'>
+<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.jpg");'>
 	<div class="boardText">
 		<h3 class="boardTitle">RESERVATION</h3>
 		<p class="boardSub">상담 예약 문의</p>
 	</div>
 </div>
 <!-- title, visual end -->
-<!-- ReservationWrite -->
+<!-- InquiryWrite -->
 	<div class="container">
 	<div class="page-header">
 	<div class="row">
@@ -49,39 +49,39 @@
 					<h2 class="title">상담 예약 문의</h2>
 				</div>
 				<div class="col-xs-4 text-right">
-					<button type="button" class="btn btn-lg boardbtn notice" onclick="fn_reservationList()">목록</button>
+					<button type="button" class="btn btn-lg boardbtn notice" onclick="fn_inquiryList()">목록</button>
 				</div>
 	</div>
 	<form class="form-horizontal" method="post" role="form">
 		<div class="boardview">
 		  <div class="form-group">
-		    <label for="vstEmail" class="col-sm-2 control-label">이름</label>
+		    <label for="inqEmail" class="col-sm-12 control-label">이름</label>
 		    <div class="col-sm-12 content">
-		      ${dsReservation.USER_NAME}
+		      ${dsInquiry.USER_NAME}
 		    </div>
 		  </div>
 		  <div class="form-group">
-		    <label for="vstPhone" class="col-sm-2 control-label">전화번호</label>
+		    <label for="inqPhone" class="col-sm-12 control-label">전화번호</label>
 		    <div class="col-sm-12 content">
-		      ${dsReservation.VST_PHONE}
+		      ${dsInquiry.PHONE}
 		    </div>
 		  </div>
 		  <div class="form-group content">
-		    <label for="vstEmail" class="col-sm-2 control-label">이메일</label>
+		    <label for="inqEmail" class="col-sm-12 control-label">이메일</label>
 		    <div class="col-sm-12">
-		      ${dsReservation.VST_EMAIL}
+		      ${dsInquiry.EMAIL}
 		    </div>
 		  </div>
 		  <div class="form-group title">
-		    <label for="vstTitle" class="col-sm-2 control-label">제목</label>
+		    <label for="inqTitle" class="col-sm-12 control-label">제목</label>
 		    <div class="col-sm-12">
-		      ${dsReservation.VST_TITLE}
+		      ${dsInquiry.INQ_TITLE}
 		    </div>
 		  </div>
 		   <div class="form-group content">
-		    <label for="vstContent" class="col-sm-2 control-label">내용</label>
+		    <label for="inqContent" class="col-sm-12 control-label">내용</label>
 		    <div class="col-sm-12">
-		     ${dsReservation.VST_CONTENT}
+		     ${dsInquiry.INQ_CONTENT}
 		    </div>
 		  </div>
 		<!-- board button area start -->
