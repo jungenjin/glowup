@@ -37,16 +37,16 @@
 </div>
 <!-- title, visual end -->
 <!-- InquiryWrite -->
-	<div class="container">
+<div class="container">
 	<div class="page-header">
 	<div class="row">
-				<div class="col-xs-8">
-					<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-					<h2 class="title">상담 예약 문의</h2>
-				</div>
-				<div class="col-xs-4 text-right">
-					<button type="button" class="btn btn-lg boardbtn notice" onclick="fn_inquiryList()">목록</button>
-				</div>
+		<div class="col-xs-8">
+			<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
+			<h2 class="title">1:1문의</h2>
+		</div>
+		<div class="col-xs-4 text-right">
+			<button type="button" class="btn btn-lg boardbtn notice" onclick="fn_inquiryList()">목록</button>
+		</div>
 	</div>
 	<form class="form-horizontal" method="post" role="form">
 		<div class="boardview">

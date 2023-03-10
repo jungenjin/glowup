@@ -21,41 +21,41 @@
 </div>
 <!-- title, visual end -->
 <!-- Detail -->
-	<div class="container">
-		<!-- board title, buttons start -->
-		<div class="page-header">
-			<div class="row">
-				<div class="col-xs-8">
-					<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-					<h2 class="title">상담 예약 문의</h2>
-				</div>
-				<div class="col-xs-4 text-right">
-					<button type="button" class="btn btn-lg boardbtn"  onclick="fn_inquiryWrite()">새 글 쓰기</button>
-				</div>
+<div class="container">
+	<!-- board title, buttons start -->
+	<div class="page-header">
+		<div class="row">
+			<div class="col-xs-8">
+				<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
+				<h2 class="title">1:1문의</h2>
+			</div>
+			<div class="col-xs-4 text-right">
+				<button type="button" class="btn btn-lg boardbtn"  onclick="fn_inquiryWrite()">새 글 쓰기</button>
 			</div>
 		</div>
-		<!-- board title, buttons end -->
-		<div class="row">
-			<!-- board list start -->
-            <div class="table-responsive">
-                <table class="table table-hover boardlist">
-                    <tbody>
-                        <c:forEach items="${dsinquiryList}" var="dsinquiryList">
-                         <tr>
-                         	<td>
-                         		<div class="col-md-10"><a href ="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a></div>
-								<div class="col-md-2 text-right">${dsinquiryList.USER_NAME}</div>
-								                      
-                         	</td>
-                         </tr>
-                    	</c:forEach>
-                    </tbody>
-                </table>
-            </div>
-			<!-- board list end -->
-		</div> <!-- row end -->
-	</div> <!-- container end -->
+	</div>
+	<!-- board title, buttons end -->
+	<div class="row">
+		<!-- board list start -->
+           <div class="table-responsive">
+               <table class="table table-hover boardlist">
+                   <tbody>
+                       <c:forEach items="${dsinquiryList}" var="dsinquiryList">
+                        <tr>
+                        	<td>
+                        		<div class="col-md-10"><a href ="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a></div>
+							<div class="col-md-2 text-right">${dsinquiryList.USER_NAME}</div>
+							                      
+                        	</td>
+                        </tr>
+                   	</c:forEach>
+                   </tbody>
+               </table>
+           </div>
+		<!-- board list end -->
+	</div> <!-- row end -->
+</div> <!-- container end -->
 
-	<jsp:include page="${context}/common/foot.jsp"></jsp:include>
+<jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
 </html>

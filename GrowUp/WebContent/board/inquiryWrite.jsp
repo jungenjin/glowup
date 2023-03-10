@@ -38,7 +38,7 @@
 <!-- title, visual end -->
 <!-- Detail -->
 	<div class="container">
-	<h4 class="Title">상담신청하기</h4>
+	<h4 class="Title">1:1문의</h4>
 		<form id="inquiryWrite" class="form-horizontal boardwrite" method="post" action="${context}/work/board/inquiryWrite.do" role="form">
 		
 		<!--

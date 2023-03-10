@@ -57,8 +57,8 @@
 </div>
 <!-- title, visual end -->
 <!-- InquiryWrite -->
-	<div class="container">
-	<h4 class="Title">상담 신청 문의</h4>
+<div class="container">
+	<h4 class="Title">1:1문의</h4>
 		<form id="inquiryModify" class="form-horizontal" method="post" action="${context}/work/board/inquiryModify.do?inqNo=${dsInquiry.INQ_NO}" role="form">
 		  <!-- 
 		  <div class="form-group">
