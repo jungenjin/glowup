@@ -80,15 +80,16 @@
 					<a class="nav-link active" href="${context}/work/user/logout.do">로그아웃</a>
 					</c:if>
 				</li>
+				<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
 				<li class="nav-item dropdown">
 					<a class="nav-link active nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">마이페이지</a>
 					<ul class="dropdown-menu">
-					<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
+					
 					    <li class="nav-item"><a class="nav-link active" href="${context}/work/sell/retrieveBuyList.do">구매내역</a></li>
 					    <li class="nav-item"><a class="nav-link active" href="${context}/work/user/updateUser.do">정보수정</a></li>
 		          	</ul>
-					</c:if>
 				</li>
+				</c:if>
        		</ul>
 		</div>
 	        
