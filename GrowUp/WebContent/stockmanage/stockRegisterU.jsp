@@ -32,6 +32,7 @@
 	function fn_setDetailInfo(){
 		$("#productCode").val('${dsProduct.PRODUCT_CODE}');
 		$("#productName").val('${dsProduct.PRODUCT_NAME}');
+		$("#productNameEng").val('${dsProduct.PRODUCT_NAME_ENG}');
 		$("#productDescription").val('${dsProduct.PRODUCT_DESCRIPTION}');
 		$("#productCategoryCd").val('${dsProduct.PRODUCT_CATEGORY_CD}');
 		$("#productUnitPrice").val('${dsProduct.PRODUCT_UNIT_PRICE}');
@@ -125,6 +126,12 @@
 				<label for="productName" class="control-label col-md-2"><b>상품명</b></label>
 				<div class="col-md-10">
 					<input class="form-control" type="text" name="productName" id="productName" required="required" autofocus="autofocus"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="productName" class="control-label col-md-2"><b>상품명 영문</b></label>
+				<div class="col-md-10">
+					<input class="form-control" type="text" name="productNameEng" id="productNameEng" required="required" autofocus="autofocus"/>
 				</div>
 			</div>
 			

@@ -1,6 +1,9 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Noto+Sans+KR&display=swap');
-body {font-family: 'Gotu', 'Noto Sans KR', serif, sans-serif;word-break:keep-all}
+@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+body {font-family: 'Noto Sans KR', 'Gotu', serif, sans-serif; word-break:keep-all}
+
+/* 영문폰트 클래스 추가 */
+.gotu {font-family: "Gotu";}
 
 nav{
 	background : none !important;

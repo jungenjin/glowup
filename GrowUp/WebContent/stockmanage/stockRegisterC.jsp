@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var ="context"><%=request.getContextPath()%></c:set>
 <!DOCTYPE html>
 <html>
@@ -104,6 +105,12 @@
 				<label for="productName" class="control-label col-md-2"><b>상품명</b></label>
 				<div class="col-md-10">
 					<input class="form-control" type="text" name="productName" id="productName" required="required" autofocus="autofocus"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="productName" class="control-label col-md-2"><b>상품명 영문</b></label>
+				<div class="col-md-10">
+					<input class="form-control" type="text" name="productNameEng" id="productNameEng" required="required" autofocus="autofocus"/>
 				</div>
 			</div>
 			
