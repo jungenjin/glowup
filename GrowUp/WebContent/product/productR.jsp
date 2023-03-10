@@ -138,24 +138,30 @@
 </head>
 <body class="productview">
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
-<!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_product.png");'></div>
-<!-- title, visual end -->
 <div class="container">
+	<div class="nav justify-content-end ">
+		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="d-none d-lg-block">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="${context}/work/product/goMain.do">홈</a></li>
+				<li class="breadcrumb-item"><a href="#" onclick="fn_back()">${dsProduct.PRODUCT_CATEGORY_CD_NM}</a></li>
+				<li class="breadcrumb-item active" aria-current="page">${dsProduct.PRODUCT_NAME}</li>
+			</ol>
+		</nav>
+	</div>
 	<!-- board title, buttons start -->
-	<div class="page-header">
+<%-- 	<div class="page-header">
 		<div class="row">
 			<div class="col-xs-8">
 				<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
 				<h2 class="title eng">${dsProduct.PRODUCT_NAME}</h2>
 			</div>
 		</div>
-	</div>
+	</div> --%>
 	<!-- board title, buttons end -->
 	<div class="row">
 		<!-- 상품이미지 start -->
-		<div class="col-md-6" align="center">
-			<img id="image" src="${context}" class="img-responsive detailimg">
+		<div class="col-lg-6">
+			<img id="image" src="${context}" class="img-fluid detailimg">
               	<script type="text/javascript">
         		var existFolder = '';
         		var imageFolder = '';
@@ -184,20 +190,15 @@
 		</div>
 		<!-- 상품이미지 end -->
 		<!-- 상품정보 start -->
-		<div class="col-md-6 productInfo">
-			<table class="table table-user-information" >
+		<div class="col-lg-6 productInfo">
+			<table class="table table-user-information">
 				<tbody>
 					<tr>
-						<td>제품명</td>
-						<td>${dsProduct.PRODUCT_NAME}</td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>${dsProduct.PRODUCT_NAME_ENG}</td>
-					</tr>
-					<tr>
-						<td>설명</td>
-						<td>${dsProduct.PRODUCT_DESCRIPTION}</td>
+						<td colspan="2">
+							<h2>${dsProduct.PRODUCT_NAME}</h2>
+							<p class="h5 gotu">${dsProduct.PRODUCT_NAME_ENG}</p>
+							<p class="h5 desc">${dsProduct.PRODUCT_DESCRIPTION}</p>
+						</td>
 					</tr>
 					<tr>
 						<td>판매가</td>
@@ -210,43 +211,30 @@
 							<td id="stock">${dsProduct.PRODUCT_COUNT}개</td>
 						</tr>
 						<tr>
-							<td>수량</td>
+							<td>구매수량</td>
 							<td>
 								<div class="input-group number-spinner" style="width: 150px;">
-									<span class="input-group-btn data-dwn">
-										<button class="btn" data-dir="dwn">
-											<span class="glyphicon glyphicon-minus"></span>
-										</button>
-									</span> 
-									<input type="text" class="form-control text-center" value="1" min="1" max="100" width="100%" disabled="disabled" style="height:32px;box-shadow:none;border:0">
-									<span class="input-group-btn data-up">
-										<button class="btn" data-dir="up">
-											<span class="glyphicon glyphicon-plus"></span>
-										</button>
-									</span>
+									<button class="btn" data-dir="dwn" style="height:38px;"><i class="fa-solid fa-minus"></i></button>
+									<input type="text" class="form-control text-center" value="1" min="1" max="100" width="100%" disabled="disabled" style="height:38px;box-shadow:none;border:0">
+									<button class="btn" data-dir="up" style="height:38px;"><i class="fa-solid fa-plus"></i></button>
 								</div>
 							</td>
 						</tr>
 						</c:when>
 						<c:otherwise>
-						<tr>
-							<td>남은 수량</td>
-							<td id="stock"><mark class="text-danger">품절</mark></td>
-						</tr>
-						<tr>
-							<td> </td>
-						</tr>
+							<tr>
+								<td>남은 수량</td>
+								<td id="stock"><span class="text-danger">품절</span></td>
+							</tr>
 						</c:otherwise>
 					</c:choose>
 				</tbody>
 			</table>
-			<div class="row">
-				<div class="col-xs-6">
-					<!-- 구매하기 버튼 -->
+			<div class="row infobtn">
+				<div class="col">
 					<button id="buyBtn" type="button" class="btn btn-lg" onclick="fn_buy()">구매하기</button>
 				</div>
-				<div class="col-xs-6">
-					<!-- 장바구니 버튼 -->
+				<div class="col">
 					<button id="cartBtn" type="button" class="btn btn-lg" onclick="fn_cart()">장바구니</button>
 				</div>
 			</div>
@@ -254,39 +242,9 @@
 		<!-- 상품정보 end -->
 	</div>
 	<!-- 상품디테일 start -->
-	<div class="row">
-		<div class="text-center product-title scent-wrap">
-			<div class="scent-info">
-		      <span>Fragrance</span>
-		      <span>Number</span>
-			</div>
-		</div>
-		<div class="text-center product-details scent-wrap">
-			<div class="scent-info-sub">
-		      <span><em>저희 제품은 패키지에 </em> <em>주 원료를 표기하여</em></span>
-		      <span><em>직관적으로 향을 이해하고,</em> <em>나에게 맞는 향을 고를 수 있습니다.</em></span>
-			</div>
-		</div>
-		<div class="scent-info-img">
-			<img class="img-responsive scent-info-img" src="${context}/img/product_scent.png" alt="맞는향">
-			<img class="img-responsive scent-info-video" src="https://media.11corporation.com/cdn/addict/godo/detail/1000000045/20221025/detail_11.jpg?tr=w-1170,h-auto&amp;_=22010251810">
-		</div>	
-		<div class="scent-info-img">
-			<video class="img-responsive scent-info-video" playsinline="" autoplay="" muted="" loop="" type="video/mp4"  src="https://d2awjssdq42p8p.cloudfront.net/addict/video/media-convert/66d58d25/09010017.h264.mp4"></video>
-			<img class="img-responsive scent-info-img" src="https://media.11corporation.com/cdn/addict/godo/detail/1000000069/20221115/detail_11.jpg?tr=w-1170,h-auto&amp;_=2211151645" >
-			<video class="img-responsive scent-info-video" playsinline="" autoplay="" muted="" loop="" type="video/mp4" src="https://d2awjssdq42p8p.cloudfront.net/addict/video/media-convert/2c1e6af7/b87663e4.h264.mp4"></video>
-		</div>	
-		<div class="text-center product-title scent-wrap">
-			<div class="scent-info">
-	      		<span>Membership</span>
-	      		<span>Benefits</span>
-			</div>
-		</div>
-		<div class="text-center product-details scent-wrap">
-			<div class="scent-info-sub">
-				<span class="fragancia"><em>Aroma, Fragancia</em></span> <span><em>회원이 되어</em></span>
-		      	<span><em>회원 전용 </em> <em>혜택을 받아보세요.</em></span>
-			</div>
+	<div class="row product_detail">
+		<div class="col">
+			<img src="${context}/img/product_detail.png" class="w-100 my-5">
 		</div>
 	</div>
 	<!-- 상품디테일 end -->
