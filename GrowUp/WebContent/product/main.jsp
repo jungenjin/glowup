@@ -190,7 +190,7 @@
       </c:if>
    
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>
-	</div>
+
    <script>
   AOS.init();
 </script>

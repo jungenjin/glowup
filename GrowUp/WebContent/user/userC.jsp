@@ -121,9 +121,9 @@
        	<div class="col-md-6 col-md-offset-3">
 	        <div class="loginbox">
 	        	<!-- login tab button start -->
-	        	<div class="logintab">
-			        <div class="col-xs-6 tabbtn"><a href="${context}/user/login.jsp">Login</a></div>
-					<div class="col-xs-6 tabbtn on"><a href="${context}/work/user/createUser.do">Register</a></div>
+	        	<div class="logintab row">
+			        <div class="col-6 tabbtn"><a href="${context}/user/login.jsp">Login</a></div>
+					<div class="col-6 tabbtn on"><a href="${context}/work/user/createUser.do">Register</a></div>
 				</div>
 	        	<!-- login tab button end -->
 				<form id="joinFrm" method="post" action="${context}/work/user/createUser.do" role="form">
