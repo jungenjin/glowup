@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var ="context"><%=request.getContextPath()%></c:set>
 <!DOCTYPE html>
 <html>
@@ -190,12 +191,16 @@
 						<td>${dsProduct.PRODUCT_NAME}</td>
 					</tr>
 					<tr>
+						<td></td>
+						<td>${dsProduct.PRODUCT_NAME_ENG}</td>
+					</tr>
+					<tr>
 						<td>설명</td>
 						<td>${dsProduct.PRODUCT_DESCRIPTION}</td>
 					</tr>
 					<tr>
 						<td>판매가</td>
-						<td id="price">${dsProduct.PRODUCT_UNIT_PRICE}원</td>
+						<td id="price">₩ <fmt:formatNumber value="${dsProduct.PRODUCT_UNIT_PRICE}" pattern="#,###" /></td>
 					</tr>
 					<c:choose>
 						<c:when test="${dsProduct.PRODUCT_COUNT != 0}">

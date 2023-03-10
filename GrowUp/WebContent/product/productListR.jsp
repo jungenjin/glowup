@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="context"><%=request.getContextPath()%></c:set>
 <!DOCTYPE html>
 <html>
@@ -47,15 +48,17 @@
 					<a href="${context}/work/product/retrieveProduct.do?productCode=${dsProductList.PRODUCT_CODE}">
 						<img name="image" src="${context}" class="img-responsive">
 						<h3 class="itemtitle">
-							${dsProductList.PRODUCT_NAME}<br>
-							<small>${dsProductList.PRODUCT_DESCRIPTION}</small>
+							${dsProductList.PRODUCT_NAME}
+							<h4>${dsProductList.PRODUCT_NAME_ENG}</h4><br>
 						</h3>
 					</a>
-					<h4>${dsProductList.PRODUCT_UNIT_PRICE} 원</h4>
+					<h4>${dsProductList.PRODUCT_DESCRIPTION}</h4>
 					<h4>
 						<c:choose>
-							<c:when test="${dsProductList.PRODUCT_COUNT != 0}">남은 수량 : ${dsProductList.PRODUCT_COUNT} 개</c:when>
-							<c:otherwise><mark class="text-danger">품절</mark></c:otherwise>
+							<c:when test="${dsProductList.PRODUCT_COUNT != 0}">
+								₩ <fmt:formatNumber value="${dsProductList.PRODUCT_UNIT_PRICE}" pattern="#,###" />
+							</c:when>
+							<c:otherwise><span class="text-danger">품절</span></c:otherwise>
 						</c:choose>
 					</h4>
 				</div>
@@ -101,6 +104,10 @@
 						$("img[name='image']").eq('${dsProductIdx.index}').attr("src", path.replace(existFolder, imageFolder));
 						//console.log("imageFolder",imageFolder);
 					});
+					
+					//가격에 ₩ 및 , 추가
+					var won = '${dsProductList.PRODUCT_UNIT_PRICE}'.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+					console.log(won)
 					
 				</script>
 			</c:forEach>
