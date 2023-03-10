@@ -10,11 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 	<title>Glow up</title>
 	<!-- CSS only -->
-	<link href="${context}/css/bootstrap.min.css" rel="stylesheet">
-	<link href="${context}/css/bootstrap-theme.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 	<link href="${context}/css/common.css" rel="stylesheet">
-	<script src="${context}/js/bootstrap.min.js"></script>
 	<!-- JavaScript Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 	<script src="${context}/js/common.js"></script>
@@ -22,78 +19,87 @@
 
 <!-- URL 추가 -->
 <c:set var="homeUrl">${context}/work/product/goMain.do</c:set>
-<c:set var="loginUrl">${context}/user/login.jsp</c:set>
-
-<c:set var="visitUrl">${context}/work/board/reservation.do</c:set>
 <c:set var="noitceUrl">${context}/work/board/notice.do</c:set>
 <c:set var="cmmuUrl">${context}/work/board/community.do</c:set>
-<c:set var="eventUrl">${context}/work/board/event.do</c:set>
+<c:set var="inquiryUrl">${context}/work/board/inquiry.do</c:set>
 <c:set var="FAQUrl">${context}/FAQ/FAQ.jsp</c:set>
+<c:set var="qnaUrl">${context}/work/board/qna.do</c:set>
+
+<c:set var="loginUrl">${context}/user/login.jsp</c:set>
+<c:set var="eventUrl">${context}/work/board/event.do</c:set>
 
 <c:set var="eyeUrl">${context}/work/product/retrieveProductList.do?category=E</c:set>
 <c:set var="lipUrl">${context}/work/product/retrieveProductList.do?category=L</c:set>
 <c:set var="faceUrl">${context}/work/product/retrieveProductList.do?category=F</c:set>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-xl">
+    <nav class="navbar bg-light fixed-top navbar-expand-*">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+        <div class="navbar-header offcanvas-start">
           <a class="navbar-brand" href="${homeUrl}">
-          	<img src="${context}/img/GlowupW_logo.png" alt="glowup" width="" height="24">
+          	<img src="${context}/img/Glowup_logo.png" alt="glowup" width="" height="24">
           </a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
         </div>
-      	 
-        <div id="navbar" class="collapse navbar-collapse">
-          	<ul class="nav navbar-nav navbar-left member">
+        
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+		<div class="offcanvas-header">
+        	<h5 class="offcanvas-title" id="offcanvasNavbarLabel ">
+				<a class="navbar-brand" href="${homeUrl}"><img src="${context}/img/Glowup_logo.png" alt="glowup" width="" height="24"></a>
+        	</h5>
+        	<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      	</div>
+      <div class="offcanvas-body">
+          	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 	          	<!--  링크 수정  -->
-				<li><a onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eyeUrl}')">섀도우</a></li>
-				<li><a onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${lipUrl}')">립스틱</a></li>
-				<li><a onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${faceUrl}')">파운데이션</a></li>
-				<li><a onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
-			</ul> 
-			<ul class="nav navbar-nav navbar-right member">
-				<li>
+				<li class="nav-item"><a class="nav-link active"  onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eyeUrl}')">섀도우</a>
+				</li>
+				<li class="nav-item"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${lipUrl}')">립스틱</a>
+				</li>
+				<li class="nav-item"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${faceUrl}')">파운데이션</a>
+				</li>
+				<li class="nav-item"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a>
+				</li>
+				<li class="nav-item">
 					<c:if test="${sessionScope.id == null}">
-						<a href="${context}/work/user/createUser.do">회원가입</a>
-					</c:if>
-					<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
-						<a href="${context}/work/cart/retrieveCartList.do">장바구니</a>
+						<a class="nav-link active" href="${context}/work/user/createUser.do">회원가입</a>
 					</c:if>
 				</li>
-				<li>
+				<li class="nav-item">
+					<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
+						<a class="nav-link active" href="${context}/work/cart/retrieveCartList.do">장바구니</a>
+					</c:if>
+				</li>
+				<li class="nav-item">
 					<c:if test="${sessionScope.id == null}">
-						<a href="${context}/user/login.jsp">로그인</a>
+					<a class="nav-link active" href="${context}/user/login.jsp">로그인</a>
 					</c:if>
 					<c:if test="${sessionScope.id != null}">
-						<a href="${context}/work/user/logout.do">로그아웃</a>
+					<a class="nav-link active" href="${context}/work/user/logout.do">로그아웃</a>
 					</c:if>
 				</li>
-				
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">마이페이지</a>
-				<ul class="dropdown-menu">
-				<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
-				    <li><a href="${context}/work/sell/retrieveBuyList.do">구매내역</a></li>
-				    <li><a href="${context}/work/user/updateUser.do">정보수정</a></li>
-	          	</ul>
-				</c:if>
-          	</ul>
-			</div>
+					<a class="nav-link active nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">마이페이지</a>
+					<ul class="dropdown-menu">
+					<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
+					    <li class="nav-item"><a class="nav-link active" href="${context}/work/sell/retrieveBuyList.do">구매내역</a></li>
+					    <li class="nav-item"><a class="nav-link active" href="${context}/work/user/updateUser.do">정보수정</a></li>
+		          	</ul>
+					</c:if>
+				</li>
+       		</ul>
+		</div>
 	        
 				<li class="dropdown">
 				<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">관리자 메뉴<span class="caret"></span></a>
+		          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">관리자 메뉴<span class="caret"></span></a>
 		          <ul class="dropdown-menu">
-		          	<li><a href="${context}/work/user/updateUser.do">정보수정</a></li>
-					<li><a href="${context}/work/product/retrieveProductListForManage.do">재고관리</a></li>
-					<li><a href="${context}/work/sell/retrieveStatisticsForProduct.do">매출통계</a></li>
-					<li><a href="${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=P">재고현황</a></li>
+		          	<li><a class="nav-link active" href="${context}/work/user/updateUser.do">정보수정</a></li>
+					<li><a class="nav-link active" href="${context}/work/product/retrieveProductListForManage.do">재고관리</a></li>
+					<li><a class="nav-link active" href="${context}/work/sell/retrieveStatisticsForProduct.do">매출통계</a></li>
+					<li><a class="nav-link active" href="${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=P">재고현황</a></li>
 		          </ul>
 				</c:if>
 			</li>
