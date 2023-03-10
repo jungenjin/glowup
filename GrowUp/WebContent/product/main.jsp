@@ -12,14 +12,10 @@
 	<!-- CSS only -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-	<!-- fontawesome6.3.0 관리자페이지에 사용 -->
-	<link href="${context}/css/fontawesome6.3.0/solid.css" rel="stylesheet">
-	<link href="${context}/css/fontawesome6.3.0/v4-shims.css" rel="stylesheet" />  
-	<script defer src="${context}/js/fontawesome6.3.0/all.min.js"></script>
 	<!-- JavaScript Bundle with Popper -->
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="${context}/js/jquery-1.9.1.js"></script>
 	<script src="${context}/js/jquery.tubular.1.0.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="${context}/js/owl.carousel.js"></script>
 
    <script type="text/javascript">
@@ -169,6 +165,7 @@
 	         <h1>재고현황</h1>
 	      </div> 
 	   </div>
+   	<jsp:include page="${context}/common/foot.jsp"></jsp:include>
 	</div>
 	</c:if>
 <script>

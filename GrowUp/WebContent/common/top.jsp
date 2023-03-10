@@ -12,7 +12,11 @@
 	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 	<link href="${context}/css/common.css" rel="stylesheet">
+	<!-- fontawesome6.3.0 관리자 페이지에 사용 -->
+	<link href="${context}/css/fontawesome6.3.0/solid.css" rel="stylesheet">
+	<link href="${context}/css/fontawesome6.3.0/v4-shims.css" rel="stylesheet" />  
 	<!-- JavaScript Bundle with Popper -->
+	<script defer src="${context}/js/fontawesome6.3.0/all.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 	<script src="${context}/js/common.js"></script>
 </head>
@@ -89,9 +93,13 @@
 		          	</ul>
 				</li>
 				</c:if>
-				<!-- 관리자 메뉴 -->
-				<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
-				<div class= "container" style="margin-top:65px;">
+			
+					<!-- 관리자 메뉴 -->
+					<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
+					<div class= "container">
+						<h1 class="admintitle"><mark>관리자 모드</mark></h1>
+					</div>
+					</c:if>
 					<li class="nav-item dropdown">
 					<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
 				        		<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">관리자 메뉴<span class="caret"></span></a>
@@ -103,13 +111,11 @@
 				       	</ul>
 					</c:if>
 					</li>
-				</div>
-				</c:if>
 			</ul>
 		</div>
 	</div>
 </nav>
 <!--/.nav-collapse -->
-	<h1 class="admintitle"><mark>관리자 모드</mark></h1>
+
 </body>
 </html>
