@@ -48,24 +48,20 @@
 				</div>
 			</div>
 			<!-- board title-->
-			<div class="boardview">
+			<div class="border-bottom">
 				<!-- board view start -->
-				<div class="row title">
-					<div class="col-sm-12 col-md-10">
-						${dsEvent.EV_TITLE}
-					</div>
-					<div class="col-sm-12 col-md-2 user">
-						${dsEvent.USER_NAME}
-					</div>
+				<div class="d-flex flex-row fs-4 mb-2 p-2 ">
+					<div class="col-md-10 justify-content-start px-3">${dsEvent.EV_TITLE}</div>
+					<div class="col-md-2 justify-content-end">${dsEvent.USER_NAME}</div>
 				</div>
-				<div class="row content">
-					${dsEvent.EV_CONTENT}
-				</div>
+			</div>
+			<div class="d-flex flex-row fs-5 mt-2">
+				<div class="p-2 px-4">${dsEvent.EV_CONTENT}</div>
 			</div>
 			<!-- board view end -->
 			<!-- board button area start -->
 			<c:if test="${sessionScope.grade == 'A' || sessionScope.userCode == dsEvent.EV_REG_ID}">
-				<div class="col-xs-4 d-flex justify-content-end">
+				<div class="d-flex justify-content-end">
 					<button class="btn boardbtn" type="button" onclick="fn_eventList()">목록</button>
 					<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
 					<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>

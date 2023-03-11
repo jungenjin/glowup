@@ -40,9 +40,9 @@
 	                        <tr>
 	                        	<td class="d-flex flex-row">
 	                        		<div class="col-md-8 p-2 px-left-1"><a href ="${context}/work/board/eventView.do?evNo=${dsEventList.EV_NO}">${dsEventList.EV_TITLE}</a></div>
-								<div class="col-md-1 p-2 px-right-1">${dsEventList.USER_NAME}</div>
-								<div class="col-md-2 p-2 px-right-1">${dsEventList.EV_REG_DATE}</div>
-								<div class="col-md-1 p-2 px-right-1">조회수 : ${dsEventList.EV_HIT}</div>
+									<div class="col-md-1 p-2 px-right-1">${dsEventList.USER_NAME}</div>
+									<div class="col-md-2 p-2 px-right-1">${dsEventList.EV_REG_DATE}</div>
+									<div class="col-md-1 p-2 px-right-1">조회수 : ${dsEventList.EV_HIT}</div>
 	                        	</td>
 	                        </tr>
 	                   	</c:forEach>
