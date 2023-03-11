@@ -4,12 +4,13 @@
 <c:set var ="context"><%=request.getContextPath()%></c:set>
 <meta charset="UTF-8">
 
-<title>구매내역</title>
-<link href="${context}/css/bootstrap.min.css" rel="stylesheet">
-<link href="${context}/css/bootstrap-theme.css" rel="stylesheet">
-<link href="${context}/css/common.css" rel="stylesheet">
-<script src="${context}/js/bootstrap.min.js"></script>
-<script src="${context}/js/jquery-1.9.1.js"></script>
+<title>자주묻는질문</title>
+<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<link href="${context}/css/common.css" rel="stylesheet">
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+	<script src="${context}/js/common.js"></script>
 </head>
 
 
@@ -19,169 +20,144 @@
 <!-- title, visual start -->
 <div class="titarea" style='background-image: url("${context}/img/subbg_faq.jpg");'></div>
 <!-- title, visual end -->
-	<!-- FAQ start -->
-	<div class=FAQ_wrap>
-	<h1 class="FAQ_Text"><strong>FAQ</strong></h1>
-<div class="FAQ">
-	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <div><p>Q 주문한 상품은 언제 배송되나요?</p><p class=place1>&nbsp;<strong class="right_Text">AROMA</strong></p></div>
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-       AROMA,FRAGNCIA 사이트내 모든 상품[품절상품제외] 주문 및 결제완료 후 익일 출고[주말제외] 됩니다.<br>
-				AROMA,FRAGNCIA 디퓨저 상품은 국내본사공장에서 직접 생산하여 출고가 되므로<br>
-				주문량이 많은 시즌(설날/어버이날/추석/크리스마스)에는 배송일이 지연될 수 있는 점 양해부탁드립니다<br>
-				<strong>*대량 주문의 경우 생산준비 및 배송방법에 따라 일반 상품의 배송기간과 다르니 참고해주세요</strong>
-      </div>
-    </div>
-  </div>
-  <div class="panel">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <div><p>Q 디퓨저 어떻게 사용하나요?</p><p class=place1>&nbsp;<strong class="right_Text">AROMA</strong></p></div>
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-            	<strong>1.본품 뚜껑을 돌려서 열어줍니다.<br></strong>
-			  	<strong>2.유리병용기을 손으로 잡고 가위등을 이용하여 속마개를 잡고 비틀어 분리합니다.<br></strong>
-				(﻿용액이 새는 것을 방지하기 위해 고무마개가 꽉 끼워져있으므로 속마개의 틈사이를 이용해 조심히 분리하시길 권합니다)<br>
-				<strong>3.속마개 분리 후 뚜껑을 다시 닫아줍니다.<br></strong>
-				<strong>4.섬유스틱을 취향에 맞게 꽂아줍니다.<br></strong>
-				(취향에 맞게 스틱의 갯수로 발향을 조절해주세요. 처음에는 2~3개로 시작하는것이 좋습니다.) 
-      </div>
-    </div>
-  </div>
-   <div class="panel">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <div><p>Q 교환및 반품 절차에 대해</p><p class=place1>&nbsp;<strong class="right_Text">AROMA</strong></p></div>
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">
-        	<h4><strong><p class="text-danger">고객님께서 제품 개봉 후 사용중에(고객과실) 발생한 하자 상품에 한해서는 교환 및 반품이 불가합니다.</p></strong></h4><br>
-			교환 및 반품 접수시 게시판에 글을 올려주시거나 고객센터(02-4234-5234)로 문의해주세요.<br>
-			<br>
-			상품 수령직 후 상품 불량 및 파손,훼손으로 인한 사유는 교환 및 반품이 가능합니다.<br>
-			(상품을 받은 후 즉시 확인 하신 후 연락바랍니다.)<br>
-			<br>
-			업체오배송및 제품하자 교환 : 배송비 업체부담<br>
-			배송 받으신 상품의 내용이 다르거나 상품의 하자가 있는 경우에는 배송된 날로부터 7일 이내에 반품이 가능합니다.<br>
-			<br>
-			고객 단순변심 반품 : 배송비 고객부담 (5,000원) <br>
-			단순 고객변심으로 인한 반품은 상품을 받은 후 미사용한 경우에만 해당되며, 왕복택배비는 고객님께서 부담해주셔야 합니다.<br>
-			<br>
-			*택배비 지불방법<br>
-			-보내주시는 택배 안에 택배비가 빠지지 않게 잘 동봉하여 넣어주세요.<br>
-	      </div>
-      </div>
-    </div>
 
-
-  <div class="panel">
-    <div class="panel-heading" role="tab" id="headingFour">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-			 <div><p>Q 디퓨저를 꽂았는데 발향이 잘 되지 않아요</p><p class=place1>&nbsp;<strong class="right_Text">AROMA</strong></p></div>
-        </a>
-      </h4>
-    </div>
-    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-      <div class="panel-body">
-        <strong>1. 향이 약한 것 같아요.<br></strong>
-				발향은 개인취향 및 사용법,주변환경에 따라 달라질수있습니다.<br>
-				향이 약하다 느껴지신다면 주기적으로 꽂아주신 스틱을 거꾸로 꽂아 주시게되면 좀더 풍부한향을 느끼실수 있습니다. 스틱이 오래되어 이미 용액을 다 흡수한 경우 새로운 스틱을 구매하여 꽂아주세요.<br>
-				<br>
-				<strong>2.처음 열었을 때 향이 이상해요.<br></strong>
-				제품 수령하시고 1~2일정도는 배송되는 과정에 제품이 흔들려서 첫 개봉시에 향으로인한 불편함을 겪으실수 있으나 하루정도 지나면 본향을 느끼실수가 있으며 제품의 향강도는 스틱의수를 통해 조절하실수가 있습니다.<br>
-				스틱은 주기적으로 한번씩 뒤집어 주시면 좀더 풍부한 향을 느끼실수가 있습니다.<br>
-				<br>
-				<strong>3.전에 샀던 디퓨저와 향이 다른것 같아요.<br></strong>
-				향은 주변환경,사용법,개인차에 따라 많이 달라지는 제품입니다.<br>
-				디퓨저 제품은 본사 공장내 자체생산하고 있으며 베이스 및 오일원액의 원료,배합률은 변경된 사항이 없습니다. 향 업그레이드 이유로 배합이 변경되는 경우 향변경에 대한 안내문을 공지합니다.
-      </div>
-    </div>
-  </div>
-  <div class="panel">
-    <div class="panel-heading" role="tab" id="headingFive">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-           <div><p> Q 배송전 주문취소는 어떻게 하나요?</p><p class=place1>&nbsp;<strong class="right_Text">AROMA</strong></p></div>
-        </a>
-      </h4>
-    </div>
-    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-      <div class="panel-body">
-            	      	<strong>사이트 자체 내에서는 입금 전 주문취소만 가능합니다.</strong><br>
-			입금 후에는 게시판이나 고객센터로 문의주시면 신속한 처리 해드리도록 노력하겠습니다.<br>
-			
-			주문취소방법<br>
-			로그인 -> 상단의 주문조회 -> 주문내역에서 해당상품의 주문상세 조회 클릭(상품명 오른쪽에 위치)<br>
-			->주문내역 맨 아랫부분의 주문취소를 클릭하시면 정상적으로 주문취소가 접수 됩니다.<br>
-      </div>
-    </div>
-  </div>
-  <div class="panel">
-    <div class="panel-heading" role="tab" id="headingSix">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-            <div><p>Q 제조날짜가 어떻게 되나요?</p><p class=place1>&nbsp;<strong class="right_Text">AROMA</strong></p></div>
-        </a>
-      </h4>
-    </div>
-    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-      <div class="panel-body">
-            	      	<strong>생산시 제조날짜가 매일 자동화 기계로 기재되어 생산됩니다.</strong><br>
+<h1 class="faqhd">자주 묻는 질문</h1>
+	<div class="inputText">
+		<input type="text" id="key" name="key" class="inputTxt" placeholder="무엇을 도와드릴까요?">
+		<button type="button" class="btnSearch" onclick="goSearch();">검색</button>						
+	</div>
+<div class="faqwrap">
+	<div class="accordion accordion-flush" id="accordionFlushExample">
+	  <div class="accordion-item">
+	    <h2 class="accordion-header" id="flush-headingOne">
+	      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+	        	<h3 class="gotu me-4">Q</h3><h4>교환은 어떻게 하나요?</h4>
+	      </button>
+	    </h2>
+	    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+	      <div class="accordion-body">
+	      	<h5>
+	      	상품 불량 및 오배송 등의 경우 동일 제품으로 교환 접수 가능하나 상품이 마음에 들지 않거나 고객 변심에 의한 경우반품 후 재구매로 진행 필요한 점 안내드립니다.<br>
+			(고객 변심인 경우 반품 안내 페이지를 통해 확인 부탁드립니다.)
+			* 상품 불량 및 오배송으로 교환을 원하시는 경우에는 아래 순서로 신청하여 주시면 내용 확인 후 교환 조치해 드립니다.<br>
 			<br>
-			1.기본박스 뒷면 표기사항에는 별도표기로 되어있으나 기계로 따로 찍혀있습니다.(년/월/일)<br>
-			2.시즌상품인 경우 뒷면 표기사항에 (년/월)이 인쇄되어 생산됩니다.<br>
-      </div>
-    </div>
-  </div>
+			1. [1:1 고객 상담] 또는 고객상담실(수신자 요금 부담) 1577-1234로 연락주셔야만 회수접수가 가능하니 꼭 상담실로 연락해주세요.<br>
+			2. 회수신청이 접수되면 제품 회수를 위해 배송받으신 주소로 글로우업 지정 택배사에서(CJ대한통운택배) 영업일 기준 1~3일 내 직접 방문하여 상품을 수거합니다. <br>
+			3. 회수상품 물류 검수 완료 후 새로운 제품으로 출고<br>
+			* 교환 제품이 1~2일내 준비하여 출고되며,출고 이 후 CJ대한통운을 통해 택배사 사정에 따라 평일 1~3일내 배송됩니다.※입고 시간이 소요되는 제품인 경우 추가 시간이 소요될 수 있습니다.</div>
+			</h5>
+	    </div>
+	  </div>
+	  <div class="accordion-item">
+	    <h2 class="accordion-header" id="flush-headingTwo">
+	      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+	        	<h3 class="gotu me-4">Q</h3><h4>주문한 상품과 다른 상품이 왔어요.</h4>
+	      </button>
+	    </h2>
+	    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+	      <div class="accordion-body">
+	      	<h5>
+			오배송으로 불편을 끼쳐 드려 죄송합니다.<br>
+			글로우업 사이트 하단의 [고객센터 > 1:1 상담] 혹은 고객서비스센터(수신자 요금 부담) 1577-1234로 연락 주시면
+			신속하게 처리해드리겠습니다.</div>
+			</h5>
+	    </div>
+	  </div>
+	  <div class="accordion-item">
+	    <h2 class="accordion-header" id="flush-headingThree">
+	      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+	        	<h3 class="gotu me-4">Q</h3><h4>배송비는 얼마인가요?</h4>
+	      </button>
+	    </h2>
+	    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+	      <div class="accordion-body">   
+		    <h5>     
+		         현재 배송비 무료 이벤트 진행중이므로 배송비는 부과되지 않습니다. (3/1 ~ 3/31 까지 진행)<br>
+		    3월 배송비 무료 이벤트 종료 이후에는  고객님의 실 결제금액(할인 후 결제금액)이 5만원 이상일 경우 무료로 배송해드립니다.<br>
+			그러나 총 결제금액이 5만 원 미만일 경우 고객님께서 배송비 2,500원을 부담해주셔야 합니다.<br>
+			5만원 미만 주문 시 배송비 2,500원이 자동으로 추가 결제됩니다.</div>
+			</h5>
+	    </div>
+	  </div>
+	  <div class="accordion-item">
+	    <h2 class="accordion-header" id="flush-headingFour">
+	      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+	        	<h3 class="gotu me-4">Q</h3><h4>반품이 가능한 기준을 알고 싶어요.</h4>
+	      </button>
+	    </h2>
+	    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+	      <div class="accordion-body">   
+			<h5>
+	   		<b>1. 반품이 가능한 경우 </b><br>
+	   		<br>
+			1) 단순 변심, 착오 구매에 따른 교환/반품 신청은 상품을 공급받은 날부터 14일 이내 가능합니다. (배송비 고객 부담)<br>
+			2) 다만, 공급받은 상품이 표시/광고의 내용과 다르거나 계약 내용과 다르게 이행된 경우에는 상품을 공급받은 날부터 3개월 이내,<br>
+			그 사실을 안 날 또는 알 수 있었던 날부터 30일 이내 교환/반품 신청을 하실 수 있습니다. (배송비 회사 부담)<br>
+			3) 교환/반품을 원하는 고객은 쇼핑몰 고객센터 (1577-1234)에 전화 혹은 1:1고객상담 문의 등록 시 확인 후 회수 접수 가능합니다.<br>
+			신청 후 2~3일 이내에 글로우업 지정 택배사가 직접 방문하여 상품을 수거합니다.<br>
+			﻿4) 해당 상품 구매 시 사은품/증정품 등이 제공된 경우, 상품 교환/반품 시 함께 보내주셔야 합니다.<br>
+			<br>﻿
+			<b>﻿2. 반품이 불가능한 경우 </b><br>
+			<br>
+			1) 고객에게 책임이 있는 사유로 상품이 멸실되거나 훼손된 경우(상품 내용을 확인하기 위하여 포장 등을 훼손한 경우는 제외)<br>
+			2) 고객의 사용 또는 일부 소비로 상품 가치가 현저히 감소한 경우<br>
+			3) 시간이 지나 다시 판매하기 곤란할 정도로 상품 가치가 현저히 감소한 경우<br>
+			4) 복제가 가능한 상품의 포장을 훼손한 경우<br>
+			5) 고객의 주문에 따라 개별적으로 생산되는 상품 또는 이와 유사한 상품에 대하여 청약철회 등을 인정하는 경우 통신판매업자에게 회복할 수 없는 중대한 피해가 예상되는 경우로서 사전에 해당 거래에 대하여 별도로 그 사실을 고지하고 고객의 서면(전자 문서 포함)에 의한 동의를 받은 경우<br>
+			</h5>
+		  </div>
+	    </div>
+	  </div>
+	  <div class="accordion-item">
+	    <h2 class="accordion-header" id="flush-headingFive">
+	      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+	      	 <h3 class="gotu me-4">Q</h3><h4>주문을 취소했는데 신용카드 결제는 취소가 되지 않았어요.</h4>
+	      </button>
+	    </h2>
+	    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+	      <div class="accordion-body">
+	      	<h5>   
+	   		카드 매출 취소는 즉시 접수되나, 카드사 사정에 따라 매출 취소 기간이 8일 정도 소요(평일 기준) 될 수 있습니다.<br>
+			그리고 각 신용카드사 청구 작업이 끝난 이후에 취소 처리가 된 경우에는 납부 후 다음 달 카드 대금에서 상계처리될 수 있습니다.<br>
+			카드대금 결제일에 따라 청구 작업 기간이 다른 점 양지 부탁드리며, 해당 카드사에서 확인 가능합니다.<br>
+			</h5>
+		  </div>
+	    </div>
+	  </div>
+	</div>
 </div>
-</div>
-  </div>
- 
 
 
 	<!-- FAQ end -->
 </body>
 <style type="text/css">
 
-/*faq css*/
-.FAQ{
-margin-left: 20%;
-margin-right: 20%;
+.faqwrap{
+margin: 0 10% 10% 10%;
+}
+.faqhd{
+margin-top: 170px;
+margin-left: 10%;
+}
+.inputText{
+text-align: center;
+margin: 70px 0 70px 0;
+}
+.inputTxt{
+width: 436px;
+height: 50px;
+border-radius: 10px;
 }
 
-
-/* 배경색 fff 적용 */
-.FAQ_wrap{
-padding:10%;
-background-color: #fff;
+.btnSearch {
+    position: absolute;
+    width: 32px;
+    height: 48px;
+    background: url(/img/icon_search.svg) no-repeat ;
+    font-size: 0;
+    border: none;
+    margin: 8px 0 0 -46px;
 }
-
-/* FAQ 글자 위치 지정 */
-.FAQ_Text{
-margin-left: 20% 
-}
-
-.place1{
-text-align: right;
-}
-
-
 
 </style>
 
