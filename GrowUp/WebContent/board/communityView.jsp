@@ -36,44 +36,44 @@
 </div>
 <!-- title, visual end -->
 <!-- Detail -->
-	<div class="container">
-		<!-- board title, buttons start -->
+<div class="container-fluid">
+	<div class="px-5 py-5">
+	
+		<!-- board title start -->
 		<div class="page-header">
-			<div class="row">
-				<div class="col-xs-8">
-					<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-					<h2 class="title eng">Community</h2>
-				</div>
-				<div class="col-xs-4 text-right">
-					<button type="button" class="btn btn-lg boardbtn" onclick="fn_communityList()">목록</button>
+			<div class="row py-5">
+				<div class="d-flex flex-row mb-12">
+					<h2 class="title p-2">커뮤니티 게시판</h2>
 				</div>
 			</div>
 		</div>
-		<!-- board title, buttons end -->
-		<div class="boardview">
-			<!-- board view start -->
-			<div class="row title">
-				<div class="col-sm-12 col-md-10">
-					${dsCommunity.COMU_TITLE}
-				</div>
-				<div class="col-sm-12 col-md-2 user">
-					${dsCommunity.USER_NAME}
-				</div>
+		<!-- board title end -->
+		
+		<!-- board view start -->
+		<div class="border-bottom">
+			<div class="d-flex flex-row fs-4 mb-2 p-2 ">
+				<div class="col-md-10 justify-content-start px-3">${dsCommunity.COMU_TITLE}</div>
+				<div class="col-md-2 justify-content-end">${dsCommunity.USER_NAME}</div>
 			</div>
-			<div class="row content">
-				${dsCommunity.COMU_CONTENT}
-			</div>
+		</div>
+		<div class="d-flex flex-row fs-5 mt-2">
+			<div class="p-2 px-4">${dsCommunity.COMU_CONTENT}</div>
 		</div>
 		<!-- board view end -->
-		<!-- board button area start -->
-			<div class="row btnarea">
-				<button class="btn btn-lg boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
-				<button class="btn btn-lg boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
+		
+		<!-- board button start -->
+		<c:if test="${sessionScope.grade == 'M' || sessionScope.grade == 'A'}">
+			<div class="d-flex justify-content-end">
+				<button class="btn boardbtn" type="button" onclick="fn_communityList()">목록</button>
+				<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
+				<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
 			</div>
-		<!-- board button area end -->
-	
+		</c:if>
+		<!-- board button end -->
+		
 	</div> <!-- container end -->
+</div> <!-- container end -->
 
-	<jsp:include page="${context}/common/foot.jsp"></jsp:include>
+<jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
 </html>

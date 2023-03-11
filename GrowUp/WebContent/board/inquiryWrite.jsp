@@ -37,83 +37,48 @@
 </div>
 <!-- title, visual end -->
 <!-- Detail -->
-	<div class="container">
-	<h4 class="Title">1:1문의</h4>
-		<form id="inquiryWrite" class="form-horizontal boardwrite" method="post" action="${context}/work/board/inquiryWrite.do" role="form">
-		<input type="hidden" class="form-control" id="inqRegId" name="inqRegId">
-		<input type="hidden" class="form-control" id="inqPhone" name="inqPhone">
-		<input type="hidden" class="form-control" id="inqEmail" name="inqEmail">
-		<!--
-		  <div class="form-group">
-		    <label for="inputEmail3" class="col-sm-2 control-label">이름</label>
-		    <div class="col-sm-12">
-		      <input type="text" class="form-control" id="inqRegId" name="inqRegId" placeholder="이름을 입력해주세요">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="inqPhone" class="col-sm-2 control-label">전화번호</label>
-		    <div class="col-sm-12">
-		      <input type="tel" class="form-control" id="inqPhone" name="inqPhone" placeholder="전화번호을 입력해주세요">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="inqEmail" class="col-sm-2 control-label">이메일</label>
-		    <div class="col-sm-12">
-		      <input type="email" class="form-control" id="inqEmail" name="inqEmail" placeholder="이메일을 입력해주세요">
-		    </div>
-		  </div>
-		  -->
-		  <div class="form-group">
-		    <label for="inqTitle" class="col-sm-2 control-label">제목</label>
-		    <div class="col-sm-12">
-		      <input type="text" class="form-control" id="inqTitle" name="inqTitle" placeholder="제목을 입력해주세요">
-		    </div>
-		  </div>
-		   <div class="form-group">
-		    <label for="inqContent" class="col-sm-2 control-label">내용</label>
-		    <div class="col-sm-12">
-		     <textarea class="form-control" rows="4" style="width: 100%; height: 272px !important;" id="inqContent" name="inqContent" placeholder="내용을 입력해주세요"></textarea>
-		    </div>
-		  </div>
-  		 	<!-- board button area start -->
-			<div class="row btnarea">
-				<button class="btn btn-lg boardbtn" type="button" onclick="fn_save()">글 등록하기</button>
-				<button type="button" class="btn btn-lg boardbtn" onclick="fn_back()">취소</button>
+	<div class="container-fluid">
+		<div class="px-5 py-5">
+			<!-- board title start -->
+			<div class="page-header">
+				<div class="row py-5">
+					<div class="d-flex flex-row mb-12">
+					<h2 class="title p-2">이벤트 게시판</h2>
+				</div>
 			</div>
-			<!-- board button area end -->
+		</div>
+		<!-- board title end -->
+		
+		<!-- board write start -->
+		<form id="inquiryWrite" class="form-horizontal boardwrite" method="post" action="${context}/work/board/inquiryWrite.do" role="form">
+			<div class="form-horizontal boardwrite">
+				<div class="form-group mb-3">
+					<label for="inqTitle" class="control-label fs-4 mb-2">제목</label>
+					<input class="form-control fs-5" type="text" name="inqTitle" id="inqTitle" required="required" maxlength="50" autofocus="autofocus" placeholder="제목을 입력해주세요"/>
+				</div>
+				<div class="form-group mb-3">
+					<label for="inqTitle" class="control-label fs-4 mb-2">연락처</label>
+					<input class="form-control fs-5" type="tel" name="inqPhone" id="inqPhone" required="required" maxlength="50" autofocus="autofocus" placeholder="연락처를 입력해주세요"/>
+				</div>
+				<div class="form-group mb-3 mt-5">
+					<label for="inqContent" class="control-label fs-4 mb-2">내용</label>
+					<textarea class="form-control fs-5" name="inqContent" id="inqContent" cols="10" rows="15" required="required" placeholder="내용을 입력해주세요"></textarea>
+				</div>
+				
+				<!-- board button start -->
+				<div class="d-flex justify-content-end">
+					<button type="button" class="btn boardbtn" onclick="fn_save()">글 등록하기</button>
+					<button type="button" class="btn boardbtn" onclick="fn_back()">취소</button>
+				</div>
+				<!-- board button end -->
+				
+			</div>
 		</form>
-	</div>
-	</div>
-	<jsp:include page="/common/foot.jsp"></jsp:include>
+		<!-- board write end -->
+		
+	</div> <!-- container end -->
+</div> <!-- container end -->
+
+<jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
-<style type="text/css">
-/*background*/
-.wrap{
-background-color: #fff;
-}
-/*form 제목*/
-.form-control {
-    padding-top: 7px;
-    margin-bottom: 40px;
-    margin-top:10px;
-    height: 90px !important;
-    background-color: #D9D9D9 !important;
-}
-.control-label {
-	font-size:24px;
-    text-align: inherit !important;
-}
-.Title{
-font-family: Noto Sans KR;
-font-size: 40px;
-margin-top: 90px;
-margin-bottom: 100px;
-}
-
-
-@media (max-width: 992px) {
-	.Title {font-size: 28px;}
-	.control-label{font-size: 18px;}
-	}
-</style>
 </html>

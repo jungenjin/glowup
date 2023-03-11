@@ -31,52 +31,50 @@
 </head>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
+
 <!-- title, visual start -->
 <div class="titarea" style='background-image: url("${context}/img/subbg_notice.png");'>
 </div>
 <!-- title, visual end -->
+
 <!-- Detail -->
-	<div class="container">
-		<!-- board title, buttons start -->
+<div class="container-fluid">
+	<div class="px-5 py-5">
+		<!-- board title start -->
 		<div class="page-header">
-			<div class="row">
-				<div class="col-xs-8">
+			<div class="row py-5">
+				<div class="d-flex flex-row mb-12">
 					<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-					<h2 class="title eng">notice</h2>
-					<small>AROMA, FRAGANCIA가 전하는 소식</small>
-				</div>
-				<div class="col-xs-4 text-right">
-					<button type="button" class="btn btn-lg boardbtn notice" onclick="fn_noticeList()">목록</button>
+					<h2 class="title p-2">공지사항 게시판</h2>
 				</div>
 			</div>
 		</div>
-		<!-- board title, buttons end -->
-		<div class="boardview">
-			<!-- board view start -->
-			<div class="row title">
-				<div class="col-sm-12 col-md-10">
-					${dsNotice.NTC_TITLE}
-				</div>
-				<div class="col-sm-12 col-md-2 user">
-					${dsNotice.USER_NAME}
-				</div>
+		<!-- board title end -->
+
+		<!-- board view start -->
+		<div class="border-bottom">
+			<div class="d-flex flex-row fs-4 mb-2 p-2 ">
+				<div class="col-md-10 justify-content-start px-3">${dsNotice.NTC_TITLE}</div>
+				<div class="col-md-2 justify-content-end">${dsNotice.USER_NAME}</div>
 			</div>
-			<div class="row content">
-				${dsNotice.NTC_CONTENT}
-			</div>
+		</div>
+		<div class="d-flex flex-row fs-5 mt-2">
+			<div class="p-2 px-4">${dsNotice.NTC_CONTENT}</div>
 		</div>
 		<!-- board view end -->
+		
 		<!-- board button area start -->
-		<c:if test="${sessionScope.grade == 'A' || sessionScope.userCode == dsNotice.NTC_REG_ID}">
-			<div class="row btnarea">
-				<button class="btn btn-lg boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
-				<button class="btn btn-lg boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
+		<c:if test="${sessionScope.grade == 'A' || sessionScope.userCode == dsEvent.EV_REG_ID}">
+			<div class="d-flex justify-content-end">
+				<button class="btn boardbtn" type="button" onclick="fn_noticeList()">목록</button>
+				<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
+				<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
 			</div>
 		</c:if>
 		<!-- board button area end -->
-	
+		
 	</div> <!-- container end -->
-
-	<jsp:include page="${context}/common/foot.jsp"></jsp:include>
+</div> <!-- container end -->
+<jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
 </html>

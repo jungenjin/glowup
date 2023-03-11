@@ -57,82 +57,49 @@
 </div>
 <!-- title, visual end -->
 <!-- InquiryWrite -->
-<div class="container">
-	<h4 class="Title">1:1문의</h4>
-		<form id="inquiryModify" class="form-horizontal" method="post" action="${context}/work/board/inquiryModify.do?inqNo=${dsInquiry.INQ_NO}" role="form">
-		<input type="hidden" class="form-control" id="inqRegId" name="inqRegId">
-		<input type="hidden" class="form-control" id="inqPhone" name="inqPhone">
-		<input type="hidden" class="form-control" id="inqEmail" name="inqEmail">
-		  <!-- 
-		  <div class="form-group">
-		    <label for="inputEmail3" class="col-sm-2 control-label">이름</label>
-		    <div class="col-sm-12">
-		      <input type="text" class="form-control" id="inqRegId" name="inqRegId">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="inqPhone" class="col-sm-2 control-label">전화번호</label>
-		    <div class="col-sm-12">
-		      <input type="tel" class="form-control" id="inqPhone" name="inqPhone">
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="inqEmail" class="col-sm-2 control-label">이메일</label>
-		    <div class="col-sm-12">
-		      <input type="email" class="form-control" id="inqEmail" name="inqEmail">
-		    </div>
-		  </div>
-		   -->
-		  <div class="form-group">
-		    <label for="inqTilte" class="col-sm-2 control-label">제목</label>
-		    <div class="col-sm-12">
-		      <input type="text" class="form-control" id="inqTitle" name="inqTitle">
-		    </div>
-		  </div>
-		   <div class="form-group">
-		    <label for="inqContent" class="col-sm-2 control-label">내용</label>
-		    <div class="col-sm-12">
-		     <textarea id="inqContent" name="inqContent" class="form-control" rows="4" style="width: 100%; height: 272px !important;"></textarea>
-		    </div>
-		  </div>
-		<!-- board button area start -->
-		<div class="row btnarea">
-			<button class="btn btn-lg boardbtn" type="button" onclick="fn_save()">글 등록하기</button>
-			<button type="button" class="btn btn-lg boardbtn" onclick="fn_back()">취소</button>
+<div class="container-fluid">
+	<div class="px-5 py-5">
+		<!-- board title start -->
+		<div class="page-header">
+			<div class="row py-5">
+				<div class="d-flex flex-row mb-12">
+				<h2 class="title p-2">1:1 문의 게시판</h2>
+			</div>
 		</div>
-		<!-- board button area end -->
-	</form>
 	</div>
-	</div>
-	<jsp:include page="/common/foot.jsp"></jsp:include>
+	<!-- board title end -->
+		
+		<!-- board modify start -->
+		<form id="inquiryModify" class="form-horizontal" method="post" action="${context}/work/board/inquiryModify.do?inqNo=${dsInquiry.INQ_NO}" role="form">
+			<div class="form-horizontal boardwrite">
+				<div class="form-group">
+					<label for="inqTilte" class="control-label fs-4 mb-2">제목</label>
+					<input class="form-control" type="text" name="inqTilte" id="inqTilte" required="required" maxlength="50" autofocus="autofocus">
+				</div>
+				<div class="form-group">
+					<label for="inqContent" class="control-label fs-4 mb-2 mt-5">내용</label>
+					<textarea class="form-control" name="inqContent" id="inqContent" cols="10" rows="15" required="required"></textarea>
+				</div>
+				
+				<!-- board button start -->
+				<div class="col-xs-4 d-flex justify-content-end">
+					<button type="button" class="btn boardbtn" onclick="fn_save()">글 등록하기</button>
+					<button type="button" class="btn boardbtn" onclick="fn_back()">취소</button>
+				</div>
+				<!-- board button end -->
+				
+			</div>
+		</form>
+		<!-- board modify end -->
+		
+	</div> <!-- container end -->
+</div> <!-- container end -->
+<jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
-<style type="text/css">
-.wrap{
-background-color: #fff;
-}
-/*form 제목*/
-.form-control {
-    padding-top: 7px;
-    margin-bottom: 40px;
-    margin-top:10px;
-    height: 90px !important;
-    background-color: #D9D9D9 !important;
-}
-.control-label {
-	font-size:24px;
-    text-align: inherit !important;
-}
-.Title{
-font-family: Noto Sans KR;
-font-size: 40px;
-margin-top: 90px;
-margin-bottom: 100px;
-}
-
-@media (max-width: 992px) {
-	.Title {font-size: 28px;}
-	.control-label{font-size: 18px;}
-	}
-</style>
-
 </html>
+	
+<%-- <form id="inquiryModify" class="form-horizontal" method="post" action="${context}/work/board/inquiryModify.do?inqNo=${dsInquiry.INQ_NO}" role="form">
+<input type="hidden" class="form-control" id="inqRegId" name="inqRegId">
+<input type="hidden" class="form-control" id="inqPhone" name="inqPhone">
+<input type="hidden" class="form-control" id="inqEmail" name="inqEmail"> --%>
+		 

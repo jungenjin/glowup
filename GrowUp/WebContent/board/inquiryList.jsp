@@ -21,39 +21,47 @@
 </div>
 <!-- title, visual end -->
 <!-- Detail -->
-<div class="container">
-	<!-- board title, buttons start -->
-	<div class="page-header">
-		<div class="row">
-			<div class="col-xs-8">
-				<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-				<h2 class="title">1:1문의</h2>
-			</div>
-			<div class="col-xs-4 text-right">
-				<button type="button" class="btn btn-lg boardbtn"  onclick="fn_inquiryWrite()">새 글 쓰기</button>
+<div class="container-fluid">
+	<div class="px-5 py-5">
+	
+		<!-- board title start -->
+		<div class="page-header">
+			<div class="row py-5">
+				<div class="d-flex flex-row mb-12">
+					<h2 class="title p-2">1:1 문의 게시판</h2>
+				</div>
 			</div>
 		</div>
-	</div>
-	<!-- board title, buttons end -->
-	<div class="row">
+		<!-- board title end -->
+		
 		<!-- board list start -->
-           <div class="table-responsive">
-               <table class="table table-hover boardlist">
-                   <tbody>
-                       <c:forEach items="${dsinquiryList}" var="dsinquiryList">
-                        <tr>
-                        	<td>
-                        		<div class="col-md-10"><a href ="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a></div>
-							<div class="col-md-2 text-right">${dsinquiryList.USER_NAME}</div>
-							                      
-                        	</td>
-                        </tr>
-                   	</c:forEach>
-                   </tbody>
-               </table>
-           </div>
-		<!-- board list end -->
-	</div> <!-- row end -->
+		<div class="row">
+	         <div class="table-responsive">
+	             <table class="table table-hover">
+	                 <tbody>
+	                     <c:forEach items="${dsinquiryList}" var="dsinquiryList">
+	                      <tr>
+	                      	<td class="d-flex flex-row">
+	                      		<div class="col-md-10"><a href ="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a></div>
+								<div class="col-md-1 p-2 px-right-1">${dsinquiryList.USER_NAME}</div>
+								<div class="col-md-2 p-2 px-right-1">${dsinquiryList.INQ_REG_DATE}</div>
+								<div class="col-md-1 p-2 px-right-1">조회수 : ${dsinquiryList.INQ_HIT}</div>
+	                      	</td>
+	                      </tr>
+	                 	</c:forEach>
+	                 </tbody>
+	             </table>
+	         </div>
+			<!-- board list end -->
+		</div> <!-- row end -->
+		
+		<!-- board buttons start -->
+			<div class="d-flex flex-row-reverse p-2">
+				<button type="button" class="btn boardbtn p-2" onclick="fn_eventWrite()">새 글 쓰기</button>
+			</div>
+		<!-- board buttons end -->
+	
+	</div> <!-- container end -->
 </div> <!-- container end -->
 
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>

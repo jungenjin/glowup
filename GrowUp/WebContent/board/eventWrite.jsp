@@ -47,6 +47,8 @@
 			</div>
 		</div>
 		<!-- board title end -->
+		
+		<!-- board write start -->
 		<form id="eventWrite" method="post" action="${context}/work/board/eventWrite.do" role="form">
 			<div class="form-horizontal boardwrite">
 				<div class="form-group mb-3">
@@ -57,16 +59,21 @@
 					<label for="evContent" class="control-label fs-4 mb-2">내용</label>
 					<textarea class="form-control fs-5" name="evContent" id="evContent" cols="10" rows="15" required="required" placeholder="내용을 입력해주세요"></textarea>
 				</div>
-				<!-- board button area start -->
+				
+				<!-- board button start -->
 				<div class="d-flex justify-content-end">
 					<button type="button" class="btn boardbtn" onclick="fn_save()">글 등록하기</button>
 					<button type="button" class="btn boardbtn" onclick="fn_back()">취소</button>
 				</div>
-				<!-- board button area end -->
+				<!-- board button end -->
+				
 			</div>
 		</form>
+		<!-- board write end -->
+		
 	</div> <!-- container end -->
 </div> <!-- container end -->
+
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
 </html>

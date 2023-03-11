@@ -21,40 +21,51 @@
 </div>
 <!-- title, visual end -->
 <!-- Detail -->
-	<div class="container">
-		<!-- board title, buttons start -->
+<div class="container-fluid">
+	<div class="px-5 py-5">
+	
+		<!-- board title start -->
 		<div class="page-header">
-			<div class="row">
-				<div class="col-xs-8">
-					<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-					<h2 class="title eng">Community</h2>
+			<div class="row py-5">
+				<div class="d-flex flex-row mb-12">
+					<h2 class="title p-2">커뮤니티 게시판</h2>
 				</div>
-					<div class="col-xs-4 text-right">
-						<button type="button" class="btn btn-lg boardbtn " onclick="fn_communityWrite()">새 글 쓰기</button>
-					</div>
 			</div>
 		</div>
-		<!-- board title, buttons end -->
+		<!-- board title end -->
+		
+		<!-- board list start -->
 		<div class="row">
-			<!-- board list start -->
-            <div class="table-responsive">
-                <table class="table table-hover boardlist">
-                    <tbody>
-                        <c:forEach items="${dsCommunityList}" var="dsCommunityList">
-                         <tr>
-                         	<td>
-                         		<div class="col-md-10"><a href ="${context}/work/board/communityView.do?comuNo=${dsCommunityList.COMU_NO}">${dsCommunityList.COMU_TITLE}</a></div>
-								<div class="col-md-2 text-right">${dsCommunityList.USER_NAME}</div>
-                         	</td>
-                         </tr>
-                    	</c:forEach>
-                    </tbody>
-                </table>
-            </div>
+	         <div class="table-responsive">
+	             <table class="table table-hover">
+	                 <tbody>
+	                     <c:forEach items="${dsCommunityList}" var="dsCommunityList">
+	                      <tr>
+	                      	<td class="d-flex flex-row">
+	                      		<div class="col-md-8 p-2 px-left-1"><a href ="${context}/work/board/communityView.do?comuNo=${dsCommunityList.COMU_NO}">${dsCommunityList.COMU_TITLE}</a></div>
+								<div class="col-md-1 p-2 px-right-1">${dsCommunityList.USER_NAME}</div>
+								<div class="col-md-2 p-2 px-right-1">${dsCommunityList.COMU_REG_DATE}</div>
+								<div class="col-md-1 p-2 px-right-1">조회수 : ${dsCommunityList.COMU_HIT}</div>
+	                      	</td>
+	                      </tr>
+	                 	</c:forEach>
+	                 </tbody>
+	             </table>
+	         </div>
 			<!-- board list end -->
-		</div> <!-- row end -->
+		</div> <!-- row end -->	
+			
+		<!-- board buttons start -->
+		<c:if test="${sessionScope.grade == 'A' || sessionScope.grade == 'M'}">
+			<div class="d-flex flex-row-reverse p-2">
+				<button type="button" class="btn boardbtn p-2" onclick="fn_eventWrite()">새 글 쓰기</button>
+			</div>
+		</c:if>
+		<!-- board buttons end -->
+	
 	</div> <!-- container end -->
+</div> <!-- container end -->
 
-	<jsp:include page="${context}/common/foot.jsp"></jsp:include>
+<jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
 </html>

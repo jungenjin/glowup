@@ -36,38 +36,44 @@
 </div>
 <!-- title, visual end -->
 <!-- Detail -->
-	<div class="container">
-		<!-- board title, buttons start -->
-		<div class="page-header">
-			<div class="row">
-				<div class="col-xs-8">
-					<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-					<h2 class="title eng">Community</h2>
+	<div class="container-fluid">
+		<div class="px-5 py-5">
+			<!-- board title start -->
+			<div class="page-header">
+				<div class="row py-5">
+					<div class="d-flex flex-row mb-12">
+					<h2 class="title p-2">커뮤니티 게시판</h2>
 				</div>
 			</div>
 		</div>
-		<!-- board title, buttons end -->
+		<!-- board title end -->
 		
+		<!-- board write start -->
 		<form id="communityWrite" method="post" action="${context}/work/board/communityWrite.do" role="form">
 			<div class="form-horizontal boardwrite">
-				<div class="form-group">
-					<label for="comuTitle" class="control-label">제목</label>
-					<input class="form-control" name="comuTitle" id="comuTitle" required="required" maxlength="50" placeholder="제목을 입력해주세요" />
+				<div class="form-group mb-3">
+					<label for="comuTitle" class="control-label fs-4 mb-2">제목</label>
+					<input class="form-control fs-5" type="text" name="comuTitle" id="comuTitle" required="required" maxlength="50" autofocus="autofocus" placeholder="제목을 입력해주세요"/>
 				</div>
-				<div class="form-group">
-					<label for="comuContent" class="control-label">내용</label>
-					<textarea class="form-control" name="comuContent" id="comuContent" cols="10" rows="15" required="required" placeholder="내용을 입력해주세요"></textarea>
+				<div class="form-group mb-3 mt-5">
+					<label for="comuContent" class="control-label fs-4 mb-2">내용</label>
+					<textarea class="form-control fs-5" name="comuContent" id="comuContent" cols="10" rows="15" required="required" placeholder="내용을 입력해주세요"></textarea>
 				</div>
-				<!-- board button area start -->
-				<div class="row btnarea">
-					<button class="btn btn-lg boardbtn" type="button" onclick="fn_save()">글 등록하기</button>
-					<button type="button" class="btn btn-lg boardbtn" onclick="fn_back()">취소</button>
+				
+				<!-- board button start -->
+				<div class="d-flex justify-content-end">
+					<button type="button" class="btn boardbtn" onclick="fn_save()">글 등록하기</button>
+					<button type="button" class="btn boardbtn" onclick="fn_back()">취소</button>
 				</div>
-				<!-- board button area end -->
+				<!-- board button end -->
+				
 			</div>
 		</form>
-	</div>
+		<!-- board write end -->
+		
+	</div> <!-- container end -->
+</div> <!-- container end -->
 
-	<jsp:include page="${context}/common/foot.jsp"></jsp:include>
+<jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
 </html>

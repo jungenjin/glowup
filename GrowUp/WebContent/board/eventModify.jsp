@@ -50,17 +50,19 @@
 </div>
 <!-- title, visual end -->
 <!-- Detail -->
-	<div class="container-fluid">
-		<div class="px-5 py-5">
-			<!-- board title start -->
-			<div class="page-header">
-				<div class="row py-5">
-					<div class="d-flex flex-row mb-12">
-					<h2 class="title p-2">이벤트 게시판</h2>
-				</div>
+<div class="container-fluid">
+	<div class="px-5 py-5">
+		<!-- board title start -->
+		<div class="page-header">
+			<div class="row py-5">
+				<div class="d-flex flex-row mb-12">
+				<h2 class="title p-2">이벤트 게시판</h2>
 			</div>
 		</div>
-		<!-- board title end -->
+	</div>
+	<!-- board title end -->
+		
+		<!-- board modify start -->
 		<form id="modifyEvent" method="post" action="${context}/work/board/eventModify.do?evNo=${dsEvent.EV_NO}" role="form">
 			<div class="form-horizontal boardwrite">
 				<div class="form-group">
@@ -71,15 +73,20 @@
 					<label for="evContent" class="control-label fs-4 mb-2 mt-5">내용</label>
 					<textarea class="form-control" name="evContent" id="evContent" cols="10" rows="15" required="required"></textarea>
 				</div>
-				<!-- board button area start -->
+				
+				<!-- board button start -->
 				<div class="col-xs-4 d-flex justify-content-end">
-					<button class="btn btn-lg boardbtn" type="button" onclick="fn_save()">글 등록하기</button>
-					<button type="button" class="btn btn-lg boardbtn" onclick="fn_back()">취소</button>
+					<button type="button" class="btn boardbtn" onclick="fn_save()">글 등록하기</button>
+					<button type="button" class="btn boardbtn" onclick="fn_back()">취소</button>
 				</div>
-				<!-- board button area end -->
+				<!-- board button end -->
+				
 			</div>
 		</form>
+		<!-- board modify end -->
+		
 	</div> <!-- container end -->
 </div> <!-- container end -->
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
+</html>
