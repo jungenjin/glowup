@@ -118,7 +118,7 @@
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <div class="container-fluid backgroundImg">
 	<div class="row">
-       	<div class="col-md-6 col-md-offset-3">
+       	<div class="col-md-6 col-md-offset-3" style="width: 100%">
 	        <div class="loginbox">
 	        	<!-- login tab button start -->
 	        	<div class="logintab row">
@@ -132,7 +132,7 @@
 					<div class="form-group">
 						<div class="col-sm-12">
 							<label for="id" class="control-label hidden"><b>아이디</b></label>
-							<input class="form-control" type="text" name="id" id="id" required="required" autofocus="autofocus" onkeyup="idCheck();" placeholder="Id"/>
+							<input class="form-control" type="text" name="id" id="id" required="required" autofocus="autofocus" onkeyup="idCheck();" placeholder="아이디"/>
 						</div>
 						<div class="col-sm-12" id="message"></div>
 					</div>
@@ -141,7 +141,7 @@
 					<div class="form-group">
 						<div class="col-sm-12">
 							<label for="pw" class="control-label hidden"><b>비밀번호</b></label>
-							<input class="form-control" type="password" name="pw" id="pw" required="required" placeholder="Password"/>
+							<input class="form-control" type="password" name="pw" id="pw" required="required" autofocus="autofocus"  placeholder="비밀번호"/>
 						</div>
 					</div>
 					
@@ -149,7 +149,7 @@
 					<div class="form-group">
 						<div class="col-sm-12">
 							<label for="name" class="control-label hidden"><b>이름</b></label>
-							<input class="form-control" type="text" id="name" name="name" autofocus="autofocus" required="required" placeholder="Name"/>
+							<input class="form-control" type="text" id="name" name="name" autofocus="autofocus" required="required" placeholder="이름"/>
 						</div>
 					</div>
 				
@@ -157,7 +157,7 @@
 					<div class="form-group">
 						<div class="col-sm-12">
 							<label for="email" class="control-label hidden"><b>이메일</b></label>
-							<input class="form-control" type="email" name="email" id="email" required="required" placeholder="E-mail"/>
+							<input class="form-control" type="email" name="email" id="email" required="required" placeholder="이메일"/>
 						</div>
 					</div>
 					
@@ -165,7 +165,7 @@
 			        <div class="form-group">
 					    <div class="col-sm-12">
 							<label for="birth" class="control-label hidden"><b>생년월일</b></label>
-					        <input class="form-control" id="birth" name="birth" required="required" maxlength="10" placeholder="Birth" autocomplete="off"/>
+					        <input class="form-control" id="birth" name="birth" required="required" maxlength="10" placeholder="생년월일" autocomplete="off"/>
 					    </div>
 					</div> 
 							
@@ -193,7 +193,7 @@
 					    <div class="col-sm-12">
 							<div class="input-group">
 								<label for="address" class="control-label hidden"><b>주소</b></label>
-						    	<input type="text" class="form-control postcode" placeholder="Address" id="postNum1" name="address" disabled="disabled" required="required">
+						    	<input type="text" class="form-control postcode" placeholder="주소" id="postNum1" name="address" disabled="disabled" required="required">
 					    		<span class="input-group-btn">
 					    			<button class="btn btn-default postsearch" id="sample6_execDaumPostcode()" onclick="sample6_execDaumPostcode()" type="button">Search</button>
 					    		</span>
@@ -204,19 +204,19 @@
 		            <!-- 주소 1 -->
 		            <div class="form-group hidden">
 		            	<div class="col-sm-12">
-		                <input class="form-control" placeholder="Details 1" id="postNum2" name="details 1" disabled="disabled" type="hidden">
+		                <input class="form-control" placeholder="주소 1" id="postNum2" name="details 1" disabled="disabled" type="hidden">
 		                </div>
 		            </div>
 		            <!-- 주소 2 -->
 		            <div class="form-group">
 		            	<div class="col-sm-12">
-		                <input class="form-control" placeholder="Details 1" id="address1" disabled="disabled" type="text">
+		                <input class="form-control" placeholder="상세주소" id="address1" disabled="disabled" type="text">
 		                </div>
 		            </div>
 		            <!-- 주소 3 -->
 		            <div class="form-group">
 		            	<div class="col-sm-12">
-		                	<input class="form-control" placeholder="Details 2" id="address2" type="text">
+		                	<input class="form-control" placeholder="추가주소" id="address2" type="text">
 		                	<input type="hidden" id="address" name="address">
 		                </div>
 		            </div>
@@ -224,7 +224,7 @@
 					<input type="hidden" id="flag" name="flag" value="false">
 					<div class="form-group">
 	                	<div class="col-sm-12">
-							<button class="form-control btn Loginbtn" type="button" name="btnSubmit" id="btnSubmit" onclick="fn_save()">CREATE ACCOUNT</button>
+							<button class="form-control btn Loginbtn" type="button" name="btnSubmit" id="btnSubmit" onclick="fn_save()">회원가입</button>
 						</div>
 					</div>
 					&nbsp;

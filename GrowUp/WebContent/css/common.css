@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Gotu&family=Noto+Sans+KR:wght@400;500;700&display=swap');
 body {font-family: 'Noto Sans KR', 'Gotu', serif, sans-serif; word-break:keep-all}
 
+
+
 /* 영문폰트 클래스 추가 */
 .gotu {font-family: "Gotu";}
 
@@ -15,88 +17,17 @@ a:hover {color:#CC947C;text-decoration: none;}
 /* foot */
 .footer{border-top:1px solid #D9D9D9;padding: 50px;margin-top:100px}
 .footer ul {padding-left: 0;}
-.footer .ftlogo {font-size: 30px; margin-top: 20px; color: #000;font-family: 'Crimson Pro';}
-.footer .sns p {font-size: 20px; margin-bottom: 30px; color: #000;font-family: 'Crimson Pro';}
+.footer .ftlogo {font-size: 30px; margin-top: 20px; color: #000;font-family: 'Gotu';}
+.footer .sns p {font-size: 20px; margin-bottom: 30px; color: #000;font-family: 'Gotu';}
 .footer .sns a {width: 40px; height: 40px; display: inline-block; margin-right: 10px;margin-bottom:30px}
 .footer .sns img{width:20px;height:20px;}
-.footer .footer-right h2 {font-weight: 600; font-size: 17px;font-family: 'Crimson Pro';margin-top:10px}
-.footer .footer-right .info li {line-height: 2em;color: #999;font-family: 'Crimson Pro';}
+.footer .footer-right h2 {font-weight: 600; font-size: 17px;font-family: 'Gotu';margin-top:10px}
+.footer .footer-right .info li {line-height: 2em;color: #999;font-family: 'Gotu';}
 .footer .footer-right .info a {color: #999;}
 @media (mim-width:768px){
    .footer .footer-right:last-child h2, .footer .footer-right:last-child ul {padding-left:80px;}
 }
 
-/* 쿠키 팝업 */
-#notice_wrap {position: absolute; z-index:100;left: 30px;top: 170px; background-color: #F7F9F6; width: 310px;}
-#notice_wrap > p {padding:10px; text-align: center;font-family: "Crimson Pro";font-size: 25px;}
-#notice_wrap .closewrap .bx-wrapper {margin-bottom: 0px;}
-.bx-wrapper{margin-bottom: 0px;}
-#notice_wrap .closewrap {position:relative;padding: 20px 10px}
-#notice_wrap .closewrap #expiresChk {margin-left:10px;width:16px;height:16px;}
-#notice_wrap .closewrap label {padding-left:5px;font-size: 18px; font-weight: bold;} 
-#notice_wrap .closewrap .closeBtn{position:absolute;right:15px;background: none; border: none; font-size: 18px; font-weight: bold;}
-#notice_wrap .bx-prev, .bx-next{display: none;}
-/* main */
-/* main visual - vegas plugin */
-.mainveg {height:700px}
-.mainveg .vegas-timer {height:12px;}
-.mainveg .vegas-timer .vegas-timer-progress {background:#CDA274}
-
-/* 메인 스토리 부분 */
-.storytext {padding-top:150px;padding-bottom:150px;font-family: "Crimson Pro";font-size: 18px; line-height: 2; text-align: center;overflow:hidden}
-.storytext p:nth-child(2) {margin-top:50px;}
-/* 스크롤 페이드인 */
-@keyframes fadeInUp {from {opacity: 0; transform: translateY(100%);}
-   to {opacity: 1;transform: translateY(0);}}
-.test_obj {position: relative;animation: fadeInUp 3s;}
-.test_obj2 {position: relative;animation: fadeInUp 6s;}
-.story {background-color: rgb(225, 225, 227); height:380px; margin-bottom:150px; }
-.story h4 {margin:0;font-family: "Crimson Pro"; font-size: 40px; padding-top: 60px; padding-bottom: 60px; text-align: center;}
-.storyproduct img{display:inline-block;border-radius: 30px; opacity:0;}
-
-/* color 부분 */
-.maincolor{width: auto; background-color: rgb(225, 225, 227); }
-.maincolor > h4 {font:bold 40px "Crimson Pro";padding-top: 60px; padding-bottom: 60px; text-align: center;}
-.colorproduct{ display: grid; grid-template-columns: repeat(auto-fill, minmax(412px, 0.5fr)); box-sizing: border-box; justify-content: space-around;}
-.colorproduct > div > li > img{ border-radius: 10px 10px 0 120px; padding-bottom: 60px;}
-.mc-a{ position: relative; margin: 0 auto; width: 270px;}
-.mc-c{ position: absolute; opacity: 0; transition: opacity 0.5s linear; top: 0px; left: 0px;}
-.mc-a:hover .mc-c{ opacity: 1; z-index: 1;}
-.probtn{background-color: #292F36; color : #fff; font-size: 20px; text-align: center; padding : 26px 54px 26px 54px; 
-margin-top: 30px; margin-bottom : 30px; border-radius: 12px; border: none;}
-.probtn:hover { background-color:#53606E; transition: 0.7s;}
-
-/* 분할 텍스트 영역 */
-.sixwrap{ padding-top: 200px; padding-bottom: 200px;}
-.sixcontext{box-sizing:border-box}
-.sixcontext .sixb {background-color:#e1e1e3;font-family: "Crimson Pro";font-size: 18px; text-align: center;border-radius: 30px;margin-top:10px}
-.sixcontext .sixb p {font:bold 30px "Crimson Pro"; padding-top: 80px;padding-bottom:20px}
-.sixcontext .sixb span {display:block;font-size: 22px;padding-bottom:80px}
-.sixcontext .sixb.b1{ background-color:#E3D0CC; border-radius: 30px;}
-@media (min-width: 768px) {
-   .sixcontext{height:390px;}
-   .sixcontext .sixb {background-color:#fff;margin-top:0}
-   .sixcontext .sixb:hover{ background-color: #E3D0CC; transition: 0.7s;}
-   .sixcontext .sixb.b1{ background-color: #e1e1e3}
-}
-
-/* join us */
-.movebtn{background-color: #292F36; color: #fff; text-align: center; border-radius: 70px;padding:70px 0}
-.movebtn .title {font-family: "Crimson Pro";font-size: 30px;padding:0 20px}
-.movebtn p {font-size: 15px;font-family: "Crimson Pro";padding:10px 20px;}
-.movebtn .move{display:inline-block;width:240px;height:75px;background-color: #CDA274;font-family: "Crimson Pro";font-size:18px;border-radius: 15px; border: none;margin-top:20px}
-.movebtn .move:hover { background-color:#CC947C; transition: 0.7s; }
-
-/* 지도 영역 */
-.maptitle{text-align: center;font-family: "Crimson Pro";font-size: 30px;   margin-top: 220px;}
-.mainmap {margin-top: 60px; margin-bottom: 80px;}
-.mainmap #map {height: 450px; margin-bottom: 30px;}
-.mainmap .transport h3 { font-size: 22px; padding-bottom:10px}
-.mainmap .transport .tptitle {font-weight: bold;padding-top:15px}
-.mainmap .transport .tptext {font-size: 15px;}
-@media screen and (min-width: 992px) {
-   .transport {padding-left:50px; }
-}
 
 .btn-glyphicon { padding:8px; background:#ffffff; margin-right:4px; }
 .icon-btn { padding: 1px 15px 3px 2px; border-radius:50px;}
@@ -445,16 +376,22 @@ transition: all 0.4s ease-in-out;
 .adminlink:hover h1 {color:#CC947C}
 
 /* by, 김은주, 정은진 - 로그인, 비밀번호찾기, 회원가입, 정보수정 */
+
+.hidden{
+/*visibility: hidden;*/
+display: none;
+}
+
 .chkMsg{
 	cursor: pointer;
 	color: #333;
     text-decoration: none;
    	font-size: 16px !important;
-	font-family: 'Crimson Pro';
+	font-family: 'Gotu';
 }
 .foundMsg, .notFoundMsg{
 	font-size: 16px !important;
-	font-family: 'Crimson Pro';
+	font-family: 'Gotu';
 }
 .backgroundImg {
 	background-image: url('/img/subbg_login.png');
@@ -463,19 +400,19 @@ transition: all 0.4s ease-in-out;
 	padding:100px 15px;
 }
 .loginbox {max-width: 566px;background:#fff;padding: 0px;margin:0 auto;border-radius: 30px; }
-.logintab {overflow:hidden;border-radius: 30px 30px 0 0; text-align:center;}
+.logintab {overflow:hidden;border-radius: 30px 30px 0 0; text-align:center; width: 100%; margin-left: 0%; font-family: "Gotu"}
 .logintab .title {height:44px;font-size:20px;text-align:left;padding-top:21px;padding-left:48px}
 .logintab .tabbtn {background:#9E9C9C;}
 .logintab .tabbtn a {display:block;width:100%;height:44px;font-size:20px;padding-top:7px}
 .logintab .tabbtn a:hover {color:#fff;transition:0.3s}
 .logintab .tabbtn.on {background:#fff;pointer-events : none;}
-.loginbox form {padding:35px 35px 21px;font-family: Crimson Pro;font-size:16px;}
+.loginbox form {padding:35px 35px 21px;font-family: Gotu;font-size:16px;}
 .loginbox .form-control {height: 46px;border-radius: 15px; margin-bottom:11px;}
 .loginbox .input-group .form-control {z-index:0}
 .loginbox ::-webkit-input-placeholder {
-	font-family: Crimson Pro;font-size:16px;
+	font-size:16px;
 	background-size: contain;
-	background-position:  1px center;
+	background-position: 1px center;
 	background-repeat: no-repeat;
 	padding: 0 15px 0 0;
 	padding-left:28px;
@@ -519,7 +456,6 @@ transition: all 0.4s ease-in-out;
       height: 46px;
       background: #fff;
       font-size: 16px;
-      font-family: Crimson Pro;
       outline:none;
       display:inline-block;
       margin-left: -1px;
@@ -535,7 +471,7 @@ transition: all 0.4s ease-in-out;
 	.loginbox .hyphen {position:relative;}
 	.loginbox .hyphen::after {content:"-";position:absolute;display:block;right:-4px;top:0;height:46px;line-height:46px;font-size:16px;font-family:"Noto Sans KR";}
 @media (min-width: 992px) {
-	.logintab .title {height:62px;font-size:28px;padding-top:30px;padding-left:70px}
+	.logintab .title {height:62px;font-size:28px;padding-top:30px;padding-left:70px;font-family: "Gotu"}
 	.logintab .tabbtn a {height:62px;font-size:28px;padding-top:10px}
 	.loginbox form {padding:50px 50px 30px;font-size:20px;}
 	.loginbox form .form-control {height: 66px;font-size:20px;margin-bottom:15px;}

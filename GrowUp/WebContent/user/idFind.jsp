@@ -43,12 +43,12 @@
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <div class="container-fluid backgroundImg">
 	<div class="row">
-    	<div class="col-md-6 col-md-offset-3">
+    	<div class="col-md-6 col-md-offset-3" style="width: 100%">
 	        <div class="loginbox">
 	        	<!-- login tab button start -->
-	        	<div class="logintab">
-			        <div class="col-xs-6 tabbtn on"><a href="${context}/user/idFind.jsp">Find Id</a></div>
-			        <div class="col-xs-6 tabbtn"><a href="${context}/user/pwFind.jsp">Find Password</a></div>
+	        	<div class="logintab row">
+			        <div class="col-6 tabbtn on"><a href="${context}/user/idFind.jsp">Find Id</a></div>
+			        <div class="col-6 tabbtn"><a href="${context}/user/pwFind.jsp">Find Password</a></div>
 				</div>
 	        	<!-- login tab button end -->
 	        	<form>
