@@ -9,6 +9,9 @@ nav{
 	background : none !important;
 }
 
+
+/* by 김은주, 코드리펙토링 230214 */
+
 ul, ol, li {list-style: none;}
 a {color:#333;text-decoration: none;}
 a:hover {color:#CC947C;text-decoration: none;}
@@ -349,19 +352,13 @@ transition: all 0.4s ease-in-out;
    .page-header small {padding-left:70px;font-size:37px;}
 }
 
-/* by 김은주, 게시판 공통디자인 */
 /* board buttons */
-.boardbtn {width:112px;height:42px;background:#D9D9D9;border-radius:21px;font-size:14px;margin-top:20px}
+.boardbtn {width:153px;height:60px;background:#D2D4DC;font-size:20px;margin-top:120px}
 .boardbtn:hover {background:#9CA09F;color:#fff;transition:0.3s}
 .boardbtn:not(:first-child) {margin-left:34px}
 .btnarea {margin:80px 0;text-align:right;}
 .btnarea .boardbtn {margin-top:0}
-@media (min-width: 992px) {
-   .boardbtn {width:198px;height:60px;border-radius:30px;font-size:20px;}
-   .boardbtn.notice {margin-top:60px}
-   .boardbtn:not(:first-child) {margin-left:48px}
-   .btnarea {margin:120px 0;}
-}
+
 /* board list */
 .table-responsive {border:0}
 .table.boardlist>tbody>tr>td {padding:25px 0;color:#575656;font-size:20px;border-top:0;border-bottom:1px solid #000;}
@@ -372,7 +369,7 @@ transition: all 0.4s ease-in-out;
    .table.boardlist>tbody>tr>td  {min-height:130px;padding:42px 10px;font-size:30px;}
 }
 /* board view */
-.boardview .title {padding:30px 7px;font-size:21px;border-bottom:1px solid #000}
+.boardview .title {padding:30px 7px;font-size:20px;border-bottom:1px solid #000}
 .boardview .user {color:#575656;text-align:right}
 .boardview .content {padding:18px;color:#000;font-size:16px;}
 @media (min-width: 992px) {
@@ -381,48 +378,61 @@ transition: all 0.4s ease-in-out;
 }
 /* board boardwrite */
 .boardwrite .form-group {margin:0}
-.boardwrite .control-label {padding-top:28px;padding-bottom:10px;font-size:16px;text-align:left;}
-.boardwrite .form-control {height:63px;font-size:16px;border-radius:0;background:#D9D9D9;padding:14px}
-.boardwrite textarea.form-control {height:190px;resize:none}
-@media (min-width: 992px) {
-   .boardwrite .control-label {padding-top:40px;padding-bottom:15px;font-size:24px;}
-   .boardwrite .form-control {height:90px;font-size:24px;;padding:20px}
-   .boardwrite textarea.form-control {height:272px;}
-}
+.boardwrite .control-label {padding-top:28px;padding-bottom:10px;font-size:25px;text-align:left;}
+.boardwrite .form-control {height:90px;font-size:20px;}
+.boardwrite textarea.form-control {height:300px;resize:none}
 
-/* by 김은주 - 상품목록, 상품상세정보 2023.3.11 */
+/* by 김은주, 고푸름 - 상품목록, 상품상세정보 */
 /* product list */
-.product_list {margin-top:6.3rem;}
-.item_first {height:340px;margin-bottom:65px}
-.item_first > div {max-width:340px;height:100%;background:#E4DFDF;font-family: 'Gotu';color:#151515;text-align:center;margin:0 auto;}
-.item_first > div > div {margin-left:48px;text-align:left}
-.item_first p {font-size:1rem}
-.item_first p:last-child {font-family: 'Noto Sans KR';font-weight:500}
 .productitem {text-align:center;padding-bottom:65px;}
-.productitem .item_name {margin-top:30px}
-.productitem .eng {font-family: 'Gotu';margin-bottom:20px;}
-.productitem .desc {margin-bottom:20px;}
+.productitem a {display:inline-block;}
+.productitem .itemtitle {padding-bottom:20px;}
+.productitem a:hover .itemtitle{color:#CC947C;text-decoration:underline;}
+.productitem .img-responsive {height:340px;}
 /* product detail view */
-.productview {margin-top:138px}
-.productview .detailimg {width:100%}
-.productInfo .table-user-information {border-bottom:1px solid #D9D9D9;}
-.productInfo .table-user-information > tbody > tr { border:0;}
-.productInfo .table-user-information > tbody > tr > td {font-size: 20px;height: 3em; text-align:left;border:0;}
-.productInfo .desc {border-bottom:1px solid #D9D9D9;padding-bottom:20px;}
 /* product detail view 버튼 공통 */
-.productview .btn {background-color: #d9d9d9;color: #000;border: none;border-radius:0}
+.productview .btn {background-color: #d9d9d9;color: #000;border: none;}
 .productview .btn:hover {background:#9CA09F;color:#fff;transition:0.3s}
 .productview .btn[disabled] {background-color: #d9d9d9;color: #000;opacity:0.65;cursor:not-allowed;}
-.productInfo #buyBtn, .productInfo #cartBtn {margin-top: 50px;width:100%;height: 90px;}
-@media (min-width: 992px) {
-	.productview .detailimg {width:80%}
-	.productInfo #buyBtn, .productInfo #cartBtn {width: 210px;}
-	.productInfo .infobtn div:first-child{text-align:right}
-}
-/* 상세설명 */
-.productview .product_detail {margin:200px 0}
-/* .scent-info-video {display: block; width: 1170px; height: auto;}
+.scent-info-video {display: block; width: 1170px; height: auto;}
 .sent-info-img {display: block; width: 1170px; cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;}
+.detailimg {height:450px}
+.productInfo {margin-top: 50px; text-align:center}
+.productInfo .table-user-information {border-bottom:1px solid #D9D9D9;}
+.productInfo .table-user-information > tbody > tr {
+   font-size: 20px;
+    height: 3em;
+    border: none !important;
+    text-align:left;
+}
+.productInfo .table-user-information > tbody > tr > td:first-child {padding-left:20px}
+@media (min-width: 992px) {
+   .productInfo {text-align:center}
+   .productInfo .table-user-information {border-bottom:0;}
+}
+
+.productInfo #buyBtn, .productInfo #cartBtn {
+   font-family: 'Noto Sans KR'; 
+   font-style: normal;
+   font-size: 20px;
+    margin-top: 50px;
+    padding: 0px; 
+    width: 100%; 
+    height: 90px;
+}
+@media (min-width: 768px) {
+   .productInfo #buyBtn, .productInfo #cartBtn {width: 223px;}
+}
+#reviewBtn {
+   background-color: #d9d9d9;
+   color: #000;
+   padding: 10px;
+   font-family: 'Noto Sans KR'; 
+   font-style: normal; 
+   font-size: 18px; 
+   border: none; 
+}
+
 .product-title {
    font-family: 'DM Serif Display';
    font-size: 3.5em;
@@ -430,13 +440,17 @@ transition: all 0.4s ease-in-out;
    margin-top: 173px;
    margin-bottom: 78px
 }
+
 .scent-wrap .scent-info {
     padding: 0.5em 0 0.3em;
 }
+
 .scent-wrap .scent-info-sub {
    padding: 0.5em 0 0.3em;
 } 
+
 .fragancia {font-family: 'DM Serif Display'; font-size: 1.5em; font-weight: 100%; }
+
 .product-details{
    font-family: 'Noto Sans KR'; 
    font-style: normal;
@@ -446,7 +460,7 @@ transition: all 0.4s ease-in-out;
    margin-bottom: 117px;
    line-height: 1.7em;
    margin-bottom: 150px;
-}  */
+} 
 
 /* product detail view 상품평 */
 .review-box{
@@ -461,15 +475,6 @@ transition: all 0.4s ease-in-out;
 #post-review-box {margin-top: 15px;}
 #post-review-box textara {margin-bottom: 15px;}
 #close-review-box {margin-right:10px;}
-#reviewBtn {
-   background-color: #d9d9d9;
-   color: #000;
-   padding: 10px;
-   font-family: 'Noto Sans KR'; 
-   font-style: normal; 
-   font-size: 18px; 
-   border: none; 
-}
 
 /* 관리자페이지 */
 /* 사이트 전체에서 dataTables-example 사용시 공통디자인 */
