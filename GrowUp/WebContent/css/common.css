@@ -341,16 +341,7 @@ transition: all 0.4s ease-in-out;
 }
 
 /* by 김은주, subpage title */
-.page-header {min-height:84px;border-bottom:0;}
-.page-header .title.eng {color:#292F36;font:34px/100% 'DM Serif Display';}
 .page-header .title {color:#292F36;font:39px/100% 'Noto Sans KR';}
-.page-header small {display:inline-block;color:#575656;font:bold 26px/100% 'Crimson Pro';}
-@media (min-width: 992px) {
-   .page-header {min-height:120px;}
-   .page-header .title.eng {font-size:48px;}
-   .page-header .title {font-size:55px;}
-   .page-header small {padding-left:70px;font-size:37px;}
-}
 
 /* board buttons */
 .boardbtn {width:153px;height:60px;background:#D2D4DC;font-size:20px;margin-top:120px}
@@ -359,15 +350,6 @@ transition: all 0.4s ease-in-out;
 .btnarea {margin:80px 0;text-align:right;}
 .btnarea .boardbtn {margin-top:0}
 
-/* board list */
-.table-responsive {border:0}
-.table.boardlist>tbody>tr>td {padding:25px 0;color:#575656;font-size:20px;border-top:0;border-bottom:1px solid #000;}
-.table.boardlist>tbody>tr>td a {color:#4D5053;}
-/* .table.boardlist>tbody>tr:hover {cursor:pointer;} */
-.table.boardlist>tbody>tr>td a:hover {color:#CC947C;}
-@media (min-width: 992px) {
-   .table.boardlist>tbody>tr>td  {min-height:130px;padding:42px 10px;font-size:30px;}
-}
 /* board view */
 .boardview .title {padding:30px 7px;font-size:20px;border-bottom:1px solid #000}
 .boardview .user {color:#575656;text-align:right}
