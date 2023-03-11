@@ -36,47 +36,44 @@
 </div>
 <!-- title, visual end -->
 <!-- Detail -->
-	<div class="container">
-		<!-- board title, buttons start -->
-		<div class="page-header">
-			<div class="row">
-				<div class="col-xs-8">
-					<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-					<h2 class="title eng">이벤트 게시판</h2>
-				</div>
-				<div class="col-xs-4 text-right">
-					<button type="button" class="btn btn-lg boardbtn" onclick="fn_eventList()">목록</button>
-				</div>
-			</div>
-		</div>
-		<!-- board title, buttons end -->
-		<div class="boardview">
-			<!-- board view start -->
-			<div class="row title">
-				<div class="col-sm-12 col-md-10">
-					${dsEvent.EV_TITLE}
-				</div>
-				<div class="col-sm-12 col-md-2 user">
-					${dsEvent.USER_NAME}
+	<div class="container-fluid">
+		<div class="px-5 py-5">
+			<!-- board title start -->
+			<div class="page-header">
+				<div class="row py-5">
+					<div class="d-flex flex-row mb-12">
+						<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
+						<h2 class="title p-2">이벤트 게시판</h2>
+					</div>
 				</div>
 			</div>
-			<div class="row content">
-				${dsEvent.EV_CONTENT}
+			<!-- board title-->
+			<div class="boardview">
+				<!-- board view start -->
+				<div class="row title">
+					<div class="col-sm-12 col-md-10">
+						${dsEvent.EV_TITLE}
+					</div>
+					<div class="col-sm-12 col-md-2 user">
+						${dsEvent.USER_NAME}
+					</div>
+				</div>
+				<div class="row content">
+					${dsEvent.EV_CONTENT}
+				</div>
 			</div>
-		</div>
-		<!-- board view end -->
-		<!-- board button area start -->
-		
-		<c:if test="${sessionScope.grade == 'A' || sessionScope.userCode == dsEvent.EV_REG_ID}">
-			<div class="row btnarea">
-				<button class="btn btn-lg boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
-				<button class="btn btn-lg boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
-			</div>
-		</c:if>
-		
-		<!-- board button area end -->
-	
+			<!-- board view end -->
+			<!-- board button area start -->
+			<c:if test="${sessionScope.grade == 'A' || sessionScope.userCode == dsEvent.EV_REG_ID}">
+				<div class="col-xs-4 d-flex justify-content-end">
+					<button class="btn boardbtn" type="button" onclick="fn_eventList()">목록</button>
+					<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
+					<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
+				</div>
+			</c:if>
+			<!-- board button area end -->
+		</div> <!-- container end -->
 	</div> <!-- container end -->
-	<jsp:include page="${context}/common/foot.jsp"></jsp:include>
+<jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
 </html>

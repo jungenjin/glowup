@@ -30,7 +30,7 @@
 </head>
 
 <c:set var="homeUrl">${context}/work/product/goMain.do</c:set>
-<!-- URL 추가 -->
+
 <c:set var="noitceUrl">${context}/work/board/notice.do</c:set>
 <c:set var="cmmuUrl">${context}/work/board/community.do</c:set>
 <c:set var="inquiryUrl">${context}/work/board/inquiry.do</c:set>
@@ -38,8 +38,8 @@
 <c:set var="qnaUrl">${context}/work/board/qna.do</c:set>
 
 <body>
-<footer class="footer">
-	<div class="container">
+<footer class="footer bg-opacity-75">
+	<div class="container-fluid">
 		<div class="row">
 		<div class="col-sm-12 col-md-4">
 			<a href="${homeUrl}" class="ftlogo">
