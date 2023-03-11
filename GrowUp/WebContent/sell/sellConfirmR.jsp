@@ -100,7 +100,7 @@
 </head>
 <body>
 <jsp:include page="/common/top.jsp"></jsp:include>
-<div class="backgroundImg" style="background-image: url('${context}/img/subbg_sellconfirm.png');">
+<div class="backgroundImg" style="background-image: url('${context}/img/subbg_sellconfirm.jpg');">
 
 		<div class="sellfirm container" style="margin-bottom: 10%; padding-top: 10%">
 			

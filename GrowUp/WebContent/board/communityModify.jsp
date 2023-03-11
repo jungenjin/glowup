@@ -47,7 +47,7 @@
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_event.png");'>
+<div class="titarea" style='background-image: url("${context}/img/subbg_event.jpg");'>
 </div>
 <!-- title, visual end -->
 <!-- Detail -->

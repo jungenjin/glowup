@@ -17,7 +17,7 @@
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_faq.png");'></div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_faq.jpg");'></div>
 <!-- title, visual end -->
 	<!-- FAQ start -->
 	<div class=FAQ_wrap>

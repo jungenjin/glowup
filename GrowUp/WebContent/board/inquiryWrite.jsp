@@ -33,7 +33,7 @@
 <jsp:include page="/common/top.jsp"></jsp:include>
 <div class="wrap">
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.png");'>
+<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.jpg");'>
 </div>
 <!-- title, visual end -->
 <!-- Detail -->
