@@ -29,7 +29,7 @@
 		<div class="page-header">
 			<div class="row py-5">
 				<div class="d-flex flex-row mb-12">
-					<h2 class="title p-2">커뮤니티 게시판</h2>
+					<h2 class="title p-2 ">커뮤니티 게시판</h2>
 				</div>
 			</div>
 		</div>
