@@ -38,22 +38,19 @@
 <c:set var="qnaUrl">${context}/work/board/qna.do</c:set>
 
 <body>
-<footer class="footer bg-light opacity-75 py-5">
+<footer class="footer bg-light opacity-75 pt-5 pb-2">
 	<div class="container">
 		<div class="row">
-		
 			<div class="col-sm-12 col-md-6">
 				<a href="${homeUrl}" class=" pb-3">
 					<img src="${context}/img/Glowup_logo.png" alt="glowup" width="" height="45">
 				</a>
-				<p class="py-2">글로우업과 함께 당신만의 팔레트를 완성해보세요. </p>
-				<div class="py-2 px-2">
-					<a href="#" class="px-2"><i class="fas fa-search"></i></a>
-					<a href="#" class="px-2"><i class="fas fa-search"></i></a>
-					<a href="#" class="px-2"><i class="fas fa-search"></i></a>
-					<a href="#" class="px-2"><i class="fas fa-search"></i></a>
-					<a href="#" class="px-2"><i class="fas fa-search"></i></a>
-				</div>
+				<p class="py-2 pb-3 fw-semibold">글로우업과 함께 당신만의 팔레트를 완성해보세요. </p>
+				<a href="#" class="px-2"><i class="fa-solid fa-comment"></i></a>
+				<a href="#" class="px-2"><i class="fa-brands fa-youtube"></i></a>
+				<a href="#" class="px-2"><i class="fa-brands fa-tiktok"></i></a>
+				<a href="#" class="px-2"><i class="fa-brands fa-instagram"></i></a>
+				<a href="#" class="px-2"><i class="fa-brands fa-facebook"></i></a>
 			</div>
 	
 			<div class="col-sm-12 col-md-2">
