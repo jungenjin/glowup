@@ -37,10 +37,10 @@
 <c:set var="faceUrl">${context}/work/product/retrieveProductList.do?category=F</c:set>
 
 <body>
-<nav class="navbar bg-opacity-75 fixed-top">
-  <div class="container-fluid">
-	<a class="navbar-brand px-left-2" href="${homeUrl}"><img src="${context}/img/Glowup_logo.png" alt="glowup" width="" height="24"></a>
-    <button class="navbar-toggler px-right-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+<nav class="navbar bg-light opacity-75 fixed-top">
+  <div class="container">
+	<a class="navbar-brand" href="${homeUrl}"><img src="${context}/img/Glowup_logo.png" alt="glowup" width="" height="24"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -102,9 +102,10 @@
 				</li>
 				</c:if>
 			</ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
-    </nav>
+	</div>
+</nav>
 
 	<div class= "container" style="margin-top:65px;">
 	  	<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">

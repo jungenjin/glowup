@@ -31,23 +31,26 @@
 </head>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
+
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_notice.png");'>
-</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_notice.png");'></div>
 <!-- title, visual end -->
-<!-- Detail -->
-<!-- Detail -->
-	<div class="container-fluid">
-		<div class="px-5 py-5">
-			<!-- board title start -->
-			<div class="page-header">
-				<div class="row py-5">
-					<div class="d-flex flex-row mb-12">
-					<h2 class="title p-2">공지사항 게시판</h2>
+
+<!-- Details -->
+<div class="container">
+	<div class="px-5 py-5">
+	
+		<!-- board title start -->
+		<div class="page-header">
+			<div class="row py-5">
+				<div class="d-flex flex-row mb-12">
+					<p class="title p-2 fs-1 fs-bold">공지사항</p>
 				</div>
 			</div>
 		</div>
-		<!-- board title, buttons end -->
+		<!-- board title end -->
+		
+		<!-- board view start -->
 		<form id="noticeWrite" method="post" action="${context}/work/board/noticeWrite.do" role="form">
 			<div class="form-horizontal boardwrite">
 				<div class="form-group">
@@ -59,16 +62,21 @@
 					<label for="ntcContent" class="control-label">내용</label>
 					<textarea class="form-control" name="ntcContent" id="ntcContent" cols="10" rows="15" required="required" placeholder="내용을 입력해주세요"></textarea>
 				</div>
+				
 				<!-- board button area start -->
 				<div class="row btnarea">
 					<button class="btn btn-lg boardbtn" type="button" onclick="fn_save()">글 등록하기</button>
 					<button type="button" class="btn btn-lg boardbtn" onclick="fn_back()">취소</button>
 				</div>
 				<!-- board button area end -->
+				
 			</div>
 		</form>
-	</div>
+		<!-- board view end -->
+		
+	</div><!-- Details end -->
+</div><!-- container end -->
 
-	<jsp:include page="${context}/common/foot.jsp"></jsp:include>
+<jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
 </html>

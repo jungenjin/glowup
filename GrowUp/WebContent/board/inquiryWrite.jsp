@@ -31,19 +31,20 @@
 </head>
 <body>
 <jsp:include page="/common/top.jsp"></jsp:include>
-<div class="wrap">
+
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.jpg");'>
-</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.jpg");'></div>
 <!-- title, visual end -->
-<!-- Detail -->
-	<div class="container-fluid">
-		<div class="px-5 py-5">
-			<!-- board title start -->
-			<div class="page-header">
-				<div class="row py-5">
-					<div class="d-flex flex-row mb-12">
-					<h2 class="title p-2">이벤트 게시판</h2>
+
+<!-- Details -->
+<div class="container">
+	<div class="px-5 py-5">
+	
+		<!-- board title start -->
+		<div class="page-header">
+			<div class="row py-5">
+				<div class="d-flex flex-row mb-12">
+					<p class="title p-2 fs-1 fs-bold">1 : 1 문의</p>
 				</div>
 			</div>
 		</div>
@@ -76,7 +77,7 @@
 		</form>
 		<!-- board write end -->
 		
-	</div> <!-- container end -->
+	</div> <!-- Details end -->
 </div> <!-- container end -->
 
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>

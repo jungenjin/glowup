@@ -16,19 +16,20 @@
 </head>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
+
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.jpg");'>
-</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.jpg");'></div>
 <!-- title, visual end -->
-<!-- Detail -->
-<div class="container-fluid">
+
+<!-- Details -->
+<div class="container">
 	<div class="px-5 py-5">
 	
 		<!-- board title start -->
 		<div class="page-header">
 			<div class="row py-5">
 				<div class="d-flex flex-row mb-12">
-					<h2 class="title p-2">1:1 문의 게시판</h2>
+					<p class="title p-2 fs-1 fs-bold">1 : 1 문의</p>
 				</div>
 			</div>
 		</div>
@@ -56,13 +57,13 @@
 		</div> <!-- row end -->
 		
 		<!-- board buttons start -->
-			<div class="d-flex flex-row-reverse p-2">
-				<button type="button" class="btn boardbtn p-2" onclick="fn_eventWrite()">새 글 쓰기</button>
-			</div>
+		<div class="d-flex flex-row-reverse p-2">
+			<button type="button" class="btn boardbtn p-2" onclick="fn_eventWrite()">새 글 쓰기</button>
+		</div>
 		<!-- board buttons end -->
 	
-	</div> <!-- container end -->
-</div> <!-- container end -->
+	</div><!-- Details end -->
+</div><!-- container end -->
 
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>

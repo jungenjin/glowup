@@ -31,69 +31,74 @@
 </head>
 <body>
 <jsp:include page="/common/top.jsp"></jsp:include>
-<div class="wrap">
+
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.jpg");'>
-</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.jpg");'></div>
 <!-- title, visual end -->
-<!-- InquiryWrite -->
-<div class="container-fluid">
+
+<!-- Details -->
+<div class="container">
 	<div class="px-5 py-5">
+	
 		<!-- board title start -->
 		<div class="page-header">
 			<div class="row py-5">
 				<div class="d-flex flex-row mb-12">
-					<h2 class="title p-2">1:1문의</h2>
+					<p class="title p-2 fs-1 fs-bold">1 : 1 문의</p>
 				</div>
 			</div>
 		</div>
 		<!-- board title end -->
+	
+	<!-- board view start -->
 	<div class="border-bottom">
-		<!-- board view start -->
-		<div class="d-flex flex-row fs-4 mb-2 p-2 ">
-		<div class="boardview">
-		  <div class="form-group">
-		    <label for="inqEmail" class="col-sm-12 control-label">이름</label>
-		    <div class="col-sm-12 content">
-		      ${dsInquiry.USER_NAME}
-		    </div>
-		  </div>
-		  <div class="form-group">
-		    <label for="inqPhone" class="col-sm-12 control-label">전화번호</label>
-		    <div class="col-sm-12 content">
-		      ${dsInquiry.PHONE}
-		    </div>
-		  </div>
-		  <div class="form-group content">
-		    <label for="inqEmail" class="col-sm-12 control-label">이메일</label>
-		    <div class="col-sm-12">
-		      ${dsInquiry.EMAIL}
-		    </div>
-		  </div>
-		  <div class="form-group title">
-		    <label for="inqTitle" class="col-sm-12 control-label">제목</label>
-		    <div class="col-sm-12">
-		      ${dsInquiry.INQ_TITLE}
-		    </div>
-		  </div>
-		   <div class="form-group content">
-		    <label for="inqContent" class="d-flex flex-row fs-5 mt-2">내용</label>
-		    <div class="p-2 px-4">
-		     ${dsInquiry.INQ_CONTENT}
-		    </div>
-		  </div>
-		<!-- board button area start -->
-		<div class="d-flex justify-content-end">
-			<button class="btn boardbtn" type="button" onclick="fn_inquiryList()">목록</button>
-			<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
-			<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
-		</div>
-		<!-- board button area end -->
-	</div>
-	</div>
-	<!-- board button area end -->
-	</div> <!-- container end -->
-</div> <!-- container end -->
+		<div class="row d-flex flex-row fs-4 mb-2 p-2 ">
+			<div class="boardview">
+				  <div class="form-group">
+				    <label for="inqEmail" class="col-sm-12 control-label">이름</label>
+				    <div class="col-sm-12 content">
+				      ${dsInquiry.USER_NAME}
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="inqPhone" class="col-sm-12 control-label">전화번호</label>
+				    <div class="col-sm-12 content">
+				      ${dsInquiry.PHONE}
+				    </div>
+				  </div>
+				  <div class="form-group content">
+				    <label for="inqEmail" class="col-sm-12 control-label">이메일</label>
+				    <div class="col-sm-12">
+				      ${dsInquiry.EMAIL}
+				    </div>
+				  </div>
+				  <div class="form-group title">
+				    <label for="inqTitle" class="col-sm-12 control-label">제목</label>
+				    <div class="col-sm-12">
+				      ${dsInquiry.INQ_TITLE}
+				    </div>
+				  </div>
+				   <div class="form-group content">
+				    <label for="inqContent" class="d-flex flex-row fs-5 mt-2">내용</label>
+				    <div class="p-2 px-4">
+				     ${dsInquiry.INQ_CONTENT}
+				    </div>
+				  </div>
+			
+				<!-- board button area start -->
+				<div class="d-flex justify-content-end">
+					<button class="btn boardbtn" type="button" onclick="fn_inquiryList()">목록</button>
+					<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
+					<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
+				</div>
+				<!-- board button area end -->
+				
+			</div><!-- board view end -->
+		</div><!-- board row end -->
+	</div><!-- board bottom end -->
+	
+	</div><!-- Details end -->
+</div><!-- container end -->
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
 <style type="text/css">
@@ -138,5 +143,4 @@ border-bottom:none !important;
 	.control-label{font-size: 18px;}
 	}
 </style>
-
 </html>

@@ -16,12 +16,13 @@
 </head>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
+
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_event.jpg");'>
-</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_event.jpg");'></div>
 <!-- title, visual end -->
-<!-- Detail -->
-<div class="container-fluid">
+
+<!-- Details -->
+<div class="container">
 	<div class="px-5 py-5">
 	
 		<!-- board title start -->
@@ -63,8 +64,8 @@
 		</c:if>
 		<!-- board buttons end -->
 	
-	</div> <!-- container end -->
-</div> <!-- container end -->
+	</div><!-- Details end -->
+</div><!-- container end -->
 
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>

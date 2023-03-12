@@ -17,23 +17,23 @@
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_notice.jpg");'>
-</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_notice.jpg");'></div>
 <!-- title, visual end -->
 <!-- Detail -->
-<div class="container-fluid">
+<div class="container">
 	<div class="px-5 py-5">
+	
 		<!-- board title start -->
 		<div class="page-header">
 			<div class="row py-5">
 				<div class="d-flex flex-row mb-12">
-					<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-					<h2 class="title p-2">공지사항 게시판</h2>
+					<p class="title p-2 fs-1 fs-bold">공지사항</p>
 				</div>
 			</div>
 		</div>
+		<!-- board title end -->
+		<!-- board list start -->
 		<div class="row">
-			<!-- board list start -->
             <div class="table-responsive">
                 <table class="table table-hover boardlist">
                     <tbody>
@@ -58,9 +58,10 @@
 			</div>
 		</c:if>
 		<!-- board buttons end -->
-		</div> <!-- row end -->
-	</div> <!-- container end -->
-
-	<jsp:include page="${context}/common/foot.jsp"></jsp:include>
+		
+		</div><!-- row end -->
+	</div><!-- container end -->
+</div><!-- container end -->
+<jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
 </html>

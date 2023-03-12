@@ -45,24 +45,26 @@
 </head>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
+
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_notice.jpg");'>
-</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_notice.jpg");'></div>
 <!-- title, visual end -->
+
 <!-- Detail -->
-<div class="container-fluid">
+<div class="container">
 	<div class="px-5 py-5">
+	
 		<!-- board title start -->
 		<div class="page-header">
 			<div class="row py-5">
 				<div class="d-flex flex-row mb-12">
-				<h2 class="title p-2">공지사항 게시판</h2>
+					<p class="title p-2 fs-1 fs-bold">공지사항</p>
+				</div>
 			</div>
 		</div>
-	</div>
-	<!-- board title end -->
+		<!-- board title end -->
 		
-		<!-- board modify start -->
+		<!-- board list start -->
 		<form id="noticeModify" method="post" action="${context}/work/board/noticeModify.do?ntcNo=${dsNotice.NTC_NO}" role="form">
 			<div class="form-horizontal boardwrite">
 				<div class="form-group">

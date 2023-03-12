@@ -31,19 +31,20 @@
 </head>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
+
 <!-- title, visual start -->
-<div class="titarea" style='background-image: url("${context}/img/subbg_event.jpg");'>
-</div>
+<div class="titarea" style='background-image: url("${context}/img/subbg_event.jpg");'></div>
 <!-- title, visual end -->
-<!-- Detail -->
-<div class="container-fluid">
+
+<!-- Details -->
+<div class="container">
 	<div class="px-5 py-5">
 	
 		<!-- board title start -->
 		<div class="page-header">
 			<div class="row py-5">
 				<div class="d-flex flex-row mb-12">
-					<h2 class="title p-2">이벤트 게시판</h2>
+					<p class="title p-2 fs-1 fs-bold">이벤트</p>
 				</div>
 			</div>
 		</div>
@@ -71,8 +72,8 @@
 		</c:if>
 		<!-- board button end -->
 		
-	</div> <!-- container end -->
-</div> <!-- container end -->
+	</div><!-- Details end -->
+</div><!-- container end -->
 
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
