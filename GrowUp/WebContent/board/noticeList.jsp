@@ -16,9 +16,11 @@
 </head>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
+
 <!-- title, visual start -->
 <div class="titarea" style='background-image: url("${context}/img/subbg_notice.jpg");'></div>
 <!-- title, visual end -->
+
 <!-- Detail -->
 <div class="container">
 	<div class="px-5 py-5">
@@ -27,11 +29,12 @@
 		<div class="page-header">
 			<div class="row py-5">
 				<div class="d-flex flex-row mb-12">
-					<p class="title p-2 fs-1 fs-bold">공지사항</p>
+					<p class="title p-2 fs-1 fw-bold">공지사항</p>
 				</div>
 			</div>
 		</div>
 		<!-- board title end -->
+		
 		<!-- board list start -->
 		<div class="row">
             <div class="table-responsive">
@@ -41,7 +44,7 @@
                       <tr>
                       	<td class="d-flex flex-row">
                       		<div class="col-md-8 p-2 px-left-1"><a href ="${context}/work/board/noticeView.do?ntcNo=${dsNoticeList.NTC_NO}">${dsNoticeList.NTC_TITLE}</a></div>
-							<div class="col-md-1 p-2 px-right-1">${dsNoticeList.USER_NAME}</div>
+							<div class="col-md-1 p-2 px-right-1 fw-bold">${dsNoticeList.USER_NAME}</div>
 							<div class="col-md-2 p-2 px-right-1">${dsNoticeList.NTC_REG_DATE}</div>
 							<div class="col-md-1 p-2 px-right-1">조회수 : ${dsNoticeList.NTC_HIT}</div>
                       	</td>

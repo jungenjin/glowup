@@ -29,7 +29,7 @@
 		<div class="page-header">
 			<div class="row py-5">
 				<div class="d-flex flex-row mb-12">
-					<p class="title p-2 fs-1 fs-bold">1 : 1 문의</p>
+					<p class="title p-2 fs-1 fw-bold">1 : 1 문의</p>
 				</div>
 			</div>
 		</div>
@@ -44,7 +44,7 @@
 	                      <tr>
 	                      	<td class="d-flex flex-row">
 	                      		<div class="col-md-10"><a href ="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a></div>
-								<div class="col-md-1 p-2 px-right-1">${dsinquiryList.USER_NAME}</div>
+								<div class="col-md-1 p-2 px-right-1 fw-bold">${dsinquiryList.USER_NAME}</div>
 								<div class="col-md-2 p-2 px-right-1">${dsinquiryList.INQ_REG_DATE}</div>
 								<div class="col-md-1 p-2 px-right-1">조회수 : ${dsinquiryList.INQ_HIT}</div>
 	                      	</td>

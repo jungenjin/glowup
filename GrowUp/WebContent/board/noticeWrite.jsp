@@ -36,7 +36,7 @@
 <div class="titarea" style='background-image: url("${context}/img/subbg_notice.png");'></div>
 <!-- title, visual end -->
 
-<!-- Details -->
+<!-- Detail -->
 <div class="container">
 	<div class="px-5 py-5">
 	
@@ -44,7 +44,7 @@
 		<div class="page-header">
 			<div class="row py-5">
 				<div class="d-flex flex-row mb-12">
-					<p class="title p-2 fs-1 fs-bold">공지사항</p>
+					<p class="title p-2 fs-1 fw-bold">공지사항</p>
 				</div>
 			</div>
 		</div>

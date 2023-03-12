@@ -37,13 +37,14 @@
 <!-- title, visual end -->
 
 <!-- Details -->
-	<div class="container">
-		<div class="px-5 py-5">
-			<!-- board title start -->
-			<div class="page-header">
-				<div class="row py-5">
-					<div class="d-flex flex-row mb-12">
-					<h2 class="title p-2">커뮤니티 게시판</h2>
+<div class="container">
+	<div class="px-5 py-5">
+	
+		<!-- board title start -->
+		<div class="page-header">
+			<div class="row py-5">
+				<div class="d-flex flex-row mb-12">
+					<p class="title p-2 fs-1 fw-bold">커뮤니티</p>
 				</div>
 			</div>
 		</div>

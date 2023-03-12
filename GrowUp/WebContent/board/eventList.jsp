@@ -29,7 +29,7 @@
 		<div class="page-header">
 			<div class="row py-5">
 				<div class="d-flex flex-row mb-12">
-					<p class="title p-2 fs-1 fs-bold">이벤트</p>
+					<p class="title p-2 fs-1 fw-bold">이벤트</p>
 				</div>
 			</div>
 		</div>
@@ -44,7 +44,7 @@
 	                      <tr>
 	                      	<td class="d-flex flex-row">
 	                      		<div class="col-md-8 p-2 px-left-1"><a href ="${context}/work/board/eventView.do?evNo=${dsEventList.EV_NO}">${dsEventList.EV_TITLE}</a></div>
-								<div class="col-md-1 p-2 px-right-1">${dsEventList.USER_NAME}</div>
+								<div class="col-md-1 p-2 px-right-1 fw-bold">${dsEventList.USER_NAME}</div>
 								<div class="col-md-2 p-2 px-right-1">${dsEventList.EV_REG_DATE}</div>
 								<div class="col-md-1 p-2 px-right-1">조회수 : ${dsEventList.EV_HIT}</div>
 	                      	</td>
