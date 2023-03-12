@@ -25,7 +25,7 @@
 		</div>
 	</div>
 	<!-- board title end -->
-		
+
 			<!-- search-bar start -->
 			<div class="d-flex justify-content-center mb-5">
 				<div class="search-bar">
@@ -38,8 +38,8 @@
 			<div class="accordion accordion-flush p-2">
 			  <div class="accordion-item">
 			    <div class="accordion-header fs-4" id="flush-headingOne">
-			      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-		        	<p class="gotu">Q</p><p class="px-4">교환은 어떻게 하나요?</p>
+			      <button class="accordion-button collapsed border-bottom" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+		        	<p class="gotu fw-bold">Q</p><p class="px-4">교환은 어떻게 하나요?</p>
 			      </button>
 			    </div>
 			    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -59,8 +59,8 @@
 			  
 			  <div class="accordion-item">
 			    <div class="accordion-header fs-4" id="flush-headingTwo">
-			      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-		        	<p class="gotu">Q</p><p class="px-4">주문한 상품과 다른 상품이 왔어요.</p>
+			      <button class="accordion-button collapsed border-bottom" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+		        	<p class="gotu fw-bold">Q</p><p class="px-4">주문한 상품과 다른 상품이 왔어요.</p>
 			      </button>
 		    	</div>
 			    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
@@ -75,8 +75,8 @@
 			  
 			  <div class="accordion-item">
 			    <div class="accordion-header fs-4" id="flush-headingThree">
-			      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-		        	<p class="gotu">Q</p><p class="px-4">배송비는 얼마인가요?</p>
+			      <button class="accordion-button collapsed border-bottom" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+		        	<p class="gotu fw-bold">Q</p><p class="px-4">배송비는 얼마인가요?</p>
 			      </button>
 			    </div>
 			    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
@@ -93,8 +93,8 @@
 			  
 				<div class="accordion-item">
 				    <div class="accordion-header fs-4" id="flush-headingFour">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-				    		<p class="gotu">Q</p><p class="px-4">반품이 가능한 기준을 알고 싶어요.</p>
+						<button class="accordion-button collapsed border-bottom" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+				    		<p class="gotu fw-bold">Q</p><p class="px-4">반품이 가능한 기준을 알고 싶어요.</p>
 						</button>
 				    </div>
 				    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
@@ -123,8 +123,8 @@
 			    
 			  	<div class="accordion-item">
 				    <div class="accordion-header fs-4" id="flush-headingFive">
-				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-				      	 <p class="gotu">Q</p><p class="px-4">주문을 취소했는데 신용카드 결제는 취소가 되지 않았어요.</p>
+				      <button class="accordion-button collapsed border-bottom" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+				      	 <p class="gotu fw-bold">Q</p><p class="px-4">주문을 취소했는데 신용카드 결제는 취소가 되지 않았어요.</p>
 				      </button>
 				    </div>
 			    	<div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
