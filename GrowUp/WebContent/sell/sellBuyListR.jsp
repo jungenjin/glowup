@@ -41,17 +41,21 @@
 <!-- title, visual start -->
 <div class="titarea" style='background-image: url("${context}/img/subbg_cart.jpg");'></div>
 <!-- title, visual end -->
+<!-- Details -->
 <div class="container">
-	<!-- board title, buttons start -->
-	<div class="page-header">
-		<div class="row">
-			<div class="col-xs-8">
-				<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-				<h2 class="title">구매내역</h2>
+	<div class="px-5 py-5">
+	
+		<!-- board title start -->
+		<div class="page-header">
+			<div class="row py-5">
+				<div class="d-flex flex-row mb-12">
+					<p class="title p-2 fs-1 fw-bold">구매내역</p>
+				</div>
 			</div>
 		</div>
-	</div>
-	<!-- board title, buttons end -->
+		<!-- board title end -->
+		
+	<!-- table-responsive start -->
     <div class="table-responsive">
         <table class="table" id="dataTables-example">
             <thead>
@@ -101,7 +105,10 @@
 	       </table>
 	   </div>
 	   <!-- /.table-responsive -->
-</div>
+	   
+	</div><!-- Details end -->
+</div><!-- container end -->
+
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
 </html>

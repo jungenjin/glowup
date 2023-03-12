@@ -103,20 +103,17 @@
 				<!-- card start -->	
 				<div class="card text-bg-light pt-5 px-5">
 					<div class="">
-						<p class="fs-5 text-center pb-5">
-							<span class="fw-bold fs-3 gotu">Glow up </span>을 이용해 주셔서 감사합니다. <br>
-							<br>
-							주문/결제가 <br>
-							정상적으로 완료되었습니다.
+						<p class="fs-5 text-center pt-5">
+							<span class="fw-bold fs-3 gotu">Glow up </span>을 이용해 주셔서 감사합니다.
 						</p>
-						<p class="fs-5 text-center">
-							기타 궁금하신 사항은 문의주시면 성심껏 답변드리겠습니다.
+						<p class="fs-5 text-center pt-2">
+							1:1문의가 정상적으로 등록되었습니다.
 						</p>
 					</div>
 					<!-- card button start -->	
 					<div class="col-xs-4 d-flex justify-content-center pb-5">
-						<button type="button" class="btn confirmbtn" onclick="fn_buyList()">구매내역 확인하기</button>
-						<button type="button" class="btn confirmbtn" onclick="fn_review('${productCode}')">상품후기 작성하기</button>
+						<button type="button" class="btn confirmbtn" onclick="fn_buyList()">메인으로 돌아가기</button>
+						<button type="button" class="btn confirmbtn" onclick="fn_review('${productCode}')">목록으로 돌아가기</button>
 					</div>
 					<!-- card button end -->	
 				</div><!-- card end -->

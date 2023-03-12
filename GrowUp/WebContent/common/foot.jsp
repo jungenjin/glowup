@@ -38,45 +38,43 @@
 <c:set var="qnaUrl">${context}/work/board/qna.do</c:set>
 
 <body>
-<footer class="footer bg-opacity-75">
-	<div class="container-fluid">
-		<div class="row">
-		<div class="col-sm-12 col-md-4">
-			<a href="${homeUrl}" class="ftlogo">
-				<img src="${context}/img/Glowup_logo.png" alt="glowup" width="" height="24">
+<footer class="footer bg-light opacity-75 fixed-bottom">
+	<div class="container">
+		<div class="row pt-5 pb-3">
+		<div class="col-xs-12 col-sm-12 col-md-5">
+			<a href="${homeUrl}" class="mb-3">
+				<img src="${context}/img/Glowup_logo.png" alt="glowup" width="" height="35">
 			</a>
-			<p>글로우업과 함께 당신만의 팔레트를 완성해보세요. </p>
-			<div class="sns">
-	      		<a href="#"><img src="${context}/img/common/sns_kakao.svg"  alt="kakaolink"></a>
-	      		<a href="#"><img src="${context}/img/common/sns_insta.svg" alt="instalink"></a>
-	      		<a href="#"><img src="${context}/img/common/sns_youtube.svg" alt="youtubelink"></a>
-	      		<a href="#"><img src="${context}/img/common/sns_twitter.svg" alt="twitterlink"></a>
-	      		<a href="#"><img src="${context}/img/common/sns_facebook.svg" alt="fackbooklink"></a>
-			</div>
+			<p class="fw-bold pt-4 pb-2">글로우업과 함께 당신만의 팔레트를 완성해보세요. </p>
+      		<a href="#" class="px-2"><i class="fa-solid fa-comment"></i></a>
+      		<a href="#" class="px-2"><i class="fa-brands fa-youtube"></i></a>
+			<a href="#" class="px-2"><i class="fa-brands fa-tiktok"></i></a>
+			<a href="#" class="px-2"><i class="fa-brands fa-instagram"></i></a>
+			<a href="#" class="px-2"><i class="fa-brands fa-facebook"></i></a>
 		</div>
-		<div class="col-sm-4 col-md-2 footer-right">
-			<h2>서비스</h2>
-			<ul class="info">
+		<div class="col-xs-12 col-sm-4 col-md-2 footer-right">
+			<ul class="">
+				<p class="fw-bold fs-5">서비스</p>
 				<li><a href="${context}/work/board/notice.do">공지사항</a>
 				<li><a href="${context}/work/board/community.do">커뮤니티</a>
 				<li><a href="#">회사소개 </a>
 			</ul>
 		</div>
-		<div class="col-sm-4 col-md-3 footer-right">
-			<h2>고객센터</h2>
-			<ul class="info info2">
+		<div class="col-xs-12 col-sm-4 col-md-2 footer-right">
+			<ul class="">
+			<p class="fw-bold fs-5">고객센터</p>
 				<li><a href="${context}/work/board/inquiry.do">1 : 1 상담</a>
 				<li><a href="${context}/work/board/qan.do">Q & A</a></li>
 				<li><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
 			</ul>
 		</div>
-		<div class="col-sm-4 col-md-3 footer-right">
-			<h2>정보</h2>
-			<ul class="info info3">
+		<div class="col-xs-12 col-sm-4 col-md-3 ">
+			<ul class="">
+			<p class="fw-bold fs-5">정보</p>
 				<li>email : <a>glowup@glowup.co.kr</a></li>
 				<li>tel : <a>1577-1234</a></li>
 			</ul>
-			<ul class="info info2">
+			<ul class="">
 				<li>상담시간 : <a>AM 09:00 ~ PM 05:00</a></li>
 				<li>월 ~ 금 (주말, 공휴일 제외)</li>
 			</ul>

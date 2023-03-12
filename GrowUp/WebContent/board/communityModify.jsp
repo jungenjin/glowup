@@ -51,7 +51,7 @@
 <div class="titarea" style='background-image: url("${context}/img/subbg_event.jpg");'></div>
 <!-- title, visual end -->
 
-<!-- Details -->
+<!-- Detail -->
 <div class="container">
 	<div class="px-5 py-5">
 	

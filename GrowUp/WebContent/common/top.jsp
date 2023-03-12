@@ -39,7 +39,7 @@
 <body>
 <nav class="navbar bg-light opacity-75 fixed-top">
   <div class="container">
-	<a class="navbar-brand" href="${homeUrl}"><img src="${context}/img/Glowup_logo.png" alt="glowup" width="" height="24"></a>
+	<a class="navbar-brand" href="${homeUrl}"><img src="${context}/img/Glowup_logo.png" alt="glowup" width="" height="33"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>

@@ -73,6 +73,9 @@
 		<!-- board modify start -->
 		<form id="inquiryModify" class="form-horizontal" method="post" action="${context}/work/board/inquiryModify.do?inqNo=${dsInquiry.INQ_NO}" role="form">
 			<div class="form-horizontal boardwrite">
+			<input type="hidden" class="form-control" id="inqRegId" name="inqRegId">
+			<input type="hidden" class="form-control" id="inqPhone" name="inqPhone">
+			<input type="hidden" class="form-control" id="inqEmail" name="inqEmail">
 				<div class="form-group">
 					<label for="inqTilte" class="control-label fs-4 mb-2">제목</label>
 					<input class="form-control" type="text" name="inqTilte" id="inqTilte" required="required" maxlength="50" autofocus="autofocus">
@@ -97,10 +100,4 @@
 </div><!-- container end -->
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
-</html>
-	
-<%-- <form id="inquiryModify" class="form-horizontal" method="post" action="${context}/work/board/inquiryModify.do?inqNo=${dsInquiry.INQ_NO}" role="form">
-<input type="hidden" class="form-control" id="inqRegId" name="inqRegId">
-<input type="hidden" class="form-control" id="inqPhone" name="inqPhone">
-<input type="hidden" class="form-control" id="inqEmail" name="inqEmail"> --%>
-		 
+</html>		 

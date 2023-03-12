@@ -16,15 +16,16 @@
 <!-- Detail -->
 <div class="container">
 	<div class="px-5 py-5">
-	<!-- board title start -->
-	<div class="page-header">
-		<div class="row py-5">
-			<div class="d-flex flex-row mb-12">
-				<h2 class="title p-2">자주 묻는 질문</h2>
+	
+		<!-- board title start -->
+		<div class="page-header">
+			<div class="row py-5">
+				<div class="d-flex flex-row mb-12">
+					<p class="title p-2 fs-1 fw-bold">자주 묻는 질문</p>
+				</div>
 			</div>
 		</div>
-	</div>
-	<!-- board title end -->
+		<!-- board title end -->
 
 			<!-- search-bar start -->
 			<div class="d-flex justify-content-center mb-5">
@@ -35,16 +36,16 @@
 			</div>	
 			<!-- search-bar end -->
 			
-			<div class="accordion accordion-flush p-2">
+			<div class="accordion accordion-flush " id="accordionFlushExample">
 			  <div class="accordion-item">
 			    <div class="accordion-header fs-4" id="flush-headingOne">
-			      <button class="accordion-button collapsed border-bottom" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+			      <button class="accordion-button collapsed border-bottom border-2" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
 		        	<p class="gotu fw-bold">Q</p><p class="px-4">교환은 어떻게 하나요?</p>
 			      </button>
 			    </div>
 			    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-			      <div class="accordion-body fs-5">
-				    <p class="lh-base">   
+			      <div class="accordion-body fs-6">
+				    <p class="lh-base py-3">   
 			      	상품 불량 및 오배송 등의 경우 동일 제품으로 교환 접수 가능하나 상품이 마음에 들지 않거나 고객 변심에 의한 경우반품 후 재구매로 진행 필요한 점 안내드립니다.<br>
 					(고객 변심인 경우 반품 안내 페이지를 통해 확인 부탁드립니다.)<br>
 					* 상품 불량 및 오배송으로 교환을 원하시는 경우에는 아래 순서로 신청하여 주시면 내용 확인 후 교환 조치해 드립니다.<br>
@@ -57,15 +58,15 @@
 			    </div>
 			  </div>
 			  
-			  <div class="accordion-item">
+			  <div class="accordion-item" id="accordionFlushExample">
 			    <div class="accordion-header fs-4" id="flush-headingTwo">
-			      <button class="accordion-button collapsed border-bottom" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+			      <button class="accordion-button collapsed border-bottom border-2" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
 		        	<p class="gotu fw-bold">Q</p><p class="px-4">주문한 상품과 다른 상품이 왔어요.</p>
 			      </button>
 		    	</div>
 			    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-			      <div class="accordion-body fs-5">
-				    <p class="lh-base">   
+			      <div class="accordion-body fs-6">
+				    <p class="lh-base py-3">   
 					오배송으로 불편을 끼쳐 드려 죄송합니다.<br>
 					글로우업 사이트 하단의 [고객센터 > 1:1 상담] 혹은 고객서비스센터(수신자 요금 부담) 1577-1234로 연락 주시면
 					신속하게 처리해드리겠습니다.
@@ -73,15 +74,15 @@
 			    </div>
 			  </div>
 			  
-			  <div class="accordion-item">
+			  <div class="accordion-item" id="accordionFlushExample">
 			    <div class="accordion-header fs-4" id="flush-headingThree">
-			      <button class="accordion-button collapsed border-bottom" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+			      <button class="accordion-button collapsed border-bottom border-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
 		        	<p class="gotu fw-bold">Q</p><p class="px-4">배송비는 얼마인가요?</p>
 			      </button>
 			    </div>
 			    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-			      	<div class="accordion-body fs-5">   
-				    	<p class="lh-base">       
+			      	<div class="accordion-body fs-6">   
+				    	<p class="lh-base py-3">       
 					         현재 배송비 무료 이벤트 진행중이므로 배송비는 부과되지 않습니다. (3/1 ~ 3/31 까지 진행)<br>
 					    3월 배송비 무료 이벤트 종료 이후에는  고객님의 실 결제금액(할인 후 결제금액)이 5만원 이상일 경우 무료로 배송해드립니다.<br>
 						그러나 총 결제금액이 5만 원 미만일 경우 고객님께서 배송비 2,500원을 부담해주셔야 합니다.<br>
@@ -91,15 +92,15 @@
 				  </div>
 			  </div>
 			  
-				<div class="accordion-item">
+				<div class="accordion-item" id="accordionFlushExample">
 				    <div class="accordion-header fs-4" id="flush-headingFour">
-						<button class="accordion-button collapsed border-bottom" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+						<button class="accordion-button collapsed border-bottom border-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
 				    		<p class="gotu fw-bold">Q</p><p class="px-4">반품이 가능한 기준을 알고 싶어요.</p>
 						</button>
 				    </div>
 				    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-				      <div class="accordion-body fs-5">   
-					    <p class="lh-base">
+				      <div class="accordion-body fs-6">   
+					    <p class="lh-base py-3">
 				   		<b>1. 반품이 가능한 경우 </b><br>
 				   		<br>
 						1) 단순 변심, 착오 구매에 따른 교환/반품 신청은 상품을 공급받은 날부터 14일 이내 가능합니다. (배송비 고객 부담)<br>
@@ -121,15 +122,15 @@
 				    </div>
 				</div>
 			    
-			  	<div class="accordion-item">
+			  	<div class="accordion-item" id="accordionFlushExample">
 				    <div class="accordion-header fs-4" id="flush-headingFive">
-				      <button class="accordion-button collapsed border-bottom" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+				      <button class="accordion-button collapsed border-bottom border-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
 				      	 <p class="gotu fw-bold">Q</p><p class="px-4">주문을 취소했는데 신용카드 결제는 취소가 되지 않았어요.</p>
 				      </button>
 				    </div>
 			    	<div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-				      <div class="accordion-body fs-5">
-					    <p class="lh-base">        
+				      <div class="accordion-body fs-6">
+					    <p class="lh-base py-3">        
 				   		카드 매출 취소는 즉시 접수되나, 카드사 사정에 따라 매출 취소 기간이 8일 정도 소요(평일 기준) 될 수 있습니다.<br>
 						그리고 각 신용카드사 청구 작업이 끝난 이후에 취소 처리가 된 경우에는 납부 후 다음 달 카드 대금에서 상계처리될 수 있습니다.<br>
 						카드대금 결제일에 따라 청구 작업 기간이 다른 점 양지 부탁드리며, 해당 카드사에서 확인 가능합니다.<br>
@@ -142,21 +143,28 @@
 	
 			<!-- pagination start -->
 			<div class="d-flex justify-content-center my-5">
-				<ul class="pagination">
-				  <li class="page-item">
-				    <a class="page-link" href="#" aria-label="Previous">
-				      <span aria-hidden="true">&laquo;</span>
-				    </a>
-				  </li>
-				  <li class="page-item"><a class="page-link" href="#">1</a></li>
-				  <li class="page-item"><a class="page-link" href="#">2</a></li>
-				  <li class="page-item"><a class="page-link" href="#">3</a></li>
-				  <li class="page-item">
-				    <a class="page-link" href="#" aria-label="Next">
-				      <span aria-hidden="true">&raquo;</span>
-				    </a>
-				  </li>
-				</ul>
+			<!-- 페이징을 지정할 태그에 class에 pagination을 넣으면 자동으로 페이징이 된다.-->
+			  <!-- 페이징의 크기를 제어할 수 있는데 pagination-lg를 추가하면 페이징 크기가 커지고, pagination-sm를 넣으면 작아진다. -->
+			  <!-- 큰 페이징 class="pagination pagination-lg", 보통 페이징 class="pagination", 작은 페이징  class="pagination pagination-sm" -->
+			  <ul class="pagination mx-2">
+			    <!-- li태그의 클래스에 disabled를 넣으면 마우스를 위에 올렸을 때 클릭 금지 마크가 나오고 클릭도 되지 않는다.-->
+			    <!-- disabled의 의미는 앞의 페이지가 존재하지 않다는 뜻이다. -->
+			    <li class="disabled mx-2">
+			      <a href="#">
+			        <span>«</span>
+			      </a>
+			    </li>
+			    <!-- li태그의 클래스에 active를 넣으면 색이 반전되고 클릭도 되지 않는다. -->
+			    <!-- active의 의미는 현재 페이지의 의미이다. -->
+			    <li class="active mx-2"><a href="#">1</a></li>
+			    <li class="mx-2"><a href="#">2</a></li>
+			    <li class="mx-2"><a href="#">3</a></li>
+			    <li class="mx-2">
+			      <a href="#">
+			        <span>»</span>
+			      </a>
+			    </li>
+			  </ul>
 			</div><!-- pagination end -->
 		
 			</div><!-- container end -->
