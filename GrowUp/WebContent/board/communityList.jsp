@@ -58,7 +58,7 @@
 		<!-- board buttons start -->
 		<c:if test="${sessionScope.grade == 'A' || sessionScope.grade == 'M'}">
 			<div class="d-flex flex-row-reverse p-2">
-				<button type="button" class="btn boardbtn p-2" onclick="fn_eventWrite()">새 글 쓰기</button>
+				<button type="button" class="btn boardbtn p-2" onclick="fn_communityWrite()">새 글 쓰기</button>
 			</div>
 		</c:if>
 		<!-- board buttons end -->
