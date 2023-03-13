@@ -43,8 +43,8 @@
 					<c:forEach items="${dsNoticeList}" var="dsNoticeList">
                       <tr>
                       	<td class="d-flex flex-row">
-                      		<div class="col-md-8 p-2 px-left-1"><a href ="${context}/work/board/noticeView.do?ntcNo=${dsNoticeList.NTC_NO}">${dsNoticeList.NTC_TITLE}</a></div>
-							<div class="col-md-1 p-2 px-right-1 fw-bold">${dsNoticeList.USER_NAME}</div>
+                      		<div class="col-md-7 p-2 px-left-1"><a href ="${context}/work/board/noticeView.do?ntcNo=${dsNoticeList.NTC_NO}">${dsNoticeList.NTC_TITLE}</a></div>
+							<div class="col-md-2 p-2 px-right-1 fw-bold">${dsNoticeList.USER_NAME}</div>
 							<div class="col-md-2 p-2 px-right-1">${dsNoticeList.NTC_REG_DATE}</div>
 							<div class="col-md-1 p-2 px-right-1">조회수 : ${dsNoticeList.NTC_HIT}</div>
                       	</td>

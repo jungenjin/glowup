@@ -442,7 +442,7 @@ transition: all 0.4s ease-in-out;
 /* .table.boardlist>tbody>tr:hover {cursor:pointer;} */
 .table.boardlist>tbody>tr>td a:hover {color:#CC947C;}
 @media (min-width: 992px) {
-   .table.boardlist>tbody>tr>td  {min-height:130px;padding:42px 10px;font-size:30px;}
+   .table.boardlist>tbody>tr>td  {min-height:130px;padding:42px 10px;font-size:25px;}
 }
 /* board view */
 .boardview .title {padding:30px 7px;font-size:21px;border-bottom:1px solid #000}

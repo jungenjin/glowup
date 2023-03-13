@@ -52,8 +52,8 @@
 	                     <c:forEach items="${dsqnaList}" var="dsqnaList">
 	                      <tr>
 	                      	<td class="d-flex flex-row">
-	                      		<div class="col-md-10"><a href ="${context}/work/board/qnaView.do?inqNo=${dsqnaList.QNA_NO}">${dsqnaList.QNA_TITLE}</a></div>
-								<div class="col-md-1 p-2 px-right-1 fw-bold">${dsqnaList.USER_NAME}</div>
+	                      		<div class="col-md-7"><a href ="${context}/work/board/qnaView.do?inqNo=${dsqnaList.QNA_NO}">${dsqnaList.QNA_TITLE}</a></div>
+								<div class="col-md-2 p-2 px-right-1 fw-bold">${dsqnaList.USER_NAME}</div>
 								<div class="col-md-2 p-2 px-right-1">${dsqnaList.QNA_REG_DATE}</div>
 								<div class="col-md-1 p-2 px-right-1">조회수 : ${dsqnaList.QNA_HIT}</div>
 	                      	</td>

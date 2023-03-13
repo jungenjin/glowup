@@ -43,8 +43,8 @@
 	                     <c:forEach items="${dsinquiryList}" var="dsinquiryList">
 	                      <tr>
 	                      	<td class="d-flex flex-row">
-	                      		<div class="col-md-8 p-2 px-left-1"><a href ="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a></div>
-								<div class="col-md-1 p-2 px-right-1 fw-bold">${dsinquiryList.USER_NAME}</div>
+	                      		<div class="col-md-7 p-2 px-left-1"><a href ="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a></div>
+								<div class="col-md-2 p-2 px-right-1 fw-bold">${dsinquiryList.USER_NAME}</div>
 								<div class="col-md-2 p-2 px-right-1">${dsinquiryList.INQ_REG_DATE}</div>
 								<div class="col-md-1 p-2 px-right-1">조회수 : ${dsinquiryList.INQ_HIT}</div>
 	                      	</td>
