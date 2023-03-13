@@ -131,7 +131,7 @@
 	        <div class="loginbox">
 	        	<!-- login tab button start -->
 	        	<div class="logintab">
-			        <div class="col-xs-12 title">Edit user information</div>
+			        <div class="col-xs-12 title">정보수정</div>
 				</div>
 	        	<!-- login tab button end -->
 				<form id="joinFrm" method="post" action="${context}/work/user/updateUser.do" role="form" class="form-horizontal">

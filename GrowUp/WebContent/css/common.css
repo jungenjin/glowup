@@ -624,7 +624,7 @@ display: none;
 	.loginbox .hyphen {position:relative;}
 	.loginbox .hyphen::after {content:"-";position:absolute;display:block;right:-4px;top:0;height:46px;line-height:46px;font-size:16px;font-family:"Noto Sans KR";}
 @media (min-width: 992px) {
-	.logintab .title {height:62px;font-size:28px;padding-top:30px;padding-left:70px;font-family: "Gotu"}
+	.logintab .title {height:62px;font-size:27px;padding-top:30px;font-family: "Gotu"}
 	.logintab .tabbtn a {height:62px;font-size:28px;padding-top:10px}
 	.loginbox form {padding:50px 50px 30px;font-size:20px;}
 	.loginbox form .form-control {height: 66px;font-size:20px;margin-bottom:15px;}
