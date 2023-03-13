@@ -63,7 +63,7 @@
 		<!-- board view end -->
 		
 		<!-- board button area start -->
-		<c:if test="${sessionScope.grade == 'A' || sessionScope.userCode == dsEvent.EV_REG_ID}">
+		<c:if test="${sessionScope.grade == 'A'}">
 			<div class="d-flex justify-content-end">
 				<button class="btn boardbtn" type="button" onclick="fn_noticeList()">목록</button>
 				<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
