@@ -108,9 +108,9 @@
 	</div>
 </nav>
 
-	<div class= "container" style="margin-top:65px;">
+	<div class= "container">
 	  	<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
-	  		<h1 class="admintitle"><mark>관리자 모드</mark></h1>
+	  		<h1 class="admintitle"><mark>관리자 화면</mark></h1>
 	  	</c:if>
 	</div>
 
