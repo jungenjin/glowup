@@ -8,11 +8,27 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>커뮤니티 | 글 목록</title>
 	<script src="${context}/js/jquery-1.9.1.js"></script>
+	<!-- 테이블에 dataTables-example 사용시 검색, 페이징처리 됨 -->
+	<link href="${context}/css/plugins/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="${context}/css/sb-admin-2.css" rel="stylesheet">
+	<script src="${context}/js/jquery-1.9.1.js"></script>
+	<!-- 테이블에 dataTables-example 사용시 검색, 페이징처리 됨 -->
+    <script src="${context}/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="${context}/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    
 	<script type="text/javascript">
+	 $(document).ready(function() {
+	        $('#dataTables-example').DataTable();
+	    });
+	
 		function fn_communityWrite(){
 			location.href = "${context}/work/board/communityWrite.do";
 		}
 	</script>
+	<style type="text/css">
+		.dataTables_info{display: hidden};
+		#dataTables-example th {background: #ffffff !important};
+	</style>
 </head>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
@@ -32,26 +48,29 @@
 		
 		<!-- board list start -->
         <div class="table-responsive">
-            <table class="table table-hover boardlist">
-                <tbody>
-                    <c:forEach items="${dsCommunityList}" var="dsCommunityList">
-                     <tr>
-                     	<td class="col-md-7 p-3 px-left-1">
-                     		<a href ="${context}/work/board/communityView.do?comuNo=${dsCommunityList.COMU_NO}">${dsCommunityList.COMU_TITLE}</a>
-                     	</td>
-                     	<td class="col-md-2 p-3 px-right-1 fw-bold">
-							${dsCommunityList.USER_NAME}
-                     	</td>
-                     	<td class="col-md-2 p-3 px-right-1">
-							${dsCommunityList.COMU_REG_DATE}
-                     	</td>
-                     	<td class="col-md-1 p-3 px-right-1">
-							조회수 : ${dsCommunityList.COMU_HIT}
-                     	</td>
-                     </tr>
-                	</c:forEach>
-                </tbody>
-            </table>
+            <table class="table table-hover boardlist" id="dataTables-example">
+                <thead>
+			            <tr style="display: none;">
+			                <th>Name</th>
+			                <th>Position</th>
+			                <th>Office</th>
+			                <th>Age</th>
+			                <th>Start date</th>
+			            </tr>
+			        </thead>
+                    <tbody>
+					<c:forEach items="${dsCommunityList}" var="dsCommunityList">
+                      <tr>
+                      	<td class="flex-row" >
+                      		<th class="col-md-7 p-2  comuTable"  style="background: #ffffff"><a href ="${context}/work/board/communityView.do?comuNo=${dsCommunityList.COMU_NO}" style="background: #ffffff">${dsCommunityList.COMU_TITLE}</a></th>
+							<th class="col-md-2 p-2 px-right-1 fw-bold" style="background: #ffffff">${dsCommunityList.USER_NAME}</th>
+							<th class="col-md-2 p-2 px-right-1 comuTable" style="background: #ffffff">${dsCommunityList.COMU_REG_DATE}</th>
+							<th class="col-md-1 p-2 px-right-1 comuTable" style="background: #ffffff">조회수 : ${dsCommunityList.COMU_HIT}</th>
+                      	</td>
+                      </tr>
+                 	</c:forEach>
+                    </tbody>
+                </table>
         </div>
 		<!-- board list end -->
 		
