@@ -78,7 +78,7 @@
 </head>
 <c:set var="productManageUrl">${context}/work/product/retrieveProductListForManage.do</c:set>
 <c:set var="statisticsForProductUrl">${context}/work/sell/retrieveStatisticsForProduct.do</c:set>
-<c:set var="statisticsForStockUrl">${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=P</c:set>
+<c:set var="statisticsForStockUrl">${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=E</c:set>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <!-- 메인 백그라운드 배경 튜블라 적용 -->
@@ -165,8 +165,8 @@
 	         <h1>재고현황</h1>
 	      </div> 
 	   </div>
-   	<jsp:include page="${context}/common/foot.jsp"></jsp:include>
 	</div>
+   	<jsp:include page="${context}/common/foot.jsp"></jsp:include>
 	</c:if>
 <script>
   AOS.init();
