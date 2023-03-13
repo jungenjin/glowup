@@ -63,7 +63,11 @@
 		<div class="col-xs-12 col-sm-4 col-md-2 footer-right">
 			<ul class="">
 			<p class="fw-bold fs-5">고객센터</p>
-				<li><a href="${context}/work/board/inquiry.do">1 : 1 상담</a>
+			
+				<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
+					<li><a href="${context}/work/board/inquiry.do">1 : 1 상담</a></li>
+				</c:if>
+				
 				<li><a href="${context}/work/board/qna.do">Q & A</a></li>
 				<li><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
 			</ul>
