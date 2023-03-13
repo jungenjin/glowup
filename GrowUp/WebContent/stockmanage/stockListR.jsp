@@ -44,19 +44,11 @@
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <div class="container">
-	<!-- board title, buttons start -->
-	<div class="page-header">
-		<div class="row">
-			<div class="col-xs-8">
-				<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-				<h2 class="title">재고관리</h2>
-			</div>
-			<div class="col-xs-4 text-right">
-				<button type="button" class="btn btn-lg boardbtn" onclick="fn_createProduct()">상품등록</button>
-			</div>
-		</div>
+	<!-- board title start -->
+	<div class="py-5">
+		<p class="title fs-1 fw-bold">재고관리</p>
 	</div>
-	<!-- board title, buttons end -->
+	<!-- board title end -->
     <div class="table-responsive">
         <table class="table" id="dataTables-example">
             <thead>
@@ -96,9 +88,9 @@
                     </td>
                     <td style="vertical-align: middle;">
                     	[${dsProductList.PRODUCT_CATEGORY_CD_NM}]
-                    	<br>${dsProductList.PRODUCT_NAME}
-                    	<br>${dsProductList.PRODUCT_NAME_ENG}
-                    	<br>${dsProductList.PRODUCT_DESCRIPTION}
+                    	<br>한글명 : ${dsProductList.PRODUCT_NAME}
+                    	<br>영문명 : ${dsProductList.PRODUCT_NAME_ENG}
+                    	<br>설명 : ${dsProductList.PRODUCT_DESCRIPTION}
                     </td>
                     <td style="text-align: center; vertical-align: middle;">₩ <fmt:formatNumber value="${dsProductList.PRODUCT_UNIT_PRICE}" pattern="#,###" /></td>
                     <td style="text-align: center; vertical-align: middle;">${dsProductList.PRODUCT_COUNT}</td>
@@ -110,6 +102,11 @@
             </tbody>
         </table>
 	</div>
+	<!-- board buttons start -->
+	<div class="d-flex flex-row-reverse p-2">
+		<button type="button" class="btn boardbtn p-2" onclick="fn_createProduct()">상품등록</button>
+	</div>
+	<!-- board buttons end -->
 </div>
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>

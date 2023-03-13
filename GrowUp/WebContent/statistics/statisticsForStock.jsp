@@ -31,13 +31,15 @@
     	$("#sort").change(function(){
     		sort = $("#sort").val();
 
-    		if(sort == 'stockP'){
-				url = "${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=P";
-    		}else if(sort == 'stockD'){
-				url = "${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=D";
-    		}else if(sort == 'sell'){
+    		if(sort == 'stockE'){
+				url = "${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=E";
+    		} else if(sort == 'stockF'){
+				url = "${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=F";
+    		} else if(sort == 'stockL'){
+				url = "${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=L";
+    		} else if(sort == 'sell'){
     			url = "${context}/work/product/retrieveStatisticsForSell.do";
-    		}
+    		} 
 
     		if(sort != 'sell'){
     			location.href = url + "&sort=" + sort;
@@ -75,24 +77,17 @@
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <div class="container">
-	<!-- board title, buttons start -->
-	<div class="page-header">
-		<div class="row">
-			<div class="col-xs-8">
-				<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-				<h2 class="title">재고현황/판매현황</h2>
-			</div>
-			<div class="col-xs-4 text-right">
-			</div>
-		</div>
+	<!-- board title start -->
+	<div class="py-5">
+		<p class="title fs-1 fw-bold">재고현황/판매현황</p>
 	</div>
-	<!-- board title, buttons end -->
-
+	<!-- board title end -->
 	<div class="row">
 		<div class="col-md-3">
 			<select class="form-control" id="sort" name="sort">
-				<option value="stockP">재고현황[PERFUME]</option>
-				<option value="stockD">재고현황[DIFFUSER]</option>
+				<option value="stockE">재고현황[섀도우]</option>
+				<option value="stockL">재고현황[립스틱]</option>
+				<option value="stockF">재고현황[파운데이션]</option>
 				<option value="sell">판매현황</option>
 			</select>
 		</div>

@@ -78,21 +78,16 @@
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <div class="container">
-	<!-- board title, buttons start -->
-	<div class="page-header">
-		<div class="row">
-			<div class="col-xs-8">
-				<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-				<h2 class="title">신규상품등록</h2>
-			</div>
-		</div>
+	<!-- board title start -->
+	<div class="py-5">
+		<p class="title fs-1 fw-bold">신규상품등록</p>
 	</div>
-	<!-- board title, buttons end -->
+	<!-- board title end -->
 	<form id="createProduct" method="post" action="${context}/work/product/createProduct.do" role="form">
-		<div class="form-horizontal" style="padding-top: 5%;">
+		<div class="form-horizontal">
 
-			<div class="form-group">
-				<label for="productCategoryCd" class="control-label col-md-2"><b>카테고리</b></label>
+			<div class="form-group row mb-3">
+				<label for="productCategoryCd" class="col-form-label col-md-2">카테고리</label>
 				<div class="col-md-10">
 		        	<select class="form-control" id="productCategoryCd" name="productCategoryCd" required="required" onchange="fn_setProductCategoryCd()">
 						<c:forEach items="${dsCode1}" var="code1">
@@ -101,43 +96,43 @@
 		     		</select>
 	     		</div>
 			</div>
-			<div class="form-group">
-				<label for="productName" class="control-label col-md-2"><b>상품명</b></label>
+			<div class="form-group row mb-3">
+				<label for="productName" class="col-form-label col-md-2">상품명 한글</label>
 				<div class="col-md-10">
 					<input class="form-control" type="text" name="productName" id="productName" required="required" autofocus="autofocus"/>
 				</div>
 			</div>
-			<div class="form-group">
-				<label for="productName" class="control-label col-md-2"><b>상품명 영문</b></label>
+			<div class="form-group row mb-3">
+				<label for="productName" class="col-form-label col-md-2">상품명 영문</label>
 				<div class="col-md-10">
 					<input class="form-control" type="text" name="productNameEng" id="productNameEng" required="required" autofocus="autofocus"/>
 				</div>
 			</div>
 			
-			<div class="form-group">
-				<label for="productName" class="control-label col-md-2"><b>상품설명</b></label>
+			<div class="form-group row mb-3">
+				<label for="productName" class="col-form-label col-md-2">상품설명</label>
 				<div class="col-md-10">
 					<input class="form-control" type="text" name="productDescription" id="productDescription" required="required" autofocus="autofocus"/>
 				</div>
 			</div>
 
-			<div class="form-group">
-				<label for="productUnitPrice" class="control-label col-md-2"><b>단가</b></label>
+			<div class="form-group row mb-3">
+				<label for="productUnitPrice" class="col-form-label col-md-2">단가(원)</label>
 				<div class="col-md-10">
 					<input class="form-control" type="text" id="productUnitPrice" name="productUnitPrice" required="required" onkeydown="return fn_showKeyCode(event)"/>
 				</div>
 			</div>
 
-			<div class="form-group">
-				<label for="productCount" class="control-label col-md-2"><b>수량</b></label>
+			<div class="form-group row mb-3">
+				<label for="productCount" class="col-form-label col-md-2">수량</label>
 				<div class="col-md-10">
 					<input class="form-control" type="text" id="productCount" name="productCount" required="required" onkeydown="return fn_showKeyCode(event)"/>
 				</div>
 			</div>
-			<div class="form-group">
-				<label class="control-label col-md-2"><b>상품이미지</b></label>
+			<div class="form-group row mb-3">
+				<label class="col-form-label col-md-2">상품이미지</label>
 				<div class="col-md-10">
-					<img id="pic" style="width:auto;max-width:100%;min-width:100%"><br/>
+					<img id="pic" style="width:auto;max-width:100%;"><br/>
 					<input type="hidden" id="productImage" name="productImage" required="required">
 				</div>
 			</div>
@@ -145,22 +140,20 @@
 	</form>
 
 	<form id="ajaxform" action="${context}/work/product/saveFile.do" method="post" enctype="multipart/form-data" role="form">
-		<div class="form-group">
-		<label class="control-label col-md-2"></label>
+		<div class="form-group row mb-3">
+		<label class="col-form-label col-md-2"></label>
 			<div class="col-md-10">
 				<input class="form-control" type="file" id="imageFile" name="imageFile" onchange="fn_upload()" onclick="return fn_checkCategory()"/>
 				<input type="hidden" id="imageFolder" name="imageFolder">
 			</div>
 		</div>
 	</form>
-	<div class="form-group">
-		<!-- board button area start -->
-		<div class="row btnarea">
-			<button class="btn btn-lg boardbtn" type="button" onclick="fn_save()">등록하기</button>
-			<button type="button" class="btn btn-lg boardbtn" onclick="fn_back()">취소</button>
-		</div>
-		<!-- board button area end -->
+	<!-- board button start -->
+	<div class="d-flex justify-content-end">
+		<button type="button" class="btn boardbtn" onclick="fn_save()">등록하기</button>
+		<button type="button" class="btn boardbtn" onclick="fn_back()">취소</button>
 	</div>
+	<!-- board button end -->
 </div>
 
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>

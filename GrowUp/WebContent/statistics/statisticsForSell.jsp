@@ -67,18 +67,11 @@
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <div class="container">
-	<!-- board title, buttons start -->
-	<div class="page-header">
-		<div class="row">
-			<div class="col-xs-8">
-				<!-- 한글일 경우 title 클래스만 사용. 영문일 경우 eng 클래스 추가하세요 -->
-				<h2 class="title">매출통계</h2>
-			</div>
-			<div class="col-xs-4 text-right">
-			</div>
-		</div>
+	<!-- board title start -->
+	<div class="py-5">
+		<p class="title fs-1 fw-bold">매출통계</p>
 	</div>
-	<!-- board title, buttons end -->
+	<!-- board title end -->
 	<div class="row">
 		<div class="col-md-3">
 			<select class="form-control" id="sort" name="sort">
