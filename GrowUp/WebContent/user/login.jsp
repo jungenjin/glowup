@@ -54,31 +54,31 @@
 	        <div class="loginbox">
 	        	<!-- login tab button start -->
 	        	<div class="logintab row">
-			        <div class="col-6 tabbtn on"><a href="${context}/user/login.jsp">Login</a></div>
-					<div class="col-6 tabbtn"><a href="${context}/work/user/createUser.do">Register</a></div>
+			        <div class="col-6 tabbtn on"><a href="${context}/user/login.jsp">로 그 인</a></div>
+					<div class="col-6 tabbtn"><a href="${context}/work/user/createUser.do">회원가입</a></div>
 				</div>
 				<!-- login tab button end -->
 				<form action="${context}/work/user/login.do" method="post" role="form" id="loginFrm">
                     <fieldset>
                         <div class="form-group">
 	                        <div class="col-sm-12">
-	                            <input class="form-control" type="text" name="id" id="id" required="required" autofocus="autofocus" placeholder="ID"/>
+	                            <input class="form-control" type="text" name="id" id="id" required="required" autofocus="autofocus" placeholder="아이디를 입력해주세요."/>
                             </div>
                         </div>
                         <div class="form-group">
 	                        <div class="col-sm-12">
-	                            <input class="form-control" placeholder="Password" id="pw" name="pw" type="password">
+	                            <input class="form-control" placeholder="비밀번호를 입력해주세요." id="pw" name="pw" type="password">
                             </div>
                         </div>
                         <div class="form-group">
 	                        <div class="col-sm-12">
-	                         	<button type="button" class="form-control btn Loginbtn" onclick="ajaxLoginCheck();">LOGIN</button>
+	                         	<button type="button" class="form-control btn Loginbtn" onclick="ajaxLoginCheck();">로 그 인</button>
                          	</div>
                        	</div>
                         <div class="form-group">
 	                        <div class="col-sm-12">
-	                        	<p class="forgotText"><a href="${context}/user/idFind.jsp">Forgot your id?</a></p>
-	                        	<p class="forgotText"><a href="${context}/user/pwFind.jsp">Forgot your password?</a></p>
+	                        	<p class="forgotText"><a href="${context}/user/idFind.jsp">[아이디찾기]</a></p>
+	                        	<p class="forgotText"><a href="${context}/user/pwFind.jsp">[비밀번호찾기]</a></p>
                         	</div>
                         </div>
                 	</fieldset>

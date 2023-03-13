@@ -47,20 +47,20 @@
 	        <div class="loginbox">
 	        	<!-- login tab button start -->
 	        	<div class="logintab row">
-			        <div class="col-6 tabbtn on"><a href="${context}/user/idFind.jsp">Find Id</a></div>
-			        <div class="col-6 tabbtn"><a href="${context}/user/pwFind.jsp">Find Password</a></div>
+			        <div class="col-6 tabbtn on"><a href="${context}/user/idFind.jsp">아이디 찾기</a></div>
+			        <div class="col-6 tabbtn"><a href="${context}/user/pwFind.jsp">비밀번호 찾기</a></div>
 				</div>
 	        	<!-- login tab button end -->
 	        	<form>
                     <fieldset>
                         <div class="form-group">
                         	<div class="col-sm-12">
-	                       		<input class="form-control" type="email" name="email" id="email" required="required" autofocus="autofocus" autocomplete="off" placeholder="Email"/>
+	                       		<input class="form-control" type="email" name="email" id="email" required="required" autofocus="autofocus" autocomplete="off" placeholder="이메일을 입력하세요."/>
                             </div>
 						</div>
 						<div class="form-group">
 							<div class="col-sm-12">
-								<input class="Loginbtn form-control" type="button" name="btnSubmit" id="btnSubmit" value="확인" onclick="retrieveUserId()"/>
+								<input class="Loginbtn form-control" type="button" name="btnSubmit" id="btnSubmit" value="확 인" onclick="retrieveUserId()"/>
 							</div>
 						</div>
 						<div class="form-group" id="message"></div>

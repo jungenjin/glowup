@@ -122,8 +122,8 @@
 	        <div class="loginbox">
 	        	<!-- login tab button start -->
 	        	<div class="logintab row">
-			        <div class="col-6 tabbtn"><a href="${context}/user/login.jsp">Login</a></div>
-					<div class="col-6 tabbtn on"><a href="${context}/work/user/createUser.do">Register</a></div>
+			        <div class="col-6 tabbtn"><a href="${context}/user/login.jsp">로그인</a></div>
+					<div class="col-6 tabbtn on"><a href="${context}/work/user/createUser.do">회원가입</a></div>
 				</div>
 	        	<!-- login tab button end -->
 				<form id="joinFrm" method="post" action="${context}/work/user/createUser.do" role="form">
