@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Q & A | 글 목록</title>
+	<title>Q n A | 글 목록</title>
 	<script src="${context}/js/jquery-1.9.1.js"></script>
 	<script type="text/javascript">
 		function fn_qnaWrite(){
@@ -24,14 +24,9 @@
 <!-- Details -->
 <div class="container">
 	<div class="px-5 py-5">
-	
 		<!-- board title start -->
-		<div class="page-header">
-			<div class="row py-5">
-				<div class="d-flex flex-row mb-12">
-					<p class="title p-2 fs-1 fw-bold gotu">Q & A</p>
-				</div>
-			</div>
+		<div class="py-5">
+			<p class="title fs-1 fw-bold">Q n A</p>
 		</div>
 		<!-- board title end -->
 
@@ -45,25 +40,29 @@
 		<!-- search-bar end -->
 		
 		<!-- board list start -->
-		<div class="row">
-	         <div class="table-responsive">
-	             <table class="table table-hover">
-	                 <tbody>
-	                     <c:forEach items="${dsqnaList}" var="dsqnaList">
-	                      <tr>
-	                      	<td class="d-flex flex-row">
-	                      		<div class="col-md-7"><a href ="${context}/work/board/qnaView.do?inqNo=${dsqnaList.QNA_NO}">${dsqnaList.QNA_TITLE}</a></div>
-								<div class="col-md-2 p-2 px-right-1 fw-bold">${dsqnaList.USER_NAME}</div>
-								<div class="col-md-2 p-2 px-right-1">${dsqnaList.QNA_REG_DATE}</div>
-								<div class="col-md-1 p-2 px-right-1">조회수 : ${dsqnaList.QNA_HIT}</div>
-	                      	</td>
-	                      </tr>
-	                 	</c:forEach>
-	                 </tbody>
-	             </table>
-	         </div>
-			<!-- board list end -->
-		</div> <!-- row end -->
+        <div class="table-responsive">
+            <table class="table table-hover boardlist">
+                <tbody>
+                    <c:forEach items="${dsqnaList}" var="dsqnaList">
+                     <tr>
+                     	<td class="col-md-7 p-3 px-left-1">
+                     		<a href ="${context}/work/board/qnaView.do?inqNo=${dsqnaList.QNA_NO}">${dsqnaList.QNA_TITLE}</a>
+                     	</td>
+                     	<td class="col-md-2 p-3 px-right-1 fw-bold">
+							${dsqnaList.USER_NAME}
+                     	</td>
+                     	<td class="col-md-2 p-3 px-right-1">
+							${dsqnaList.QNA_REG_DATE}
+                     	</td>
+                     	<td class="col-md-1 p-3 px-right-1">
+							조회수 : ${dsqnaList.QNA_HIT}
+                     	</td>
+                     </tr>
+                	</c:forEach>
+                </tbody>
+            </table>
+        </div>
+		<!-- board list end -->
 		
 		<!-- board buttons start -->
 		<c:if test="${sessionScope.grade == 'A' || sessionScope.grade == 'M'}">

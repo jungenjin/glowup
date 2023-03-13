@@ -24,37 +24,30 @@
 <!-- Details -->
 <div class="container">
 	<div class="px-5 py-5">
-	
 		<!-- board title start -->
-		<div class="page-header">
-			<div class="row py-5">
-				<div class="d-flex flex-row mb-12">
-					<p class="title p-2 fs-1 fw-bold">1 : 1 문의</p>
-				</div>
-			</div>
+		<div class="py-5">
+			<p class="title fs-1 fw-bold">1 : 1 문의</p>
 		</div>
 		<!-- board title end -->
 		
 		<!-- board list start -->
-		<div class="row">
-	         <div class="table-responsive">
-	             <table class="table table-hover boardlist">
-	                 <tbody>
-	                     <c:forEach items="${dsinquiryList}" var="dsinquiryList">
-	                      <tr>
-	                      	<td class="d-flex flex-row">
-	                      		<div class="col-md-7 p-2 px-left-1"><a href ="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a></div>
-								<div class="col-md-2 p-2 px-right-1 fw-bold">${dsinquiryList.USER_NAME}</div>
-								<div class="col-md-2 p-2 px-right-1">${dsinquiryList.INQ_REG_DATE}</div>
-								<div class="col-md-1 p-2 px-right-1">조회수 : ${dsinquiryList.INQ_HIT}</div>
-	                      	</td>
-	                      </tr>
-	                 	</c:forEach>
-	                 </tbody>
-	             </table>
-	         </div>
-			<!-- board list end -->
-		</div> <!-- row end -->
+        <div class="table-responsive">
+            <table class="table table-hover boardlist">
+                <tbody>
+                    <c:forEach items="${dsinquiryList}" var="dsinquiryList">
+                     <tr>
+                     	<td class="col-md-10 p-3 px-left-1">
+                     		<a href ="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a>
+                     	</td>
+                     	<td class="col-md-2 p-3 px-right-1 fw-bold">
+						${dsinquiryList.USER_NAME}
+                     	</td>
+                     </tr>
+                	</c:forEach>
+                </tbody>
+            </table>
+        </div>
+		<!-- board list end -->
 		
 		<!-- board buttons start -->
 		<c:if test="${sessionScope.grade == 'A' || sessionScope.grade == 'M'}">
@@ -65,7 +58,7 @@
 		<!-- board buttons end -->
 		
 		<!-- pagination start -->
-		<div class="d-flex justify-content-center mb-5">
+		<div class="d-flex justify-content-center my-5">
 		<!-- 페이징을 지정할 태그에 class에 pagination을 넣으면 자동으로 페이징이 된다.-->
 		  <!-- 페이징의 크기를 제어할 수 있는데 pagination-lg를 추가하면 페이징 크기가 커지고, pagination-sm를 넣으면 작아진다. -->
 		  <!-- 큰 페이징 class="pagination pagination-lg", 보통 페이징 class="pagination", 작은 페이징  class="pagination pagination-sm" -->

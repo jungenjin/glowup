@@ -21,39 +21,39 @@
 <div class="titarea" style='background-image: url("${context}/img/subbg_notice.jpg");'></div>
 <!-- title, visual end -->
 
-<!-- Detail -->
+<!-- Details -->
 <div class="container">
 	<div class="px-5 py-5">
-	
 		<!-- board title start -->
-		<div class="page-header">
-			<div class="row py-5">
-				<div class="d-flex flex-row mb-12">
-					<p class="title p-2 fs-1 fw-bold">공지사항</p>
-				</div>
-			</div>
+		<div class="py-5">
+			<p class="title fs-1 fw-bold">공지사항</p>
 		</div>
 		<!-- board title end -->
 		
 		<!-- board list start -->
-		<div class="row">
-            <div class="table-responsive">
-                <table class="table table-hover boardlist">
-                    <tbody>
-					<c:forEach items="${dsNoticeList}" var="dsNoticeList">
-                      <tr>
-                      	<td class="d-flex flex-row">
-                      		<div class="col-md-7 p-2 px-left-1"><a href ="${context}/work/board/noticeView.do?ntcNo=${dsNoticeList.NTC_NO}">${dsNoticeList.NTC_TITLE}</a></div>
-							<div class="col-md-2 p-2 px-right-1 fw-bold">${dsNoticeList.USER_NAME}</div>
-							<div class="col-md-2 p-2 px-right-1">${dsNoticeList.NTC_REG_DATE}</div>
-							<div class="col-md-1 p-2 px-right-1">조회수 : ${dsNoticeList.NTC_HIT}</div>
-                      	</td>
-                      </tr>
-                 	</c:forEach>
-                    </tbody>
-                </table>
-            </div>
-			<!-- board list end -->
+        <div class="table-responsive">
+            <table class="table table-hover boardlist">
+                <tbody>
+                    <c:forEach items="${dsNoticeList}" var="dsNoticeList">
+                     <tr>
+                     	<td class="col-md-7 p-3 px-left-1">
+                     		<a href ="${context}/work/board/noticeView.do?ntcNo=${dsNoticeList.NTC_NO}">${dsNoticeList.NTC_TITLE}</a>
+                     	</td>
+                     	<td class="col-md-2 p-3 px-right-1 fw-bold">
+							${dsNoticeList.USER_NAME}
+                     	</td>
+                     	<td class="col-md-2 p-3 px-right-1">
+							${dsNoticeList.NTC_REG_DATE}
+                     	</td>
+                     	<td class="col-md-1 p-3 px-right-1">
+							${dsNoticeList.NTC_REG_DATE}
+                     	</td>
+                     </tr>
+                	</c:forEach>
+                </tbody>
+            </table>
+        </div>
+		<!-- board list end -->
 			
 			<!-- board buttons start -->
 			<c:if test="${sessionScope.grade == 'A' || sessionScope.grade == 'A'}">

@@ -21,41 +21,40 @@
 <div class="titarea" style='background-image: url("${context}/img/subbg_event.jpg");'></div>
 <!-- title, visual end -->
 
-<!-- Detail -->
+<!-- Details -->
 <div class="container">
 	<div class="px-5 py-5">
-	
 		<!-- board title start -->
-		<div class="page-header">
-			<div class="row py-5">
-				<div class="d-flex flex-row mb-12">
-					<p class="title p-2 fs-1 fw-bold">커뮤니티</p>
-				</div>
-			</div>
+		<div class="py-5">
+			<p class="title fs-1 fw-bold">커뮤니티</p>
 		</div>
 		<!-- board title end -->
 		
 		<!-- board list start -->
-		<div class="row">
-	         <div class="table-responsive">
-	             <table class="table table-hover">
-	                 <tbody>
-	                     <c:forEach items="${dsCommunityList}" var="dsCommunityList">
-	                      <tr>
-	                      	<td class="d-flex flex-row">
-	                      		<div class="col-md-7 p-2 px-left-1"><a href ="${context}/work/board/communityView.do?comuNo=${dsCommunityList.COMU_NO}">${dsCommunityList.COMU_TITLE}</a></div>
-								<div class="col-md-2 p-2 px-right-1 fw-bold">${dsCommunityList.USER_NAME}</div>
-								<div class="col-md-2 p-2 px-right-1">${dsCommunityList.COMU_REG_DATE}</div>
-								<div class="col-md-1 p-2 px-right-1">조회수 : ${dsCommunityList.COMU_HIT}</div>
-	                      	</td>
-	                      </tr>
-	                 	</c:forEach>
-	                 </tbody>
-	             </table>
-	         </div>
-			<!-- board list end -->
-		</div> <!-- row end -->	
-			
+        <div class="table-responsive">
+            <table class="table table-hover boardlist">
+                <tbody>
+                    <c:forEach items="${dsCommunityList}" var="dsCommunityList">
+                     <tr>
+                     	<td class="col-md-7 p-3 px-left-1">
+                     		<a href ="${context}/work/board/communityView.do?comuNo=${dsCommunityList.COMU_NO}">${dsCommunityList.COMU_TITLE}</a>
+                     	</td>
+                     	<td class="col-md-2 p-3 px-right-1 fw-bold">
+							${dsCommunityList.USER_NAME}
+                     	</td>
+                     	<td class="col-md-2 p-3 px-right-1">
+							${dsCommunityList.COMU_REG_DATE}
+                     	</td>
+                     	<td class="col-md-1 p-3 px-right-1">
+							조회수 : ${dsCommunityList.COMU_HIT}
+                     	</td>
+                     </tr>
+                	</c:forEach>
+                </tbody>
+            </table>
+        </div>
+		<!-- board list end -->
+		
 		<!-- board buttons start -->
 		<c:if test="${sessionScope.grade == 'A' || sessionScope.grade == 'M'}">
 			<div class="d-flex flex-row-reverse p-2">

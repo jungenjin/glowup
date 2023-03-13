@@ -429,16 +429,18 @@ transition: all 0.4s ease-in-out;
    .btnarea {margin:120px 0;}
 }
 
-/* board list */
+
+
+/*
 .table-responsive {border:0}
 .table.boardlist>tbody>tr>td {padding:25px 0;color:#575656;font-size:20px;border-top:0;border-bottom:1px solid #000;}
 .table.boardlist>tbody>tr>td a {color:#4D5053;}
-/* .table.boardlist>tbody>tr:hover {cursor:pointer;} */
+.table.boardlist>tbody>tr:hover {cursor:pointer;}
 .table.boardlist>tbody>tr>td a:hover {color:#CC947C;}
 @media (min-width: 992px) {
    .table.boardlist>tbody>tr>td  {min-height:130px;padding:42px 10px;font-size:25px;}
 }
-/* board view */
+board view
 .boardview .title {padding:30px 7px;font-size:21px;border-bottom:1px solid #000}
 .boardview .user {color:#575656;text-align:right}
 .boardview .content {padding:18px;color:#000;font-size:16px;}
@@ -446,7 +448,7 @@ transition: all 0.4s ease-in-out;
    .boardview .title {padding:42px 10px;font-size:30px;}
    .boardview .content {padding:25px;font-size:24px;}
 }
-/* board boardwrite */
+board boardwrite
 .boardwrite .form-group {margin:0}
 .boardwrite .control-label {padding-top:28px;padding-bottom:10px;font-size:16px;text-align:left;}
 .boardwrite .form-control {height:63px;font-size:16px;border-radius:0;background:#D9D9D9;padding:14px}
@@ -455,7 +457,7 @@ transition: all 0.4s ease-in-out;
    .boardwrite .control-label {padding-top:40px;padding-bottom:15px;font-size:24px;}
    .boardwrite .form-control {height:90px;font-size:24px;;padding:20px}
    .boardwrite textarea.form-control {height:272px;}
-}
+} */
 
 /* by 김은주 - 상품목록, 상품상세정보 2023.3.11 */
 /* product list */
