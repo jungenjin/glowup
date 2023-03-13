@@ -94,10 +94,11 @@
 				<li class="dropdown">
 			          <a class="nav-link active nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">관리자 메뉴</a>
 					<ul class="dropdown-menu">
+			          	<li><a class="nav-link active" href="${context}/work/product/goMain.do">관리자 메인</a></li>
 			          	<li><a class="nav-link active" href="${context}/work/user/updateUser.do">EDIT PROFILE</a></li>
 						<li><a class="nav-link active" href="${context}/work/product/retrieveProductListForManage.do">재고관리</a></li>
 						<li><a class="nav-link active" href="${context}/work/sell/retrieveStatisticsForProduct.do">매출통계</a></li>
-						<li><a class="nav-link active" href="${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=P">재고현황</a></li>
+						<li><a class="nav-link active" href="${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=E">재고현황</a></li>
 					</ul>
 				</li>
 				</c:if>
