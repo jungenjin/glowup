@@ -74,7 +74,7 @@
 	<!-- board title end -->
 	<div class="row">
 		<div class="col-md-3">
-			<select class="form-control" id="sort" name="sort">
+			<select class="form-select" id="sort" name="sort">
 				<option value="category">분류별 매출통계</option>
 				<option value="product">항목별 매출통계</option>
 			</select>

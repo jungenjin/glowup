@@ -84,7 +84,7 @@
 	<!-- board title end -->
 	<div class="row">
 		<div class="col-md-3">
-			<select class="form-control" id="sort" name="sort">
+			<select class="form-select" id="sort" name="sort">
 				<option value="stockE">재고현황[섀도우]</option>
 				<option value="stockL">재고현황[립스틱]</option>
 				<option value="stockF">재고현황[파운데이션]</option>
