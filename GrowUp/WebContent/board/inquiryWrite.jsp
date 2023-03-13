@@ -50,17 +50,18 @@
 		</div>
 		<!-- board title end -->
 		
+		
 		<!-- board write start -->
 		<form id="inquiryWrite" class="form-horizontal boardwrite" method="post" action="${context}/work/board/inquiryWrite.do" role="form">
+			<input type="hidden" class="form-control" id="inqRegId" name="inqRegId">
+			<input type="hidden" class="form-control" id="inqPhone" name="inqPhone">
+			<input type="hidden" class="form-control" id="inqEmail" name="inqEmail">
 			<div class="form-horizontal boardwrite">
 				<div class="form-group mb-3">
 					<label for="inqTitle" class="control-label fs-4 mb-2">제목</label>
 					<input class="form-control fs-5" type="text" name="inqTitle" id="inqTitle" required="required" maxlength="50" autofocus="autofocus" placeholder="제목을 입력해주세요"/>
 				</div>
-				<div class="form-group mb-3">
-					<label for="inqTitle" class="control-label fs-4 mb-2">연락처</label>
-					<input class="form-control fs-5" type="tel" name="inqPhone" id="inqPhone" required="required" maxlength="50" autofocus="autofocus" placeholder="연락처를 입력해주세요"/>
-				</div>
+				
 				<div class="form-group mb-3 mt-5">
 					<label for="inqContent" class="control-label fs-4 mb-2">내용</label>
 					<textarea class="form-control fs-5" name="inqContent" id="inqContent" cols="10" rows="15" required="required" placeholder="내용을 입력해주세요"></textarea>

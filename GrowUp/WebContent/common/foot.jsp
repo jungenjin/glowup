@@ -38,7 +38,7 @@
 <c:set var="qnaUrl">${context}/work/board/qna.do</c:set>
 
 <body>
-<footer class="footer bg-light opacity-75">
+<footer class="footer bg-light opacity-75 mt-5">
 	<div class="container">
 		<div class="row pt-5 pb-3">
 		<div class="col-xs-12 col-sm-12 col-md-5">
@@ -64,7 +64,7 @@
 			<ul class="">
 			<p class="fw-bold fs-5">고객센터</p>
 				<li><a href="${context}/work/board/inquiry.do">1 : 1 상담</a>
-				<li><a href="${context}/work/board/qan.do">Q & A</a></li>
+				<li><a href="${context}/work/board/qna.do">Q & A</a></li>
 				<li><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
 			</ul>
 		</div>
