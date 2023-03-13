@@ -62,7 +62,7 @@
 					<c:forEach items="${dsCommunityList}" var="dsCommunityList">
                       <tr>
                       	<td class="flex-row" >
-                      		<th class="col-md-7 p-2  comuTable"  style="background: #ffffff"><a href ="${context}/work/board/communityView.do?comuNo=${dsCommunityList.COMU_NO}" style="background: #ffffff">${dsCommunityList.COMU_TITLE}</a></th>
+                      		<th class="col-md-7 p-2  comuTable"  style="background: #ffffff"><a href ="${context}/work/board/communityView.do?comuNo=${dsCommunityList.COMU_NO}">${dsCommunityList.COMU_TITLE}</a></th>
 							<th class="col-md-2 p-2 px-right-1 fw-bold" style="background: #ffffff">${dsCommunityList.USER_NAME}</th>
 							<th class="col-md-2 p-2 px-right-1 comuTable" style="background: #ffffff">${dsCommunityList.COMU_REG_DATE}</th>
 							<th class="col-md-1 p-2 px-right-1 comuTable" style="background: #ffffff">조회수 : ${dsCommunityList.COMU_HIT}</th>
