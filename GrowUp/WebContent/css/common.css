@@ -494,32 +494,6 @@ transition: all 0.4s ease-in-out;
 }
 /* 상세설명 */
 .productview .product_detail {margin:200px 0}
-/* .scent-info-video {display: block; width: 1170px; height: auto;}
-.sent-info-img {display: block; width: 1170px; cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;}
-.product-title {
-   font-family: 'DM Serif Display';
-   font-size: 3.5em;
-   font-weight: 500;
-   margin-top: 173px;
-   margin-bottom: 78px
-}
-.scent-wrap .scent-info {
-    padding: 0.5em 0 0.3em;
-}
-.scent-wrap .scent-info-sub {
-   padding: 0.5em 0 0.3em;
-} 
-.fragancia {font-family: 'DM Serif Display'; font-size: 1.5em; font-weight: 100%; }
-.product-details{
-   font-family: 'Noto Sans KR'; 
-   font-style: normal;
-   font-size: 1.4em; 
-   font-weight: 400;
-   margin-top: 78px;
-   margin-bottom: 117px;
-   line-height: 1.7em;
-   margin-bottom: 150px;
-}  */
 
 /* product detail view 상품평 */
 .review-box{
@@ -561,17 +535,22 @@ transition: all 0.4s ease-in-out;
 .adminlink h1 {margin-top:50px;}
 .adminlink:hover h1 {color:#CC947C}
 
-/* by, 김은주, 정은진 - 로그인, 비밀번호찾기, 회원가입, 정보수정 */
+/* 로그인, 비밀번호찾기, 회원가입, 정보수정  */
+.hidden{
+/*visibility: hidden;*/
+display: none;
+}
+
 .chkMsg{
 	cursor: pointer;
 	color: #333;
     text-decoration: none;
    	font-size: 16px !important;
-	font-family: 'Crimson Pro';
+	font-family: 'Gotu';
 }
 .foundMsg, .notFoundMsg{
 	font-size: 16px !important;
-	font-family: 'Crimson Pro';
+	font-family: 'Gotu';
 }
 .backgroundImg {
 	background-image: url('/img/subbg_login.png');
@@ -580,19 +559,19 @@ transition: all 0.4s ease-in-out;
 	padding:100px 15px;
 }
 .loginbox {max-width: 566px;background:#fff;padding: 0px;margin:0 auto;border-radius: 30px; }
-.logintab {overflow:hidden;border-radius: 30px 30px 0 0; text-align:center;}
+.logintab {overflow:hidden;border-radius: 30px 30px 0 0; text-align:center; width: 100%; margin-left: 0%; font-family: "Gotu"}
 .logintab .title {height:44px;font-size:20px;text-align:left;padding-top:21px;padding-left:48px}
 .logintab .tabbtn {background:#9E9C9C;}
 .logintab .tabbtn a {display:block;width:100%;height:44px;font-size:20px;padding-top:7px}
 .logintab .tabbtn a:hover {color:#fff;transition:0.3s}
 .logintab .tabbtn.on {background:#fff;pointer-events : none;}
-.loginbox form {padding:35px 35px 21px;font-family: Crimson Pro;font-size:16px;}
+.loginbox form {padding:35px 35px 21px;font-family: Gotu;font-size:16px;}
 .loginbox .form-control {height: 46px;border-radius: 15px; margin-bottom:11px;}
 .loginbox .input-group .form-control {z-index:0}
 .loginbox ::-webkit-input-placeholder {
-	font-family: Crimson Pro;font-size:16px;
+	font-size:16px;
 	background-size: contain;
-	background-position:  1px center;
+	background-position: 1px center;
 	background-repeat: no-repeat;
 	padding: 0 15px 0 0;
 	padding-left:28px;
@@ -636,7 +615,6 @@ transition: all 0.4s ease-in-out;
       height: 46px;
       background: #fff;
       font-size: 16px;
-      font-family: Crimson Pro;
       outline:none;
       display:inline-block;
       margin-left: -1px;
@@ -652,7 +630,7 @@ transition: all 0.4s ease-in-out;
 	.loginbox .hyphen {position:relative;}
 	.loginbox .hyphen::after {content:"-";position:absolute;display:block;right:-4px;top:0;height:46px;line-height:46px;font-size:16px;font-family:"Noto Sans KR";}
 @media (min-width: 992px) {
-	.logintab .title {height:62px;font-size:28px;padding-top:30px;padding-left:70px}
+	.logintab .title {height:62px;font-size:28px;padding-top:30px;padding-left:70px;font-family: "Gotu"}
 	.logintab .tabbtn a {height:62px;font-size:28px;padding-top:10px}
 	.loginbox form {padding:50px 50px 30px;font-size:20px;}
 	.loginbox form .form-control {height: 66px;font-size:20px;margin-bottom:15px;}
