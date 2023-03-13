@@ -41,7 +41,7 @@
 	</div>
 	<!-- board title end -->
     <div class="table-responsive">
-        <table class="table hover" id="dataTables-example">
+        <table class="table hover pt-2" id="dataTables-example">
             <thead>
                 <tr>
                 	<th style="width:150px;">상품번호</th>
