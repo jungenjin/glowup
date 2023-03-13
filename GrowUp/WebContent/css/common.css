@@ -79,12 +79,6 @@ a:hover {color:#CC947C;text-decoration: none;}
   font-size: 15px;
 }
 
-/* buttons 공통 */
-.boardbtn {width:153px;height:60px;background:#D2D4DC;font-size:20px;margin-top:120px}
-.boardbtn:hover {background:#9CA09F;color:#fff;transition:0.3s}
-.boardbtn:not(:first-child) {margin-left:34px}
-.btnarea {margin:80px 0;text-align:right;}
-.btnarea .boardbtn {margin-top:0}
 
 /* top */
 .navbar-header .navbar-brand {font-family: "Crimson Pro";font-size: 30px;font-weight:bold;color:#555; margin-bottom: 8px; margin-top: 8px;}
@@ -422,19 +416,19 @@ transition: all 0.4s ease-in-out;
    .page-header small {padding-left:70px;font-size:37px;}
 }
 
-/* by 김은주, 게시판 공통디자인 */
-/* board buttons */
-.boardbtn {width:112px;height:42px;background:#D9D9D9;border-radius:21px;font-size:14px;margin-top:20px}
+/* buttons 공통 */
+.boardbtn {width:100px;height:40px;border-radius:5px;font-size:14px;background:#D2D4DC;margin-top:120px}
 .boardbtn:hover {background:#9CA09F;color:#fff;transition:0.3s}
 .boardbtn:not(:first-child) {margin-left:34px}
 .btnarea {margin:80px 0;text-align:right;}
 .btnarea .boardbtn {margin-top:0}
 @media (min-width: 992px) {
-   .boardbtn {width:198px;height:60px;border-radius:30px;font-size:20px;}
+   .boardbtn {width:150px;height:60px;border-radius:5px;font-size:20px;}
    .boardbtn.notice {margin-top:60px}
    .boardbtn:not(:first-child) {margin-left:48px}
    .btnarea {margin:120px 0;}
 }
+
 /* board list */
 .table-responsive {border:0}
 .table.boardlist>tbody>tr>td {padding:25px 0;color:#575656;font-size:20px;border-top:0;border-bottom:1px solid #000;}
