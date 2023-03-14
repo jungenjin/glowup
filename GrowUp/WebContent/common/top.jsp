@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var ="context"><%=request.getContextPath()%></c:set>
 <!DOCTYPE html>
@@ -110,18 +109,10 @@
           	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 				<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
 	          	<li class="gotu mt-4 fs-5 fw-bold">MY PAGE</li>
-				
-				<li class="nav-item dropdown">
-					<a class="nav-link active nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">마이페이지</a>
-				
-					<ul class="dropdown-menu">
-					    <li><a class="nav-link active" href="${context}/work/sell/retrieveBuyList.do">구매내역</a></li>
-					    <li><a class="nav-link active" href="${context}/work/user/updateUser.do">정보수정</a></li>
-		          	</ul>
-				
-				</li>
+	          	
+			    <li class="nav-item"><a class="nav-link active" href="${context}/work/sell/retrieveBuyList.do">구매내역</a></li>
+			    <li class="nav-item"><a class="nav-link active" href="${context}/work/user/updateUser.do">정보수정</a></li>
 				</c:if>
-				
 			</ul>
         </div>
       </div>
