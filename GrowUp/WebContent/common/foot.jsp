@@ -37,7 +37,7 @@
 <c:set var="qnaUrl">${context}/work/board/qna.do</c:set>
 
 <body>
-<footer class="footer bg-light opacity-75 mt-5">
+<footer class="footer bg-light opacity-75 mt-5 ">
 	<div class="container">
 		<div class="row pt-5 pb-3">
 			<div class="col-xs-12 col-sm-12 col-md-3">

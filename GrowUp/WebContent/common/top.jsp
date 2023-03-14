@@ -37,7 +37,7 @@
 <c:set var="faceUrl">${context}/work/product/retrieveProductList.do?category=F</c:set>
 
 <body>
-<nav class="navbar bg-light opacity-75 fixed-top">
+<nav class="navbar bg-light opacity-75 fixed-top ">
   <div class="container">
 		<a class="navbar-brand" href="${homeUrl}"><span class="fs-2 fw-bold gotu">Glow up</span></a>
 	
