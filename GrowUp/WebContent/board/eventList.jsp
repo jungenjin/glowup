@@ -31,21 +31,21 @@
 		<!-- board title end -->
 		
 		<!-- board list start -->
-        <div class="table-responsive">
-            <table class="table table-hover boardlist">
+        <div class="table-responsive-sm">
+            <table class="table table-hover">
                 <tbody>
-                    <c:forEach items="${dsCommunityList}" var="dsCommunityList">
+                    <c:forEach items="${dsEventList}" var="dsEventList">
                      <tr>
-                     	<td class="col-md-7 p-3 px-left-1">
+                     	<td class="col-sm-6 p-3 text-start">
                      		<a href ="${context}/work/board/eventView.do?evNo=${dsEventList.EV_NO}">${dsEventList.EV_TITLE}</a>
                      	</td>
-                     	<td class="col-md-2 p-3 px-right-1 fw-bold">
+                     	<td class="col-sm-2 p-3 text-start fw-bold">
 							${dsEventList.USER_NAME}
                      	</td>
-                     	<td class="col-md-2 p-3 px-right-1">
+                     	<td class="col-sm-2 p-3 text-center">
 							${dsEventList.EV_REG_DATE}
                      	</td>
-                     	<td class="col-md-1 p-3 px-right-1">
+                     	<td class="col-sm-2 p-3 text-end">
 							조회수 : ${dsEventList.EV_HIT}
                      	</td>
                      </tr>
