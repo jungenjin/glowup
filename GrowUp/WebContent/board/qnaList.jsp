@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Q n A | 글 목록</title>
+	<title>Q &#38; A | 글 목록</title>
 	<script src="${context}/js/jquery-1.9.1.js"></script>
 	<script type="text/javascript">
 		function fn_qnaWrite(){
@@ -26,7 +26,7 @@
 	<div class="px-5 py-5">
 		<!-- board title start -->
 		<div class="py-5">
-			<p class="title fs-1 fw-bold">Q n A</p>
+			<p class="title fs-1 fw-bold">Q &#38; A</p>
 		</div>
 		<!-- board title end -->
 
@@ -43,19 +43,16 @@
         <div class="table-responsive">
             <table class="table table-hover boardlist">
                 <tbody>
-                    <c:forEach items="${dsqnaList}" var="dsqnaList">
+                    <c:forEach items="${dsQnAList}" var="dsQnAList">
                      <tr>
                      	<td class="col-md-7 p-3 px-left-1">
-                     		<a href ="${context}/work/board/qnaView.do?inqNo=${dsqnaList.QNA_NO}">${dsqnaList.QNA_TITLE}</a>
+                     		<a href ="${context}/work/board/qnaView.do?qaNo=${dsQnAList.QNA_NO}">${dsQnAList.QNA_TITLE}</a>
                      	</td>
                      	<td class="col-md-2 p-3 px-right-1 fw-bold">
-							${dsqnaList.USER_NAME}
+							${dsQnAList.USER_NAME}
                      	</td>
                      	<td class="col-md-2 p-3 px-right-1">
-							${dsqnaList.QNA_REG_DATE}
-                     	</td>
-                     	<td class="col-md-1 p-3 px-right-1">
-							조회수 : ${dsqnaList.QNA_HIT}
+							${dsQnAList.QNA_REG_DATE}
                      	</td>
                      </tr>
                 	</c:forEach>

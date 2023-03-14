@@ -6,24 +6,38 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>1:1 문의 | 글 쓰기</title>
+<title>Q &#38; A | 글 수정</title>
 <script src="${context}/js/jquery-1.9.1.js"></script>
-<script type="text/javascript">
+		<script type="text/javascript">
 		$(document).ready(function(){
 			fn_init();
+	
+			//글수정 기존 내용 셋팅
+			fn_setDetailInfo();
 		});
 	
+		function fn_setDetailInfo(){
+			$("#qaTitle").val('${dsQnA.QNA_TITLE}');
+			$("#qaNo").val('${dsQnA.QNA_NO}');
+	
+			var qaContent = '${dsQnA.QNA_CONTENT}';
+	
+			qaContent = qaContent.replace(/<br ?\/?>/gi, "\n");
+	
+			$("#qaContent").val(qaContent);
+		}
+	
 		function fn_save(){
-			if(!fn_validation()){ 
+			if(!fn_validation()){
 				return;
 			}else{
-				var boardContent = String($("#qnaContent").val());
+				var qaContent = String($("#qaContent").val());
 	
-				boardContent = boardContent.replace(/\n/gi, "<br/>");
+				qaContent = qaContent.replace(/\n/gi, "<br/>");
 	
-				$("#qnaContent").val(boardContent);
+				$("#qaContent").val(qaContent);
 	
-		 		$("#qnaWrite").submit();
+		 		$("#qnaModify").submit();
 			}
 		}
 	
@@ -44,22 +58,22 @@
 		<div class="page-header">
 			<div class="row py-5">
 				<div class="d-flex flex-row mb-12">
-					<p class="title p-2 fs-1 fw-bold gotu">Q & A</p>
+					<p class="title p-2 fs-1 fw-bold gotu">Q &#38; A</p>
 				</div>
 			</div>
 		</div>
 		<!-- board title end -->
 		
-		<!-- board write start -->
-		<form id="inquiryWrite" class="form-horizontal boardwrite" method="post" action="${context}/work/board/qnaWrite.do" role="form">
+		<!-- board modify start -->
+		<form id="qnaModify" class="form-horizontal boardwrite" method="post" action="${context}/work/board/qnaWrite.do" role="form">
 			<div class="form-horizontal boardwrite">
 				<div class="form-group mb-3">
-					<label for="qnaTitle" class="control-label fs-4 mb-2">제목</label>
-					<input class="form-control fs-5" type="text" name="qnaTitle" id="qnaTitle" required="required" maxlength="50" autofocus="autofocus" placeholder="제목을 입력해주세요"/>
+					<label for="qaTitle" class="control-label fs-4 mb-2">제목</label>
+					<input class="form-control fs-5" type="text" name="qaTitle" id="qaTitle" required="required" maxlength="50" autofocus="autofocus" placeholder="제목을 입력해주세요"/>
 				</div>
 				<div class="form-group mb-3 mt-5">
-					<label for="qnaContent" class="control-label fs-4 mb-2">내용</label>
-					<textarea class="form-control fs-5" name="qnaContent" id="qnaContent" cols="10" rows="15" required="required" placeholder="내용을 입력해주세요"></textarea>
+					<label for="qaContent" class="control-label fs-4 mb-2">내용</label>
+					<textarea class="form-control fs-5" name="qaContent" id="qaContent" cols="10" rows="15" required="required" placeholder="내용을 입력해주세요"></textarea>
 				</div>
 				
 				<!-- board button start -->

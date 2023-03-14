@@ -33,6 +33,7 @@ public class QnADAO {
 		sqlSession.update("qna.qnaModify", qna);
 	}
 
+
 	public void deleteQnA(Map<String, String> qnaParam){
 		sqlSession.delete("qna.deleteQnA", qnaParam);
 	}

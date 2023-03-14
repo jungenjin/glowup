@@ -18,7 +18,7 @@ import work.user.UserService;
 
 @Controller
 public class QnAController {
-	@Resource(name = "QnAService")
+	@Resource(name = "qnaService")
 	private QnAService qnaService;
 
 	@Resource(name = "userService")
@@ -62,10 +62,10 @@ public class QnAController {
 	public ModelAndView qnaView(HttpServletRequest request){
 		ModelAndView mv = new ModelAndView();
 
-		String qnaNo = request.getParameter("maxQnANo");
-		String fromRating = request.getParameter("fromRating");
-		String fromCreate = request.getParameter("fromCreate");
-		String fromReply = request.getParameter("fromReply");
+		String qnaNo = request.getParameter("qaNo");
+//		String fromRating = request.getParameter("fromRating");
+//		String fromCreate = request.getParameter("fromCreate");
+//		String fromReply = request.getParameter("fromReply");
 
 		if(qnaNo == null) qnaNo = request.getParameter("qaNo");
 
@@ -73,18 +73,22 @@ public class QnAController {
 		Map<String, String> replyParam = new HashMap<String, String>();
 
 		qnaParam.put("qaNo", qnaNo);
-		replyParam.put("qaNo", qnaNo);
+		replyParam.put("qaNo",qnaNo);
+
+//		//조회수 증가
+//		if(!"true".equals(fromRating) && !"true".equals(fromCreate) && !"true".equals(fromReply) ){
+//			qnaService.updateQnAHit(qnaParam);
+//		}
+
 		
 		Map<String, String> dsQnA = qnaService.qnaView(qnaParam);
 
-
 		mv.addObject("dsQnA", dsQnA);
-
 		mv.setViewName("/board/qnaView");
+		
 
 		return mv;
 	}
-
 	@RequestMapping(value="/work/board/qnaList.do", method = {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView qnaList(HttpServletRequest request){
 		ModelAndView mv = new ModelAndView();

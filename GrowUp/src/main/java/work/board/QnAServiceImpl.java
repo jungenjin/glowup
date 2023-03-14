@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-@Service("QnAService")
+@Service("qnaService")
 public class QnAServiceImpl implements QnAService {
 	
 	@Autowired
@@ -26,8 +26,6 @@ public class QnAServiceImpl implements QnAService {
 	}
 	public void qnaWrite(QnABean qna) {
 		qnaDAO.qnaWrite(qna);	
-		
-		
 	}
 	public void qnaModify(QnABean qna) {
 		qnaDAO.qnaModify(qna);
@@ -42,6 +40,4 @@ public class QnAServiceImpl implements QnAService {
 		
 	}
 	
-	
-
 }
