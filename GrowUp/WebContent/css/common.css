@@ -265,14 +265,14 @@ transition: all 0.4s ease-in-out;
 }
 
 /* buttons 공통 */
-.boardbtn {width:100px;height:40px;border-radius:5px;font-size:14px;background:#D2D4DC;margin-top:120px}
+.boardbtn {width:100px;height:40px;border-radius:5px;font-size:14px;background:#D2D4DC;margin-top:80px}
 .boardbtn:hover {background:#9CA09F;color:#fff;transition:0.3s}
 .boardbtn:not(:first-child) {margin-left:34px}
 .btnarea {margin:80px 0;text-align:right;}
 .btnarea .boardbtn {margin-top:0}
 @media (min-width: 992px) {
    .boardbtn {width:150px;height:60px;border-radius:5px;font-size:20px;}
-   .boardbtn.notice {margin-top:60px}
+   .boardbtn.notice {margin-top:40px}
    .boardbtn:not(:first-child) {margin-left:48px}
    .btnarea {margin:120px 0;}
 }
