@@ -81,10 +81,12 @@
 								var path = '';
 								var productCategoryCd = '${dsBuyList.PRODUCT_CATEGORY_CD}';
 							
-								if(productCategoryCd == 'P'){
-								imageFolder = "/perfumeImg/${dsBuyList.PRODUCT_IMAGE}";
-								}else if(productCategoryCd == 'D'){
-									imageFolder = "/diffuserImg/${dsBuyList.PRODUCT_IMAGE}";
+								if(productCategoryCd == 'E'){
+									imageFolder = "/eyeImg/${dsBuyList.PRODUCT_IMAGE}";
+								} else if(productCategoryCd == 'F'){
+									imageFolder = "/faceImg/${dsBuyList.PRODUCT_IMAGE}";
+								} else if(productCategoryCd == 'L'){
+									imageFolder = "/lipImg/${dsBuyList.PRODUCT_IMAGE}";
 								}
 								path = $("img[name='image']").eq('${buyIdx.index}').attr("src");
 							
