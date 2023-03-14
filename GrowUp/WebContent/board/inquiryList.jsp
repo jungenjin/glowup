@@ -62,7 +62,7 @@
                 <tbody>
                     <c:forEach items="${dsinquiryList}" var="dsinquiryList">
 	                  	<c:choose>
-							<c:when test="${sessionScope.userCode == dsinquiryList.USER_CODE}">
+							<c:when test="${sessionScope.userCode == dsinquiryList.USER_CODE || sessionScope.grade == 'A'}">
 								<tr>
 			                     	<td style="min-width:200px" class="p-3">
 			                     		<a href="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a>
