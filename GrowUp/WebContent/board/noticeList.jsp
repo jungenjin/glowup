@@ -52,7 +52,6 @@
 <!-- Detail -->
 <div class="container">
    <div class="px-5 py-5">
-   
       <!-- board title start -->
       <div class="page-header">
          <div class="row py-5">
@@ -65,26 +64,24 @@
       
       <!-- board list start -->
       <div class="row">
-            <div class="table-responsive">
+      <!-- row end -->
+            <div class="table-responsive-sm">
                 <table class="table table-hover boardlist" id="dataTables-example">
                    <thead class="mt-5">
-                     <tr style="display: none;">
-                         <th>Name</th>
-                         <th>Position</th>
-                         <th>Office</th>
-                         <th>Age</th>
-                         <th>Start date</th>
+                     <tr style="visibility: hidden;">
+                         <th>제목</th>
+                         <th>작성자</th>
+                         <th>작성일</th>
+                         <th>조회수</th>
                      </tr>
                  </thead>
-                    <tbody>
-               <c:forEach items="${dsNoticeList}" var="dsNoticeList">
+                 <tbody>
+               		<c:forEach items="${dsNoticeList}" var="dsNoticeList">
                       <tr>
-	                     <td class="flex-row mb-5">
-		                     <th class="col-sm-12 col-md-7 p-6 px-left-1 fw-normal"><a href ="${context}/work/board/noticeView.do?ntcNo=${dsNoticeList.NTC_NO}">${dsNoticeList.NTC_TITLE}</a></th>
-		                     <th class="col-md-2 px-right-1 fw-normal p-6">${dsNoticeList.USER_NAME}</th>
-		                     <th class="col-md-2 px-right-1 fw-normal p-6">${dsNoticeList.NTC_REG_DATE}</th>
-		                     <th class="col-md-1 px-right-1 fw-normal p-6">조회수 : ${dsNoticeList.NTC_HIT}</th>
-	                     </td>
+	                     <td class="col-sm-6 p-3 text-start"><a href ="${context}/work/board/noticeView.do?ntcNo=${dsNoticeList.NTC_NO}">${dsNoticeList.NTC_TITLE}</a></td>
+	                     <td class="col-sm-2 p-3 text-start fw-bold">${dsNoticeList.USER_NAME}</td>
+	                     <td class="col-sm-2 p-3 text-center">${dsNoticeList.NTC_REG_DATE}</td>
+	                     <td class="col-sm-2 p-3 text-end">조회수 : ${dsNoticeList.NTC_HIT}</td>
                       </tr>
                     </c:forEach>
                     </tbody>
@@ -93,13 +90,13 @@
          <!-- board list end -->
          
          <!-- board buttons start -->
-         <c:if test="${sessionScope.grade == 'A' || sessionScope.grade == 'A'}">
+         <c:if test="${sessionScope.grade == 'A' || sessionScope.grade == 'M'}">
             <div class="flex-row-reverse p-2">
                <button type="button" class="btn boardbtn p-2" onclick="fn_noticeWrite()">새 글 쓰기</button>
             </div>
          </c:if>
          <!-- board buttons end -->
-      
+         
       </div><!-- row end -->
    </div><!-- container end -->
 </div><!-- container end -->
