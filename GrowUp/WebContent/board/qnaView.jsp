@@ -27,6 +27,10 @@
 	
 			location.href = "${context}/work/board/qnaModify.do?qaNo=" + qaNo;
 		}
+		//답글
+	    function fn_reply(paramuserCode){
+	    	location.href = "${context}/work/board/retrieve흐으으음.do?userCode=" + paramProductCode;
+	    }
 	</script>
 </head>
 <body>
@@ -78,28 +82,28 @@
 		<div class="container review-box" >
 			<div class="row">
 				<div  class="col-xs-6">
-			   		<h3>답글 <span class="badge">${dsReplyList[0].REPLY_COUNT}</span></h3>
+			   		<p class="fs-3 fw-bold">답글 <span class="badge">${dsReplyList[0].REPLY_COUNT}</span></p>
 				</div>
-		        <div class="col-xs-6 text-right">
-		   			<c:if test="${dsProduct.SELL_YN == 'Y'}">
-		               <a class="btn confirmbtn" href="#reviews-anchor" id="open-review-box">답글 등록하기</a>
-					</c:if>
-		        </div>
+	   			<c:if test="${dsQnA.QNA_YN == 'Y'}">
+	   			<div class="col-xs-6 d-flex justify-content-end">
+	               <a class="btn confirmbtn" type="button" href="#reviews-anchor" id="open-review-box"  onclick="fn_open()">답글등록하기</a>
+				</div>
+				</c:if>
 			</div>
 			<div class="row">
 				<div class="col-md-12" id="post-review-box" style="display:none;">
 		            <form id="createReply" accept-charset="UTF-8" action="${context}/work/reply/createReply.do" method="post">
 		                <input id="ratings-hidden" name="markRating" type="hidden">
-		                <textarea class="form-control animated" cols="50" id="userReply" name="userReply" placeholder="상품평을 입력하세요..." rows="5"></textarea>
+		                <textarea class="form-control animated" cols="50" id="qnaReply" name="qnaReply" placeholder="답글을 입력하세요..." rows="5"></textarea>
 		                <div class="text-right">
-							<c:if test="${dsProduct.MARK_YN == 'N'}">
+							<c:if test="${dsQnA.MARK_YN == 'N'}">
 								<div class="stars starrr" data-rating="0"></div>
 							</c:if>
 							<a href="#" id="close-review-box" class="btn">Cancel</a>
 							<button id="save-review" class="btn" onclick="return fn_save()">Save</button>
 		                </div>
-		                <input type="hidden" id="productCode" name="productCode" value="${dsProduct.PRODUCT_CODE}">
-		                <input type="hidden" id="markYn" name="markYn" value="${dsProduct.MARK_YN}">
+		                <input type="hidden" id="userCode" name="userCode" value="${dsQnA.USER_CODE}">
+		                <input type="hidden" id="markYn" name="markYn" value="${dsQnA.MARK_YN}">
 		            </form>
 				</div>
 			</div>
@@ -118,10 +122,10 @@
 					<div class="col-xs-4 col-md-2 text-right">
 						<c:if test="${sessionScope.userCode == dsReplyList.USER_CODE}">
 		               		<a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn" 
-		               		onclick="javascript:fn_remove('${dsReplyList.USER_REPLY_NO}')">삭제</a>
+		               		onclick="javascript:fn_remove('${dsReplyList.QNA_REPLY_NO}')">삭제</a>
 		            	</c:if>
 		            </div>
-					<div class="col-xs-12 text-left">${dsReplyList.USER_REPLY}</div>
+					<div class="col-xs-12 text-left">${dsReplyList.QNA_REPLY}</div>
 				</div>
 			</c:forEach>
 		</div>

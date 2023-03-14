@@ -44,10 +44,12 @@
 </head>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
-<div class="container-fluid backgroundImg">
+<!-- title, visual start -->
+<div class="backgroundImg" style='background-image: url("${context}/img/subbg_login.jpg");'>
+<!-- title, visual end -->
 	<div class="row">
     	<div class="col-md-6 col-md-offset-3" style="width: 100%">
-	        <div class="loginbox">
+	        <div class="loginbox shadow-sm">
 	        	<!-- login tab button start -->
 	        	<div class="logintab row">
 			        <div class="col-6 tabbtn"><a href="${context}/user/idFind.jsp">아이디 찾기</a></div>

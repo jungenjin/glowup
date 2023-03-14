@@ -29,16 +29,7 @@
 			<p class="title fs-1 fw-bold">Q &#38; A</p>
 		</div>
 		<!-- board title end -->
-
-		<!-- search-bar start -->
-		<div class="d-flex justify-content-center mb-5">
-			<div class="search-bar">
-	          <input class="search-bar__input" type="search" placeholder="무엇을 도와드릴까요?" />
-	          <i class="fas fa-search"></i>
-	        </div>
-		</div>	
-		<!-- search-bar end -->
-		
+	
 		<!-- board list start -->
         <div class="table-responsive">
             <table class="table table-hover boardlist">
@@ -68,33 +59,7 @@
 			</div>
 		</c:if>
 		<!-- board buttons end -->
-		
-		<!-- pagination start -->
-		<div class="d-flex justify-content-center mb-5">
-		<!-- 페이징을 지정할 태그에 class에 pagination을 넣으면 자동으로 페이징이 된다.-->
-		  <!-- 페이징의 크기를 제어할 수 있는데 pagination-lg를 추가하면 페이징 크기가 커지고, pagination-sm를 넣으면 작아진다. -->
-		  <!-- 큰 페이징 class="pagination pagination-lg", 보통 페이징 class="pagination", 작은 페이징  class="pagination pagination-sm" -->
-		  <ul class="pagination mx-2">
-		    <!-- li태그의 클래스에 disabled를 넣으면 마우스를 위에 올렸을 때 클릭 금지 마크가 나오고 클릭도 되지 않는다.-->
-		    <!-- disabled의 의미는 앞의 페이지가 존재하지 않다는 뜻이다. -->
-		    <li class="disabled mx-2">
-		      <a href="#">
-		        <span>«</span>
-		      </a>
-		    </li>
-		    <!-- li태그의 클래스에 active를 넣으면 색이 반전되고 클릭도 되지 않는다. -->
-		    <!-- active의 의미는 현재 페이지의 의미이다. -->
-		    <li class="active mx-2"><a href="#">1</a></li>
-		    <li class="mx-2"><a href="#">2</a></li>
-		    <li class="mx-2"><a href="#">3</a></li>
-		    <li class="mx-2">
-		      <a href="#">
-		        <span>»</span>
-		      </a>
-		    </li>
-		  </ul>
-		</div><!-- pagination end -->
-			
+					
 	</div><!-- Details end -->
 </div><!-- container end -->
 
