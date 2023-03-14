@@ -49,18 +49,14 @@
 <div class="titarea" style='background-image: url("${context}/img/subbg_notice.jpg");'></div>
 <!-- title, visual end -->
 
-<!-- Detail -->
+<!-- Details -->
 <div class="container">
-   <div class="px-5 py-5">
-      <!-- board title start -->
-      <div class="page-header">
-         <div class="row py-5">
-            <div class="flex-row mb-12">
-               <p class="title p-2 fs-1 fw-bold">공지사항</p>
-            </div>
-         </div>
-      </div>
-      <!-- board title end -->
+	<div class="px-5 py-5">
+		<!-- board title start -->
+		<div class="py-5">
+			<p class="title  fs-1 fw-bold">공지사항</p>
+		</div>
+		<!-- board title end -->
       
       <!-- board list start -->
       <div class="row">
@@ -90,8 +86,8 @@
          <!-- board list end -->
          
          <!-- board buttons start -->
-         <c:if test="${sessionScope.grade == 'A' || sessionScope.grade == 'M'}">
-            <div class="flex-row-reverse p-2">
+         <c:if test="${sessionScope.grade == 'A'}">
+            <div class="d-flex flex-row-reverse p-2 ">
                <button type="button" class="btn boardbtn p-2" onclick="fn_noticeWrite()">새 글 쓰기</button>
             </div>
          </c:if>
