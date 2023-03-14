@@ -3,6 +3,9 @@
 	"dtd/mybatis-3-config.dtd">
 
 <configuration>
+<settings>
+	<setting name="jdbcTypeForNull" value="NULL" />
+</settings>
 	<typeAliases>
 		<typeAlias type="work.user.UserBean" alias="user"/>
 		<typeAlias type="work.product.ProductBean" alias="product"/>
@@ -15,6 +18,7 @@
 		<typeAlias type="work.board.CommunityBean" alias="community"/>
 		<typeAlias type="work.board.EventBean" alias="event"/>
 		<typeAlias type="work.board.InquiryBean" alias="inquiry"/>
+		<typeAlias type="work.board.QnABean" alias="qna"/>
 		
 	
 	</typeAliases>
@@ -31,5 +35,6 @@
 		<mapper resource="conf/sql-community.xml" />
 		<mapper resource="conf/sql-event.xml" />
 		<mapper resource="conf/sql-inquiry.xml" />
+		<mapper resource="conf/sql-qna.xml" />
 	</mappers>
 </configuration>
