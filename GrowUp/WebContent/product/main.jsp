@@ -82,6 +82,7 @@
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <!-- 메인 백그라운드 배경 튜블라 적용 -->
+<c:if test="${sessionScope.grade != 'A'}">
 	<div id="maintub">
 		<div class="container">
 			<div class="row item" data-aos="fade-up">
@@ -134,6 +135,39 @@
 		</div>
 		<jsp:include page="${context}/common/foot.jsp"></jsp:include>
 	</div>
+	</c:if>
+	<!-- 관리자 페이지 -->
+	<c:if test="${sessionScope.grade == 'A'}">
+	<div class="container adminmode">
+	    <div class="row">
+	         <div class="col-md-4 text-center adminlink" onclick="location.href='${productManageUrl}'">
+	         <div class="img-circle">
+	            <span>
+	               <i class="fa-solid fa-store fa-8x" style="color:white;"></i>
+	            </span>
+	         </div>
+	         <h1>재고관리</h1>
+	      </div>
+	         <div class="col-md-4 text-center adminlink" onclick="location.href='${statisticsForProductUrl}'">
+	            <div class="img-circle">
+	               <span>
+	                  <i class="fa-solid fa-chart-pie fa-8x" style="color:white;"></i>
+	            </span>
+	          </div>
+	         <h1>매출통계</h1>
+	      </div>
+	         <div class="col-md-4 text-center adminlink" onclick="location.href='${statisticsForStockUrl}'">
+	            <div class="img-circle">
+	               <span>
+	                  <i class="fa-solid fa-boxes-stacked fa-8x" style="color:white;"></i>
+	            </span>
+	           </div>
+	         <h1>재고현황</h1>
+	      </div> 
+	   </div>
+	</div>
+   	<jsp:include page="${context}/common/foot.jsp"></jsp:include>
+	</c:if>
 <script>
   AOS.init();
 </script>

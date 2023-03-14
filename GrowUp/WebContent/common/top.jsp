@@ -28,7 +28,6 @@
 <c:set var="inquiryUrl">${context}/work/board/inquiry.do</c:set>
 <c:set var="FAQUrl">${context}/FAQ/FAQ.jsp</c:set>
 <c:set var="qnaUrl">${context}/work/board/qna.do</c:set>
-<c:set var="adminUrl">${context}/work/product/adminmain.do</c:set>
 
 <c:set var="loginUrl">${context}/user/login.jsp</c:set>
 <c:set var="eventUrl">${context}/work/board/event.do</c:set>
@@ -95,11 +94,10 @@
 				<li class="dropdown">
 			          <a class="nav-link active nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">관리자 메뉴</a>
 					<ul class="dropdown-menu">
-			          	<li><a class="nav-link active" href="${context}/work/product/adminmain.do">관리자 메인</a></li>
-			          	<li><a class="nav-link active" href="${context}/work/user/updateUser.do">EDIT PROFILE</a></li>
 						<li><a class="nav-link active" href="${context}/work/product/retrieveProductListForManage.do">재고관리</a></li>
 						<li><a class="nav-link active" href="${context}/work/sell/retrieveStatisticsForProduct.do">매출통계</a></li>
 						<li><a class="nav-link active" href="${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=E">재고현황</a></li>
+			          	<li><a class="nav-link active" href="${context}/work/user/updateUser.do">EDIT PROFILE</a></li>
 					</ul>
 				</li>
 				</c:if>

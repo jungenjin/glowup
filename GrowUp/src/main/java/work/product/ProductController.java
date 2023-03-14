@@ -124,15 +124,7 @@ public class ProductController {
 		mv.setViewName("/product/main");
 		return mv;
 	}
-	// 관리자 페이지 추가
-	@RequestMapping(value="/work/product/adminmain.do", method = {RequestMethod.GET, RequestMethod.POST})
-	public ModelAndView adminmain(){
-		ModelAndView mv = new ModelAndView();
 
-		mv.setViewName("/product/adminmain");
-		return mv;
-	}
-	
 
 	@RequestMapping(value="/work/product/retrieveProductList.do", method=RequestMethod.GET)
 	public ModelAndView retrieveProductList(HttpServletRequest request){
