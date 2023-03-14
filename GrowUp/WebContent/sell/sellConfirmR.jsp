@@ -97,13 +97,13 @@
 </head>
 <body>
 <jsp:include page="/common/top.jsp"></jsp:include>
-<div class="backgroundImg" style="background-image: url('${context}/img/subbg_sellconfirm.jpg');">
+<div class="backgroundImg" style="background-image: url('${context}/img/subbg_sellconfirm.png');">
 
 		<div class="container pt-5 pb-5 d-flex justify-content-center">
 				<!-- card start -->	
-				<div class="card text-bg-light pt-5 px-5">
+				<div class="card text-bg-light pt-5 px-5 shadow-sm">
 					<div class="">
-						<p class="fs-5 text-center pb-5">
+						<p class="fs-5 text-center pb-3">
 							<span class="fw-bold fs-3 gotu">Glow up </span>을 이용해 주셔서 감사합니다. <br>
 							<br>
 							주문/결제가 <br>

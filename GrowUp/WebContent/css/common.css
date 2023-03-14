@@ -25,7 +25,7 @@ a:hover {color:#CC947C;text-decoration: none;}
 .fa-search {font-size: 15px;}
 
 
-/* top */
+/* 
 .navbar-header .navbar-brand {font-family: "Crimson Pro";font-size: 30px;font-weight:bold;color:#555; margin-bottom: 8px; margin-top: 8px;}
 .navbar-header .navbar-toggle {padding:10px;margin-top:16px;}
 .nav>li>a {font-family: "Crimson Pro";font-size:16px;font-weight:bold;}
@@ -38,7 +38,7 @@ a:hover {color:#CC947C;text-decoration: none;}
    .navbar-right {margin-right:5px;}
 }
 
-/* foot */
+foot
 footer{ background : none !important; z-index: 3;}
 .footer{border-top:1px solid #D9D9D9;padding: 50px;margin-top:100px}
 .footer ul {padding-left: 0;}
@@ -148,6 +148,9 @@ footer{ background : none !important; z-index: 3;}
    margin: 0;
 }
 
+ */
+ 
+
 /*  뙎湲  愿  젴 CSS */
  .animated {
     -webkit-transition: height 0.2s;
@@ -227,14 +230,13 @@ transition: all 0.4s ease-in-out;
    padding:0 20px 10px;
 }
 
-/* visual + title*/
+/* visual */
 .titarea {display:flex;justify-content:center;align-items:flex-end;height: 330px;background-position: center;background-size: cover;}
 
 @media (min-width: 992px) {
    .titarea {height: 500px;}
 }
 
-/*media*/
 @media (min-width: 412px){
   .desktop {
     display: none !important; 
@@ -252,18 +254,6 @@ transition: all 0.4s ease-in-out;
   }
 }
 
-/* by 김은주, subpage title */
-.page-header {min-height:84px;border-bottom:0;}
-.page-header .title.eng {color:#292F36;font:34px/100% 'DM Serif Display';}
-.page-header .title {color:#292F36;font:39px/100% 'Noto Sans KR';}
-.page-header small {display:inline-block;color:#575656;font:bold 26px/100% 'Crimson Pro';}
-@media (min-width: 992px) {
-   .page-header {min-height:120px;}
-   .page-header .title.eng {font-size:48px;}
-   .page-header .title {font-size:55px;}
-   .page-header small {padding-left:70px;font-size:37px;}
-}
-
 /* buttons 공통 */
 .boardbtn {width:100px;height:40px;border-radius:5px;font-size:14px;background:#D2D4DC;margin-top:80px}
 .boardbtn:hover {background:#9CA09F;color:#fff;transition:0.3s}
@@ -277,6 +267,15 @@ transition: all 0.4s ease-in-out;
    .btnarea {margin:120px 0;}
 }
 
+.confirmbtn {width:120px;height:40px;border-radius:5px;font-size:11px;background:#D2D4DC;margin-top:0}
+.confirmbtn:hover {background:#9CA09F;color:#fff;transition:0.3s}
+.confirmbtn:not(:first-child) {margin-left:34px}
+.confirmbtn {margin-top:0}
+@media (min-width: 992px) {
+   .confirmbtn {width:200px;height:60px;border-radius:5px;font-size:20px;}
+   .confirmbtn {margin-top:40px}
+   .confirmbtn:not(:first-child) {margin-left:48px}
+}
 
 /* by 김은주 - 상품목록, 상품상세정보 2023.3.11 */
 /* product list */
@@ -370,8 +369,8 @@ display: none;
 .backgroundImg {
 	background-image: url('/img/subbg_login.png');
 	background-size: cover;
-	margin-bottom:-100px;
-	padding:100px 15px;
+	margin-bottom:-50px;
+	padding: 160px 15px;
 }
 .loginbox {max-width: 566px;background:#fff;padding: 0px;margin:0 auto;border-radius: 30px; }
 .logintab {overflow:hidden;border-radius: 30px 30px 0 0; text-align:center; width: 100%; margin-left: 0%; font-family: "Noto Sans KR"}

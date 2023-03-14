@@ -51,11 +51,11 @@
 <div class="container-fluid backgroundImg">
 	<div class="row">
         <div class="col-md-6 col-md-offset-2" style="width: 100%">
-	        <div class="loginbox">
+	        <div class="loginbox shadow-sm">
 	        	<!-- login tab button start -->
 	        	<div class="logintab row">
 			        <div class="col-6 tabbtn on"><a href="${context}/user/login.jsp">로 그 인</a></div>
-					<div class="col-6 tabbtn"><a href="${context}/work/user/createUser.do">회원가입</a></div>
+					<div class="col-6 tabbtn"><a href="${context}/work/user/createUser.do">회 원 가 입</a></div>
 				</div>
 				<!-- login tab button end -->
 				<form action="${context}/work/user/login.do" method="post" role="form" id="loginFrm">

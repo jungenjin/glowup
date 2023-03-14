@@ -128,7 +128,7 @@
 <div class="container-fluid backgroundImg">
 	<div class="row">
        	<div class="col-md-6 col-md-offset-3"  style="width: 100%">
-	        <div class="loginbox">
+	        <div class="loginbox shadow-sm">
 	        	<!-- login tab button start -->
 	        	<div class="logintab">
 			        <div class="col-xs-12 title">정보수정</div>
