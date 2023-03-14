@@ -7,8 +7,27 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>1:1 문의 | 글 목록</title>
+	<!-- 테이블에 dataTables-example 사용시 검색, 페이징처리 됨 -->
+	<link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css" rel="stylesheet"/>
+	
 	<script src="${context}/js/jquery-1.9.1.js"></script>
+	<!-- 테이블에 dataTables-example 사용시 검색, 페이징처리 됨 -->
+	<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#dataTables-example').DataTable({
+        	   "language" : {
+	        		"search" : " ",
+	       			"searchPlaceholder": "궁금한게 있으신가요?",
+	        	    "paginate": {
+		                "first":  "1",
+		                "last":   "2",
+		                "next":   ">>",
+		                "previous":   "<<"
+	        	    }
+               },
+			});
+		});
 		function fn_inquiryWrite(){
 			location.href = "${context}/work/board/inquiryWrite.do";
 		}
@@ -32,16 +51,22 @@
 		
 		<!-- board list start -->
         <div class="table-responsive">
-            <table class="table table-hover boardlist">
+            <table class="table hover pt-2 boardlist" id="dataTables-example">
+            	<thead>
+                     <tr style="display: none;">
+                         <th>제목</th>
+                         <th>작성자</th>
+                         <th>작성일</th>
+                     </tr>
+                 </thead>
                 <tbody>
                     <c:forEach items="${dsinquiryList}" var="dsinquiryList">
                      <tr>
-                     	<td class="col-md-10 p-3 px-left-1">
+                     	<td style="min-width:200px" class="p-3">
                      		<a href ="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a>
                      	</td>
-                     	<td class="col-md-2 p-3 px-right-1 fw-bold">
-						${dsinquiryList.USER_NAME}
-                     	</td>
+                     	<td style="width:100px;min-width:100px" class="p-3 text-center">${dsinquiryList.USER_NAME}</td>
+                     	<td style="width:150px;min-width:150px" class="p-3 text-center">${dsinquiryList.INQ_REG_DATE}</td>
                      </tr>
                 	</c:forEach>
                 </tbody>
@@ -56,32 +81,6 @@
 			</div>
 		</c:if>
 		<!-- board buttons end -->
-		
-		<!-- pagination start -->
-		<div class="d-flex justify-content-center my-5">
-		<!-- 페이징을 지정할 태그에 class에 pagination을 넣으면 자동으로 페이징이 된다.-->
-		  <!-- 페이징의 크기를 제어할 수 있는데 pagination-lg를 추가하면 페이징 크기가 커지고, pagination-sm를 넣으면 작아진다. -->
-		  <!-- 큰 페이징 class="pagination pagination-lg", 보통 페이징 class="pagination", 작은 페이징  class="pagination pagination-sm" -->
-		  <ul class="pagination mx-2">
-		    <!-- li태그의 클래스에 disabled를 넣으면 마우스를 위에 올렸을 때 클릭 금지 마크가 나오고 클릭도 되지 않는다.-->
-		    <!-- disabled의 의미는 앞의 페이지가 존재하지 않다는 뜻이다. -->
-		    <li class="disabled mx-2">
-		      <a href="#">
-		        <span>«</span>
-		      </a>
-		    </li>
-		    <!-- li태그의 클래스에 active를 넣으면 색이 반전되고 클릭도 되지 않는다. -->
-		    <!-- active의 의미는 현재 페이지의 의미이다. -->
-		    <li class="active mx-2"><a href="#">1</a></li>
-		    <li class="mx-2"><a href="#">2</a></li>
-		    <li class="mx-2"><a href="#">3</a></li>
-		    <li class="mx-2">
-		      <a href="#">
-		        <span>»</span>
-		      </a>
-		    </li>
-		  </ul>
-		</div><!-- pagination end -->
 			
 	</div><!-- Details end -->
 </div><!-- container end -->
