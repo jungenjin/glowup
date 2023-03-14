@@ -39,68 +39,89 @@
 <body>
 <nav class="navbar bg-light opacity-75 fixed-top">
   <div class="container">
-	<a class="navbar-brand" href="${homeUrl}"><img src="${context}/img/Glowup_logo.png" alt="glowup" width="" height="33"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+		<a class="navbar-brand" href="${homeUrl}"><span class="fs-2 fw-bold gotu">Glow up</span></a>
+	
+	<div class="d-flex flex-row">
+		<div class="p-2 text-center h6 pt-3">
+			<c:if test="${sessionScope.id == null}">
+				<a class="nav-link active" href="${context}/work/user/createUser.do"><i class="fa-solid fa-user-plus"></i>
+				<span class="gotu">sign-up</span></a>
+			</c:if>
+		</div>
+		<div class="p-2 text-center h6 pt-3">
+			<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
+				<a class="nav-link active" href="${context}/work/cart/retrieveCartList.do"><i class="fa-solid fa-cart-shopping"></i>
+				<span class="gotu">cart</span></a>
+			</c:if>
+		</div>
+		<div class="p-2 text-center h6 pt-3">
+			<c:if test="${sessionScope.id == null}">
+				<a class="nav-link active" href="${context}/user/login.jsp"><i class="fa-solid fa-right-to-bracket"></i>
+				<span class="gotu">sign-in</span></a>
+			</c:if>
+		</div>
+		<div class="p-2 text-center h6 pt-3">
+			<c:if test="${sessionScope.id != null}">
+				<a class="nav-link active" href="${context}/work/user/logout.do"><i class="fa-solid fa-right-from-bracket"></i>
+				<span class="gotu">sign-out</span></a>
+			</c:if>
+		</div>
+		<div class="p-2">
+		    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		</div>
+	</div>
+
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 		<div class="offcanvas-header">
 	        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-	        	<a class="navbar-brand" href="${homeUrl}"><img src="${context}/img/Glowup_logo.png" alt="glowup" width="" height="24"></a>
+				<a class="navbar-brand" href="${homeUrl}"><span class="fs-2 fw-bold gotu">Glow up</span></a>
 	        </h5>
      	</div>        
 
       <!-- 오프캔버스 메뉴 -->
       <div class="offcanvas-body">
           	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-	          	<!--  링크 수정  -->
-				<li class="nav-item"><a class="nav-link active"  onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eyeUrl}')">섀도우</a>
-				</li>
-				<li class="nav-item"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${lipUrl}')">립스틱</a>
-				</li>
-				<li class="nav-item"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${faceUrl}')">파운데이션</a>
-				</li>
-				<li class="nav-item"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a>
-				</li>
-				<li class="nav-item">
-					<c:if test="${sessionScope.id == null}">
-						<a class="nav-link active" href="${context}/work/user/createUser.do">회원가입</a>
-					</c:if>
-				</li>
-				<li class="nav-item">
-					<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
-						<a class="nav-link active" href="${context}/work/cart/retrieveCartList.do">장바구니</a>
-					</c:if>
-				</li>
-				<li class="nav-item">
-					<c:if test="${sessionScope.id == null}">
-					<a class="nav-link active" href="${context}/user/login.jsp">로그인</a>
-					</c:if>
-					<c:if test="${sessionScope.id != null}">
-					<a class="nav-link active" href="${context}/work/user/logout.do">로그아웃</a>
-					</c:if>
-				</li>
+	          	<li class="gotu mt-4 nav-item fs-5 fw-bold">SHOP</li>
+				
+				<li class="nav-item"><a class="nav-link active"  onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eyeUrl}')">섀도우</a></li>
+				<li class="nav-item"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${lipUrl}')">립스틱</a></li>
+				<li class="nav-item"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${faceUrl}')">파운데이션</a></li>
+	          </ul>
+				
+          	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+	          	<li class="gotu mt-4 fs-5 fw-bold">SERVICE</li>
+				
+				<li class="nav-item"><a class="nav-link active" href="${context}/work/board/notice.do">공지사항</a></li>
+				<li class="nav-item"><a class="nav-link active" href="${context}/work/board/community.do">커뮤니티</a></li>
+				<li class="nav-item"><a class="nav-link active" href="#">회사소개 </a></li>
+	          </ul>
+	          	
+          	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+	          	<li class="gotu mt-4 fs-5 fw-bold">CUSTOMER</li>
+				
+				<li class="nav-item"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
+				<li class="nav-item"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${inquiryUrl}')">1 : 1 상담</a></li>
+				<li class="nav-item"><a class="nav-link active" href="${context}/work/board/qna.do">Q & A</a></li>
+				<li class="nav-item"><a class="nav-link active" href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
+	          </ul>
+				
+          	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 				<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
+	          	<li class="gotu mt-4 fs-5 fw-bold">MY PAGE</li>
+				
 				<li class="nav-item dropdown">
 					<a class="nav-link active nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">마이페이지</a>
+				
 					<ul class="dropdown-menu">
 					    <li><a class="nav-link active" href="${context}/work/sell/retrieveBuyList.do">구매내역</a></li>
 					    <li><a class="nav-link active" href="${context}/work/user/updateUser.do">정보수정</a></li>
 		          	</ul>
+				
 				</li>
 				</c:if>
-
-				<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
-				<li class="dropdown">
-			          <a class="nav-link active nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">관리자 메뉴</a>
-					<ul class="dropdown-menu">
-						<li><a class="nav-link active" href="${context}/work/product/retrieveProductListForManage.do">재고관리</a></li>
-						<li><a class="nav-link active" href="${context}/work/sell/retrieveStatisticsForProduct.do">매출통계</a></li>
-						<li><a class="nav-link active" href="${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=E">재고현황</a></li>
-			          	<li><a class="nav-link active" href="${context}/work/user/updateUser.do">EDIT PROFILE</a></li>
-					</ul>
-				</li>
-				</c:if>
+				
 			</ul>
         </div>
       </div>
