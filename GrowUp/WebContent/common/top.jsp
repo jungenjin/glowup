@@ -101,7 +101,6 @@
 	          	<li class="gotu mt-4 fs-5 fw-bold">CUSTOMER</li>
 				
 				<li class="nav-item"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
-				<li class="nav-item"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${inquiryUrl}')">1 : 1 상담</a></li>
 				<li class="nav-item"><a class="nav-link active" href="${context}/work/board/qna.do">Q & A</a></li>
 				<li class="nav-item"><a class="nav-link active" href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
 	          </ul>
@@ -114,6 +113,9 @@
 			    <li class="nav-item"><a class="nav-link active" href="${context}/work/user/updateUser.do">정보수정</a></li>
 				</c:if>
 			</ul>
+			<c:if test="${sessionScope.id != null || sessionScope.grade == 'A'}">
+				<li class="pointcursor"><a class="nav-link active" href="${context}/work/board/inquiryList.do">1 : 1 문의</a></li>
+			</c:if>
         </div>
       </div>
 	</div>

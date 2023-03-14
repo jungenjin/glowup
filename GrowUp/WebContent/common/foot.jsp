@@ -72,7 +72,6 @@
 			<div class="col-xs-12 col-sm-4 col-md-2 footer-right">
 				<ul class="">
 					<li class="fw-bold fs-5">고객센터</li>
-					<li class="pointcursor"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${inquiryUrl}')">1 : 1 상담</a>
 					<li><a href="${context}/work/board/qna.do">Q & A</a></li>
 					<li><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
 				</ul>
