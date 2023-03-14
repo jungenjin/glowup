@@ -113,11 +113,12 @@
 								var path = '';
 							 	var productCategoryCd = '${dsSellList.PRODUCT_CATEGORY_CD}';
 		
-							 	if(productCategoryCd == 'P'){
-									imageFolder = "/perfumeImg/${dsSellList.PRODUCT_IMAGE}";
-								}else if(productCategoryCd == 'D'){
-									imageFolder = "/diffuserImg/${dsSellList.PRODUCT_IMAGE}";
-								}
+							 	if(productCategoryCd == 'E'){
+									imageFolder = "/eyeImg/${dsSellList.PRODUCT_IMAGE}";
+								}else if(productCategoryCd == 'L'){
+									imageFolder = "/lipImg/${dsSellList.PRODUCT_IMAGE}";
+								}else if(productCategoryCd == 'F'){
+									imageFolder = "/faceImg/${dsSellList.PRODUCT_IMAGE}";
 								path = $("img[name='image']").eq('${dsProductIdx.index}').attr("src");
 		
 								existFolder = path.split("/")[0];
