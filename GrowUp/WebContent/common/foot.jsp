@@ -30,7 +30,6 @@
 </head>
 
 <c:set var="homeUrl">${context}/work/product/goMain.do</c:set>
-
 <c:set var="noitceUrl">${context}/work/board/notice.do</c:set>
 <c:set var="cmmuUrl">${context}/work/board/community.do</c:set>
 <c:set var="inquiryUrl">${context}/work/board/inquiry.do</c:set>
@@ -54,27 +53,23 @@
 		</div>
 		<div class="col-xs-12 col-sm-4 col-md-2 footer-right">
 			<ul class="">
-				<p class="fw-bold fs-5">서비스</p>
-				<li><a href="${context}/work/board/notice.do">공지사항</a>
-				<li><a href="${context}/work/board/community.do">커뮤니티</a>
-				<li><a href="#">회사소개 </a>
+				<li class="fw-bold fs-5">서비스</li>
+				<li><a href="${context}/work/board/notice.do">공지사항</a></li>
+				<li><a href="${context}/work/board/community.do">커뮤니티</a></li>
+				<li><a href="#">회사소개 </a></li>
 			</ul>
 		</div>
 		<div class="col-xs-12 col-sm-4 col-md-2 footer-right">
 			<ul class="">
-			<p class="fw-bold fs-5">고객센터</p>
-			
-				<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
-					<li><a href="${context}/work/board/inquiry.do">1 : 1 상담</a></li>
-				</c:if>
-				
+				<li class="fw-bold fs-5">고객센터</li>
+				<li class="pointcursor"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${inquiryUrl}')">1 : 1 상담</a>
 				<li><a href="${context}/work/board/qna.do">Q & A</a></li>
 				<li><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
 			</ul>
 		</div>
-		<div class="col-xs-12 col-sm-4 col-md-3 ">
+		<div class="col-xs-12 col-sm-4 col-md-3">
 			<ul class="">
-			<p class="fw-bold fs-5">정보</p>
+				<li class="fw-bold fs-5">정보</li>
 				<li>email : <a>glowup@glowup.co.kr</a></li>
 				<li>tel : <a>1577-1234</a></li>
 			</ul>
