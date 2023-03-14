@@ -89,7 +89,6 @@
 		<!-- board buttons end -->
 	</div><!-- Details end -->
 </div><!-- container end -->
-
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
 </html>
