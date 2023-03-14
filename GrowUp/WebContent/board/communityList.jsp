@@ -56,26 +56,28 @@
 		<!-- board title end -->
 		
 		<!-- board list start -->
-        <table class="table table-hover boardlist" id="dataTables-example">
-                   <thead class="mt-5">
-                     <tr style="visibility: hidden;">
-                         <th>제목</th>
-                         <th>작성자</th>
-                         <th>작성일</th>
-                         <th>조회수</th>
-                     </tr>
-                 </thead>
-                 <tbody>
-                     <c:forEach items="${dsCommunityList}" var="dsCommunityList">
-                      <tr>
-                        <td class="col-sm-6 p-3 text-start"><a href ="${context}/work/board/communityView.do?comuNo=${dsCommunityList.COMU_NO}">${dsCommunityList.COMU_TITLE}</a></td>
-                        <td class="col-sm-2 p-3 text-start fw-bold">${dsCommunityList.USER_NAME}</td>
-                        <td class="col-sm-2 p-3 text-center">${dsCommunityList.COMU_REG_DATE}</td>
-                        <td class="col-sm-2 p-3 text-end">조회수 : ${dsCommunityList.COMU_HIT}</td>
-                      </tr>
-                    </c:forEach>
-                    </tbody>
-                </table>
+		<div class="table-responsive-sm">
+        	<table class="table table-hover boardlist" id="dataTables-example">
+              <thead class="mt-5">
+                <tr style="visibility: hidden;">
+                  <th>제목</th>
+                  <th>작성자</th>
+                  <th>작성일</th>
+                  <th>조회수</th>
+                </tr>
+              </thead>
+              <tbody>
+               <c:forEach items="${dsCommunityList}" var="dsCommunityList">
+                <tr>
+                 <td class="col-sm-6 p-3 text-start"><a href ="${context}/work/board/communityView.do?comuNo=${dsCommunityList.COMU_NO}">${dsCommunityList.COMU_TITLE}</a></td>
+                 <td class="col-sm-2 p-3 text-start fw-bold">${dsCommunityList.USER_NAME}</td>
+                 <td class="col-sm-2 p-3 text-center">${dsCommunityList.COMU_REG_DATE}</td>
+                 <td class="col-sm-2 p-3 text-end">조회수 : ${dsCommunityList.COMU_HIT}</td>
+                </tr>
+               </c:forEach>
+              </tbody>
+             </table>
+          </div>
 		<!-- board list end -->
 		
 		<!-- board buttons start -->
