@@ -107,19 +107,19 @@
 					<a href="#" class="gotu">+ PRODUCT </a>
 				</h4>
 				<div class="col-sm-4">
-					<img src="/img/main/mainbest1.png" alt="메인 팔레트1" class="img-fluid rounded-3 item" data-aos="fade-up">
-					<img src="/img/main/mainbest3.png" alt="메인 팔레트2" class="img-fluid mt-5 rounded-3 item" data-aos="fade-up">
+					<img src="/img/main/mainbest1.png" alt="메인 팔레트1" class="img-fluid rounded-3 item" data-aos="fade-down-right"  data-aos-duration="2000">
+					<img style="margin-top: 100px" src="/img/main/mainbest3.png" alt="메인 팔레트2" class="img-fluid rounded-3 item" data-aos="fade-down-right"  data-aos-duration="1000">
 				</div>
 				<div class="col-sm-4" style="margin-top: 259px;">
-					<img src="/img/main/mainbest2.png" alt="메인 팔레트3" class="img-fluid rounded-3 item" data-aos="fade-up">
-					<img src="/img/main/mainbest4.png" alt="메인 팔레트4" class="img-fluid mt-5 rounded-3 item" data-aos="fade-up">
+					<img src="/img/main/mainbest2.png" alt="메인 팔레트3" class="img-fluid rounded-3 item" data-aos="fade-down-left"  data-aos-duration="1000">
+					<img style="margin-top: 100px" src="/img/main/mainbest4.png" alt="메인 팔레트4" class="img-fluid rounded-3 item" data-aos="fade-down-left" data-aos-duration="1000">
 				</div>
 			</div> 
 			
 			<div class="mainsub item gotu" data-aos="fade-up">Our Business</div>
-			<div><img src="/img/main/mainbusiness1.png" class="img-fluid my-4 rounded-3 item" data-aos="fade-up" alt="비즈니스1"></div> 
-			<div><img src="/img/main/mainbusiness2.png" class="img-fluid my-4 rounded-3 item" data-aos="fade-up" alt="비즈니스2"></div> 
-			<div><img src="/img/main/mainbusiness3.png" class="img-fluid my-4 rounded-3 item" data-aos="fade-up" alt="비즈니스3"></div>
+			<div><img src="/img/main/mainbusiness1.png" class="img-fluid my-4 rounded-3 item" data-aos="fade-right" data-aos-duration="1000" alt="비즈니스1"></div> 
+			<div><img src="/img/main/mainbusiness2.png" class="img-fluid my-4 rounded-3 item" data-aos="fade-left" data-aos-duration="1000" alt="비즈니스2"></div> 
+			<div><img src="/img/main/mainbusiness3.png" class="img-fluid my-4 rounded-3 item" data-aos="fade-right" data-aos-duration="1000" alt="비즈니스3"></div>
 		
 			<h2 style="margin-top: 195px;" class="gotu">@glowup_official</h2>
 			<div class="mainsub pt-0 gotu">
