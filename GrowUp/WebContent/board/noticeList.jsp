@@ -54,7 +54,7 @@
 	<div class="px-5 py-5">
 		<!-- board title start -->
 		<div class="py-5">
-			<p class="title  fs-1 fw-bold">공지사항</p>
+			<p class="title fs-1 fw-bold">공지사항</p>
 		</div>
 		<!-- board title end -->
       
