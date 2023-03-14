@@ -38,17 +38,16 @@
 	    	} */
 	    	if(confirm("결제하시겠습니까?")){
 	    		var IMP = window.IMP;  
-			    IMP.init("imp02022011");  // IMP.init( ) 메서드 가맹점코드 수정 바랍니다.
+			    IMP.init("imp35043538");  // IMP.init( ) 메서드 가맹점코드 수정 바랍니다.
 			    IMP.request_pay({
 			        pg : 'html5_inicis', // version 1.1.0부터 지원.
 			        pay_method : 'card',
 			        merchant_uid : 'order_' + new Date().getTime(),
 			        name : '${dsCartList[0].PRODUCT_NAME}',
-			        amount : '${dsCartList[0].CART_PRICE}',
-			        //amount : 10,
+			        //amount : '${dsCartList[0].CART_PRICE}',
+			        amount : 10,
 			        //buyer_email : '${dsCartList[0].EMAIL}',
 			        //////////////////////////////////////////// 결제테스트시 메일주소 변경요망 //////////////////////////////////////////////////////
-			        buyer_email : 'bye0607@gmail.com',
 			        buyer_name : '${dsCartList[0].NAME}(${dsCartList[0].ID})',
 			        buyer_tel : '${dsCartList[0].PHONE_CD}' + '-' + '${dsCartList[0].PHONE_NUM}',
 			        buyer_addr : '${dsCartList[0].ADDRESS}',
@@ -126,11 +125,13 @@
 								var path = '';
 							 	var productCategoryCd = '${dsCartList.PRODUCT_CATEGORY_CD}';
 							
-							 	if(productCategoryCd == 'P'){
-									imageFolder = "/perfumeImg/${dsCartList.PRODUCT_IMAGE}";
-									}else if(productCategoryCd == 'D'){
-										imageFolder = "/diffuserImg/${dsCartList.PRODUCT_IMAGE}";
-									}
+							 	if(productCategoryCd == 'E'){
+									imageFolder = "/eyeImg/${dsCartList.PRODUCT_IMAGE}";
+								} else if(productCategoryCd == 'F'){
+									imageFolder = "/faceImg/${dsCartList.PRODUCT_IMAGE}";
+								} else if(productCategoryCd == 'L'){
+									imageFolder = "/lipImg/${dsCartList.PRODUCT_IMAGE}";
+								}
 								path = $("img[name='image']").eq('${cartIdx.index}').attr("src");
 							
 								existFolder = path.split("/")[0];
