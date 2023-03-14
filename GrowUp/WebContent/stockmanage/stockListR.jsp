@@ -34,11 +34,6 @@
 </head>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
-	<div class= "container">
-	  	<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
-	  		<h1 class="admintitle"><mark>관리자 화면</mark></h1>
-	  	</c:if>
-	</div>
 <div class="container">
 	<!-- board title start -->
 	<div class="py-5">

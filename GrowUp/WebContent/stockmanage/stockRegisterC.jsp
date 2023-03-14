@@ -89,7 +89,7 @@
 			<div class="form-group row mb-3">
 				<label for="productCategoryCd" class="col-form-label col-md-2">카테고리</label>
 				<div class="col-md-10">
-		        	<select class="form-control" id="productCategoryCd" name="productCategoryCd" required="required" onchange="fn_setProductCategoryCd()">
+		        	<select class="form-select" id="productCategoryCd" name="productCategoryCd" required="required" onchange="fn_setProductCategoryCd()">
 						<c:forEach items="${dsCode1}" var="code1">
 							<option value="${code1.commCd}">${code1.commCdNm}</option>
 						</c:forEach>
