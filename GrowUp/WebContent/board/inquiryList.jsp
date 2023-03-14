@@ -18,7 +18,7 @@
 			$('#dataTables-example').DataTable({
         	   "language" : {
 	        		"search" : " ",
-	       			"searchPlaceholder": "궁금한게 있으신가요?",
+	       			"searchPlaceholder": "검색어를 입력하세요.",
 	        	    "paginate": {
 		                "first":  "1",
 		                "last":   "2",
@@ -61,13 +61,17 @@
                  </thead>
                 <tbody>
                     <c:forEach items="${dsinquiryList}" var="dsinquiryList">
-                     <tr>
-                     	<td style="min-width:200px" class="p-3">
-                     		<a href ="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a>
-                     	</td>
-                     	<td style="width:100px;min-width:100px" class="p-3 text-center">${dsinquiryList.USER_NAME}</td>
-                     	<td style="width:150px;min-width:150px" class="p-3 text-center">${dsinquiryList.INQ_REG_DATE}</td>
-                     </tr>
+	                  	<c:choose>
+							<c:when test="${sessionScope.userCode == dsinquiryList.USER_CODE}">
+								<tr>
+			                     	<td style="min-width:200px" class="p-3">
+			                     		<a href="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a>
+			                     	</td>
+			                     	<td style="width:100px;min-width:100px" class="p-3 text-center">${dsinquiryList.USER_NAME}</td>
+			                     	<td style="width:150px;min-width:150px" class="p-3 text-center">${dsinquiryList.INQ_REG_DATE}</td>
+			                     </tr>
+	                  		</c:when>
+						</c:choose>
                 	</c:forEach>
                 </tbody>
             </table>
