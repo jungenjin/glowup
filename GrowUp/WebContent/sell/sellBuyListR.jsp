@@ -42,7 +42,7 @@
 <div class="titarea" style='background-image: url("${context}/img/subbg_cart.jpg");'></div>
 <!-- title, visual end -->
 <!-- Details -->
-<div class="container">
+<div class="container footertop">
 	<div class="px-5 py-5">
 	
 		<!-- board title start -->

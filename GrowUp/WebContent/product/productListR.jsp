@@ -18,7 +18,7 @@
 <div class="titarea" style='background-image: url("${context}/img/subbg_product.jpg");'></div>
 <!-- title, visual end -->
 <!-- 상품 영역 -->		
-<div class="container product_list">
+<div class="container product_list footertop">
 	<div class="row">
 		<div class="col-sm-12 col-md-6 col-lg-4 item_first">
 			<div class="row ">

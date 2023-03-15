@@ -99,7 +99,7 @@
 <jsp:include page="/common/top.jsp"></jsp:include>
 <div class="backgroundImg" style="background-image: url('${context}/img/subbg_sellconfirm.png');">
 
-		<div class="container pt-5 pb-5 d-flex justify-content-center">
+		<div class="container pt-5 pb-5 d-flex justify-content-center footertop">
 				<!-- card start -->	
 				<div class="card text-bg-light pt-5 px-5 shadow-sm">
 					<div class="">

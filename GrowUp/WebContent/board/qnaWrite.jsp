@@ -38,7 +38,7 @@
 <!-- title, visual end -->
 
 <!-- Details -->
-<div class="container mb-5">
+<div class="container footertop">
 	<div class="px-5 py-5">
 	
 		<!-- board title start -->

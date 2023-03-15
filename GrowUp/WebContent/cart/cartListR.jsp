@@ -84,17 +84,12 @@
 <div class="titarea" style='background-image: url("${context}/img/subbg_cart.jpg");'></div>
 <!-- title, visual end -->
 
-<!-- Detail -->
-<div class="container">
+<!-- Details -->
+<div class="container footertop">
 	<div class="px-5 py-5">
-	
 		<!-- board title start -->
-		<div class="page-header">
-			<div class="row py-5">
-				<div class="d-flex flex-row mb-12">
-					<p class="title p-2 fs-1 fw-bold">장바구니</p>
-				</div>
-			</div>
+		<div class="py-5">
+			<p class="title fs-1 fw-bold">장바구니</p>
 		</div>
 		<!-- board title end -->
 		
@@ -151,6 +146,7 @@
 			</tbody>
 	    </table>
 	</div>
+</div>
 </div>
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>

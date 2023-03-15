@@ -138,7 +138,7 @@
 </head>
 <body class="productview">
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
-<div class="container">
+<div class="container footertop">
 	<div class="nav justify-content-end ">
 		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="d-none d-lg-block">
 			<ol class="breadcrumb">

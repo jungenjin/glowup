@@ -29,7 +29,7 @@
 		}
 		//답글
 	    function fn_reply(paramuserCode){
-	    	location.href = "${context}/work/board/retrieve흐으으음.do?userCode=" + paramProductCode;
+	    	location.href = "${context}/work/board/retrieve.do?userCode=" + paramProductCode;
 	    }
 	</script>
 </head>
@@ -67,9 +67,9 @@
 		<!-- board view end -->
 		
 		<!-- board button area start -->
-		<c:if test="${sessionScope.grade == 'A' || sessionScope.userCode == dsEvent.EV_REG_ID}">
+		<c:if test="${sessionScope.grade == 'A' || sessionScope.userCode == dsQnA.QNA_REG_ID}">
 			<div class="d-flex justify-content-end">
-				<button class="btn boardbtn" type="button" onclick="fn_noticeList()">목록</button>
+				<button class="btn boardbtn" type="button" onclick="fn_qaList()">목록</button>
 				<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
 				<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
 			</div>

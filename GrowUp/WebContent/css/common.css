@@ -5,8 +5,8 @@ body {font-family: 'Noto Sans KR', 'Gotu', serif, sans-serif; word-break:keep-al
 /* 영문폰트 클래스 추가 */
 .gotu {font-family: "Gotu";}
 
-nav{
-	background : none !important;
+.footertop {
+	margin-bottom : 10rem;
 }
 
 ul, ol, li {list-style: none;}
