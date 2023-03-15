@@ -41,24 +41,19 @@
 <!-- title, visual start -->
 <div class="titarea" style='background-image: url("${context}/img/subbg_cart.jpg");'></div>
 <!-- title, visual end -->
+
 <!-- Details -->
 <div class="container footertop">
 	<div class="px-5 py-5">
-	
 		<!-- board title start -->
-		<div class="page-header">
-			<div class="row py-5">
-				<div class="d-flex flex-row mb-12">
-					<p class="title p-2 fs-1 fw-bold">구매내역</p>
-				</div>
-			</div>
+		<div class="py-5">
+			<p class="title fs-1 fw-bold">구매내역</p>
 		</div>
 		<!-- board title end -->
 		
-	<!-- table-responsive start -->
     <div class="table-responsive">
         <table class="table" id="dataTables-example">
-            <thead>
+            <thead >
                 <tr>
                 	<th style="width: 60px;">No</th>
                     <th style="width: 150px;">상품이미지</th>
@@ -74,7 +69,11 @@
 	                <tr>
 	                	<td style="text-align: center; vertical-align: middle;">${buyIdx.count}</td>
 	                	<td style="text-align: center; vertical-align: middle;">
-							<img name="image" width="135px" height="120px" src="${context}" class="img-thumbnail">
+	                	
+							<a href="${context}/work/product/retrieveProduct.do?productCode=${dsCartList.PRODUCT_CODE}">
+								<img name="image" width="135px" height="120px" src="${context}" class="img-thumbnail">
+							</a>
+							
 							<script type="text/javascript">
 								var existFolder = '';
 								var imageFolder = '';
@@ -105,9 +104,8 @@
 					</c:forEach>
 				</tbody>
 	       </table>
-	   </div>
-	   <!-- /.table-responsive -->
 	   
+	   </div>
 	</div><!-- Details end -->
 </div><!-- container end -->
 

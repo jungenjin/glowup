@@ -105,7 +105,7 @@
                     <th style="width: 100px;">결제금액</th>
 				    <th style="width: 150px;">구매 / 삭제</th>
 				</tr>
-			</thead>
+				</thead>
 	        	<tbody>
 	        		<c:forEach items="${dsCartList}" var="dsCartList" varStatus="cartIdx">
 	             	<tr>
@@ -138,15 +138,15 @@
 	                	<td style="text-align: center; vertical-align: middle;">${dsCartList.CART_COUNT}</td>
 	                	<td style="text-align: center; vertical-align: middle;">${dsCartList.CART_PRICE}원</td>
 	               		<td style="text-align: center; vertical-align: middle;">
-	                		<button type="button" class="btn" onclick="fn_buy('${dsCartList.CART_CODE}', '${dsCartList.PRODUCT_CODE}', '${dsCartList.CART_PRICE}', '${dsCartList.CART_COUNT}')"style="margin-bottom: 1%">구매하기</button>
-	                		<button type="button" class="btn" onclick="fn_delete('${dsCartList.CART_CODE}', '${dsCartList.PRODUCT_CODE}', '${dsCartList.CART_COUNT}')" style="margin-bottom: 1%">삭제</button>
+	                		<button type="button" class="btn buybtn" onclick="fn_buy('${dsCartList.CART_CODE}', '${dsCartList.PRODUCT_CODE}', '${dsCartList.CART_PRICE}', '${dsCartList.CART_COUNT}')"style="margin-bottom: 1%">구매하기</button>
+	                		<button type="button" class="btn deletebtn" onclick="fn_delete('${dsCartList.CART_CODE}', '${dsCartList.PRODUCT_CODE}', '${dsCartList.CART_COUNT}')" style="margin-bottom: 1%">삭제</button>
 	            	    </td>
 	        	     </tr>
-	            </c:forEach>
-			</tbody>
-	    </table>
+	            	</c:forEach>
+				</tbody>
+	    	</table>
+		</div>
 	</div>
-</div>
 </div>
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>
 </body>
