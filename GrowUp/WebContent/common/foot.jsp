@@ -37,9 +37,9 @@
 <c:set var="qnaUrl">${context}/work/board/qna.do</c:set>
 
 <body>
-<footer class="footer bg-light opacity-75 mt-5 ">
+<footer class="footer bg-light opacity-75 py-5">
 	<div class="container">
-		<div class="row pt-5 pb-3">
+		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-3">
 				<a href="${homeUrl}" class="mb-3">
 					<img src="${context}/img/Glowup_logo.png" alt="glowup" width="" height="35">

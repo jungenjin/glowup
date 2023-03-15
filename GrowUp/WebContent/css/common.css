@@ -366,11 +366,12 @@ display: none;
 	font-size: 16px !important;
 	font-family: 'Noto Sans KR';
 }
+
+/* 푸터가 투명하지않음 따흐흐 */
 .backgroundImg {
-	background-image: url('/img/subbg_login.png');
 	background-size: cover;
-	margin-bottom:-50px;
-	padding: 160px 15px;
+	padding: 200px 15px;
+	
 }
 .loginbox {max-width: 566px;background:#fff;padding: 0px;margin:0 auto;border-radius: 30px; }
 .logintab {overflow:hidden;border-radius: 30px 30px 0 0; text-align:center; width: 100%; margin-left: 0%; font-family: "Noto Sans KR"}

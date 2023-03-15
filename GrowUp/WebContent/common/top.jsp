@@ -44,25 +44,25 @@
 		<div class="p-2 text-center h6 pt-3">
 			<c:if test="${sessionScope.id == null}">
 				<a class="nav-link active" href="${context}/work/user/createUser.do"><i class="fa-solid fa-user-plus"></i>
-				<span class="gotu">sign-up</span></a>
+				<span class="gotu">회원가입</span></a>
 			</c:if>
 		</div>
 		<div class="p-2 text-center h6 pt-3">
 			<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
 				<a class="nav-link active" href="${context}/work/cart/retrieveCartList.do"><i class="fa-solid fa-cart-shopping"></i>
-				<span class="gotu">cart</span></a>
+				<span class="gotu">장바구니</span></a>
 			</c:if>
 		</div>
 		<div class="p-2 text-center h6 pt-3">
 			<c:if test="${sessionScope.id == null}">
 				<a class="nav-link active" href="${context}/user/login.jsp"><i class="fa-solid fa-right-to-bracket"></i>
-				<span class="gotu">sign-in</span></a>
+				<span class="gotu">로그인</span></a>
 			</c:if>
 		</div>
 		<div class="p-2 text-center h6 pt-3">
 			<c:if test="${sessionScope.id != null}">
 				<a class="nav-link active" href="${context}/work/user/logout.do"><i class="fa-solid fa-right-from-bracket"></i>
-				<span class="gotu">sign-out</span></a>
+				<span class="gotu">로그아웃</span></a>
 			</c:if>
 		</div>
 		<div class="p-2">
