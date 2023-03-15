@@ -79,7 +79,7 @@
 		<!-- 첨부파일 view -->
 		
 		<!--  답글 입력 토글 start -->
-		<div class="container review-box" >
+		<!-- <div class="container review-box" >
 			<div class="row">
 				<div  class="col-xs-6">
 			   		<p class="fs-3 fw-bold">답글 <span class="badge">${dsReplyList[0].REPLY_COUNT}</span></p>
@@ -108,8 +108,10 @@
 				</div>
 			</div>
 		</div>
+		-->
 		<!-- 답글 입력 토글 end -->
 		<!-- 답글 목록 start -->
+		<!-- 
 		<div class="container">
 			<c:forEach items="${dsReplyList}" var="dsReplyList">
 				<div class="row" style="border-top: 1px solid #D7D8DA; padding:34px 0;">
@@ -129,6 +131,7 @@
 				</div>
 			</c:forEach>
 		</div>
+		 -->
 		<!-- 답글 목록 end -->
 		
 	</div><!-- Details end -->
