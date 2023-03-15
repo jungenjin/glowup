@@ -14,7 +14,7 @@
 <div class="titarea" style='background-image: url("${context}/img/subbg_faq.jpg");'></div>
 <!-- title, visual end -->
 <!-- Detail -->
-<div class="container">
+<div class="container mb-5">
 	<div class="px-5 py-5">
 	
 		<!-- board title start -->

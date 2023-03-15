@@ -84,7 +84,7 @@
 <!-- 메인 백그라운드 배경 튜블라 적용 -->
 <c:if test="${sessionScope.grade != 'A'}">
 	<div id="maintub">
-		<div class="container">
+		<div class="container mb-5">
 			<div class="row item" data-aos="fade-up">
 			<div class="mainsub gotu">Glow up<img src="/img/main/txt_animation.png" alt="돌아가는 로고" class="rotate"> </div>
 				<h4 class="col-sm-4 lh-lg">

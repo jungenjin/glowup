@@ -50,7 +50,7 @@
 <!-- title, visual end -->
 
 <!-- Details -->
-<div class="container">
+<div class="container mb-5">
 	<div class="px-5 py-5">
 		<!-- board title start -->
 		<div class="py-5">
