@@ -7,8 +7,28 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Q &#38; A | 글 목록</title>
+	<!-- 테이블에 dataTables-example 사용시 검색, 페이징처리 됨 -->
+	<link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css" rel="stylesheet"/>
+	
 	<script src="${context}/js/jquery-1.9.1.js"></script>
+	<!-- 테이블에 dataTables-example 사용시 검색, 페이징처리 됨 -->
+	<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#dataTables-example').DataTable({
+        	   "language" : {
+	        		"search" : " ",
+	       			"searchPlaceholder": "검색어를 입력하세요.",
+	        	    "paginate": {
+		                "first":  "1",
+		                "last":   "2",
+		                "next":   ">>",
+		                "previous":   "<<"
+	        	    }
+               },
+			});
+		});
+
 		function fn_qnaWrite(){
 			location.href = "${context}/work/board/qnaWrite.do";
 		}
@@ -32,7 +52,14 @@
 	
 		<!-- board list start -->
         <div class="table-responsive">
-            <table class="table table-hover boardlist">
+            <table class="table table-hover boardlist"  id="dataTables-example">
+            	<thead>
+                     <tr style="display: none;">
+                         <th>제목</th>
+                         <th>작성자</th>
+                         <th>작성일</th>
+                     </tr>
+                 </thead>
                 <tbody>
                     <c:forEach items="${dsQnAList}" var="dsQnAList">
                      <tr>
