@@ -1,4 +1,3 @@
-//import { Route } from "react-router-dom";
 import "./css/main.css";
 
 const App = () => {
