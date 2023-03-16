@@ -5,21 +5,19 @@ const App = () => {
   return (
     <>
     <nav id="gnb" className="navbar fixed-top px-5">
-        {/* <div className="container-xxl"> */}
-            <a className="navbar-brand" href="#"><img src={require('./img/logo_glowup.png').default} alt="Glow Up Brand" /></a>
-            <ul className="nav nav-pills me-auto">
-                <li className="nav-item">
-                    <a className="nav-link" href="#brand">브랜드</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#contact">Contact</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#location">오시는길</a>
-                </li>
-            </ul>
-            <a className="d-flex" href="!#" target={"_blank"}>공식 온라인몰</a>
-        {/* </div> */}
+        <a className="navbar-brand" href="#"><img src={require('./img/logo_glowup.png').default} alt="Glow Up Brand" /></a>
+        <ul className="nav nav-pills me-auto">
+            <li className="nav-item">
+                <a className="nav-link" href="#brand">브랜드</a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link" href="#contact">Contact</a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link" href="#location">오시는길</a>
+            </li>
+        </ul>
+        <a className="d-flex" href="!#" target={"_blank"}>공식 온라인몰</a>
     </nav>
     <div data-bs-spy="scroll" data-bs-target="#gnb" data-bs-offset="0" data-bs-smooth-scroll="true"  tabIndex="0">
         <div className="position-relative pt200_visiul">
