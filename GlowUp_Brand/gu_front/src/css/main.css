@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+body {font-family: 'Noto Sans KR', 'Gotu', serif, sans-serif; word-break:keep-all;color:#151515}
+
+/* header */
+#gnb {height:140px;background:rgba(255,255,255,0.9);}
+#gnb ul {margin-left:116px;}
+#gnb ul li {margin-left:20px;margin-right:20px}
+
+/* contnets */
+.main_visiul {overflow:hidden}
+.main_visiul .txt {font:200px 'Gotu';color:#fff;left:136px;bottom:-160px;}
+
+.pt200 {padding-top:200px;}
+
+.display-5 {font:50px/120% 'Gotu';color:#5F5D5D;margin-bottom:110px}
+.h3 {font-size:28;font-weight:400;line-height:180%;margin-bottom:30px}
+
+.con_slogan {color:#151515;font-size:96px;}
+
+@media (min-width: 1400px) {
+    .container-xxl {
+        max-width: 1400px;
+    }
+}
