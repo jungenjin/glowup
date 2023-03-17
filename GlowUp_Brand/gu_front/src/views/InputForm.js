@@ -7,7 +7,9 @@ class InputForm extends Component {
     super(props);
     this.state = {
       conNo: "",
-      conTitle: "",
+      conName: "",
+      conEmail: "",
+      conPnone: "",
       conContent: "",
       crud: props.match.params.crud,
     };
@@ -43,7 +45,7 @@ class InputForm extends Component {
   }
 
   crud() {
-    const { conNo, conTitle, conContent, crud } = this.state;
+    const { conNo, conName, conEmail, conPhone, conContent, crud } = this.state;
 
     let crudType = "";
 
@@ -58,8 +60,10 @@ class InputForm extends Component {
     }
 
     let form = new FormData();
+    form.append("conName", conName);
+    form.append("conEmail", conEmail);
+    form.append("conPhone", conPhone);
     form.append("conContent", conContent);
-    form.append("conTitle", conTitle);
     if (crud !== "Insert") {
       form.append("conNo", conNo);
     }
@@ -78,7 +82,9 @@ class InputForm extends Component {
       const data = res.data;
       this.setState({
         conNo: data.conNo,
-        conTitle: data.conTitle,
+        conName: data.conName,
+        conEmail: data.conEmail,
+        conPhone: data.conPhone,
         conContent: data.conContent,
       });
     });
@@ -95,19 +101,39 @@ class InputForm extends Component {
   }
 
   render() {
-    const conTitle = this.state.conTitle;
+    const conName = this.state.conName;
+    const conEmail = this.state.conEmail;
+    const conPhone = this.state.conPhone;
     const conContent = this.state.conContent;
 
     return (
       <>
         <h1>게시글 {this.createHeaderName()}</h1>
         {this.createconNoTag()}
-        <h3>제목</h3>
+        <h3>이름</h3>
         <input
           type="text"
-          value={conTitle}
+          value={conName}
           onChange={(event) =>
-            this.setState({ conTitle: event.target.value })
+            this.setState({ conName: event.target.value })
+          }
+        />
+        <br />
+        <h3>이메일</h3>
+        <input
+          type="text"
+          value={conEmail}
+          onChange={(event) =>
+            this.setState({ conEmail: event.target.value })
+          }
+        />
+        <br />
+        <h3>연락처</h3>
+        <input
+          type="text"
+          value={conPhone}
+          onChange={(event) =>
+            this.setState({ conPhone: event.target.value })
           }
         />
         <br />

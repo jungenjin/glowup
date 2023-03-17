@@ -25,8 +25,14 @@ public class Contact {
 	@Column(name = "CON_NO")
 	private int conNo;
 	
-	@Column(name = "CON_TITLE")
-	private String conTitle;
+	@Column(name = "CON_NAME")
+	private String conName;
+	
+	@Column(name = "CON_EMAIL")
+	private String conEmail;
+
+	@Column(name = "CON_PHONE")
+	private String conPhone;
 	
 	@Column(name = "CON_CONTENT", length=4000)
 	private String conContent;
