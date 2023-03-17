@@ -39,7 +39,6 @@
 <nav class="navbar bg-light opacity-75 fixed-top ">
   <div class="container">
 		<a class="navbar-brand" href="${homeUrl}"><span class="fs-2 fw-bold gotu">Glow up</span></a>
-	
 	<div class="d-flex flex-row">
 		<div class="p-2 text-center h6 pt-3">
 			<c:if test="${sessionScope.id == null}">
@@ -77,6 +76,7 @@
 	        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
 				<a class="navbar-brand" href="${homeUrl}"><span class="fs-2 fw-bold gotu">Glow up</span></a>
 	        </h5>
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
      	</div>        
 
       <!-- 오프캔버스 메뉴 -->
@@ -106,16 +106,17 @@
 	          </ul>
 				
           	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-				<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
+			<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
 	          	<li class="gotu mt-4 fs-5 fw-bold">MY PAGE</li>
 	          	
 			    <li class="nav-item"><a class="nav-link active" href="${context}/work/sell/retrieveBuyList.do">구매내역</a></li>
 			    <li class="nav-item"><a class="nav-link active" href="${context}/work/user/updateUser.do">정보수정</a></li>
-				</c:if>
-			</ul>
+			</c:if>
+
 			<c:if test="${sessionScope.id != null || sessionScope.grade == 'A'}">
 				<li class="pointcursor"><a class="nav-link active" href="${context}/work/board/inquiryList.do">1 : 1 문의</a></li>
 			</c:if>
+			</ul>
         </div>
       </div>
 	</div>
