@@ -124,7 +124,8 @@ const App = () => {
             <div className="">
                 <div className="">Contact</div>
                 <div className="">
-                    <Route exact path="/" component={InputForm} />
+                    <Route exact path="/" component={InputForm} crud="Insert" />
+                    <Route path="/:crud" component={InputForm} />
                 </div>
             </div>
             {/* 오시는길 */}

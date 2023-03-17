@@ -12,7 +12,7 @@ class InputForm extends Component {
       conContent: "",
       crud: props.match.params.crud,
     };
-    if (this.state.crud !== "Insert") {
+    if (this.state.crud !== "null") {
       this.getData();
     }
   }
@@ -85,7 +85,7 @@ class InputForm extends Component {
         conName: data.conName,
         conEmail: data.conEmail,
         conPhone: data.conPhone,
-        conContent: data.conContent,
+        conContent: data.conContent
       });
     });
   }
