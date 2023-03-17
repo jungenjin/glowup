@@ -1,4 +1,6 @@
+import { Route } from "react-router-dom";
 import React, {useEffect} from "react";
+import InputForm from "./views/InputForm";
 import "./css/main.css";
 
 // 스크립트로 kakao maps api를 심어서 가져오면 window전역 객체에 들어가게 되서 이를 바로 인식하지 못함
@@ -121,7 +123,9 @@ const App = () => {
             </div>
             <div className="">
                 <div className="">Contact</div>
-                <div className=""></div>
+                <div className="">
+                    <Route exact path="/" component={InputForm} />
+                </div>
             </div>
             {/* 오시는길 */}
             <span id="location" className="d-block pt200"></span>

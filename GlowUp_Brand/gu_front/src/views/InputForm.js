@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 class InputForm extends Component {
   constructor(props) {
@@ -72,7 +71,8 @@ class InputForm extends Component {
       .post(crudType, form)
       .then((res) => {
         alert("요청이 처리되었습니다");
-        this.props.history.push("/");
+        // this.props.history.push("/Insert");
+        window.location.replace("/Insert");
       })
       .catch((err) => alert("error: " + err.response.data.msg));
   }
@@ -148,12 +148,13 @@ class InputForm extends Component {
         ></textarea>
         <br /> <br />
         {this.createCrudBtn()}
-        <Link to="/">
-          <button type="button">취소</button>
-        </Link>
       </>
     );
   }
+}
+
+InputForm.defaultProps = {
+  crud : 'Insert'
 }
 
 export default InputForm;
