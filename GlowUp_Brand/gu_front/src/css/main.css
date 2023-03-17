@@ -22,3 +22,10 @@ body {font-family: 'Noto Sans KR', 'Gotu', serif, sans-serif; word-break:keep-al
         max-width: 1400px;
     }
 }
+
+/* 오시는길 */
+#map {height:600px;}
+
+/* footer */
+.footer {margin:90px 0}
+.footer .h4 {margin-top:12px}
