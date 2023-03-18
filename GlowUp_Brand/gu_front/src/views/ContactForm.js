@@ -66,15 +66,15 @@ class ContactForm extends Component {
             <div className="col-lg-3 display-5">Contact</div>
             <div className="col-lg-9">
                 <div className="form-floating mb-4">
-                    <input type="text" className="form-control form-control-lg" id="name" placeholder="이름" onChange={(event) => this.setState({ conName: event.target.value })} required />
+                    <input type="text" className="form-control form-control-lg" id="name" placeholder="이름" onChange={(event) => this.setState({ conName: event.target.value })} autoComplete="off" required />
                     <label htmlFor="name">이름</label>
                 </div>
                 <div className="form-floating mb-4">
-                    <input type="text" className="form-control form-control-lg" id="email" placeholder="이메일" onChange={(event) => this.setState({ conEmail: event.target.value })} required />
+                    <input type="text" className="form-control form-control-lg" id="email" placeholder="이메일" onChange={(event) => this.setState({ conEmail: event.target.value })} autoComplete="off" required />
                     <label htmlFor="email">이메일</label>
                 </div>
                 <div className="form-floating mb-4">
-                    <input type="email" className="form-control form-control-lg" id="phone" placeholder="연락처" onChange={(event) => this.setState({ conPhone: event.target.value })} required />
+                    <input type="email" className="form-control form-control-lg" id="phone" placeholder="연락처" onChange={(event) => this.setState({ conPhone: event.target.value })} autoComplete="off" required />
                     <label htmlFor="phone">연락처</label>
                 </div>
                 <div className="form-floating mb-4">
@@ -82,7 +82,7 @@ class ContactForm extends Component {
                     <label htmlFor="phone">문의메세지를 남겨주세요.</label>
                 </div>
                 <div className="d-flex col-auto">
-                    <button className="btn btn-dark btn-lg ms-auto" onClick={() => this.crud()}>문의하기</button>
+                    <button className="btn btn-dark btn-lg ms-auto px-5 py-3" onClick={() => this.crud()}>문의하기</button>
                 </div>
             </div>
         </div>
