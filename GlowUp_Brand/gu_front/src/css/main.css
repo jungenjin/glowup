@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Gotu&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+body {font-family: 'Noto Sans KR', 'Gotu', serif, sans-serif; word-break:keep-all;color:#151515;font-size:20px}
+
+/* header */
+#gnb {padding:40px 0;min-height:140px;background:rgba(255,255,255,0.9);}
+#gnb .navbar-brand {min-height:60px}
+#gnb ul {margin-left:90px;}
+#gnb ul li {margin-right:20px;color:#151515;}
+#gnb ul li .nav-link {color:#000;padding:15px 30px;}
+#gnb .nav-link.active {background:#151515;color:#fff}
+#gnb .btn_shop {min-width:30px;background:url("../img/icon_bag.svg") no-repeat left center; background-size:20px 20px;padding-left:26px; color:#151515;text-decoration:none;}
+
+/* contnets */
+.main_visiul {overflow:hidden;background:url("../img/img_main.png") no-repeat;background-size: cover;height:955px}
+.main_visiul .txt {font:200px 'Gotu';color:#fff;left:136px;bottom:-160px;}
+
+.pt200 {padding-top:200px;}
+
+.display-5 {font:50px/120% 'Gotu';color:#5F5D5D;margin-bottom:110px}
+.h3 {font-size:28px;font-weight:400;line-height:180%;margin-bottom:30px}
+
+.con_slogan {color:#151515;font-size:96px;}
+
+@media (min-width: 1400px) {
+    .container-xxl {
+        max-width: 1400px;
+    }
+}
+
+/* contact */
+textarea {height:300px !important;resize:none}
+.form-floating>.form-control {height: calc(3.5rem + 10px);border-radius:0.375rem;}
+.form-floating>.form-control:not(:placeholder-shown) {padding-top: 2.0rem;}
+
+/* 오시는길 */
+#map {height:600px;}
+
+/* footer */
+.footer {margin:90px 0}
+.footer .h4 {margin-top:12px}
