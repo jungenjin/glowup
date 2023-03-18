@@ -41,25 +41,39 @@ const App = () => {
     }, [])
   return (
     <>
-    <nav id="gnb" className="navbar fixed-top px-5">
-        <a className="navbar-brand" href="#"><img src={require('./img/logo_glowup.png').default} alt="Glow Up Brand" /></a>
-        <ul className="nav nav-pills me-auto">
-            <li className="nav-item">
-                <a className="nav-link" href="#brand">브랜드</a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#contact">Contact</a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#location">오시는길</a>
-            </li>
-        </ul>
-        <a className="d-flex" href="!#" target={"_blank"}>공식 온라인몰</a>
+    <span id="top"></span>
+    <nav id="gnb" className="navbar navbar-expand-xxl fixed-top px-5">
+        <a className="navbar-brand" href="#top"><img src={require('./img/logo_glowup.png').default} alt="Glow Up Brand" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul className="navbar-nav nav-pills me-auto">
+                <li className="nav-item">
+                    <a className="nav-link" href="#brand">브랜드스토리</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#tech">R&I</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#identity">디자인</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#individuality">기치관</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#contact">Contact</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#location">오시는길</a>
+                </li>
+            </ul>
+        <a className="btn_shop d-flex" href="http://localhost:9005" target={"_blank"}>공식 온라인몰</a>
+        </div>
     </nav>
     <div data-bs-spy="scroll" data-bs-target="#gnb" data-bs-offset="0" data-bs-smooth-scroll="true"  tabIndex="0">
-        <div className="position-relative pt200_visiul">
+        <div className="position-relative main_visiul">
             <div className="position-absolute txt">Glow up</div>
-            <img src={require('./img/img_main.png').default} alt="" className="img-fluid" />
         </div>
         <div className="container-xxl">
             {/* 브랜드소개 */}
@@ -72,7 +86,7 @@ const App = () => {
                 </div>
                 <div className="col-md-12 col-lg-7"><img src={require('./img/img_brand01.png').default} alt="" className="img-fluid" /></div>
             </div>
-            <div className="row d-flex justify-content-between align-items-center pt200">
+            <div id="tech" className="row d-flex justify-content-between align-items-center pt200">
                 <div className="col-md-12 col-lg-4 order-2">
                     <p className="display-5">Research <br />& Innovation</p>
                     <p className="h3">
@@ -84,7 +98,7 @@ const App = () => {
                 </div>
                 <div className="col-md-12 col-lg-8 order-1"><img src={require('./img/img_brand02.png').default} alt="" className="img-fluid" /></div>
             </div>
-            <div className="row d-flex justify-content-between align-items-center pt200">
+            <div id="identity" className="row d-flex justify-content-between align-items-center pt200">
                 <div className="col-md-12 col-lg-6">
                     <p className="display-5">Creative <br />Visual Identity</p>
                     <p className="h3">
@@ -96,7 +110,7 @@ const App = () => {
                 </div>
                 <div className="col-md-12 col-lg-6 text-right"><img src={require('./img/img_brand03.png').default} alt="" className="img-fluid" /></div>
             </div>
-            <div className="row d-flex justify-content-between align-items-center pt200">
+            <div id="individuality" className="row d-flex justify-content-between align-items-center pt200">
                 <div className="col-md-12 col-lg-6 order-2">
                     <p className="display-5">Individuality</p>
                     <p className="h3">

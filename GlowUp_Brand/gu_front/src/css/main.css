@@ -2,12 +2,16 @@
 body {font-family: 'Noto Sans KR', 'Gotu', serif, sans-serif; word-break:keep-all;color:#151515}
 
 /* header */
-#gnb {height:140px;background:rgba(255,255,255,0.9);}
-#gnb ul {margin-left:116px;}
-#gnb ul li {margin-left:20px;margin-right:20px}
+#gnb {padding:40px 0;min-height:140px;background:rgba(255,255,255,0.9);font-size:20px;}
+#gnb .navbar-brand {min-height:60px}
+#gnb ul {margin-left:90px;}
+#gnb ul li {margin-right:20px;color:#151515;}
+#gnb ul li .nav-link {color:#000;padding:15px 30px;}
+#gnb .nav-link.active {background:#151515;color:#fff}
+#gnb .btn_shop {min-width:30px;background:url("../img/icon_bag.svg") no-repeat left center; background-size:20px 20px;padding-left:26px; color:#151515;text-decoration:none;}
 
 /* contnets */
-.main_visiul {overflow:hidden}
+.main_visiul {overflow:hidden;background:url("../img/img_main.png") no-repeat;background-size: cover;height:955px}
 .main_visiul .txt {font:200px 'Gotu';color:#fff;left:136px;bottom:-160px;}
 
 .pt200 {padding-top:200px;}
@@ -22,6 +26,9 @@ body {font-family: 'Noto Sans KR', 'Gotu', serif, sans-serif; word-break:keep-al
         max-width: 1400px;
     }
 }
+
+/* contact */
+textarea {height:300px !important;resize:none}
 
 /* 오시는길 */
 #map {height:600px;}
