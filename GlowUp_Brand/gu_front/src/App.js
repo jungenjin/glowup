@@ -1,6 +1,5 @@
-import { Route } from "react-router-dom";
 import React, {useEffect} from "react";
-import InputForm from "./views/InputForm";
+import ContactForm from "./views/ContactForm";
 import "./css/main.css";
 
 // 스크립트로 kakao maps api를 심어서 가져오면 window전역 객체에 들어가게 되서 이를 바로 인식하지 못함
@@ -114,7 +113,8 @@ const App = () => {
                 <div className="col-md-12 col-lg-6 order-1"><img src={require('./img/img_brand04.png').default} alt="" className="img-fluid" /></div>
             </div>
             {/* contact */}
-            <span id="contact" className="d-block pt200"></span>
+            <ContactForm crud="Insert" />
+            {/* <span id="contact" className="d-block pt200"></span>
             <div>
                 <p className="display-5 con_slogan">Building Brands, One <br className="d-none d-lg-block" />Success Story at a Time.</p>
                 <p className="h3">Glow up은 변하는 시대에 맞춰 가치관을 새롭게 정립해왔습니다. 그리고 이를 성장을 위한 나침반으로 삼았습니다. <br />
@@ -124,10 +124,9 @@ const App = () => {
             <div className="">
                 <div className="">Contact</div>
                 <div className="">
-                    <Route exact path="/" component={InputForm} crud="Insert" />
-                    <Route path="/:crud" component={InputForm} />
+                    <ContactForm crud="Insert" />
                 </div>
-            </div>
+            </div> */}
             {/* 오시는길 */}
             <span id="location" className="d-block pt200"></span>
             <div>
