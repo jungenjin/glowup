@@ -26,7 +26,7 @@ const Location = () => {
         // 마커가 지도 위에 표시되도록 설정합니다
         marker.setMap(map);
         
-        const iwContent = '<div style="padding:5px;">Glow Up</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+        const iwContent = '<div style="padding:10px 30px;">Glow Up</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
         iwPosition = new kakao.maps.LatLng(37.5213, 127.0222); //인포윈도우 표시 위치입니다
 
         // 인포윈도우를 생성합니다
