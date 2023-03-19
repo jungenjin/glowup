@@ -21,7 +21,6 @@ body {font-family: 'Noto Sans KR', 'Gotu', serif, sans-serif; word-break:keep-al
 .main_visiul {overflow:hidden;background:url("../img/img_main.png") no-repeat center center; background-size:cover; height:100vh}
 .main_visiul .txt {font:100px/100% 'Gotu';color:#fff;text-align:center;left:50%;bottom:50%;transform:translate(-50%, 60%);}
 @media (min-width: 992px) {
-    .main_visiul {height:62.188rem}
     .main_visiul .txt {font:200px 'Gotu';left:136px;bottom:-160px;transform:translate(0, 0);}
 }
 
