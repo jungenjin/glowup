@@ -3,5 +3,6 @@
 	<persistence-unit name="gu_back">
 		<class>com.glowup.brand.model.Article</class>
 		<class>com.glowup.brand.model.Contact</class>
+		<class>com.glowup.brand.model.User</class>
 	</persistence-unit>
 </persistence>
