@@ -25,8 +25,8 @@ public class Contact {
 	@Column(name = "CON_NO")
 	private int conNo;
 	
-	@Column(name = "CON_NAME")
-	private String conName;
+	@Column(name = "CON_REG_ID")
+	private String conRegId;
 	
 	@Column(name = "CON_EMAIL")
 	private String conEmail;

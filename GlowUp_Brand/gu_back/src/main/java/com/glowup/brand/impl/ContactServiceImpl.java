@@ -17,7 +17,7 @@ public class ContactServiceImpl implements ContactService{
 	
 	public void update(Contact contact) {
 		Contact currContact = dao.findTopByOrderByConNoDesc();
-		currContact.setConName(contact.getConName());
+		currContact.setConRegId(contact.getConRegId());
 		currContact.setConEmail(contact.getConEmail());
 		currContact.setConPhone(contact.getConPhone());
 		currContact.setConContent(contact.getConContent());
