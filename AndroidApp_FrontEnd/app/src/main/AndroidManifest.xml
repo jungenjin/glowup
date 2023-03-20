@@ -46,7 +46,7 @@
             </intent-filter>
         </activity>
 
-        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="구글맵 API Key ﻿를 넣습니다"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDw196eACGXUV7uZ2Vo3cm__8WvrjVvCUg"/>
 
     </application>
 
