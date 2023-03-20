@@ -7,7 +7,7 @@ class ContactForm extends Component {
     super(props);
     this.state = {
       conNo: "",
-      conName: "",
+      conRegId: "",
       conEmail: "",
       conPhone: "",
       conContent: "",
@@ -19,7 +19,7 @@ class ContactForm extends Component {
 
   //by 김은주 230318, 전체기능은 Insert만 남기고 삭제
   crud() {
-    const { conNo, conName, conEmail, conPhone, conContent, crud } = this.state;
+    const { conNo, conRegId, conEmail, conPhone, conContent, crud } = this.state;
 
     let crudType = "";
 
@@ -34,7 +34,7 @@ class ContactForm extends Component {
     }
 
     let form = new FormData();
-    form.append("conName", conName);
+    form.append("conRegId", conRegId);
     form.append("conEmail", conEmail);
     form.append("conPhone", conPhone);
     form.append("conContent", conContent);
@@ -66,7 +66,7 @@ class ContactForm extends Component {
             <div className="col-lg-3 display-5">Contact</div>
             <div className="col-lg-9">
                 <div className="form-floating mb-4">
-                    <input type="text" className="form-control form-control-lg" id="name" placeholder="이름" onChange={(event) => this.setState({ conName: event.target.value })} autoComplete="off" required />
+                    <input type="text" className="form-control form-control-lg" id="name" placeholder="이름" onChange={(event) => this.setState({ conRegId: event.target.value })} autoComplete="off" required />
                     <label htmlFor="name">이름</label>
                 </div>
                 <div className="form-floating mb-4">
