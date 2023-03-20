@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginBottom="2dp"
-        android:background="#dddddd"
+        android:background="#ffffff"
         android:gravity="right"
         app:layout_constraintBottom_toTopOf="@+id/mainFragment"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,7 @@
             android:text="메인"
             android:background="@drawable/edittext_rectangle"
             android:textColor="#000000"
-            app:backgroundTint="#dddddd"
+            app:backgroundTint="#ffffff"
             app:layout_constraintBottom_toTopOf="@+id/mapview"
             app:layout_constraintEnd_toStartOf="@+id/btnLocationGoMain" />
 
@@ -39,7 +39,7 @@
             android:background="#dddddd"
             android:text="오시는 길"
             android:textColor="#000000"
-            app:backgroundTint="#dddddd"
+            app:backgroundTint="#ffffff"
             app:layout_constraintBottom_toTopOf="@+id/mapview"
             app:layout_constraintEnd_toStartOf="@+id/btnLocationGoMain" />
 
@@ -50,7 +50,7 @@
             android:background="#dddddd"
             android:text="홍보"
             android:textColor="#000000"
-            app:backgroundTint="#dddddd"
+            app:backgroundTint="#ffffff"
             app:layout_constraintBottom_toTopOf="@+id/mapview"
             app:layout_constraintEnd_toStartOf="@+id/btnLocationGoMain" />
         <Button
@@ -60,7 +60,7 @@
             android:background="#dddddd"
             android:text="상품"
             android:textColor="#000000"
-            app:backgroundTint="#dddddd"
+            app:backgroundTint="#ffffff"
             app:layout_constraintBottom_toTopOf="@+id/mapview"
             app:layout_constraintEnd_toStartOf="@+id/btnLocationGoMain" />
 
@@ -72,7 +72,7 @@
             android:text="로그아웃"
             android:background="@drawable/edittext_rectangle"
             android:textColor="#000000"
-            app:backgroundTint="#dddddd"
+            app:backgroundTint="#ffffff"
             app:layout_constraintBottom_toTopOf="@+id/mapview"
             app:layout_constraintEnd_toStartOf="@+id/btnLocationGoMain" />
 
