@@ -33,7 +33,7 @@ class Header extends Component {
                                 <a className="nav-link" href="#directions">오시는길</a>
                             </li>
                         </ul>
-                    <a className="btn_shop d-flex" href="http://localhost:9005" target={"_blank"} rel="noreferrer">공식 온라인몰</a>
+                    <a className="btn_shop d-flex" href="http://localhost:9500" target={"_blank"} rel="noreferrer">공식 온라인몰</a>
                     </div>
                 </div>
             </nav>
