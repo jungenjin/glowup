@@ -17,7 +17,8 @@
         app:layout_constraintBottom_toTopOf="@+id/videoView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownIdInLayout">
         <Button
             android:id="@+id/btnHome"
             android:layout_width="wrap_content"
@@ -32,7 +33,7 @@
             android:id="@+id/toolbar2"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:background="#dddddd"
+            android:background="@drawable/edittext_rectangle"
             android:text="오시는 길"
             android:textColor="#000000"
             app:backgroundTint="#dddddd"
@@ -43,7 +44,7 @@
             android:id="@+id/toolbar3"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:background="#dddddd"
+            android:background="@drawable/edittext_rectangle"
             android:text="홍보"
             android:textColor="#000000"
             app:backgroundTint="#dddddd"
@@ -53,7 +54,7 @@
             android:id="@+id/toolbar4"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:background="#dddddd"
+            android:background="@drawable/edittext_rectangle"
             android:text="상품"
             android:textColor="#000000"
             app:backgroundTint="#dddddd"
