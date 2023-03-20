@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private final String TAG = getClass().getSimpleName();
 
-    Button btnSignIn,btnHome, toolbar2,toolbar3, toolbar4;
+    Button btnSignIn,btnHome;
     EditText signInId, signInPw;
 
 
@@ -43,40 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
         btnSignIn = (Button) findViewById(R.id.btnSignIn);
 
-        btnHome = (Button) findViewById(R.id.btnHome);
-        toolbar2 = (Button) findViewById(R.id.toolbar2);
-        toolbar3 = (Button) findViewById(R.id.toolbar3);
-        toolbar4 = (Button) findViewById(R.id.toolbar4);
 
-        btnHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
 
-        toolbar2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), LocationActivity.class);
-                startActivity(intent);
-            }
-        });
-        toolbar3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), GoodsPrActivity.class);
-                startActivity(intent);
-            }
-        });
-        toolbar4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), GoodsInfoActivity.class);
-                startActivity(intent);
-            }
-        });
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Retrofit 객체 생성 및 MoshiConverter 추가
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://192.168.0.106:9009/")
+                        .baseUrl("http://192.168.219.101:9008/")
                         .addConverterFactory(MoshiConverterFactory.create(moshi)).build();
 
                 UserApi api = retrofit.create(UserApi.class);

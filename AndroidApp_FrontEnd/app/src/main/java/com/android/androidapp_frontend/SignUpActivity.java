@@ -66,7 +66,7 @@ public class SignUpActivity extends AppCompatActivity {
                 Moshi moshi = new Moshi.Builder().build();
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://192.168.0.106:9009/")
+                        .baseUrl("http://192.168.219.101:9008/")
                         .addConverterFactory(MoshiConverterFactory.create(moshi))
                         .build();
                 UserApi api = retrofit.create(UserApi.class);
