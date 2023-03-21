@@ -37,10 +37,10 @@ public class UserController implements HttpSessionListener{
 	public ResponseEntity<String> idCheck(HttpServletRequest request){
 		String id = request.getParameter("id");
 		UserBean bean = userService.retrieveUser(id);
-		String checkMsg = "<font color='green' size='3px;'><i class='fa fa-check'>&nbsp;사용 가능한 아이디입니다.</i></font>@true";
+		String checkMsg = "<font color='green' size='3px;'><p>&nbsp;사용 가능한 아이디입니다.</p></font>@true";
 
 		if(bean != null){
-			checkMsg = "<font color='red' size='3px;'><i class='fa fa-times'>&nbsp;이미 사용중인 아이디입니다.</i></font>@false";
+			checkMsg = "<font color='red' size='3px;'><p>&nbsp;이미 사용중인 아이디입니다.</p></font>@false";
 		}
 
 		HttpHeaders resHeader = new HttpHeaders();
