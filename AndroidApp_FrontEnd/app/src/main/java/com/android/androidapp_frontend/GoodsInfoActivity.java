@@ -110,9 +110,9 @@ public class GoodsInfoActivity extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             ImageView imageView = new ImageView(context);
-            imageView.setLayoutParams(new GridView.LayoutParams(460, 575));
+            imageView.setLayoutParams(new GridView.LayoutParams(445, 445));
             imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-            imageView.setPadding(10,10,10,10);
+            imageView.setPadding(10,15,10,15);
             imageView.setImageResource(posterID[position]);
 
             final int pos = position;

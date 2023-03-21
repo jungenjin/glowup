@@ -84,7 +84,7 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
 
         googleMap.addMarker(new MarkerOptions()
                 .position(new LatLng(37.5213, 127.0222))
-                .title("Glow up 찾아오시는 길"));
+                .title("Glow up"));
 
     }
 
