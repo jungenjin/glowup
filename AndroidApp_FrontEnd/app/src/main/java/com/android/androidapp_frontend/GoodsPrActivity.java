@@ -73,7 +73,7 @@ public class GoodsPrActivity extends AppCompatActivity {
         btnGoMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SignUpSuccess.class);
                 startActivity(intent);
             }
         });
@@ -81,7 +81,7 @@ public class GoodsPrActivity extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SignUpSuccess.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -144,3 +144,4 @@ public class GoodsPrActivity extends AppCompatActivity {
         videoView.pause();
     }
 }
+

@@ -8,75 +8,9 @@
     tools:context=".AboutActivity">
 
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/custom_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#dddddd"
-        android:gravity="right"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-        <Button
-            android:id="@+id/btnHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_rectangle"
-            android:text="메인"
-            app:backgroundTint="#dddddd"
-            android:textColor="#000000"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/toolbar2"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_rectangle"
-            android:text="오시는 길"
-            android:textColor="#000000"
-            app:backgroundTint="#dddddd"
-            app:layout_constraintBottom_toTopOf="@+id/mapview"
-            app:layout_constraintEnd_toStartOf="@+id/btnLocationGoMain" />
-
-        <Button
-            android:id="@+id/toolbar3"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_rectangle"
-            android:text="홍보"
-            android:textColor="#000000"
-            app:backgroundTint="#dddddd"
-            app:layout_constraintBottom_toTopOf="@+id/mapview"
-            app:layout_constraintEnd_toStartOf="@+id/btnLocationGoMain" />
-        <Button
-            android:id="@+id/toolbar4"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_rectangle"
-            android:text="상품"
-            android:textColor="#000000"
-            app:backgroundTint="#dddddd"
-            app:layout_constraintBottom_toTopOf="@+id/mapview"
-            app:layout_constraintEnd_toStartOf="@+id/btnLocationGoMain" />
-
-
-        <Button
-            android:id="@+id/btnGoMain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_rectangle"
-            android:text="로그아웃"
-            app:backgroundTint="#dddddd"
-            android:textColor="#000000"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-
-
-    </androidx.appcompat.widget.Toolbar>
+    <include
+        android:id="@+id/include3"
+        layout="@layout/toolbar" />
 
 
     <WebView
@@ -88,7 +22,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/custom_toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/include3"
         tools:ignore="MissingConstraints" />
 
 

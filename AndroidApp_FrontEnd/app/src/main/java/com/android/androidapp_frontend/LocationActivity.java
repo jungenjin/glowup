@@ -16,8 +16,8 @@ public class LocationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
 
-        btnGoMain = (Button) findViewById(R.id.btnLocationGoMain);
-        btnHome = (Button) findViewById(R.id.btnLocationHome);
+        btnGoMain = (Button) findViewById(R.id.btnGoMain);
+        btnHome = (Button) findViewById(R.id.btnHome);
 
         toolbar2 = (Button) findViewById(R.id.toolbar2);
         toolbar3 = (Button) findViewById(R.id.toolbar3);
@@ -26,7 +26,7 @@ public class LocationActivity extends AppCompatActivity {
         btnGoMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SignUpSuccess.class);
                 startActivity(intent);
             }
         });
@@ -34,7 +34,7 @@ public class LocationActivity extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SignUpSuccess.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });

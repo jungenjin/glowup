@@ -10,9 +10,8 @@
         android:id="@+id/custom_toolbar"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="2dp"
-        android:background="#ffffff"
-        android:gravity="right"
+        android:background="#000000"
+        app:contentInsetStart="0dp"
         app:layout_constraintBottom_toTopOf="@+id/mainFragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,59 +19,74 @@
         tools:ignore="UnknownIdInLayout">
 
 
-
         <Button
-            android:id="@+id/btnLocationHome"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="메인"
+            android:layout_gravity="center"
+            android:id="@+id/btnGoMain"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
             android:background="@drawable/edittext_rectangle"
-            android:textColor="#000000"
-            app:backgroundTint="#ffffff"
+            android:text="메인"
+            android:textColor="#ffffff"
+            app:backgroundTint="#000000"
             app:layout_constraintBottom_toTopOf="@+id/mapview"
             app:layout_constraintEnd_toStartOf="@+id/btnLocationGoMain" />
 
         <Button
+            android:layout_gravity="center"
             android:id="@+id/toolbar2"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
             android:background="@drawable/edittext_rectangle"
             android:text="오시는 길"
-            android:textColor="#000000"
-            app:backgroundTint="#ffffff"
+            android:textColor="#ffffff"
+            app:backgroundTint="#000000"
             app:layout_constraintBottom_toTopOf="@+id/mapview"
             app:layout_constraintEnd_toStartOf="@+id/btnLocationGoMain" />
 
         <Button
+            android:layout_gravity="center"
             android:id="@+id/toolbar3"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
             android:background="@drawable/edittext_rectangle"
             android:text="홍보"
-            android:textColor="#000000"
-            app:backgroundTint="#ffffff"
+            android:textColor="#ffffff"
+            app:backgroundTint="#000000"
             app:layout_constraintBottom_toTopOf="@+id/mapview"
             app:layout_constraintEnd_toStartOf="@+id/btnLocationGoMain" />
+
         <Button
+            android:layout_gravity="center"
             android:id="@+id/toolbar4"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
             android:background="@drawable/edittext_rectangle"
             android:text="상품"
-            android:textColor="#000000"
-            app:backgroundTint="#ffffff"
+            android:textColor="#ffffff"
+            app:backgroundTint="#000000"
             app:layout_constraintBottom_toTopOf="@+id/mapview"
             app:layout_constraintEnd_toStartOf="@+id/btnLocationGoMain" />
 
 
         <Button
+            android:layout_gravity="center"
             android:id="@+id/btnHome"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="로그아웃"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
             android:background="@drawable/edittext_rectangle"
-            android:textColor="#000000"
-            app:backgroundTint="#ffffff"
+            android:text="로그아웃"
+            android:textColor="#ffffff"
+            app:backgroundTint="#000000"
             app:layout_constraintBottom_toTopOf="@+id/mapview"
             app:layout_constraintEnd_toStartOf="@+id/btnLocationGoMain" />
 

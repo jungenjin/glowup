@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Retrofit 객체 생성 및 MoshiConverter 추가
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://192.168.219.101:9008/")
+                        .baseUrl("http://192.168.0.106:9008/")
                         .addConverterFactory(MoshiConverterFactory.create(moshi)).build();
 
                 UserApi api = retrofit.create(UserApi.class);
