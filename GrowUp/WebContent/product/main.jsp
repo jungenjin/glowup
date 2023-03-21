@@ -79,6 +79,7 @@
 <c:set var="productManageUrl">${context}/work/product/retrieveProductListForManage.do</c:set>
 <c:set var="statisticsForProductUrl">${context}/work/sell/retrieveStatisticsForProduct.do</c:set>
 <c:set var="statisticsForStockUrl">${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=E</c:set>
+<c:set var="lipUrl">${context}/work/product/retrieveProductList.do?category=L</c:set>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
 <!-- 메인 백그라운드 배경 튜블라 적용 -->
@@ -90,7 +91,7 @@
 				<h4 class="col-sm-4 lh-lg">
 					아래 사이트에서도 글로우업에 대한 정보를 확인하실 수 있습니다. <br/>
 					<br/>
-				    <a href="#">+ 브랜드 사이트 방문하기 </a> 
+				    <a href="http://localhost:3000">+ 브랜드 사이트 방문하기 </a> 
 				</h4>
 				<div class="col-sm-8">
 					<img src="/img/main/main1.png" alt="메인 립" class="img-fluid rounded-3">
@@ -104,7 +105,7 @@
 					그 시절 그대로,<br/>
 					변하지 않는 아름다움을 만들어보세요.<br>
 					<br/>
-					<a href="#" class="gotu">+ PRODUCT </a>
+					<a href="${context}/work/product/retrieveProductList.do?category=L" class="gotu">+ PRODUCT </a>
 				</h4>
 				<div class="col-sm-4">
 					<img src="/img/main/mainbest1.png" alt="메인 팔레트1" class="img-fluid rounded-3 item" data-aos="fade-down-right"  data-aos-duration="2000">

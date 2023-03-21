@@ -68,7 +68,7 @@
 					<li class="fw-bold fs-5 pb-1">서비스</li>
 					<li><a href="${context}/work/board/notice.do">공지사항</a></li>
 					<li><a href="${context}/work/board/community.do">커뮤니티</a></li>
-					<li><a href="#">회사소개 </a></li>
+					<li><a href="http://localhost:3000">회사소개 </a></li>
 				</ul>
 			</div>
 			
