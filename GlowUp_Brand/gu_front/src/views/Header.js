@@ -24,7 +24,7 @@ class Header extends Component {
                                 <a className="nav-link" href="#identity">디자인</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#individuality">기치관</a>
+                                <a className="nav-link" href="#individuality">가치관</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#contact">Contact</a>
