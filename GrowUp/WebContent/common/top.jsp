@@ -35,6 +35,12 @@
 <c:set var="lipUrl">${context}/work/product/retrieveProductList.do?category=L</c:set>
 <c:set var="faceUrl">${context}/work/product/retrieveProductList.do?category=F</c:set>
 
+<!-- 관리자페이지 URL -->
+<c:set var="productManageUrl">${context}/work/product/retrieveProductListForManage.do</c:set>
+<c:set var="statisticsForProductUrl">${context}/work/sell/retrieveStatisticsForProduct.do</c:set>
+<c:set var="statisticsForStockUrl">${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=E</c:set>
+<c:set var="lipUrl">${context}/work/product/retrieveProductList.do?category=L</c:set>
+
 <body>
 <nav class="navbar bg-light opacity-75 fixed-top ">
   <div class="container">
@@ -124,7 +130,20 @@
 
 	<div class= "container">
 	  	<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
-	  		<h1 class="admintitle"><mark>관리자 화면</mark></h1>
+	  	<div class="admin navbar">
+	  		<h1 class="admintitle"><a href="${homeUrl}"><mark>관리자 화면</mark></a></h1>
+	  		<ul class="nav justify-content-end">
+				<li class="nav-item">
+					<a class="nav-link"href="${productManageUrl}">재고관리</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="${statisticsForProductUrl}">매출통계</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="${statisticsForStockUrl}">재고현황</a>
+				</li>
+			</ul>
+		</div>
 	  	</c:if>
 	</div>
 

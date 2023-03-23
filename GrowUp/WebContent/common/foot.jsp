@@ -55,10 +55,11 @@
 			<div class="col-sm-12 col-md-2">
 				<ul class="pb-2">
 				<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
-					<li class="fw-bold fs-5 pb-1">관리자 메뉴</li>
-					<li><a class="nav-link active" href="${context}/work/product/retrieveProductListForManage.do">재고관리</a></li>
-					<li><a class="nav-link active" href="${context}/work/sell/retrieveStatisticsForProduct.do">매출통계</a></li>
-					<li><a class="nav-link active" href="${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=E">재고현황</a></li>
+					<li class="fw-bold fs-5 pb-1">관리자</li>
+					<li><a href="${homeUrl}">관리자메인</a></li>
+					<li><a href="${context}/work/product/retrieveProductListForManage.do">재고관리</a></li>
+					<li><a href="${context}/work/sell/retrieveStatisticsForProduct.do">매출통계</a></li>
+					<li><a href="${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=E">재고현황</a></li>
 				</c:if>
 				</ul>
 			</div>
