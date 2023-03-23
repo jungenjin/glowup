@@ -7,17 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Glow up</title>
-<!-- 채널톡 챗봇 연동 -->
-	<c:if test="${sessionScope.id == null}">
-		<script>
-		  (function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.")}var ch=function(){ch.c(arguments)};ch.q=[];ch.c=function(args){ch.q.push(args)};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x)}}if(document.readyState==="complete"){l()}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l)}})();
-		
-		  ChannelIO('boot', {
-		    "pluginKey": "c3d98b1c-a99d-4111-9531-8fa51ea5da14"
-		  });
-		</script>
-	</c:if>
-	
+<!-- 채널톡 챗봇 연동 -->	
 	<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
 		<script>
 		  (function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.")}var ch=function(){ch.c(arguments)};ch.q=[];ch.c=function(args){ch.q.push(args)};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x)}}if(document.readyState==="complete"){l()}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l)}})();
@@ -76,7 +66,7 @@
 			<div class="col-sm-12 col-md-2">
 				<ul class="pb-2">
 					<li class="fw-bold fs-5 pb-1">고객센터</li>
-					<li><a href="${context}/work/board/qna.do">Q & A</a></li>
+					<li><a href="${context}/work/board/qna.do">Q&#38;A</a></li>
 					<li><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
 				</ul>
 			</div>
@@ -84,7 +74,7 @@
 			<div class="col-sm-12 col-md-3">
 				<ul class="pb-2">
 					<li class="fw-bold fs-5 pb-1">정보</li>
-					<li>email : <a>glowup@glowup.co.kr</a></li>
+					<li>email : <a>glowup&#64;glowup.co.kr</a></li>
 					<li>tel : <a>1577-1234</a></li>
 				</ul>
 				<ul class="pb-2">

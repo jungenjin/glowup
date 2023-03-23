@@ -107,7 +107,7 @@
 	          	<li class="gotu mt-4 fs-5 fw-bold">CUSTOMER</li>
 				
 				<li class="hand"><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
-				<li class="nav-item"><a href="${context}/work/board/qna.do">Q & A</a></li>
+				<li class="nav-item"><a href="${context}/work/board/qna.do">Q&#38;A</a></li>
 				<li class="nav-item"><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
 	          </ul>
 				

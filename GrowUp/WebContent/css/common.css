@@ -1,10 +1,14 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Gotu&family=Noto+Sans+KR:wght@400;500;700&display=swap');
 body {font-family: 'Noto Sans KR', 'Gotu', serif, sans-serif; word-break:keep-all}
+
+ul, ol, li {list-style: none; margin:0; padding:0;}
+a {color:#333;text-decoration: none;}
+a:hover {color:#CC947C;text-decoration: none;}
 
 /* 영문폰트 클래스 추가 */
 .gotu {font-family: "Gotu";}
 
+.offcanvas.show {opacity:1}
 
 /* 게시판 buttons 공통 */
 .boardbtn {width:100px;height:40px;border-radius:5px;font-size:14px;background:#D2D4DC;margin-top:80px}
@@ -143,7 +147,7 @@ display: none;
 	font-family: 'Noto Sans KR';
 }
 
-/* 푸터가 투명하지않음 따흐흐 */
+/* 푸터 */
 .backgroundImg {
 	background-size: cover;
 	padding: 200px 15px;
@@ -236,9 +240,3 @@ display: none;
 .footertop {
 	margin-bottom : 10rem;
 }
-
-ul, ol, li {list-style: none; magin:0; padding:0;}
-a {color:#333;text-decoration: none;}
-a:hover {color:#CC947C;text-decoration: none;}
-
-
