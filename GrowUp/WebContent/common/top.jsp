@@ -90,37 +90,37 @@
           	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 	          	<li class="gotu mt-4 nav-item fs-5 fw-bold">SHOP</li>
 				
-				<li class="pointcursor"><a class="nav-link active" style="cursor:pointer" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eyeUrl}')">섀도우</a></li>
-				<li class="pointcursor"><a class="nav-link active" style="cursor:pointer" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${lipUrl}')">립스틱</a></li>
-				<li class="pointcursor"><a class="nav-link active" style="cursor:pointer" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${faceUrl}')">파운데이션</a></li>
+				<li class="nav-item"><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eyeUrl}')">섀도우</a></li>
+				<li class="nav-item"><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${lipUrl}')">립스틱</a></li>
+				<li class="nav-item"><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${faceUrl}')">파운데이션</a></li>
 	          </ul>
 				
           	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 	          	<li class="gotu mt-4 fs-5 fw-bold">SERVICE</li>
 				
-				<li class="nav-item"><a class="nav-link active" href="${context}/work/board/notice.do">공지사항</a></li>
-				<li class="nav-item"><a class="nav-link active" href="${context}/work/board/community.do">커뮤니티</a></li>
-				<li class="nav-item"><a class="nav-link active" href="#">회사소개 </a></li>
+				<li class="nav-item"><a href="${context}/work/board/notice.do">공지사항</a></li>
+				<li class="nav-item"><a href="${context}/work/board/community.do">커뮤니티</a></li>
+				<li class="nav-item"><a href="http://localhost:3000" target="_blank">회사소개 </a></li>
 	          </ul>
 	          	
           	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 	          	<li class="gotu mt-4 fs-5 fw-bold">CUSTOMER</li>
 				
-				<li class="hand"><a class="nav-link active" style="cursor:pointer" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
-				<li class="nav-item"><a class="nav-link active" href="${context}/work/board/qna.do">Q & A</a></li>
-				<li class="nav-item"><a class="nav-link active" href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
+				<li class="hand"><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
+				<li class="nav-item"><a href="${context}/work/board/qna.do">Q & A</a></li>
+				<li class="nav-item"><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
 	          </ul>
 				
           	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 			<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
 	          	<li class="gotu mt-4 fs-5 fw-bold">MY PAGE</li>
 	          	
-			    <li class="nav-item"><a class="nav-link active" href="${context}/work/sell/retrieveBuyList.do">구매내역</a></li>
-			    <li class="nav-item"><a class="nav-link active" href="${context}/work/user/updateUser.do">정보수정</a></li>
+			    <li class="nav-item"><a href="${context}/work/sell/retrieveBuyList.do">구매내역</a></li>
+			    <li class="nav-item"><a href="${context}/work/user/updateUser.do">정보수정</a></li>
 			</c:if>
 
 			<c:if test="${sessionScope.id != null || sessionScope.grade == 'A'}">
-				<li class="pointcursor"><a class="nav-link active" href="${context}/work/board/inquiryList.do">1 : 1 문의</a></li>
+				<li class="nav-item"><a href="${context}/work/board/inquiryList.do">1:1 문의</a></li>
 			</c:if>
 			</ul>
         </div>
