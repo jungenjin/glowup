@@ -72,10 +72,12 @@
 					<li><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
 					<li><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${qnaUrl}')">Q&#38;A</a></li>
 					<li><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
-					<li><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${inquiryUrl}')">1:1 문의</a></li>
+				<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
+					<li><a href="${context}/work/board/inquiry.do">1:1 문의</a></li>
+				</c:if>
 				</ul>
 			</div>
-			
+
 			<div class="col-sm-12 col-md-3">
 				<ul class="pb-2">
 					<li class="fw-bold fs-5 pb-1">정보</li>
