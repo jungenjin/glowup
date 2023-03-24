@@ -63,13 +63,11 @@
 		<!-- board view end -->
 		
 		<!-- board button start -->
-		<c:if test="${sessionScope.grade == 'M' || sessionScope.grade == 'A'}">
 			<div class="d-flex justify-content-end">
 				<button class="btn boardbtn" type="button" onclick="fn_communityList()">목록</button>
 				<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
 				<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
 			</div>
-		</c:if>
 		<!-- board button end -->
 		
 	</div><!-- Details end -->

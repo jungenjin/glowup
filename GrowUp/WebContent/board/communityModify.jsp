@@ -19,6 +19,7 @@
 		function fn_setDetailInfo(){
 			$("#comuTitle").val('${dsCommunity.COMU_TITLE}');
 			$("#comuNo").val('${dsCommunity.COMU_NO}');
+			$("#comuModId").val('${sessionScope.userCode}');
 	
 			var comuContent = '${dsCommunity.COMU_CONTENT}';
 	
@@ -67,6 +68,7 @@
 		
 		<!-- board modify start -->
 		<form id="communityModify" method="post" action="${context}/work/board/communityModify.do?comuNo=${dsCommunity.COMU_NO}" role="form">
+		<input type="hidden" class="form-control" id="comuModId" name="comuModId">
 			<div class="form-horizontal boardwrite">
 				<div class="form-group">
 					<label for="comuTitle" class="control-label fs-4 mb-2">제목</label>

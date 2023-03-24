@@ -36,9 +36,10 @@
 			SELECT COMMUNITY.COMU_NO
 				 , COMMUNITY.COMU_TITLE
 				 , COMMUNITY.COMU_CONTENT
-				 , COMMUNITY.COMU_REG_ID
+				  , COMMUNITY.COMU_REG_ID
 				 , (SELECT NAME FROM TB_COM_USER WHERE USER_CODE = COMMUNITY.COMU_REG_ID) AS USER_NAME
 				 , COMMUNITY.COMU_REG_DATE
+				 , COMMUNITY.COMU_MOD_ID 
 				 , COMMUNITY.COMU_MOD_DATE
 				 , COMMUNITY.COMU_HIT
 			FROM   TB_COMMUNITY COMMUNITY
@@ -64,6 +65,7 @@
 				, COMU_CONTENT
 				, COMU_REG_ID
 				, COMU_REG_DATE
+				, COMU_MOD_ID	
 				, COMU_MOD_DATE
 			) VALUES 
 				('A' || LPAD(COMMUNITY_SEQ.NEXTVAL, 5, 0)
@@ -71,6 +73,7 @@
 				, #{comuContent}
 				, #{comuRegId}
 				, TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')
+				, #{comuRegId}
 				, TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')
 			)
 		]]>
@@ -82,6 +85,7 @@
 			UPDATE TB_COMMUNITY
 			SET COMU_TITLE         =  #{comuTitle}
 			  , COMU_CONTENT       =  #{comuContent}
+			   , COMU_MOD_ID        =  #{comuModId}
 			  , COMU_MOD_DATE	  =  TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')
 			WHERE COMU_NO = #{comuNo}
 		]]>
