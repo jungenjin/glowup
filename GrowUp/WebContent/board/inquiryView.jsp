@@ -65,10 +65,10 @@
 					 <p class="fs-5 ps-3">이름 : ${dsInquiry.USER_NAME}</p>
 				</div>
 				<div class="col-lg-4 pt-3">
-					<p class="fs-5 ps-3">연락처 : ${dsInquiry.PHONE}</p>
+					<p class="fs-5 ps-3">연락처 : ${dsInquiry.INQ_PHONE}</p>
 				</div>
 				<div class="col-lg-4 pt-3">
-					<p class="fs-5 ps-3">이메일 : ${dsInquiry.EMAIL}</p>
+					<p class="fs-5 ps-3">이메일 : ${dsInquiry.INQ_EMAIL}</p>
 				</div>
 			</div>
 		</div>
@@ -77,8 +77,10 @@
   			<!-- board button area start -->
 			<div class="d-flex justify-content-end">
 				<button class="btn boardbtn" type="button" onclick="fn_inquiryList()">목록</button>
-				<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
-				<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
+				<c:if test="${sessionScope.userCode == dsInquiry.INQ_REG_ID}">
+					<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
+					<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
+				</c:if>
 			</div>
 			<!-- board button area end -->	
 		</form>

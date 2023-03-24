@@ -15,8 +15,10 @@
 	<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
+			
 			$('#dataTables-example').DataTable({
-        	   "language" : {
+				'order': [[3, 'desc']],
+				"language" : {
 	        		"search" : " ",
 	       			"searchPlaceholder": "검색어를 입력하세요.",
 	        	    "paginate": {
@@ -54,6 +56,7 @@
             <table class="table hover pt-2 boardlist" id="dataTables-example">
             	<thead>
                      <tr style="display: none;">
+                         <th class="visually-hidden">NO</th>
                          <th>제목</th>
                          <th>작성자</th>
                          <th>작성일</th>
@@ -62,8 +65,9 @@
                 <tbody>
                     <c:forEach items="${dsinquiryList}" var="dsinquiryList">
 	                  	<c:choose>
-							<c:when test="${sessionScope.userCode == dsinquiryList.USER_CODE || sessionScope.grade == 'A'}">
+							<c:when test="${sessionScope.userCode == dsinquiryList.INQ_REG_ID || sessionScope.grade == 'A'}">
 								<tr>
+									<td class="visually-hidden">${dsinquiryList.INQ_NO}</td>
 			                     	<td style="min-width:200px" class="p-3">
 			                     		<a href="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a>
 			                     	</td>
@@ -81,7 +85,7 @@
 		<!-- board buttons start -->
 		<c:if test="${sessionScope.grade == 'A' || sessionScope.grade == 'M'}">
 			<div class="d-flex flex-row-reverse p-2">
-				<button type="button" class="btn boardbtn p-2" onclick="fn_inquiryWrite()">새 글 쓰기</button>
+				<button type="button" class="btn boardbtn p-2" onclick="fn_inquiryWrite()">새 글쓰기</button>
 			</div>
 		</c:if>
 		<!-- board buttons end -->
