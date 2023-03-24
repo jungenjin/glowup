@@ -19,8 +19,6 @@
 		function fn_setDetailInfo(){
 			$("#inqTitle").val('${dsInquiry.INQ_TITLE}');
 			$("#inqNo").val('${dsInquiry.INQ_NO}');
-			$("#inqPhone").val('${dsInquiry.INQ_PHONE}');
-			$("#inqEmail").val('${dsInquiry.INQ_EMAIL}');
 	
 			var inqContent = '${dsInquiry.INQ_CONTENT}';
 	
@@ -34,12 +32,9 @@
 				return;
 			}else{
 				
-				//alert("ddddd");
 				var inqContent = String($("#inqContent").val());
 	
 				inqContent = inqContent.replace(/\n/gi, "<br/>");
-	
-				//alert(inqContent);
 				
 				$("#inqContent").val(inqContent);
 	
@@ -73,12 +68,9 @@
 		<!-- board modify start -->
 		<form id="inquiryModify" class="form-horizontal" method="post" action="${context}/work/board/inquiryModify.do?inqNo=${dsInquiry.INQ_NO}" role="form">
 			<div class="form-horizontal boardwrite">
-			<input type="hidden" class="form-control" id="inqRegId" name="inqRegId">
-			<input type="hidden" class="form-control" id="inqPhone" name="inqPhone">
-			<input type="hidden" class="form-control" id="inqEmail" name="inqEmail">
 				<div class="form-group">
 					<label for="inqTilte" class="control-label fs-4 mb-2">제목</label>
-					<input class="form-control" type="text" name="inqTilte" id="inqTilte" required="required" maxlength="50" autofocus="autofocus">
+					<input class="form-control" type="text" name="inqTitle" id="inqTitle" required="required" maxlength="50" autofocus="autofocus">
 				</div>
 				<div class="form-group">
 					<label for="inqContent" class="control-label fs-4 mb-2 mt-5">내용</label>
