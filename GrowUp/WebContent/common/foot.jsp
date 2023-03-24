@@ -77,7 +77,7 @@
 				</c:if>
 				</ul>
 			</div>
-			
+
 			<div class="col-sm-12 col-md-3">
 				<ul class="pb-2">
 					<li class="fw-bold fs-5 pb-1">정보</li>

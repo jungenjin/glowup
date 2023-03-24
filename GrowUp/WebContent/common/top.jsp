@@ -107,7 +107,7 @@
 				<li class="py-1"><a href="${context}/work/board/qna.do">Q&#38;A</a></li>
 				<li class="py-1"><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
 	          </ul>
-				
+
 			<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
           	<h5 class="gotu mt-4 fs-5 fw-bold">MY PAGE</h5>
           	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
