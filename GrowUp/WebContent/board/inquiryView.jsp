@@ -52,57 +52,37 @@
 		
 		<!-- board view start -->
 		<div class="border-bottom">
-			<div class="d-flex flex-row fs-4 mb-2 p-2 ">
-				<div class="col-md-10 justify-content-start px-3">${dsInquiry.INQ_TITLE}</div>
-				<div class="col-md-2 justify-content-end">${dsInquiry.USER_NAME}</div>
+			<div class="row fs-4 mb-2 p-2">
+				<div class="col-md-10 px-3">${dsInquiry.INQ_TITLE}</div>
 			</div>
 		</div>
-		<div class="p-2 px-4">
-			<form class="form-horizontal" method="post" role="form">
-				<div class="boardview">
-				  <div class="form-group">
-				    <label for="inqEmail" class="col-sm-12 control-label">이름</label>
-				    <div class="col-sm-12 content">
-				      ${dsInquiry.USER_NAME}
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <label for="inqPhone" class="col-sm-12 control-label">전화번호</label>
-				    <div class="col-sm-12 content">
-				      ${dsInquiry.PHONE}
-				    </div>
-				  </div>
-				  <div class="form-group content">
-				    <label for="inqEmail" class="col-sm-12 control-label">이메일</label>
-				    <div class="col-sm-12">
-				      ${dsInquiry.EMAIL}
-				    </div>
-				  </div>
-				  <div class="form-group title">
-				    <label for="inqTitle" class="col-sm-12 control-label">제목</label>
-				    <div class="col-sm-12">
-				      ${dsInquiry.INQ_TITLE}
-				    </div>
-				  </div>
-				   <div class="form-group content">
-				    <label for="inqContent" class="col-sm-12 control-label">내용</label>
-				    <div class="col-sm-12">
-				     ${dsInquiry.INQ_CONTENT}
-				    </div>
-				  </div>
+		
+		<div class="mt-2">
+			<div class="fs-4 p-3">${dsInquiry.INQ_CONTENT}</div>
+			
+			<div class="row mt-3 bg-light">
+				<div class="col-lg-4 pt-3">
+					 <p class="fs-5 ps-3">이름 : ${dsInquiry.USER_NAME}</p>
 				</div>
+				<div class="col-lg-4 pt-3">
+					<p class="fs-5 ps-3">연락처 : ${dsInquiry.PHONE}</p>
+				</div>
+				<div class="col-lg-4 pt-3">
+					<p class="fs-5 ps-3">이메일 : ${dsInquiry.EMAIL}</p>
+				</div>
+			</div>
+		</div>
   		
-	  			<!-- board button area start -->
-				<div class="d-flex justify-content-end">
-					<button class="btn boardbtn" type="button" onclick="fn_inquiryList()">목록</button>
-					<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
-					<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
-				</div>
-				<!-- board button area end -->	
-			</form>
-		</div>
+		<form class="form-horizontal" method="post" role="form">
+  			<!-- board button area start -->
+			<div class="d-flex justify-content-end">
+				<button class="btn boardbtn" type="button" onclick="fn_inquiryList()">목록</button>
+				<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
+				<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
+			</div>
+			<!-- board button area end -->	
+		</form>
 		<!-- board view end -->
-		</div>
 	</div>
 </div>
 <jsp:include page="/common/foot.jsp"></jsp:include>
