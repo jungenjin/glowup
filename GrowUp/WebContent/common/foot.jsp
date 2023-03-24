@@ -66,6 +66,7 @@
 			<div class="col-sm-12 col-md-2">
 				<ul class="pb-2">
 					<li class="fw-bold fs-5 pb-1">고객센터</li>
+					<li><a href="${context}/user/login.jsp" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
 					<li><a href="${context}/work/board/qna.do">Q&#38;A</a></li>
 					<li><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
 				</ul>
