@@ -14,7 +14,7 @@
 		<result property="inqModDate" column="INQ_MOD_DATE" />
 	</resultMap>
 
-	<select id="inquiryList" parameterType="map" resultType="map">
+	<!-- <select id="inquiryList" parameterType="map" resultType="map">
 		<![CDATA[
 		/*	inquiryList	*/
             SELECT INQUIRY.INQ_NO
@@ -31,20 +31,52 @@
 			WHERE  1=1
 			ORDER BY INQUIRY.INQ_REG_DATE DESC
 		]]>
+	</select> -->
+	<!-- <select id="inquiryList" parameterType="map" resultType="map">
+		<![CDATA[
+		/*	inquiryList	*/
+            SELECT INQUIRY.INQ_NO
+				 , INQUIRY.INQ_TITLE
+                 , INQUIRY.INQ_REG_ID
+                 , COMUSER.USER_CODE
+				 , INQUIRY.INQ_CONTENT
+				 , INQUIRY.INQ_REG_DATE
+			FROM   TB_INQUIRY INQUIRY
+            INNER JOIN TB_COM_USER COMUSER
+            ON INQUIRY.INQ_REG_ID = COMUSER.USER_CODE
+			WHERE INQUIRY.INQ_EMAIL IN (COMUSER.EMAIL)
+			ORDER BY INQUIRY.INQ_REG_DATE DESC
+		]]>
+	</select> -->
+	<select id="inquiryList" parameterType="map" resultType="map">
+		<![CDATA[
+		/*	inquiryList	*/
+            SELECT I.INQ_NO
+				 , I.INQ_TITLE
+				 , I.INQ_REG_ID
+				 , (SELECT NAME FROM TB_COM_USER WHERE USER_CODE = I.INQ_REG_ID) AS USER_NAME
+				 , I.INQ_REG_DATE
+			FROM   TB_INQUIRY I
+			WHERE  1=1
+			ORDER BY INQ_REG_DATE DESC
+		]]>
 	</select>
-
+	
+	
+	
 	<select id="inquiryView" parameterType="map" resultType="map">
 		<![CDATA[
 		/*	inquiryView	*/
             SELECT INQUIRY.INQ_NO
 				 , INQUIRY.INQ_TITLE
-				 , INQUIRY.INQ_CONTENT /* 내용 */
-				 , (SELECT PHONE_CD||'-'||PHONE_NUM FROM TB_COM_USER WHERE USER_CODE = INQUIRY.INQ_REG_ID) AS PHONE /* 전화번호 */
-				 , (SELECT NAME FROM TB_COM_USER WHERE USER_CODE = INQUIRY.INQ_REG_ID) AS USER_NAME /* 등록자 */
-				 , (SELECT EMAIL FROM TB_COM_USER WHERE USER_CODE = INQUIRY.INQ_REG_ID) AS EMAIL /* 이메일 */
-				 , INQUIRY.INQ_REG_DATE /*  등록일자 */
-				 , (SELECT NAME FROM TB_COM_USER WHERE USER_CODE = INQUIRY.INQ_REG_ID) AS USER_NAME_MODI  /* 수정자*/
-				 , INQUIRY.INQ_MOD_DATE /*  수정일자*/
+				 , INQUIRY.INQ_CONTENT
+				 , INQUIRY.INQ_PHONE
+				 , INQUIRY.INQ_EMAIL
+				 , INQUIRY.INQ_REG_ID /* 등록자 유저코드 */
+				 , (SELECT NAME FROM TB_COM_USER WHERE USER_CODE = INQUIRY.INQ_REG_ID) AS USER_NAME /* 등록자 이름 */
+				 , INQUIRY.INQ_REG_DATE
+				 , INQUIRY.INQ_MOD_ID
+				 , INQUIRY.INQ_MOD_DATE
 			FROM   TB_INQUIRY INQUIRY
 			WHERE  1=1
 			AND    INQUIRY.INQ_NO = #{inqNo}
@@ -69,19 +101,20 @@
 				, INQ_PHONE
 				, INQ_EMAIL
 				, INQ_REG_ID
-				, INQ_REG_DATE				
+				, INQ_REG_DATE	
+				, INQ_MOD_ID			
 				, INQ_MOD_DATE				
 			) VALUES 
 				('A' || LPAD(INQUIRY_SEQ.NEXTVAL, 5, 0) /* N*/
 				, #{inqTitle}
 				, #{inqContent}
-				, #{inqPhone}
-				, #{inqEmail}
+				, (SELECT PHONE_CD||'-'||PHONE_NUM FROM TB_COM_USER WHERE USER_CODE = #{inqRegId})
+				, (SELECT EMAIL FROM TB_COM_USER WHERE USER_CODE = #{inqRegId})
 				, #{inqRegId}
-				, TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')
-				, TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')
+				, TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS')
+				, #{inqRegId} /* 등록자와 수정자 동일하게 입력 */
+				, TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS')
 			)			
-		
 		]]>
 	</insert>
 	
@@ -92,7 +125,8 @@
 			UPDATE TB_INQUIRY
 			SET INQ_TITLE         =  #{inqTitle}
 			  , INQ_CONTENT       =  #{inqContent}
-			  , INQ_MOD_DATE	  =  TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')  
+			  , INQ_MOD_ID        =  #{inqModId}
+			  , INQ_MOD_DATE	  =  TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS')  
 			WHERE INQ_NO = #{inqNo}
 		]]>
 	</update>

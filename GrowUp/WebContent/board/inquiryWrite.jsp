@@ -54,6 +54,7 @@
 		<!-- board write start -->
 		<form id="inquiryWrite" class="form-horizontal boardwrite" method="post" action="${context}/work/board/inquiryWrite.do" role="form">
 			<input type="hidden" class="form-control" id="inqRegId" name="inqRegId">
+			<input type="hidden" class="form-control" id="inqModId" name="inqModId">
 			<input type="hidden" class="form-control" id="inqPhone" name="inqPhone">
 			<input type="hidden" class="form-control" id="inqEmail" name="inqEmail">
 			<div class="form-horizontal boardwrite">
