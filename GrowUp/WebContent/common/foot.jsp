@@ -25,6 +25,9 @@
 <c:set var="inquiryUrl">${context}/work/board/inquiry.do</c:set>
 <c:set var="FAQUrl">${context}/FAQ/FAQ.jsp</c:set>
 <c:set var="qnaUrl">${context}/work/board/qna.do</c:set>
+<c:set var="eventUrl">${context}/work/board/event.do</c:set>
+
+<c:set var="loginUrl">${context}/user/login.jsp</c:set>
 
 <body>
 <footer class="footer bg-light opacity-75 py-5">
@@ -58,7 +61,7 @@
 				<ul class="pb-2">
 					<li class="fw-bold fs-5 pb-1">서비스</li>
 					<li><a href="${context}/work/board/notice.do">공지사항</a></li>
-					<li><a href="${context}/work/board/community.do">커뮤니티</a></li>
+					<li><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${cmmuUrl}')">커뮤니티</a></li>
 					<li><a href="http://localhost:3000" target="_blank">회사소개 </a></li>
 				</ul>
 			</div>
@@ -66,8 +69,8 @@
 			<div class="col-sm-12 col-md-2">
 				<ul class="pb-2">
 					<li class="fw-bold fs-5 pb-1">고객센터</li>
-					<li><a href="${context}/user/login.jsp" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
-					<li><a href="${context}/work/board/qna.do">Q&#38;A</a></li>
+					<li><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
+					<li><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${qnaUrl}')">Q&#38;A</a></li>
 					<li><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
 				</ul>
 			</div>
