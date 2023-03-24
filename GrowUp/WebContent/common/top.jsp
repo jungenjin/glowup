@@ -106,7 +106,6 @@
 				<li class="py-1"><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
 				<li class="py-1"><a href="${context}/work/board/qna.do">Q&#38;A</a></li>
 				<li class="py-1"><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
-				<li class="py-1"><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${inquiryUrl}')">1:1 문의</a></li>
 	          </ul>
 				
 			<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
@@ -114,6 +113,7 @@
           	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 			    <li class="py-1"><a href="${context}/work/sell/retrieveBuyList.do">구매내역</a></li>
 			    <li class="py-1"><a href="${context}/work/user/updateUser.do">정보수정</a></li>
+				<li class="py-1"><a href="${context}/work/board/inquiry.do">1:1 문의</a></li>
 			</ul>
 			</c:if>
         </div>
