@@ -17,8 +17,9 @@
 		});
 	
 		function fn_setDetailInfo(){
-			$("#inqTitle").val('${dsInquiry.INQ_TITLE}');
 			$("#inqNo").val('${dsInquiry.INQ_NO}');
+			$("#inqTitle").val('${dsInquiry.INQ_TITLE}');
+			$("#inqModId").val('${sessionScope.userCode}');
 	
 			var inqContent = '${dsInquiry.INQ_CONTENT}';
 	
@@ -67,6 +68,7 @@
 		
 		<!-- board modify start -->
 		<form id="inquiryModify" class="form-horizontal" method="post" action="${context}/work/board/inquiryModify.do?inqNo=${dsInquiry.INQ_NO}" role="form">
+			<input type="hidden" class="form-control" id="inqModId" name="inqModId"> <!-- 글수정자 id 전송 -->
 			<div class="form-horizontal boardwrite">
 				<div class="form-group">
 					<label for="inqTilte" class="control-label fs-4 mb-2">제목</label>
@@ -79,7 +81,7 @@
 				
 				<!-- board button start -->
 				<div class="col-xs-4 d-flex justify-content-end">
-					<button type="button" class="btn boardbtn" onclick="fn_save()">글 등록하기</button>
+					<button type="button" class="btn boardbtn" onclick="fn_save()">글 수정하기</button>
 					<button type="button" class="btn boardbtn" onclick="fn_back()">취소</button>
 				</div>
 				<!-- board button end -->
