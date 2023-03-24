@@ -72,6 +72,7 @@
 					<li><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
 					<li><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${qnaUrl}')">Q&#38;A</a></li>
 					<li><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
+					<li><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${inquiryUrl}')">1:1 문의</a></li>
 				</ul>
 			</div>
 			
