@@ -19,6 +19,7 @@
 		function fn_setDetailInfo(){
 			$("#evTitle").val('${dsEvent.EV_TITLE}');
 			$("#evNo").val('${dsEvent.EV_NO}');
+			$("#evModId").val('${sessionScope.userCode}');
 	
 			var evContent = '${dsEvent.EV_CONTENT}';
 	
@@ -66,6 +67,7 @@
 		
 		<!-- board modify start -->
 		<form id="modifyEvent" method="post" action="${context}/work/board/eventModify.do?evNo=${dsEvent.EV_NO}" role="form">
+		<input type="hidden" class="form-control" id="evModId" name="evModId">
 			<div class="form-horizontal boardwrite">
 				<div class="form-group">
 					<label for="boTitle" class="control-label fs-4 mb-2">제목</label>

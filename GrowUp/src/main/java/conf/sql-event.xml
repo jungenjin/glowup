@@ -64,6 +64,7 @@
 			, EV_CONTENT
 			, EV_REG_ID
 			, EV_REG_DATE
+			, EV_MOD_ID
 			, EV_MOD_DATE
 			) VALUES (
 			  'B' || LPAD(EVENT_SEQ.NEXTVAL, 5, 0)
@@ -71,6 +72,7 @@
 			, #{evContent}
 			, #{evRegId}
 			, TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')
+			, #{evRegId}
 			, TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')
 			)
 		]]>
@@ -82,6 +84,7 @@
 			UPDATE TB_EVENT
 			SET EV_TITLE         =  #{evTitle}
 			  , EV_CONTENT       =  #{evContent}
+			  , EV_MOD_ID        =  #{evModId}
 			WHERE EV_NO = #{evNo}
 		]]>
 	</update>
