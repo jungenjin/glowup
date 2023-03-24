@@ -106,6 +106,9 @@
 				<li class="py-1"><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
 				<li class="py-1"><a href="${context}/work/board/qna.do">Q&#38;A</a></li>
 				<li class="py-1"><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
+			<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
+				<li><a href="${context}/work/board/inquiry.do">1:1 문의</a></li>
+			</c:if>
 	          </ul>
 
 			<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
