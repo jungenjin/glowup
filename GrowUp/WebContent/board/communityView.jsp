@@ -63,10 +63,12 @@
 		<!-- board view end -->
 		
 		<!-- board button start -->
-			<div class="d-flex justify-content-end">
+		<div class="d-flex justify-content-end">
 				<button class="btn boardbtn" type="button" onclick="fn_communityList()">목록</button>
-				<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
-				<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
+					<c:if test="${sessionScope.grade == 'A' || sessionScope.userCode == dsCommunity.COMU_REG_ID}">
+						<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
+						<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
+					</c:if>
 			</div>
 		<!-- board button end -->
 		
