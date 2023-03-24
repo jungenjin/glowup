@@ -35,11 +35,16 @@
 <c:set var="lipUrl">${context}/work/product/retrieveProductList.do?category=L</c:set>
 <c:set var="faceUrl">${context}/work/product/retrieveProductList.do?category=F</c:set>
 
+<!-- 관리자페이지 URL -->
+<c:set var="productManageUrl">${context}/work/product/retrieveProductListForManage.do</c:set>
+<c:set var="statisticsForProductUrl">${context}/work/sell/retrieveStatisticsForProduct.do</c:set>
+<c:set var="statisticsForStockUrl">${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=E</c:set>
+<c:set var="lipUrl">${context}/work/product/retrieveProductList.do?category=L</c:set>
+
 <body>
 <nav class="navbar bg-light opacity-75 fixed-top ">
   <div class="container">
 		<a class="navbar-brand" href="${homeUrl}"><span class="fs-2 fw-bold gotu">Glow up</span></a>
-	
 	<div class="d-flex flex-row">
 		<div class="p-2 text-center h6 pt-3">
 			<c:if test="${sessionScope.id == null}">
@@ -77,44 +82,39 @@
 	        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
 				<a class="navbar-brand" href="${homeUrl}"><span class="fs-2 fw-bold gotu">Glow up</span></a>
 	        </h5>
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
      	</div>        
 
-      <!-- 오프캔버스 메뉴 -->
-      <div class="offcanvas-body">
+	      <!-- 오프캔버스 메뉴 -->
+	      <div class="offcanvas-body">
+          	<h5 class="gotu mt-2 fs-5 fw-bold">SHOP</h5>
           	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-	          	<li class="gotu mt-4 nav-item fs-5 fw-bold">SHOP</li>
-				
-				<li class="nav-item"><a class="nav-link active"  onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eyeUrl}')">섀도우</a></li>
-				<li class="nav-item"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${lipUrl}')">립스틱</a></li>
-				<li class="nav-item"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${faceUrl}')">파운데이션</a></li>
+				<li class="py-1"><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eyeUrl}')">섀도우</a></li>
+				<li class="py-1"><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${lipUrl}')">립스틱</a></li>
+				<li class="py-1"><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${faceUrl}')">파운데이션</a></li>
 	          </ul>
 				
+          	<h5 class="gotu mt-4 fs-5 fw-bold">SERVICE</h5>
           	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-	          	<li class="gotu mt-4 fs-5 fw-bold">SERVICE</li>
-				
-				<li class="nav-item"><a class="nav-link active" href="${context}/work/board/notice.do">공지사항</a></li>
-				<li class="nav-item"><a class="nav-link active" href="${context}/work/board/community.do">커뮤니티</a></li>
-				<li class="nav-item"><a class="nav-link active" href="#">회사소개 </a></li>
+				<li class="py-1"><a href="${context}/work/board/notice.do">공지사항</a></li>
+				<li class="py-1"><a href="${context}/work/board/community.do">커뮤니티</a></li>
+				<li class="py-1"><a href="http://localhost:3000" target="_blank">회사소개 </a></li>
 	          </ul>
 	          	
+          	<h5 class="gotu mt-4 fs-5 fw-bold">CUSTOMER</h5>
           	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-	          	<li class="gotu mt-4 fs-5 fw-bold">CUSTOMER</li>
-				
-				<li class="nav-item"><a class="nav-link active" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
-				<li class="nav-item"><a class="nav-link active" href="${context}/work/board/qna.do">Q & A</a></li>
-				<li class="nav-item"><a class="nav-link active" href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
+				<li class="py-1"><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
+				<li class="py-1"><a href="${context}/work/board/qna.do">Q&#38;A</a></li>
+				<li class="py-1"><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
 	          </ul>
 				
+			<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
+          	<h5 class="gotu mt-4 fs-5 fw-bold">MY PAGE</h5>
           	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-				<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
-	          	<li class="gotu mt-4 fs-5 fw-bold">MY PAGE</li>
-	          	
-			    <li class="nav-item"><a class="nav-link active" href="${context}/work/sell/retrieveBuyList.do">구매내역</a></li>
-			    <li class="nav-item"><a class="nav-link active" href="${context}/work/user/updateUser.do">정보수정</a></li>
-				</c:if>
+			    <li class="py-1"><a href="${context}/work/sell/retrieveBuyList.do">구매내역</a></li>
+			    <li class="py-1"><a href="${context}/work/user/updateUser.do">정보수정</a></li>
+				<li class="py-1"><a href="${context}/work/board/inquiryList.do">1:1 문의</a></li>
 			</ul>
-			<c:if test="${sessionScope.id != null || sessionScope.grade == 'A'}">
-				<li class="pointcursor"><a class="nav-link active" href="${context}/work/board/inquiryList.do">1 : 1 문의</a></li>
 			</c:if>
         </div>
       </div>
@@ -123,7 +123,20 @@
 
 	<div class= "container">
 	  	<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
-	  		<h1 class="admintitle"><mark>관리자 화면</mark></h1>
+	  	<div class="admin navbar">
+	  		<h1 class="admintitle"><a href="${homeUrl}"><mark>관리자 화면</mark></a></h1>
+	  		<ul class="nav justify-content-end">
+				<li class="nav-item">
+					<a class="nav-link"href="${productManageUrl}">재고관리</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="${statisticsForProductUrl}">매출통계</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="${statisticsForStockUrl}">재고현황</a>
+				</li>
+			</ul>
+		</div>
 	  	</c:if>
 	</div>
 
