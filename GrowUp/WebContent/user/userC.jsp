@@ -133,7 +133,7 @@
 					<!-- 아이디 -->
 					<div class="form-group">
 						<div class="col-sm-12">
-							<label for="id" class="control-label hidden"><b>아이디</b></label>
+							<label for="id" class="control-label hidden">아이디</label>
 							<input class="form-control" type="text" name="id" id="id" required="required" autofocus="autofocus" onkeyup="idCheck();" placeholder="아이디"/>
 						</div>
 						<div class="col-sm-12" id="message"></div>
@@ -142,7 +142,7 @@
 					<!-- 비밀번호 -->
 					<div class="form-group">
 						<div class="col-sm-12">
-							<label for="pw" class="control-label hidden"><b>비밀번호</b></label>
+							<label for="pw" class="control-label hidden">비밀번호</label>
 							<input class="form-control" type="password" name="pw" id="pw" required="required" autofocus="autofocus"  placeholder="비밀번호"/>
 						</div>
 					</div>
@@ -150,7 +150,7 @@
 					<!-- 이름 -->
 					<div class="form-group">
 						<div class="col-sm-12">
-							<label for="name" class="control-label hidden"><b>이름</b></label>
+							<label for="name" class="control-label hidden">이름</label>
 							<input class="form-control" type="text" id="name" name="name" autofocus="autofocus" required="required" placeholder="이름"/>
 						</div>
 					</div>
@@ -158,7 +158,7 @@
 					<!-- 이메일 -->
 					<div class="form-group">
 						<div class="col-sm-12">
-							<label for="email" class="control-label hidden"><b>이메일</b></label>
+							<label for="email" class="control-label hidden">이메일</label>
 							<input class="form-control" type="email" name="email" id="email" required="required" placeholder="이메일"/>
 						</div>
 					</div>
@@ -166,7 +166,7 @@
 					<!-- 생년월일 -->
 			        <div class="form-group">
 					    <div class="col-sm-12">
-							<label for="birth" class="control-label hidden"><b>생년월일</b></label>
+							<label for="birth" class="control-label hidden">생년월일</label>
 					        <input class="form-control" id="birth" name="birth" required="required" maxlength="10" placeholder="생년월일" autocomplete="off"/>
 					    </div>
 					</div> 
@@ -174,7 +174,7 @@
 					<!-- 전화번호 -->
 					<div class="form-group">
 					    <div class="col-sm-12">
-							<label for="phoneCd" class="control-label hidden"><b>전화번호</b></label>
+							<label for="phoneCd" class="control-label hidden">전화번호</label>
 					        <select class="form-control" id="phoneCd" name="phoneCd" required="required">
 								<c:forEach items="${dsCode1}" var="code1">
 								    <option value="${code1.commCd}">${code1.commCdNm}</option>
@@ -194,7 +194,7 @@
 					<div class="form-group">
 					    <div class="col-sm-12">
 							<div class="input-group">
-								<label for="address" class="control-label hidden"><b>주소</b></label>
+								<label for="address" class="control-label hidden">주소</label>
 						    	<input type="text" class="form-control postcode" placeholder="주소" id="postNum1" name="address" disabled="disabled" required="required">
 					    		<span class="input-group-btn">
 					    			<button class="btn btn-default postsearch" id="sample6_execDaumPostcode()" onclick="sample6_execDaumPostcode()" type="button">Search</button>

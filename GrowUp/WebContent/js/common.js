@@ -24,7 +24,11 @@ function fn_validation(){
 
 	for(var i = 0; i < objSize; i++){
 		if(obj.eq(i).val() == ""){
-			alertMsg = obj.eq(i).parent().parent().find("label").eq(0).children().next().text();
+			/* by 김은주 230326, label 선택하도록 코드 수정*/
+			/*alertMsg = obj.eq(i).parent().parent().find("label").eq(0).children().next().text();*/
+			alertMsg = obj.parent().parent().find("label").eq(i).text().replace("*", "");
+			console.log("label",obj.parent().parent().find("label").eq(i).text().replace("*", ""));
+			
 			alertMsg += "을(를) 입력해주세요.";
 
 			alert(alertMsg);
@@ -65,8 +69,11 @@ function fn_init(){
 	var divSize = 0;
 
 	for(var i = 0; i < objSize; i++){
-		obj.eq(i).parent().parent().find("label").eq(0).prepend("<font color='red'>*&nbsp;</font>");
-
+		/* by 김은주 230326, label 선택하도록 코드 수정*/
+		/*obj.eq(i).parent().parent().find("label").eq(0).prepend("<font color='red'>*&nbsp;</font>");*/
+		obj.parent().siblings().find("label").prepend("<font color='red'>*&nbsp;</font>");
+		//console.log("label", obj.parent().siblings().find("label").prepend("<font color='red'>*&nbsp;</font>"));
+		
 		if(obj.eq(i).prop("tagName") != "TEXTAREA"){
 			divSize = obj.eq(i).parent().parent().children("div").size();
 			if(divSize > 1){
