@@ -8,6 +8,7 @@ public class CommunityBean implements Serializable{
 	private String comuContent;	//내용
 	private String comuRegId;	//등록자
 	private String comuRegDate;	//등록일자
+	private String comuModId;   //수정자
 	private String comuModDate;	//수정일자
 	private String comuHit;		//조회수
 
@@ -15,7 +16,7 @@ public class CommunityBean implements Serializable{
 		super();
 	}
 
-	public CommunityBean(String comuNo, String comuTitle, String comuContent, String comuRegId, String comuRegDate,
+	public CommunityBean(String comuNo, String comuTitle, String comuContent, String comuRegId, String comuRegDate, String comuModId,
 			String comuModDate, String comuHit) {
 		super();
 		this.comuNo = comuNo;
@@ -23,6 +24,7 @@ public class CommunityBean implements Serializable{
 		this.comuContent = comuContent;
 		this.comuRegId = comuRegId;
 		this.comuRegDate = comuRegDate;
+		this.comuModId = comuModId;
 		this.comuModDate = comuModDate;
 		this.comuHit = comuHit;
 	}
@@ -68,6 +70,15 @@ public class CommunityBean implements Serializable{
 	public void setComuRegDate(String comuRegDate) {
 		this.comuRegDate = comuRegDate;
 	}
+	
+
+	public String getComuModId() {
+		return comuModId;
+	}
+
+	public void setComuModId(String comuModId) {
+		this.comuModId = comuModId;
+	}
 
 	public String getComuModDate() {
 		return comuModDate;
@@ -90,17 +101,19 @@ public class CommunityBean implements Serializable{
 		StringBuilder builder = new StringBuilder();
 		builder.append("CommunityBean [communityNo=");
 		builder.append(comuNo);
-		builder.append(", noticeTitle=");
+		builder.append(", communityTitle=");
 		builder.append(comuTitle);
-		builder.append(", noticeContent=");
+		builder.append(", communityContent=");
 		builder.append(comuContent);
-		builder.append(", noticeRegId=");
+		builder.append(", communityRegId=");
 		builder.append(comuRegId);
-		builder.append(", noticeRegDate=");
+		builder.append(", communityRegDate=");
 		builder.append(comuRegDate);
-		builder.append(", noticeModDate=");
+		builder.append(", communityModId=");
+		builder.append(comuModId);
+		builder.append(", communityModDate=");
 		builder.append(comuModDate);
-		builder.append(", noticeHit=");
+		builder.append(", communityHit=");
 		builder.append(comuHit);
 		builder.append("]");
 		return builder.toString();
