@@ -19,10 +19,6 @@
 	<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
 	
     <script>
-	    $(document).ready(function() {
-	        $('#dataTables-example').DataTable();
-	    });
-	
 	    function fn_modifyProduct(paramProductCode){
 			location.href = "${context}/work/product/updateProduct.do?productCode=" + paramProductCode;
 	    }
@@ -34,7 +30,7 @@
 </head>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
-<div class="container">
+<div class="container footertop">
 	<!-- board title start -->
 	<div class="py-5">
 		<p class="title fs-1 fw-bold">재고관리</p>

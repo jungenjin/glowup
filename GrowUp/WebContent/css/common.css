@@ -210,6 +210,7 @@ transition: all 0.4s ease-in-out;
 /* 사이트 전체에서 dataTables-example 사용시 공통디자인 */
 #dataTables-example>tbody>tr>td {border-top:0;border-bottom: 1px solid #ddd;}
 #dataTables-example th {background:#F5F5F5;text-align:center;padding-top:20px;padding-bottom:20px}
+#dataTables-example .btn {background:#D2D4DC;}
 #dataTables-example .btn:hover {background:#9CA09F;color:#fff;transition:0.3s}
 .datatablerow {margin:10px 0;}
 .datatablecol {padding:0}

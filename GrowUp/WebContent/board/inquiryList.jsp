@@ -14,22 +14,7 @@
 	<!-- 테이블에 dataTables-example 사용시 검색, 페이징처리 됨 -->
 	<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function() {
-			
-			$('#dataTables-example').DataTable({
-				'order': [[3, 'desc']],
-				"language" : {
-	        		"search" : " ",
-	       			"searchPlaceholder": "검색어를 입력하세요.",
-	        	    "paginate": {
-		                "first":  "1",
-		                "last":   "2",
-		                "next":   ">>",
-		                "previous":   "<<"
-	        	    }
-               },
-			});
-		});
+
 		function fn_inquiryWrite(){
 			location.href = "${context}/work/board/inquiryWrite.do";
 		}
