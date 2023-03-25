@@ -13,6 +13,17 @@ a:hover {color:#CC947C;text-decoration: none;}
 	margin-bottom : 10rem;
 }
 
+/* navbar opacity 95% */
+/* (225, 225, 225, .95)는 너무 회색이길뢰 bg-light  
+rgba(248, 249, 250)
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
+} */
+.opacity-95 {
+    opacity: .95!important;
+}
+
 /*  뙎湲  愿  젴 CSS */
  .animated {
     -webkit-transition: height 0.2s;
