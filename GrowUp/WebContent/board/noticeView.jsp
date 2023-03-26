@@ -63,13 +63,14 @@
 		<!-- board view end -->
 		
 		<!-- board button area start -->
-		<c:if test="${sessionScope.grade == 'A'}">
-			<div class="d-flex justify-content-end">
+	
+			<div class="d-flex justify-content-end" style="float: right;">
 				<button class="btn boardbtn" type="button" onclick="fn_noticeList()">목록</button>
-				<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
-				<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
+				<c:if test="${sessionScope.grade == 'A'}">
+					<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
+					<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
+				</c:if>
 			</div>
-		</c:if>
 		<!-- board button area end -->
 		
 	</div><!-- Details end -->

@@ -14,21 +14,7 @@
 	<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
 	
     <script>
-       $(document).ready(function() {
-           $('#dataTables-example').DataTable({
-        	   "language" : {
-	        		"search" : " ",
-	       			"searchPlaceholder": "궁금한게 있으신가요?",
-	        	    "paginate": {
-	                "first":  "1",
-	                "last":   "2",
-	                "next":   ">>",
-	                "previous":   "<<"
-        	    }
-               },
-           });
-           
-       });
+
       function fn_noticeWrite(){
          location.href = "${context}/work/board/noticeWrite.do";
       }
@@ -64,7 +50,8 @@
             <div class="table-responsive-sm">
                 <table class="table table-hover boardlist" id="dataTables-example">
                    <thead class="mt-5">
-                     <tr style="visibility: hidden;">
+                     <tr style="display: none;">
+                         <th class="visually-hidden">NO</th>
                          <th>제목</th>
                          <th>작성자</th>
                          <th>작성일</th>
@@ -74,6 +61,7 @@
                  <tbody>
                		<c:forEach items="${dsNoticeList}" var="dsNoticeList">
                       <tr>
+                      	 <td class="visually-hidden">${dsNoticeList.NTC_NO}</td>
 	                     <td class="col-sm-6 p-3 text-start"><a href ="${context}/work/board/noticeView.do?ntcNo=${dsNoticeList.NTC_NO}">${dsNoticeList.NTC_TITLE}</a></td>
 	                     <td class="col-sm-2 p-3 text-start fw-bold">${dsNoticeList.USER_NAME}</td>
 	                     <td class="col-sm-2 p-3 text-center">${dsNoticeList.NTC_REG_DATE}</td>
