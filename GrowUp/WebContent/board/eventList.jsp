@@ -14,21 +14,6 @@
 	<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
     
 	<script type="text/javascript">
-	 $(document).ready(function() {
-         $('#dataTables-example').DataTable({
-      	   "language" : {
-	        		"search" : " ",
-	       			"searchPlaceholder": "궁금한게 있으신가요?",
-	        	    "paginate": {
-	                "first":  "1",
-	                "last":   "2",
-	                "next":   ">>",
-	                "previous":   "<<"
-      	    }
-             },
-         });
-         
-     });
 		function fn_eventWrite(){
 			location.href = "${context}/work/board/eventWrite.do";
 		}
