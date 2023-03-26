@@ -65,12 +65,20 @@
 				$("img[name='image']").eq('${dsProductIdx.index}').attr("src", path.replace(existFolder, imageFolder));
 					
 				$("img[name='image']").eq('${dsProductIdx.index}').on('mouseover', function(){
+					var imgNull = "${dsProductList.PRODUCT_IMAGE2}";
+					
+					//over이미지 PRODUCT_IMAGE2가 없을 경우 추가
+					if("${dsProductList.PRODUCT_IMAGE2}" == "") {
+						imgNull = "${dsProductList.PRODUCT_IMAGE}";
+						console.log("img2", imgNull);
+					}
+					
 					if(productCategoryCd == 'E'){
-						imageOver = "/eyeImg/${dsProductList.PRODUCT_IMAGE2}";
+						imageOver = "/eyeImg/" + imgNull;
 					} else if(productCategoryCd == 'F'){
-						imageOver = "/faceImg/${dsProductList.PRODUCT_IMAGE2}";
+						imageOver = "/faceImg/" + imgNull;
 					} else if(productCategoryCd == 'L'){
-						imageOver = "/lipImg/${dsProductList.PRODUCT_IMAGE2}";
+						imageOver = "/lipImg/" + imgNull;
 					}
 					$("img[name='image']").eq('${dsProductIdx.index}').attr("src", path.replace(existFolder, imageOver));
 					//console.log("imageOver",imageOver);
