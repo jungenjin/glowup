@@ -91,22 +91,25 @@
                 <tbody>
                 	<c:forEach items="${dsSellList}" var="dsSellList" varStatus="sellIdx">
                      <tr>
-                        <td style="text-align: center;">
+                        <td style="text-align: center; vertical-align: middle;">
+							<a href="${context}/work/product/retrieveProduct.do?productCode=${dsSellList.PRODUCT_CODE}">
 							<img name="image" width="135px" height="120px" src="${context}" class="img-thumbnail">
+							</a>
 							<script type="text/javascript">
 								var existFolder = '';
 								var imageFolder = '';
 								var path = '';
 							 	var productCategoryCd = '${dsSellList.PRODUCT_CATEGORY_CD}';
-		
+							
 							 	if(productCategoryCd == 'E'){
 									imageFolder = "/eyeImg/${dsSellList.PRODUCT_IMAGE}";
-								}else if(productCategoryCd == 'L'){
-									imageFolder = "/lipImg/${dsSellList.PRODUCT_IMAGE}";
-								}else if(productCategoryCd == 'F'){
+								} else if(productCategoryCd == 'F'){
 									imageFolder = "/faceImg/${dsSellList.PRODUCT_IMAGE}";
-								path = $("img[name='image']").eq('${dsProductIdx.index}').attr("src");
-		
+								} else if(productCategoryCd == 'L'){
+									imageFolder = "/lipImg/${dsSellList.PRODUCT_IMAGE}";
+								}
+								path = $("img[name='image']").eq('${sellIdx.index}').attr("src");
+							
 								existFolder = path.split("/")[0];
 								$("img[name='image']").eq('${sellIdx.index}').attr("src", path.replace(existFolder, imageFolder));
 							</script>
