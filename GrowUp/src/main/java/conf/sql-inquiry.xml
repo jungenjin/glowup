@@ -53,9 +53,13 @@
 		/*	inquiryList	*/
             SELECT I.INQ_NO
 				 , I.INQ_TITLE
+				 , I.INQ_CONTENT
+				 , I.INQ_PHONE
 				 , I.INQ_REG_ID
 				 , (SELECT NAME FROM TB_COM_USER WHERE USER_CODE = I.INQ_REG_ID) AS USER_NAME
 				 , I.INQ_REG_DATE
+				 , I.INQ_MOD_ID
+				 , I.INQ_MOD_DATE
 			FROM   TB_INQUIRY I
 			WHERE  1=1
 			ORDER BY INQ_REG_DATE DESC
@@ -111,9 +115,9 @@
 				, (SELECT PHONE_CD||'-'||PHONE_NUM FROM TB_COM_USER WHERE USER_CODE = #{inqRegId})
 				, (SELECT EMAIL FROM TB_COM_USER WHERE USER_CODE = #{inqRegId})
 				, #{inqRegId}
-				, TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS')
+				, TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')
 				, #{inqRegId} /* 등록자와 수정자 동일하게 입력 */
-				, TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS')
+				, TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')
 			)			
 		]]>
 	</insert>
@@ -126,7 +130,7 @@
 			SET INQ_TITLE         =  #{inqTitle}
 			  , INQ_CONTENT       =  #{inqContent}
 			  , INQ_MOD_ID        =  #{inqModId}
-			  , INQ_MOD_DATE	  =  TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS')  
+			  , INQ_MOD_DATE	  =  TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')  
 			WHERE INQ_NO = #{inqNo}
 		]]>
 	</update>
