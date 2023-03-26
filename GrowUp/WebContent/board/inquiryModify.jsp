@@ -54,7 +54,7 @@
 
 <!-- Details -->
 <div class="container footertop">
-	<div class="px-5 py-5">
+	<div class="py-5">
 	
 		<!-- board title start -->
 		<div class="page-header">

@@ -37,7 +37,7 @@
 		
 		<!-- board list start -->
         <div class="table-responsive">
-            <table class="table hover pt-2 boardlist" id="dataTables-example">
+            <table class="table hover pt-3 mb-3 boardlist" id="dataTables-example">
             	<thead>
                      <tr style="display: none;">
                          <th class="visually-hidden">NO</th>
@@ -47,7 +47,7 @@
                      </tr>
                  </thead>
                 <tbody>
-                    <c:forEach items="${dsinquiryList}" var="dsinquiryList" varStatus="inqIdx">
+                    <c:forEach items="${dsinquiryList}" var="dsinquiryList">
 	                  	<c:choose>
 							<c:when test="${sessionScope.userCode == dsinquiryList.INQ_REG_ID || sessionScope.grade == 'A'}">
 								<tr>
@@ -56,19 +56,10 @@
 			                     		<a href="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a>
 			                     	</td>
 			                     	<td style="width:100px;min-width:100px" class="p-3 text-center">${dsinquiryList.USER_NAME}</td>
-			                     	<td id="dataf" style="width:100px;min-width:100px" class="p-3 text-end">${dsinquiryList.INQ_REG_DATE}</td>
+			                     	<td style="width:150px;min-width:150px" class="p-3 text-end">${dsinquiryList.INQ_REG_DATE}</td>
 			                     </tr>
 	                  		</c:when>
 						</c:choose>
-	                     <script type="text/javascript">
-		         			//날짜출력형태 바꾸기
-		         			var dataformat11 = "${dsinquiryList.INQ_REG_DATE}";
-		         			//console.log("${dsinquiryList.INQ_REG_DATE}");
-		         			var dataformat1 = dataformat11.split(" ")[0];
-		         			//console.log(dataformat1);
-		         			$('table > tbody > tr > td#dataf').eq('${inqIdx.index}').text(dataformat1);
-		         			//console.log($('table > tbody > tr > td#dataf').eq('${inqIdx.index}').text(dataformat1));
-	         			</script>
                 	</c:forEach>
                 </tbody>
             </table>

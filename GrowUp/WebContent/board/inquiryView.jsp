@@ -31,7 +31,6 @@
 </head>
 <body>
 <jsp:include page="/common/top.jsp"></jsp:include>
-<div class="wrap">
 <!-- title, visual start -->
 <div class="titarea" style='background-image: url("${context}/img/subbg_inquiry.jpg");'>
 </div>
@@ -83,47 +82,4 @@
 </div>
 <jsp:include page="/common/foot.jsp"></jsp:include>
 </body>
-<style type="text/css">
-.wrap{
-background-color: #fff;
-}
-/*form 제목*/
-.form-horizontal .control-label {
-    padding-top: 7px;
-    margin-bottom: 8px;
-    text-align: inherit !important;
-}
-.Title{
-font-family: Noto Sans KR;
-font-size: 40px;
-margin-top: 87px;
-margin-bottom: 80px;
-}
-/*form 제목*/
-.form-control {
-    padding-top: 7px;
-    margin-bottom: 40px;
-    margin-top:10px;
-    height: 90px !important;
-    background-color: #D9D9D9 !important;
-}
-.control-label {
-	font-size:24px;
-    text-align: inherit !important;
-}
-.Title{
-font-family: Noto Sans KR;
-font-size: 40px;
-margin-top: 90px;
-margin-bottom: 100px;
-}
-.title {
-border-bottom:none !important;
-}
-@media (max-width: 992px) {
-	.Title {font-size: 28px;}
-	.control-label{font-size: 18px;}
-	}
-</style>
-
 </html>
