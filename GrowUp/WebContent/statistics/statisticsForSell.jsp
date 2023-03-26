@@ -66,7 +66,7 @@
 </head>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
-<div class="container">
+<div class="container footertop">
 	<!-- board title start -->
 	<div class="py-5">
 		<p class="title fs-1 fw-bold">매출통계</p>
