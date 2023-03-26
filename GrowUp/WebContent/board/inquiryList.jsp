@@ -14,11 +14,10 @@
 	<!-- 테이블에 dataTables-example 사용시 검색, 페이징처리 됨 -->
 	<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript">
-
 		function fn_inquiryWrite(){
 			location.href = "${context}/work/board/inquiryWrite.do";
 		}
-	</script>
+     </script>
 </head>
 <body>
 <jsp:include page="${context}/common/top.jsp"></jsp:include>
@@ -29,7 +28,7 @@
 
 <!-- Details -->
 <div class="container footertop">
-	<div class="px-5 py-5">
+	<div class="py-5">
 		<!-- board title start -->
 		<div class="py-5">
 			<p class="title fs-1 fw-bold">1 : 1 문의</p>
@@ -48,7 +47,7 @@
                      </tr>
                  </thead>
                 <tbody>
-                    <c:forEach items="${dsinquiryList}" var="dsinquiryList">
+                    <c:forEach items="${dsinquiryList}" var="dsinquiryList" varStatus="inqIdx">
 	                  	<c:choose>
 							<c:when test="${sessionScope.userCode == dsinquiryList.INQ_REG_ID || sessionScope.grade == 'A'}">
 								<tr>
@@ -57,10 +56,19 @@
 			                     		<a href="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a>
 			                     	</td>
 			                     	<td style="width:100px;min-width:100px" class="p-3 text-center">${dsinquiryList.USER_NAME}</td>
-			                     	<td style="width:150px;min-width:150px" class="p-3 text-center">${dsinquiryList.INQ_REG_DATE}</td>
+			                     	<td id="dataf" style="width:100px;min-width:100px" class="p-3 text-end">${dsinquiryList.INQ_REG_DATE}</td>
 			                     </tr>
 	                  		</c:when>
 						</c:choose>
+	                     <script type="text/javascript">
+		         			//날짜출력형태 바꾸기
+		         			var dataformat11 = "${dsinquiryList.INQ_REG_DATE}";
+		         			//console.log("${dsinquiryList.INQ_REG_DATE}");
+		         			var dataformat1 = dataformat11.split(" ")[0];
+		         			//console.log(dataformat1);
+		         			$('table > tbody > tr > td#dataf').eq('${inqIdx.index}').text(dataformat1);
+		         			//console.log($('table > tbody > tr > td#dataf').eq('${inqIdx.index}').text(dataformat1));
+	         			</script>
                 	</c:forEach>
                 </tbody>
             </table>

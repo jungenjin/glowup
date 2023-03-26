@@ -111,26 +111,21 @@ transition: all 0.4s ease-in-out;
  
   
 /* 게시판 buttons 공통 */
-.boardbtn {width:100px;height:40px;border-radius:5px;font-size:14px;background:#D2D4DC;margin-top:80px}
+.boardbtn {width:7.65em;height:3em;border-radius:5px;font-size:1.25em;background:#D2D4DC;margin-top:6em}
 .boardbtn:hover {background:#9CA09F;color:#fff;transition:0.3s}
-.boardbtn:not(:first-child) {margin-left:34px}
-.btnarea {margin:80px 0;text-align:right;}
+.boardbtn:not(:first-child) {margin-left:1.6em}
+.btnarea {margin:6em 0;text-align:right;}
 .btnarea .boardbtn {margin-top:0}
-@media (min-width: 992px) {
-   .boardbtn {width:150px;height:60px;border-radius:5px;font-size:20px;}
-   .boardbtn.notice {margin-top:40px}
-   .boardbtn:not(:first-child) {margin-left:48px}
-   .btnarea {margin:120px 0;}
-}
+
 /* 확인시트 */
 .confirmbtn {width:120px;height:40px;border-radius:5px;font-size:11px;background:#D2D4DC;margin-top:0}
 .confirmbtn:hover {background:#9CA09F;color:#fff;transition:0.3s}
-.confirmbtn:not(:first-child) {margin-left:34px}
+.confirmbtn:not(:first-child) {margin-left:22px}
 .confirmbtn {margin-top:0}
 @media (min-width: 992px) {
    .confirmbtn {width:200px;height:60px;border-radius:5px;font-size:20px;}
    .confirmbtn {margin-top:40px}
-   .confirmbtn:not(:first-child) {margin-left:48px}
+   /* .confirmbtn:not(:first-child) {margin-left:32px} */
 }
 /* 구매하기 */
 .buybtn {width:75px;height:35px;border-radius:5px;font-size:9px;background:#D2D4DC;margin-top:0}

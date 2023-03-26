@@ -27,7 +27,7 @@ function fn_validation(){
 			/* by 김은주 230326, label 선택하도록 코드 수정*/
 			/*alertMsg = obj.eq(i).parent().parent().find("label").eq(0).children().next().text();*/
 			alertMsg = obj.parent().parent().find("label").eq(i).text().replace("*", "");
-			console.log("label",obj.parent().parent().find("label").eq(i).text().replace("*", ""));
+			//console.log("label",obj.parent().parent().find("label").eq(i).text().replace("*", ""));
 			
 			alertMsg += "을(를) 입력해주세요.";
 
@@ -71,9 +71,8 @@ function fn_init(){
 	for(var i = 0; i < objSize; i++){
 		/* by 김은주 230326, label 선택하도록 코드 수정*/
 		/*obj.eq(i).parent().parent().find("label").eq(0).prepend("<font color='red'>*&nbsp;</font>");*/
-		obj.parent().siblings().find("label").prepend("<font color='red'>*&nbsp;</font>");
-		//console.log("label", obj.parent().siblings().find("label").prepend("<font color='red'>*&nbsp;</font>"));
-		
+		obj.eq(i).parent().parent().find("label").prepend("<font color='red'>*&nbsp;</font>");
+		//console.log("label", obj.eq(i).parent().parent().find("label").prepend("<font color='red'>*&nbsp;</font>"));
 		if(obj.eq(i).prop("tagName") != "TEXTAREA"){
 			divSize = obj.eq(i).parent().parent().children("div").size();
 			if(divSize > 1){
@@ -125,3 +124,37 @@ function fn_showKeyCode(event) {
 	/* 48~57:일반 숫자키 코드, 96~105:숫자키패드 숫자키 코드 */
 }
 
+
+/* by 김은주 230326 datatables 관련 설정 추가 */ 
+$(document).ready(function() {
+	let dte = $('#dataTables-example');
+	//datatables를 사용한다면
+	if(dte.length) {
+		dte.DataTable({
+	    	 order: [[3, 'desc']], //3은 날짜컬럼 순서
+	  	  	 language : {
+	    	    emptyTable:   '등록된 게시글이 없습니다.',
+	    	    info:         '_TOTAL_건',
+	    	    infoEmpty:    '0건',
+	    	    infoFiltered: '(전체 _MAX_건)',
+	    	    lengthMenu:	  '<select>'+
+								  '<option value="10">10</option>'+
+								  '<option value="20">20</option>'+
+								  '<option value="30">30</option>'+
+								  '<option value="40">40</option>'+
+								  '<option value="50">50</option>'+
+								  '<option value="-1">전체</option>'+
+							  '</select>',
+	    	    search:		  '',
+	   			searchPlaceholder: '검색어를 입력하세요.',
+	    	    zeroRecords:	   '검색 결과가 없습니다.',
+	    	    paginate: {
+	                first:    '<i class="fa-solid fa-angles-left"></i>',
+	                previous: '<i class="fa-solid fa-angle-left"></i>',
+	                next:     '<i class="fa-solid fa-angle-right"></i>',
+	                last:     '<i class="fa-solid fa-angles-right"></i>'
+	            },
+			} //end language
+		});
+	} //end if
+});

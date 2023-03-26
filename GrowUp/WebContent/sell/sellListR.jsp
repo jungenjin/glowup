@@ -9,29 +9,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>주문/결제</title>
-	<link href="${context}/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
 	<!-- 테이블에 dataTables-example 사용시 검색, 페이징처리 됨 -->
-	<link href="${context}/css/plugins/dataTables.bootstrap.css" rel="stylesheet">
-    <link href="${context}/css/sb-admin-2.css" rel="stylesheet">
-	<!-- 테이블 헤더에 sort 표시됨, fontawsome까지 사용 -->
-    <link href="${context}/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="${context}/css/common.css" rel="stylesheet" type="text/css">
+	<link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css" rel="stylesheet"/>
 	
 	<script src="${context}/js/jquery-1.9.1.js"></script>
-
-	<!-- 테이블 헤더에 sort 표시됨 -->
-    <script src="${context}/js/plugins/metisMenu/metisMenu.min.js"></script>
-    <script src="${context}/js/sb-admin-2.js"></script>
-    
 	<!-- 테이블에 dataTables-example 사용시 검색, 페이징처리 됨 -->
-    <script src="${context}/js/plugins/dataTables/jquery.dataTables.js"></script>
-    <script src="${context}/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+	<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
 	<!-- 아임포트 결제 CDN 연동 -->
     <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
     <script>
-	    $(document).ready(function() {
-	        $('#dataTables-example').DataTable();
-	    });
 	    function fn_buy(paramSellCode, paramSellCount, paramProductCode){
 	    	if(confirm("결제하시겠습니까?")){
 	    		var IMP = window.IMP;  

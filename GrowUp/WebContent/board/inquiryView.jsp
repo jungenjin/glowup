@@ -38,7 +38,7 @@
 <!-- title, visual end -->
 <!-- Details -->
 <div class="container footertop">
-	<div class="px-5 py-5">
+	<div class="py-5">
 	
 		<!-- board title start -->
 		<div class="page-header">
@@ -51,26 +51,20 @@
 		<!-- board title end -->
 		
 		<!-- board view start -->
-		<div class="border-bottom">
+		<div class="border-bottom border-secondary">
 			<div class="row fs-4 mb-2 p-2">
-				<div class="col-md-10 px-3">${dsInquiry.INQ_TITLE}</div>
+				<div class="col-md-10 px-3"><span class="badge bg-secondary">질문</span> ${dsInquiry.INQ_TITLE}</div>
+			</div>
+			
+			<div class="row fs-5 mb-2 px-3 p-2 text-secondary">
+				<div class="col-lg-4"><i class="fa-regular fa-user"></i> ${dsInquiry.USER_NAME}</div>
+				<div class="col-lg-4"><i class="fa-solid fa-mobile-screen-button"></i> ${dsInquiry.INQ_PHONE}</div>
+				<div class="col-lg-4"><i class="fa-regular fa-envelope"></i> ${dsInquiry.INQ_EMAIL}</div>
 			</div>
 		</div>
 		
 		<div class="mt-2">
 			<div class="fs-4 p-3">${dsInquiry.INQ_CONTENT}</div>
-			
-			<div class="row mt-3 bg-light">
-				<div class="col-lg-4 pt-3">
-					 <p class="fs-5 ps-3">이름 : ${dsInquiry.USER_NAME}</p>
-				</div>
-				<div class="col-lg-4 pt-3">
-					<p class="fs-5 ps-3">연락처 : ${dsInquiry.INQ_PHONE}</p>
-				</div>
-				<div class="col-lg-4 pt-3">
-					<p class="fs-5 ps-3">이메일 : ${dsInquiry.INQ_EMAIL}</p>
-				</div>
-			</div>
 		</div>
   		
 		<form class="form-horizontal" method="post" role="form">
