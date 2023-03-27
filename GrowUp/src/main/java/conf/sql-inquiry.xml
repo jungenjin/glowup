@@ -13,60 +13,42 @@
 		<result property="inqRegDate" column="INQ_REG_DATE" />
 		<result property="inqModDate" column="INQ_MOD_DATE" />
 	</resultMap>
-
-	<!-- <select id="inquiryList" parameterType="map" resultType="map">
-		<![CDATA[
-		/*	inquiryList	*/
-            SELECT INQUIRY.INQ_NO
-				 , INQUIRY.INQ_TITLE
-				 , INQUIRY.INQ_CONTENT
-				 , INQUIRY.INQ_PHONE
-				 , (SELECT USER_CODE FROM TB_COM_USER WHERE USER_CODE = INQUIRY.INQ_REG_ID) AS USER_CODE
-				 , (SELECT NAME FROM TB_COM_USER WHERE USER_CODE = INQUIRY.INQ_REG_ID) AS USER_NAME
-				 , (SELECT EMAIL FROM TB_COM_USER WHERE USER_CODE = INQUIRY.INQ_REG_ID) AS EMAIL
-				 , INQUIRY.INQ_REG_DATE
-				 , (SELECT NAME FROM TB_COM_USER WHERE USER_CODE = INQ_MOD_ID) AS USER_NAME_MODI
-				 , INQUIRY.INQ_MOD_DATE
-			FROM   TB_INQUIRY INQUIRY
-			WHERE  1=1
-			ORDER BY INQUIRY.INQ_REG_DATE DESC
-		]]>
-	</select> -->
+	
 	<!-- <select id="inquiryList" parameterType="map" resultType="map">
 		<![CDATA[
 		/*	inquiryList	*/
             SELECT INQUIRY.INQ_NO
 				 , INQUIRY.INQ_TITLE
                  , INQUIRY.INQ_REG_ID
-                 , COMUSER.USER_CODE
+                 , (SELECT NAME FROM TB_COM_USER WHERE USER_CODE = INQUIRY.INQ_REG_ID) AS USER_NAME
 				 , INQUIRY.INQ_CONTENT
 				 , INQUIRY.INQ_REG_DATE
 			FROM   TB_INQUIRY INQUIRY
             INNER JOIN TB_COM_USER COMUSER
             ON INQUIRY.INQ_REG_ID = COMUSER.USER_CODE
-			WHERE INQUIRY.INQ_EMAIL IN (COMUSER.EMAIL)
+			WHERE 1=1
+			AND (INQUIRY.INQ_REG_ID = #{userCode} OR COMUSER.GRADE = 'A')
 			ORDER BY INQUIRY.INQ_REG_DATE DESC
 		]]>
 	</select> -->
+	
 	<select id="inquiryList" parameterType="map" resultType="map">
 		<![CDATA[
 		/*	inquiryList	*/
-            SELECT I.INQ_NO
-				 , I.INQ_TITLE
-				 , I.INQ_CONTENT
-				 , I.INQ_PHONE
-				 , I.INQ_REG_ID
-				 , (SELECT NAME FROM TB_COM_USER WHERE USER_CODE = I.INQ_REG_ID) AS USER_NAME
-				 , I.INQ_REG_DATE
-				 , I.INQ_MOD_ID
-				 , I.INQ_MOD_DATE
-			FROM   TB_INQUIRY I
-			WHERE  1=1
-			ORDER BY INQ_REG_DATE DESC
+            SELECT INQUIRY.INQ_NO
+				 , INQUIRY.INQ_TITLE
+                 , INQUIRY.INQ_REG_ID
+                 , (SELECT NAME FROM TB_COM_USER WHERE USER_CODE = INQUIRY.INQ_REG_ID) AS USER_NAME
+				 , INQUIRY.INQ_CONTENT
+				 , INQUIRY.INQ_REG_DATE
+			FROM   TB_INQUIRY INQUIRY
+            INNER JOIN TB_COM_USER COMUSER
+            ON INQUIRY.INQ_REG_ID = COMUSER.USER_CODE
+			WHERE 1=1
+			AND (INQUIRY.INQ_REG_ID = #{userCode} OR #{grade} = 'A')
+			ORDER BY INQUIRY.INQ_REG_DATE DESC
 		]]>
 	</select>
-	
-	
 	
 	<select id="inquiryView" parameterType="map" resultType="map">
 		<![CDATA[

@@ -48,18 +48,14 @@
                  </thead>
                 <tbody>
                     <c:forEach items="${dsinquiryList}" var="dsinquiryList">
-	                  	<c:choose>
-							<c:when test="${sessionScope.userCode == dsinquiryList.INQ_REG_ID || sessionScope.grade == 'A'}">
-								<tr>
-									<td class="visually-hidden">${dsinquiryList.INQ_NO}</td>
-			                     	<td style="min-width:200px" class="p-3">
-			                     		<a href="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a>
-			                     	</td>
-			                     	<td style="width:100px;min-width:100px" class="p-3 text-center">${dsinquiryList.USER_NAME}</td>
-			                     	<td style="width:150px;min-width:150px" class="p-3 text-end">${dsinquiryList.INQ_REG_DATE}</td>
-			                     </tr>
-	                  		</c:when>
-						</c:choose>
+						<tr>
+							<td class="visually-hidden">${dsinquiryList.INQ_NO}</td>
+	                     	<td style="min-width:200px" class="p-3">
+	                     		<a href="${context}/work/board/inquiryView.do?inqNo=${dsinquiryList.INQ_NO}">${dsinquiryList.INQ_TITLE}</a>
+	                     	</td>
+	                     	<td style="width:100px;min-width:100px" class="p-3 text-center">${dsinquiryList.USER_NAME}</td>
+	                     	<td style="width:150px;min-width:150px" class="p-3 text-end">${dsinquiryList.INQ_REG_DATE}</td>
+	                     </tr>
                 	</c:forEach>
                 </tbody>
             </table>
