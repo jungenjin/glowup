@@ -112,12 +112,16 @@ public class InquiryController {
 		
 		HttpSession session = request.getSession();
 		String userCode = (String)session.getAttribute("userCode");
+		String grade = (String)session.getAttribute("grade");
 		
 		Map<String, String> inquiryParam = new HashMap<String, String>();
 		
 		inquiryParam.put("userCode", userCode);
+		inquiryParam.put("grade", grade);
 		
 		List<Map<String, String>> dsInquiryList = inquiryService.inquiryList(inquiryParam);
+		System.out.println("userCode****************************************" + userCode);
+		System.out.println("grade****************************************" + grade);
 		System.out.println("inquiryParam****************************************" + inquiryParam);
 		System.out.println("dsInquiryList****************************************" + dsInquiryList);
 		
