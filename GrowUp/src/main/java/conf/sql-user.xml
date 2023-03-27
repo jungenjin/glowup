@@ -38,6 +38,7 @@
 		<![CDATA[
 			SELECT USER_CODE
 				 , ID
+				 , NAME
 				 , GRADE
 			FROM   TB_COM_USER WHERE ID = #{id}
 		]]>

@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import work.cart.CartService;
 import work.code.CodeBean;
 import work.code.CodeService;
 
@@ -31,6 +32,9 @@ public class UserController implements HttpSessionListener{
 
 	@Resource(name = "codeService")
 	private CodeService codeService;
+	
+	@Resource(name = "cartService")
+	private CartService cartService;
 
 	@RequestMapping(value="/work/user/idCheck.do", method=RequestMethod.GET)
 	@ResponseBody
@@ -76,12 +80,26 @@ public class UserController implements HttpSessionListener{
 
 		String userCode = userBean.getUserCode();
 		String id = userBean.getId();
+		String name = userBean.getName();
 		String grade = userBean.getGrade();
 
 		session.setAttribute("userCode", userCode);
 		session.setAttribute("grade", grade);
 		session.setAttribute("id", id);
+		session.setAttribute("name", name);
+		System.out.println("session/////////////////////////////////////////" + session);
+		
+		
+		//장바구니 갯수 가져오기
+		Map<String, String> cartParam = new HashMap<String, String>();
 
+		cartParam.put("userCode", userCode);
+		
+		List<Map<String, String>> dsCartList = cartService.retrieveCartList(cartParam);
+		session.setAttribute("dsCartList", dsCartList);
+		System.out.println("dsCartList++++++++++++++++++++++++" + dsCartList.size());
+				
+				
 		session.setMaxInactiveInterval(-1); //세션 무한대
 		return "redirect:/work/product/goMain.do";
 	}

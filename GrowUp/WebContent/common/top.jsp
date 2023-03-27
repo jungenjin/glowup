@@ -45,38 +45,39 @@
 
 <body>
 <nav class="navbar bg-opac-95 fixed-top ">
-  <div class="container">
+	<div class="container">
 		<a class="navbar-brand" href="${homeUrl}"><span class="fs-2 fw-bold gotu">Glow up</span></a>
-	<div class="d-flex flex-row">
-		<div class="p-2 text-center h6 pt-3">
 			<c:if test="${sessionScope.id == null}">
-				<a class="nav-link active" href="${context}/work/user/createUser.do"><i class="fa-solid fa-user-plus"></i>
-				<span class="gotu">회원가입</span></a>
+			<!-- 로그인, 로그아웃시 정렬 맞추기 위해 div.d-flex 중복 사용 -->
+			<div class="d-flex flex-row align-items-baseline">
+				<div class="d-flex justify-content-end align-items-center pe-3">
+					<a class="pe-4" href="${context}/user/login.jsp"><i class="fa-solid fa-right-to-bracket"></i> 로그인</a>
+					<a class="" href="${context}/work/user/createUser.do"><i class="fa-solid fa-user-plus"></i> 회원가입</a>
+				</div>
 			</c:if>
-		</div>
-		<div class="p-2 text-center h6 pt-3">
-			<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
-				<a class="nav-link active" href="${context}/work/cart/retrieveCartList.do"><i class="fa-solid fa-cart-shopping"></i>
-				<span class="gotu">장바구니</span></a>
-			</c:if>
-		</div>
-		<div class="p-2 text-center h6 pt-3">
-			<c:if test="${sessionScope.id == null}">
-				<a class="nav-link active" href="${context}/user/login.jsp"><i class="fa-solid fa-right-to-bracket"></i>
-				<span class="gotu">로그인</span></a>
-			</c:if>
-		</div>
-		<div class="p-2 text-center h6 pt-3">
 			<c:if test="${sessionScope.id != null}">
-				<a class="nav-link active" href="${context}/work/user/logout.do"><i class="fa-solid fa-right-from-bracket"></i>
-				<span class="gotu">로그아웃</span></a>
+			<!-- 로그인, 로그아웃시 정렬 맞추기 위해 div.d-flex 중복 사용 -->
+			<div class="d-flex flex-row align-items-baseline mb-2">
+				<div class="d-flex justify-content-end align-items-baseline pe-3">
+					${sessionScope.name}(${sessionScope.id}) 님
+					<c:if test="${sessionScope.grade != 'A'}">
+					<div class="ps-3">
+						<div class="position-relative mt-3">
+						<a class=" " href="${context}/work/cart/retrieveCartList.do">
+							<i class="fa-solid fa-cart-shopping"></i>
+							<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+							    ${dsCartList.size() }
+							    <span class="visually-hidden">장바구니</span>
+							</span>
+						</a>
+						</div>
+					</div>
+					</c:if>
+				</div>
 			</c:if>
-		</div>
-		<div class="p-2">
-		    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-		      <span class="navbar-toggler-icon"></span>
-		    </button>
-		</div>
+	    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
 	</div>
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -84,7 +85,13 @@
 	        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
 				<a class="navbar-brand" href="${homeUrl}"><span class="fs-2 fw-bold gotu">Glow up</span></a>
 	        </h5>
-			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	        <div>
+		        <c:if test="${sessionScope.id != null}">
+				    <a href="${context}/work/user/logout.do"><i class="fa-solid fa-right-from-bracket"></i> 로그아웃</a>
+					<div class="vr ms-2"></div>
+				</c:if>
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
      	</div>        
 
 	      <!-- 오프캔버스 메뉴 -->
