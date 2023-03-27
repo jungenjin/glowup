@@ -38,33 +38,6 @@
 			ORDER BY PRODUCT.PRODUCT_REG_DATE DESC
 	</select>
 
-	<select id="retrieveProductListForMain" resultType="map">
-		<![CDATA[
-			/*	retrieveProductListForMain	*/
-			SELECT T.PRODUCT_IMAGE, T.PRODUCT_CATEGORY_CD
-			FROM
-			(
-			  SELECT PRODUCT_IMAGE, PRODUCT_CATEGORY_CD
-			  FROM TB_PRODUCT
-			  WHERE 1=1
-			  AND PRODUCT_CATEGORY_CD = 'P'
-			  ORDER BY PRODUCT_REG_DATE DESC
-			) T
-			WHERE ROWNUM = 1
-			UNION ALL
-			SELECT T.PRODUCT_IMAGE, T.PRODUCT_CATEGORY_CD
-			FROM
-			(
-			  SELECT PRODUCT_IMAGE, PRODUCT_CATEGORY_CD
-			  FROM TB_PRODUCT
-			  WHERE 1=1
-			  AND PRODUCT_CATEGORY_CD = 'D'
-			  ORDER BY PRODUCT_REG_DATE DESC
-			) T
-			WHERE ROWNUM = 1
-			]]>
-	</select>
-
 	<select id="productListForEye" resultType="map">
 		<![CDATA[
 			/*	productListForPerfume	*/

@@ -17,10 +17,6 @@ public class ProductDAO {
 		return sqlSession.selectList("product.retrieveProductList", productParam);
 	}
 
-	public List<Map<String, String>> retrieveProductListForMain(){
-		return sqlSession.selectList("product.retrieveProductListForMain");
-	}
-
 	public List<Map<String, String>> productListForEye(){
 		return sqlSession.selectList("product.productListForEye");
 	}

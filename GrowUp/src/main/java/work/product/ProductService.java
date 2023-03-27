@@ -5,7 +5,6 @@ import java.util.Map;
 
 public interface ProductService {
 	public List<Map<String, String>> retrieveProductList(Map<String, String> productParam);
-	public List<Map<String, String>> retrieveProductListForMain();
 
 	public List<Map<String, String>> productListForEye();
 	public List<Map<String, String>> productListForFace();

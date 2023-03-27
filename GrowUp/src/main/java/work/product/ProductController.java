@@ -105,26 +105,31 @@ public class ProductController {
 		return mv;
 	}
 
+//	@RequestMapping(value="/work/product/goMain.do", method=RequestMethod.GET)
+//	public ModelAndView goMain(){
+//		ModelAndView mv = new ModelAndView();
+//
+//		List<Map<String, String>> dsProductList = productService.retrieveProductListForMain();
+//
+//		List<Map<String, String>> dsEyeList = productService.productListForEye();
+//		List<Map<String, String>> dsFaceList = productService.productListForFace();
+//		List<Map<String, String>> dsLipList = productService.productListForLip();
+//
+//		mv.addObject("dsProductList", dsProductList);
+//
+//		mv.addObject("dsEyeList", dsEyeList);
+//		mv.addObject("dsFaceList", dsFaceList);
+//		mv.addObject("dsLipList", dsLipList);
+
+//		mv.setViewName("/product/main");
+//		return mv;
+//	}
+	
 	@RequestMapping(value="/work/product/goMain.do", method=RequestMethod.GET)
-	public ModelAndView goMain(){
-		ModelAndView mv = new ModelAndView();
-
-		List<Map<String, String>> dsProductList = productService.retrieveProductListForMain();
-
-		List<Map<String, String>> dsEyeList = productService.productListForEye();
-		List<Map<String, String>> dsFaceList = productService.productListForFace();
-		List<Map<String, String>> dsLipList = productService.productListForLip();
-
-		mv.addObject("dsProductList", dsProductList);
-
-		mv.addObject("dsEyeList", dsEyeList);
-		mv.addObject("dsFaceList", dsFaceList);
-		mv.addObject("dsLipList", dsLipList);
-
-		mv.setViewName("/product/main");
-		return mv;
+	public String goMain(){
+		return "/product/main";
 	}
-
+	
 
 	@RequestMapping(value="/work/product/retrieveProductList.do", method=RequestMethod.GET)
 	public ModelAndView retrieveProductList(HttpServletRequest request){
