@@ -109,10 +109,22 @@ public class InquiryController {
 	@RequestMapping(value="/work/board/inquiryList.do", method = {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView inquiryList(HttpServletRequest request){
 		ModelAndView mv = new ModelAndView();
-
+		
+		HttpSession session = request.getSession();
+		String userCode = (String)session.getAttribute("userCode");
+		String grade = (String)session.getAttribute("grade");
+		
 		Map<String, String> inquiryParam = new HashMap<String, String>();
-
+		
+		inquiryParam.put("userCode", userCode);
+		inquiryParam.put("grade", grade);
+		
 		List<Map<String, String>> dsInquiryList = inquiryService.inquiryList(inquiryParam);
+		System.out.println("userCode****************************************" + userCode);
+		System.out.println("grade****************************************" + grade);
+		System.out.println("inquiryParam****************************************" + inquiryParam);
+		System.out.println("dsInquiryList****************************************" + dsInquiryList);
+		
 
 		mv.addObject("dsinquiryList", dsInquiryList);
 		mv.setViewName("/board/inquiryList");
