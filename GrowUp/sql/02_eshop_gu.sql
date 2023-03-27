@@ -88,6 +88,12 @@ VALUES ('USER0000' || USER_SEQ.NEXTVAL, 'ksy', 'ksy', 'ksy@naver.com', '기성�
 INSERT INTO TB_COM_USER(USER_CODE, ID, PW, EMAIL, NAME, BIRTH, POST_NUM, PHONE_CD, PHONE_NUM, ADDRESS, ENT_DATE) 
 VALUES ('USER0000' || USER_SEQ.NEXTVAL, 'shm', 'shm', 'shm@naver.com', '손흥민', '1992-05-07', '06021',
           '01', '3333-4444', '서울특별시 강남구 도산대로45길 7', '2023-03-29');
+INSERT INTO TB_COM_USER(USER_CODE, ID, PW, EMAIL, NAME, BIRTH, POST_NUM, PHONE_CD, PHONE_NUM, ADDRESS, ENT_DATE) 
+VALUES ('USER0000' || USER_SEQ.NEXTVAL, 'pjs', 'pjs', 'pjs@naver.com', '박지성', '1981-03-30', '06021',
+          '01', '3333-4444', '서울특별시 강남구 압구정로11길 17', '2023-03-30');
+INSERT INTO TB_COM_USER(USER_CODE, ID, PW, EMAIL, NAME, BIRTH, POST_NUM, PHONE_CD, PHONE_NUM, ADDRESS, ENT_DATE) 
+VALUES ('USER0000' || USER_SEQ.NEXTVAL, 'kmj', 'kmj', 'kmj@naver.com', '김민재', '1996-11-15', '06021',
+          '01', '3333-4444', '서울특별시 송파구 올림픽로 240', '2023-03-31');
 
 commit;
 
