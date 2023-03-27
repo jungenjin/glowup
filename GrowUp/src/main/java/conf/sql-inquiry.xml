@@ -14,31 +14,13 @@
 		<result property="inqModDate" column="INQ_MOD_DATE" />
 	</resultMap>
 	
-	<!-- <select id="inquiryList" parameterType="map" resultType="map">
-		<![CDATA[
-		/*	inquiryList	*/
-            SELECT INQUIRY.INQ_NO
-				 , INQUIRY.INQ_TITLE
-                 , INQUIRY.INQ_REG_ID
-                 , (SELECT NAME FROM TB_COM_USER WHERE USER_CODE = INQUIRY.INQ_REG_ID) AS USER_NAME
-				 , INQUIRY.INQ_CONTENT
-				 , INQUIRY.INQ_REG_DATE
-			FROM   TB_INQUIRY INQUIRY
-            INNER JOIN TB_COM_USER COMUSER
-            ON INQUIRY.INQ_REG_ID = COMUSER.USER_CODE
-			WHERE 1=1
-			AND (INQUIRY.INQ_REG_ID = #{userCode} OR COMUSER.GRADE = 'A')
-			ORDER BY INQUIRY.INQ_REG_DATE DESC
-		]]>
-	</select> -->
-	
 	<select id="inquiryList" parameterType="map" resultType="map">
 		<![CDATA[
 		/*	inquiryList	*/
             SELECT INQUIRY.INQ_NO
 				 , INQUIRY.INQ_TITLE
                  , INQUIRY.INQ_REG_ID
-                 , (SELECT NAME FROM TB_COM_USER WHERE USER_CODE = INQUIRY.INQ_REG_ID) AS USER_NAME
+                 , COMUSER.NAME USER_NAME
 				 , INQUIRY.INQ_CONTENT
 				 , INQUIRY.INQ_REG_DATE
 			FROM   TB_INQUIRY INQUIRY
