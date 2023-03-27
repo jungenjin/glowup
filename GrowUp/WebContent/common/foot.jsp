@@ -30,7 +30,7 @@
 <c:set var="loginUrl">${context}/user/login.jsp</c:set>
 
 <body>
-<footer class="footer bg-light opacity-95 py-5">
+<footer class="footer bg-opac-95 py-5">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 col-md-3">

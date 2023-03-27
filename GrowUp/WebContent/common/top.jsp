@@ -44,7 +44,7 @@
 <c:set var="lipUrl">${context}/work/product/retrieveProductList.do?category=L</c:set>
 
 <body>
-<nav class="navbar bg-light opacity-95 fixed-top ">
+<nav class="navbar bg-opac-95 fixed-top ">
   <div class="container">
 		<a class="navbar-brand" href="${homeUrl}"><span class="fs-2 fw-bold gotu">Glow up</span></a>
 	<div class="d-flex flex-row">
