@@ -67,8 +67,6 @@
 							<i class="fa-solid fa-cart-shopping"></i>
 							<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
 								<jsp:include page="${context}/common/cartcount.do"></jsp:include>
-							    <%-- <c:if test="${dsCartList.size()==''}">0</c:if>
-							    <c:if test="${dsCartList.size()!=''}">${dsCartList.size() }</c:if> --%>
 							    <span class="visually-hidden">장바구니</span>
 							</span>
 						</a>
