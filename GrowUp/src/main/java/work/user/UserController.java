@@ -87,18 +87,7 @@ public class UserController implements HttpSessionListener{
 		session.setAttribute("grade", grade);
 		session.setAttribute("id", id);
 		session.setAttribute("name", name);
-		System.out.println("session/////////////////////////////////////////" + session);
-		
-		
-		//장바구니 갯수 가져오기
-		Map<String, String> cartParam = new HashMap<String, String>();
-
-		cartParam.put("userCode", userCode);
-		
-		List<Map<String, String>> dsCartList = cartService.retrieveCartList(cartParam);
-		session.setAttribute("dsCartList", dsCartList);
-		System.out.println("dsCartList++++++++++++++++++++++++" + dsCartList.size());
-				
+		System.out.println("user/////////////////////////////////////////" + id +", " + name +", " + grade);
 				
 		session.setMaxInactiveInterval(-1); //세션 무한대
 		return "redirect:/work/product/goMain.do";
