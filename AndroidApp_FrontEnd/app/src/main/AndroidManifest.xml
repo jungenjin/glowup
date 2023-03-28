@@ -20,9 +20,9 @@
          모든 Http 주소에 접근할 수 있습니다. -->
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_glowup"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_glowup_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.AndroidApp_FrontEnd">
