@@ -20,6 +20,10 @@ public class CartDAO {
 	public List<Map<String, String>> retrieveCartList(Map<String, String> cartParam){
 		return sqlSession.selectList("cart.retrieveCartList", cartParam);
 	}
+	
+	public List<Map<String, String>> cartCount(Map<String, String> cartParam){
+		return sqlSession.selectList("cart.cartCount", cartParam);
+	}
 
 	public void deleteCart(Map<String, String> cartParam){
 		sqlSession.delete("cart.deleteCart", cartParam);

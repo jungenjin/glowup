@@ -102,7 +102,7 @@ public class CartController {
 	}
 
 
-	@RequestMapping(value="/work/cart/retrieveCartList.do", method=RequestMethod.GET)
+	@RequestMapping(value= "/work/cart/retrieveCartList.do", method=RequestMethod.GET)
 	public ModelAndView retrieveCartList(HttpServletRequest request){
 		ModelAndView mv = new ModelAndView();
 
@@ -118,9 +118,30 @@ public class CartController {
 
 		mv.addObject("dsCartList", dsCartList);
 
+		mv.setViewName("/common/cartcount");
 		mv.setViewName("/cart/cartListR");
 
 		return mv;
 	}
 
+	@RequestMapping(value= "/common/cartcount.do", method=RequestMethod.GET)
+	public ModelAndView cartCount(HttpServletRequest request){
+		ModelAndView mv = new ModelAndView();
+
+		HttpSession session = request.getSession();
+
+		String userCode = (String)session.getAttribute("userCode");
+
+		Map<String, String> cartParam = new HashMap<String, String>();
+
+		cartParam.put("userCode", userCode);
+
+		List<Map<String, String>> dsCartList = cartService.retrieveCartList(cartParam);
+
+		mv.addObject("dsCartList", dsCartList);
+
+		mv.setViewName("/common/cartcount");
+
+		return mv;
+	}
 }
