@@ -79,36 +79,31 @@
 		<!-- 첨부파일 view -->
 		
 		<!--  답글 입력 토글 start -->
-		<!-- <div class="container review-box" >
-			<div class="row">
-				<div  class="col-xs-6">
-			   		<p class="fs-3 fw-bold">답글 <span class="badge">${dsReplyList[0].REPLY_COUNT}</span></p>
-				</div>
-	   			<c:if test="${dsQnA.QNA_YN == 'Y'}">
-	   			<div class="col-xs-6 d-flex justify-content-end">
-	               <a class="btn confirmbtn" type="button" href="#reviews-anchor" id="open-review-box"  onclick="fn_open()">답글등록하기</a>
-				</div>
-				</c:if>
-			</div>
-			<div class="row">
-				<div class="col-md-12" id="post-review-box" style="display:none;">
-		            <form id="createReply" accept-charset="UTF-8" action="${context}/work/reply/createReply.do" method="post">
-		                <input id="ratings-hidden" name="markRating" type="hidden">
-		                <textarea class="form-control animated" cols="50" id="qnaReply" name="qnaReply" placeholder="답글을 입력하세요..." rows="5"></textarea>
-		                <div class="text-right">
-							<c:if test="${dsQnA.MARK_YN == 'N'}">
-								<div class="stars starrr" data-rating="0"></div>
-							</c:if>
-							<a href="#" id="close-review-box" class="btn">Cancel</a>
-							<button id="save-review" class="btn" onclick="return fn_save()">Save</button>
-		                </div>
-		                <input type="hidden" id="userCode" name="userCode" value="${dsQnA.USER_CODE}">
-		                <input type="hidden" id="markYn" name="markYn" value="${dsQnA.MARK_YN}">
-		            </form>
-				</div>
-			</div>
+<div class="container review-box" >
+	<div class="row">
+		<div  class="col-xs-6">
+	   		<h3>상품평 <span class="badge">${dsComment[0].COMMENT_COUNT}</span></h3>
 		</div>
-		-->
+        <div class="col-xs-6 text-right">
+               <a class="btn btn-lg" id="openReviewBtn">상품평 등록하기</a>
+        </div>
+	</div>
+	<div class="row">
+		<div class="col-md-12" id="post-review-box" style="display:block;">
+            <form id="createComment" accept-charset="UTF-8" action="${context}/work/reply/createComment.do" method="post">
+                <input id="ratings-hidden" name="markRating" type="hidden">
+                <textarea class="form-control animated" cols="50" id="userComment" name="userComment" placeholder="상품평을 입력하세요..." rows="5"></textarea>
+                <div class="text-right">
+						<div class="stars starrr" data-rating="0"></div>
+					<a href="#" id="close-review-box" class="btn">Cancel</a>
+					<button id="save-review" class="btn" onclick="return fn_save()">Save</button>
+                </div>
+                <input type="block" id="qnaNo" name="qnaNo"  value="${dsQnA.QNA_NO}">
+                <!--<input type="hidden" id="markYn" name="markYn" value="${dsProduct.MARK_YN}">  -->
+            </form>
+		</div>
+	</div>
+</div>
 		<!-- 답글 입력 토글 end -->
 		<!-- 답글 목록 start -->
 		<!-- 

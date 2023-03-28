@@ -44,7 +44,7 @@ public class QnAController {
 
 			String maxQnANo = qnaService.maxQnANo();
 
-			mv.setViewName("redirect:/work/board/qnaView.do?maxQnANo=" + maxQnANo + "&fromCreate=true");
+			mv.setViewName("redirect:/work/board/qnaView.do?qaNo=" + maxQnANo);
 		}
 
 		return mv;

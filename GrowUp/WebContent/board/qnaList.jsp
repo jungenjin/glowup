@@ -7,15 +7,14 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Q &#38; A | 글 목록</title>
+	<script src="${context}/js/jquery-1.9.1.js"></script>
 	<!-- 테이블에 dataTables-example 사용시 검색, 페이징처리 됨 -->
 	<link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css" rel="stylesheet"/>
-	
-	<script src="${context}/js/jquery-1.9.1.js"></script>
 	<!-- 테이블에 dataTables-example 사용시 검색, 페이징처리 됨 -->
 	<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$('#dataTables-example').DataTable({
+			$('#QnAdataTables-example').DataTable({
         	   "language" : {
 	        		"search" : " ",
 	       			"searchPlaceholder": "검색어를 입력하세요.",
@@ -53,8 +52,9 @@
 		<!-- board list start -->
         <div class="table-responsive">
             <table class="table table-hover boardlist"  id="dataTables-example">
-            	<thead>
-                     <tr style="display: none;">
+            	<thead class="mt-5">
+                <tr style="display: none;">
+                  <th class="visually-hidden">NO</th>
                          <th>제목</th>
                          <th>작성자</th>
                          <th>작성일</th>
@@ -63,16 +63,11 @@
                 <tbody>
                     <c:forEach items="${dsQnAList}" var="dsQnAList">
                      <tr>
-                     	<td class="col-md-7 p-3 px-left-1">
-                     		<a href ="${context}/work/board/qnaView.do?qaNo=${dsQnAList.QNA_NO}">${dsQnAList.QNA_TITLE}</a>
-                     	</td>
-                     	<td class="col-md-2 p-3 px-right-1 fw-bold">
-							${dsQnAList.USER_NAME}
-                     	</td>
-                     	<td class="col-md-2 p-3 px-right-1">
-							${dsQnAList.QNA_REG_DATE}
-                     	</td>
-                     </tr>
+                <td class="visually-hidden">${dsCommunityList.COMU_NO}</td>
+                 <td class="col-sm-6 p-3 text-start"><a href ="${context}/work/board/qnaView.do?qaNo=${dsQnAList.QNA_NO}">${dsQnAList.QNA_TITLE}</a></td>
+                 <td class="col-sm-2 p-3 text-start fw-bold">${dsQnAList.USER_NAME}</td>
+                 <td class="col-sm-2 p-3 text-center">${dsQnAList.QNA_REG_DATE}</td>
+                </tr>
                 	</c:forEach>
                 </tbody>
             </table>
