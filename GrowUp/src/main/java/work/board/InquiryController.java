@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import work.reply.InquiryReplyService;
 import work.user.UserService;
 
 @Controller
@@ -24,6 +25,8 @@ public class InquiryController {
 	@Resource(name = "userService")
 	private UserService userService;
 
+	@Resource(name = "inquiryReplyService")
+	private InquiryReplyService inquiryReplyService;
 
 	@RequestMapping(value="/work/board/inquiryWrite.do", method = {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView inquiryWrite(@ModelAttribute InquiryBean inquiry, HttpServletRequest request){
@@ -72,36 +75,41 @@ public class InquiryController {
 		ModelAndView mv = new ModelAndView();
 
 		String inquiryNo = request.getParameter("inqNo");
-//		String fromRating = request.getParameter("fromRating");
-//		String fromCreate = request.getParameter("fromCreate");
-//		String fromReply = request.getParameter("fromReply");
-
+		
+		HttpSession session = request.getSession();
+		
+		String inqreNo = (String)session.getAttribute("inqreNo");
+		String userCode = (String)session.getAttribute("userCode");
+		String inqreContent = (String)session.getAttribute("inqreContent");
+		String inqreRegDate = (String)session.getAttribute("inqreRegDate");
+		
 		if(inquiryNo == null) inquiryNo = request.getParameter("inqNo");
 
 		Map<String, String> inquiryParam = new HashMap<String, String>();
-		Map<String, String> replyParam = new HashMap<String, String>();
+		Map<String, String> inqreParam = new HashMap<String, String>();
 
 		inquiryParam.put("inqNo", inquiryNo);
-		replyParam.put("inqNo",inquiryNo);
+		inquiryParam.put("userCode", userCode);
 
-//		//조회수 증가
-//		if(!"true".equals(fromRating) && !"true".equals(fromCreate) && !"true".equals(fromReply) ){
-//			inquiryService.updateInquiryHit(inquiryParam);
-//		}
+		inqreParam.put("inqNo", inquiryNo);
+		inqreParam.put("inqreNo", inqreNo);
+		inqreParam.put("userCode", userCode);
+		inqreParam.put("inqreContent", inqreContent);
+		inqreParam.put("inqreRegDate", inqreRegDate);
 
-		//System.out.println("aaaaaa" + inquiryNo);
-		//System.out.println("qqqqQ" + inquiryParam);
-		
+		//문의글내용
 		Map<String, String> dsInquiry = inquiryService.inquiryView(inquiryParam);
-
-		//System.out.println("111111111111");
 		mv.addObject("dsInquiry", dsInquiry);
 
-		System.out.println("222222222222");
+		System.out.println("inqreParam 출력////////////////////"+inqreParam );
+		
+		//댓글리스트
+		List<Map<String, String>> dsComment = inquiryReplyService.inquiryReplyList(inqreParam);
+		mv.addObject("dsComment", dsComment);
+
+		System.out.println("dsComment 출력////////////////////"+dsComment );
 		
 		mv.setViewName("/board/inquiryView");
-		
-		System.out.println("3333333");
 
 		return mv;
 	}

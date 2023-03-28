@@ -19,6 +19,7 @@
 		<typeAlias type="work.board.CommunityBean" alias="community"/>
 		<typeAlias type="work.board.EventBean" alias="event"/>
 		<typeAlias type="work.board.InquiryBean" alias="inquiry"/>
+		<typeAlias type="work.reply.InquiryReplyBean" alias="inquiryReply"/>
 		<typeAlias type="work.board.QnABean" alias="qna"/>
 		
 	
@@ -37,6 +38,7 @@
 		<mapper resource="conf/sql-community.xml" />
 		<mapper resource="conf/sql-event.xml" />
 		<mapper resource="conf/sql-inquiry.xml" />
+		<mapper resource="conf/sql-inquiryReply.xml" />
 		<mapper resource="conf/sql-qna.xml" />
 	</mappers>
 </configuration>

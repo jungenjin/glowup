@@ -10,39 +10,37 @@
 		<result property="commentDate" column="COMMENT_DATE" />
 	</resultMap>
 
-	<!-- <select id="retrieveCommentList" parameterType="map" resultType="comment">
-		<![CDATA[
-		/*	retrieveCommentList	*/
-				SELECT COMMENT.QNA_NO
-				 , COMMENT.USER_CODE
-				 , (SELECT ID FROM TB_COM_USER WHERE USER_CODE = COMMENT.USER_CODE) AS USER_ID
-				 , COMMENT.USER_COMMENT_NO
-				 , COMMENT.USER_COMMENT
-				 , COMMENT.COMMENT_DATE
-				 , (SELECT COUNT(*) FROM TB_COMMENT WHERE QNA_NO = #{qaNo}) AS COMMENT_COUNT
-			FROM   TB_COMMENT COMMENT
-			WHERE 1=1
-			AND    COMMENT.QNA_NO = #{qaNo}
-			ORDER BY COMMENT.COMMENT_DATE ASC
-		]]>
-	</select> -->
-
 	<select id="retrieveCommentList" parameterType="map" resultType="map">
 		<![CDATA[
-		/*	retrieveComment	*/
-			SELECT CO.QNA_NO
-				 , CO.USER_CODE
-				 , CO.USER_COMMENT_NO
-				 , CU.NAME
-				 , CO.USER_COMMENT
-				 , CO.COMMENT_DATE
-			FROM   TB_COMMENT CO
-			INNER JOIN TB_COM_USER CU
-			ON  CO.USER_CODE = CU.USER_CODE
-			WHERE   1=1
-			AND    (CO.QNA_NO = #{qaNo} AND CO.USER_CODE = #{userCode})
+		/*	retrieveCommentList	*/
+         SELECT CO.QNA_NO
+             , CO.USER_CODE
+             , (SELECT ID FROM TB_COM_USER WHERE USER_CODE = CO.USER_CODE) AS USER_ID
+             , CO.USER_COMMENT_NO
+             , CO.USER_COMMENT
+             , CO.COMMENT_DATE
+             , (SELECT COUNT(*) FROM TB_COM_USER WHERE QNA_NO =#{qnaNo}) AS CO_COMMENT_COUNT
+         FROM   TB_COMMENT CO
+         WHERE   QNA_NO = #{qnaNo}
+         AND    USER_CODE = #{userCode}
 		]]>
 	</select>
+
+   <select id="retrieveComment" parameterType="map" resultType="map">
+      <![CDATA[
+      /*   retrieveComment   */
+         SELECT CO.QNA_NO
+             , CO.USER_CODE
+             , (SELECT ID FROM TB_COM_USER WHERE USER_CODE = CO.USER_CODE) AS USER_ID
+             , CO.USER_COMMENT_NO
+             , CO.USER_COMMENT
+             , CO.COMMENT_DATE
+             , (SELECT COUNT(*) FROM TB_COM_USER WHERE QNA_NO =#{qnaNo}) AS COMMENT_COUNT
+         FROM   TB_COMMENT CO
+         WHERE   QNA_NO = #{qnaNo}
+         AND    USER_CODE = #{userCode}
+      ]]>
+   </select>
 
 	<insert id="createComment" parameterType="map">
 		<![CDATA[

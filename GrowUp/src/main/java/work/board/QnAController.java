@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import work.reply.CommentService;
 import work.user.UserService;
 
 @Controller
@@ -23,6 +24,9 @@ public class QnAController {
 
 	@Resource(name = "userService")
 	private UserService userService;
+	
+	@Resource(name = "commentService")
+	private CommentService commentService;
 
 
 	@RequestMapping(value="/work/board/qnaWrite.do", method = {RequestMethod.GET, RequestMethod.POST})
@@ -67,23 +71,48 @@ public class QnAController {
 //		String fromCreate = request.getParameter("fromCreate");
 //		String fromReply = request.getParameter("fromReply");
 
+		HttpSession session = request.getSession();
+		
+		String userCode = (String)session.getAttribute("userCode");
+		String userCommentNo = (String)session.getAttribute("userCommentNo");
+		String userComment = (String)session.getAttribute("userComment");
+		String commentDate = (String)session.getAttribute("commentDate");
+		
 		if(qnaNo == null) qnaNo = request.getParameter("qaNo");
 
 		Map<String, String> qnaParam = new HashMap<String, String>();
 		Map<String, String> replyParam = new HashMap<String, String>();
-
-		qnaParam.put("qaNo", qnaNo);
-		replyParam.put("qaNo",qnaNo);
 
 //		//조회수 증가
 //		if(!"true".equals(fromRating) && !"true".equals(fromCreate) && !"true".equals(fromReply) ){
 //			qnaService.updateQnAHit(qnaParam);
 //		}
 
+		qnaParam.put("qaNo", qnaNo);
+		qnaParam.put("userCode", userCode);
+		
+		replyParam.put("qaNo", qnaNo);
+		replyParam.put("userCode", userCode);
+		replyParam.put("userCommentNo", userCommentNo);
+		replyParam.put("userComment", userComment);
+		replyParam.put("commentDate", commentDate);
+		
+		System.out.println("qnaNo" + qnaNo);
+		System.out.println("userCode" + userCode);
+		System.out.println("userCommentNo" + userCommentNo);
+		System.out.println("userComment" + userComment);
+		System.out.println("commentDate" + commentDate);
 		
 		Map<String, String> dsQnA = qnaService.qnaView(qnaParam);
 
+		List<Map<String, String>> dsReplyList = commentService.retrieveCommentList(replyParam);
+		
 		mv.addObject("dsQnA", dsQnA);
+		mv.addObject("dsReplyList", dsReplyList);
+
+		System.out.println("dsQnA///////////////////////////" + dsQnA);
+		System.out.println("dsReplyList///////////////////////////" + dsReplyList);
+		
 		mv.setViewName("/board/qnaView");
 		
 

@@ -27,6 +27,11 @@
 	
 			location.href = "${context}/work/board/inquiryModify.do?inqNo=" + VstNo;
 		}
+		
+		//답글
+	    function fn_reply(paramuserCode){
+	    	location.href = "${context}/work/board/retrieve.do?userCode=" + paramProductCode;
+	    }
 	</script>
 </head>
 <body>
@@ -79,6 +84,34 @@
 		</form>
 		<!-- board view end -->
 	</div>
+	<!--  답글 입력 토글 start -->
+<div class="container review-box" >
+	<div class="row">
+		<div  class="col-xs-6">
+	   		<h3>상품평 <span class="badge">${dsComment[0].COMMENT_COUNT}</span></h3>
+		</div>
+        <div class="col-xs-6 text-right">
+               <a class="btn btn-lg" id="openReviewBtn">상품평 등록하기</a>
+        </div>
+	</div>
+	<div class="row">
+		<div class="col-md-12" id="post-review-box" style="display:block;">
+            <form id="inquiryReplyWrite" accept-charset="UTF-8" action="${context}/work/reply/inquiryReplyWrite.do" method="post">
+                <textarea class="form-control animated" cols="50" id="inqreContent" name="inqreContent" placeholder="상품평을 입력하세요..." rows="5"></textarea>
+                <div class="text-right">
+					<a href="#" id="close-review-box" class="btn">Cancel</a>
+					<button id="save-review" class="btn" onclick="return fn_save()">Save</button>
+                </div>
+                <input type="text" id="inqNo" name="inqNo"  value="${dsInquiry.INQ_NO}">
+            </form>
+		</div>
+	</div>
+</div>
+		<!-- 답글 입력 토글 end -->
+		<!-- 답글 목록 start -->
+        <jsp:include page="${context}/work/board/inquiryReply.do"></jsp:include>
+		<!-- 답글 목록 end -->
+		
 </div>
 <jsp:include page="/common/foot.jsp"></jsp:include>
 </body>

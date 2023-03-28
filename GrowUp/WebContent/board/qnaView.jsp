@@ -98,7 +98,7 @@
 					<a href="#" id="close-review-box" class="btn">Cancel</a>
 					<button id="save-review" class="btn" onclick="return fn_save()">Save</button>
                 </div>
-                <input type="block" id="qnaNo" name="qnaNo"  value="${dsQnA.QNA_NO}">
+                <input type="text" id="qnaNo" name="qnaNo"  value="${dsQnA.QNA_NO}">
                 <!--<input type="hidden" id="markYn" name="markYn" value="${dsProduct.MARK_YN}">  -->
             </form>
 		</div>
@@ -129,6 +129,7 @@
 		 -->
 		<!-- 답글 목록 end -->
 		
+                <jsp:include page="${context}/work/board/retrieveComment.do"></jsp:include>
 	</div><!-- Details end -->
 </div> <!-- container end -->
 <jsp:include page="${context}/common/foot.jsp"></jsp:include>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+				  "dtd/mybatis-3-mapper.dtd">
+<mapper namespace="inquiryReply">
+	<resultMap id="inquiryReplyResult" type="inquiryReply">
+		<result property="inqNo" column="INQ_NO" />
+		<result property="inqreNo" column="INQRE_NO" />
+		<result property="userCode" column="USER_CODE" />
+		<result property="inqreContent" column="INQRE_CONTENT" />
+		<result property="inqreRegDate" column="INQRE_REG_DATE" />
+	</resultMap>
+
+	<select id="inquiryReplyList" parameterType="map" resultType="map">
+		<![CDATA[
+			SELECT RE.INQ_NO
+				 , RE.INQRE_NO
+				 , RE.USER_CODE
+				 , CU.NAME
+				 , RE.INQRE_CONTENT
+				 , RE.INQRE_REG_DATE
+			FROM   TB_INQUIRY_REPLY RE
+			INNER JOIN TB_COM_USER CU
+			ON  RE.USER_CODE = CU.USER_CODE
+			WHERE   1=1
+			AND    (RE.INQ_NO = #{inqNo} AND RE.USER_CODE = #{userCode})
+		]]>
+	</select>
+
+	<insert id="inquiryReplyWrite" parameterType="inquiryReply">
+		<![CDATA[
+			INSERT INTO TB_INQUIRY_REPLY(
+			  INQ_NO
+			, INQRE_NO
+			, USER_CODE
+			, INQRE_CONTENT
+			, INQRE_REG_DATE
+			) VALUES (
+			  #{inqNo}
+			, (SELECT NVL(MAX(INQRE_NO), 0) + 1 FROM TB_INQUIRY_REPLY WHERE 1=1 AND INQ_NO = #{inqNo} AND USER_CODE = #{userCode})
+			, #{userCode}
+			, #{inqreContent}
+			, TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')
+			)
+		]]>
+	</insert>
+
+	<update id="inquiryReplyModify" parameterType="inquiryReply">
+		<![CDATA[
+			UPDATE
+			FROM  TB_INQUIRY_REPLY
+			WHERE 1=1
+			AND INQ_NO = #{inqNo}
+			AND INQRE_NO = #{inqreNo}
+			AND USER_CODE = #{userCode}
+		]]>
+	</update>
+
+	<delete id="inquiryReplyDelete" parameterType="map">
+		<![CDATA[
+			DELETE
+			FROM  TB_INQUIRY_REPLY
+			WHERE 1=1
+			AND INQ_NO = #{inqNo}
+			AND INQRE_NO = #{inqreNo}
+			AND USER_CODE = #{userCode}
+		]]>
+	</delete>
+</mapper>

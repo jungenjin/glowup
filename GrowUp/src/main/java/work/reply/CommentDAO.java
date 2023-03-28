@@ -13,8 +13,24 @@ public class CommentDAO {
 	@Autowired
 	private SqlSessionTemplate sqlSession;
 
+	public List<Map<String, String>> retrieveCommentList(Map<String, String> commentParam){
+		return sqlSession.selectList("comment.retrieveCommentList", commentParam);
+	}
+
+	public Map<String, String> retrieveComment(Map<String, String> commentParam){
+		return sqlSession.selectOne("comment.retrieveComment", commentParam);
+	}
+
 	public void createComment(Map<String, String> commentParam){
 		sqlSession.insert("comment.createComment", commentParam);
+	}
+
+	public void updateComment(Map<String, String> commentParam){
+		sqlSession.update("comment.updateComment", commentParam);
+	}
+
+	public void deleteComment(Map<String, String> commentParam){
+		sqlSession.delete("comment.deleteComment", commentParam);
 	}
 
 
