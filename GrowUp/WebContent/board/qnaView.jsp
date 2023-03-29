@@ -31,6 +31,8 @@
 			location.href = "${context}/work/board/qnaModify.do?qaNo=" + qaNo;
 		} 
 		
+		var qnaUsercode = '${qnaParam.userCode}'
+		
 		
 		}	
 
@@ -119,13 +121,13 @@ if('${dsProduct.PRODUCT_COUNT}' == 0){
 		<!-- board view end -->
 		
 		<!-- board button area start -->
-		<c:if test="${sessionScope.grade == 'M' || sessionScope.userCode == dsQnA.QNA_REG_ID}">
 			<div class="d-flex justify-content-end">
+		<c:if test="${sessionScope.userCode == dsQnA.QNA_REG_ID || sessionScope.grade == 'A'}">
 				<button class="btn boardbtn" type="button" onclick="fn_qnaList()">목록</button>
 				<button class="btn boardbtn" type="button" onclick="fn_update()">글 수정하기</button>
 				<button class="btn boardbtn" type="button" onclick="fn_delete()">글 삭제하기</button>
-			</div>
 		</c:if>
+			</div>
 		<!-- 댓글 -->
 		
 <!-- <div class="container">

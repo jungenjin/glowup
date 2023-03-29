@@ -34,6 +34,7 @@
 		/*	qnaView	*/
             SELECT QNA.QNA_NO
 				 , QNA.QNA_TITLE
+				 , QNA.QNA_REG_ID
 				 , QNA.QNA_CONTENT /* 내용 */
 				 , (SELECT NAME FROM TB_COM_USER WHERE USER_CODE = QNA.QNA_REG_ID) AS USER_NAME /* 등록자 */
 				 , QNA.QNA_REG_DATE /*  등록일자 */
