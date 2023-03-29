@@ -251,11 +251,11 @@
 </div>
 <!--  상품평 입력 토글 start -->
 <div class="container review-box" >
-	<div class="row">
-		<div  class="col-xs-6">
-	   		<h3>상품평 <span class="badge">${dsReplyList[0].REPLY_COUNT}</span></h3>
+	<div class="d-flex flex-row justify-content-between">
+		<div  class="col-xs-6 ">
+	   		<h3>상품평 <span class="badge bg-secondary">${dsReplyList[0].REPLY_COUNT}</span></h3>
 		</div>
-        <div class="col-xs-6 text-right">
+        <div class="col-xs-6 text-end">
    			<c:if test="${dsProduct.SELL_YN == 'Y'}">
                <a class="btn btn-lg" href="#reviews-anchor" id="open-review-box">상품평 등록하기</a>
 			</c:if>
@@ -266,7 +266,7 @@
             <form id="createReply" accept-charset="UTF-8" action="${context}/work/reply/createReply.do" method="post">
                 <input id="ratings-hidden" name="markRating" type="hidden">
                 <textarea class="form-control animated" cols="50" id="userReply" name="userReply" placeholder="상품평을 입력하세요..." rows="5"></textarea>
-                <div class="text-right">
+                <div class="text-end">
 					<c:if test="${dsProduct.MARK_YN == 'N'}">
 						<div class="stars starrr" data-rating="0"></div>
 					</c:if>
@@ -284,13 +284,13 @@
 <div class="container">
 	<c:forEach items="${dsReplyList}" var="dsReplyList">
 		<div class="row" style="border-top: 1px solid #D7D8DA; padding:34px 0;">
-			<div class="col-xs-8 col-md-10 text-left">
+			<div class="col-xs-8 col-md-10 text-start">
 				<h4>
-					${dsReplyList.USER_ID}&nbsp;&nbsp;<span class="text-muted">${dsReplyList.REPLY_DATE}</span>&nbsp;&nbsp;&nbsp;
+					${dsReplyList.NAME}<small class="text-muted"><span class="vr mx-3"></span>${dsReplyList.REPLY_DATE}</small>&nbsp;&nbsp;&nbsp;
 					<span class="stars starrr replyStar" data-rating="${dsReplyList.MARK_RATING}"></span>
 				</h4>
 			</div>
-			<div class="col-xs-4 col-md-2 text-right">
+			<div class="col-xs-4 col-md-2 text-end">
 				<c:if test="${sessionScope.userCode == dsReplyList.USER_CODE}">
                		<a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn" 
                		onclick="javascript:fn_remove('${dsReplyList.USER_REPLY_NO}')">삭제</a>
