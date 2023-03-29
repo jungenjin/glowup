@@ -64,7 +64,7 @@
 				</div>
 				
 				<!-- board button area start -->
-				<div class="row btnarea">
+				<div class="row btnarea justify-content-end">
 					<button class="btn btn-lg boardbtn" type="button" onclick="fn_save()">글 등록하기</button>
 					<button type="button" class="btn btn-lg boardbtn" onclick="fn_back()">취소</button>
 				</div>
