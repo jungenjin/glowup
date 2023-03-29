@@ -158,7 +158,7 @@ if('${dsProduct.PRODUCT_COUNT}' == 0){
 		<div class="col-md-12" id="post-review-box" style="display:block;">
             <form id="createComment" accept-charset="UTF-8" action="${context}/work/reply/createComment.do" method="post">
                 <input id="ratings-hidden" name="markRating" type="hidden">
-                <textarea class="form-control animated" cols="50" id="userComment" name="userComment" placeholder="상품평을 입력하세요..." rows="5"></textarea>
+                <textarea class="form-control animated" cols="50" id="userComment" name="userComment" placeholder="댓글을 입력하세요..." rows="5"></textarea>
                 <div class="text-end">
 					<a href="#" id="close-review-box" class="btn">Cancel</a>
 					<button id="save-review" class="btn" onclick="return fn_save()">Save</button>
