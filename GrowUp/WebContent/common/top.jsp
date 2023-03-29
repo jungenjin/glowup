@@ -113,7 +113,7 @@
           	<h5 class="gotu mt-4 fs-5 fw-bold">CUSTOMER</h5>
           	<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 				<li class="py-1"><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${eventUrl}')">이벤트</a></li>
-				<li class="py-1"><a href="${context}/work/board/qna.do">Q&#38;A</a></li>
+				<li class="py-1"><a href="#" onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${qnaUrl}')">Q&#38;A</a></li>
 				<li class="py-1"><a href="${context}/FAQ/FAQ.jsp">FAQ</a></li>
 				
 			<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
