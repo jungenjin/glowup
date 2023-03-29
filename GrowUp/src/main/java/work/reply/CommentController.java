@@ -70,4 +70,62 @@ public class CommentController {
 		return mv;
 	}
 
-}
+	@RequestMapping(value="/work/reply/deleteComment.do", method=RequestMethod.GET)
+	public ModelAndView deleteComment(HttpServletRequest request){
+		ModelAndView mv = new ModelAndView();
+
+		HttpSession session = request.getSession();
+
+		Map<String, String> commentParam = new HashMap<String, String>();
+
+		String userCode = (String)session.getAttribute("userCode");
+		String qnaNo = request.getParameter("qnaNo");
+		String userCommentNo = request.getParameter("userCommentNo");
+
+		commentParam.put("userCode", userCode);
+		commentParam.put("qnaNo", qnaNo);
+		commentParam.put("userCommentNo", userCommentNo);
+
+		//댓글 삭제
+		commentService.deleteComment(commentParam);
+
+		mv.setViewName("redirect:/work/board/qnaView.do?qaNo=" + qnaNo);
+
+		return mv;
+	}
+	
+
+	@RequestMapping(value="/work/reply/retrieveCommentList.do", method = {RequestMethod.GET})
+	public ModelAndView retrieveCommentList(HttpServletRequest request){
+		ModelAndView mv = new ModelAndView();
+
+		Map<String, String> commentParam = new HashMap<String, String>();
+
+		String qnaNo = request.getParameter("qaNo");
+		String userCode = request.getParameter("userCode");
+		String userCommentNo = request.getParameter("userCommentNo");
+		String userComment = request.getParameter("userComment");
+		String commentDate = request.getParameter("commentDate");
+		
+		commentParam.put("userCode", userCode);
+		commentParam.put("qaNo", qnaNo);
+		commentParam.put("userCommentNo", userCommentNo);
+		commentParam.put("userComment",userComment);
+		commentParam.put("commentDate",commentDate);
+		List<Map<String, String>> dsComment = commentService.retrieveCommentList(commentParam);
+		mv.addObject("dsComment", dsComment);
+
+		System.out.println("dsComment 116 ============"+dsComment);
+		
+		mv.setViewName("/board/CommentView");
+		return mv;
+	}
+	
+
+
+	}
+
+
+
+
+

@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class CommentBean implements Serializable{
 	private String qnaNo;     //제품코드
 	private String userCode;     //유저코드
-	private int userCommentNo;	 //댓글일련번호
+	private String userCommentNo;	 //댓글일련번호
 	private String userComment;    //댓글내용
 	private String commentDate;    //댓글날짜
 
@@ -13,7 +13,7 @@ public class CommentBean implements Serializable{
 		super();
 	}
 
-	public CommentBean(String qnaNo, String userCode, int userCommentNo,
+	public CommentBean(String qnaNo, String userCode, String userCommentNo,
 			String userComment, String commentDate) {
 		super();
 		this.qnaNo = qnaNo;
@@ -22,6 +22,8 @@ public class CommentBean implements Serializable{
 		this.userComment = userComment;
 		this.commentDate = commentDate;
 	}
+
+
 
 
 	public String getQnaNo() {
@@ -40,11 +42,12 @@ public class CommentBean implements Serializable{
 		this.userCode = userCode;
 	}
 
-	public int getUserCommentNo() {
+
+	public String getUserCommentNo() {
 		return userCommentNo;
 	}
 
-	public void setUserCommentNo(int userCommentNo) {
+	public void setUserCommentNo(String userCommentNo) {
 		this.userCommentNo = userCommentNo;
 	}
 

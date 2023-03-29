@@ -8,12 +8,14 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import work.reply.CommentService;
 import work.user.UserService;
 
 @Controller
@@ -23,6 +25,9 @@ public class QnAController {
 
 	@Resource(name = "userService")
 	private UserService userService;
+	
+	@Autowired
+	private CommentService commentService;
 
 
 	@RequestMapping(value="/work/board/qnaWrite.do", method = {RequestMethod.GET, RequestMethod.POST})
@@ -60,9 +65,14 @@ public class QnAController {
 
 	@RequestMapping(value="/work/board/qnaView.do", method = {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView qnaView(HttpServletRequest request){
+		HttpSession session = request.getSession();
 		ModelAndView mv = new ModelAndView();
 
 		String qnaNo = request.getParameter("qaNo");
+		String userCode = (String)session.getAttribute("userCode");
+		String userCommentNo = request.getParameter("userCommentNo");
+		String userComment = request.getParameter("userComment");
+		String commentDate = request.getParameter("commentDate");
 //		String fromRating = request.getParameter("fromRating");
 //		String fromCreate = request.getParameter("fromCreate");
 //		String fromReply = request.getParameter("fromReply");
@@ -73,7 +83,11 @@ public class QnAController {
 		Map<String, String> replyParam = new HashMap<String, String>();
 
 		qnaParam.put("qaNo", qnaNo);
-		replyParam.put("qaNo",qnaNo);
+		replyParam.put("qaNo", qnaNo);
+		replyParam.put("userCode",userCode);
+		replyParam.put("userCommentNo",userCommentNo);
+		replyParam.put("userComment",userComment);
+		replyParam.put("commentDate",commentDate);
 
 //		//조회수 증가
 //		if(!"true".equals(fromRating) && !"true".equals(fromCreate) && !"true".equals(fromReply) ){
@@ -84,10 +98,16 @@ public class QnAController {
 		Map<String, String> dsQnA = qnaService.qnaView(qnaParam);
 
 		mv.addObject("dsQnA", dsQnA);
-		mv.setViewName("/board/qnaView");
+		System.out.println("dsQnA===================================="+dsQnA);
+		
 		
 
-		return mv;
+		List<Map<String, String>> dsComment = commentService.retrieveCommentList(replyParam);
+			mv.addObject("dsComment", dsComment);
+			
+			mv.setViewName("/board/qnaView");
+		
+			return mv;
 	}
 	@RequestMapping(value="/work/board/qnaList.do", method = {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView qnaList(HttpServletRequest request){

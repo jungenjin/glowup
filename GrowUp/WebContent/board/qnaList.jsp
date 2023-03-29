@@ -13,20 +13,6 @@
 	<!-- 테이블에 dataTables-example 사용시 검색, 페이징처리 됨 -->
 	<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#QnAdataTables-example').DataTable({
-        	   "language" : {
-	        		"search" : " ",
-	       			"searchPlaceholder": "검색어를 입력하세요.",
-	        	    "paginate": {
-		                "first":  "1",
-		                "last":   "2",
-		                "next":   ">>",
-		                "previous":   "<<"
-	        	    }
-               },
-			});
-		});
 
 		function fn_qnaWrite(){
 			location.href = "${context}/work/board/qnaWrite.do";
@@ -51,7 +37,7 @@
 	
 		<!-- board list start -->
         <div class="table-responsive">
-            <table class="table table-hover boardlist"  id="dataTables-example">
+            <table class="table table-hover qnalist"  id="dataTables-example">
             	<thead class="mt-5">
                 <tr style="display: none;">
                   <th class="visually-hidden">NO</th>
@@ -64,9 +50,9 @@
                     <c:forEach items="${dsQnAList}" var="dsQnAList">
                      <tr>
                 <td class="visually-hidden">${dsCommunityList.COMU_NO}</td>
-                 <td class="col-sm-6 p-3 text-start"><a href ="${context}/work/board/qnaView.do?qaNo=${dsQnAList.QNA_NO}">${dsQnAList.QNA_TITLE}</a></td>
-                 <td class="col-sm-2 p-3 text-start fw-bold">${dsQnAList.USER_NAME}</td>
-                 <td class="col-sm-2 p-3 text-center">${dsQnAList.QNA_REG_DATE}</td>
+                <td style="min-width:200px" class="p-3"><a href ="${context}/work/board/qnaView.do?qaNo=${dsQnAList.QNA_NO}">${dsQnAList.QNA_TITLE}</a></td>
+                <td style="width:100px;min-width:100px" class="p-3 text-center">${dsQnAList.USER_NAME}</td>
+                <td style="width:150px;min-width:150px" class="p-3 text-end">${dsQnAList.QNA_REG_DATE}</td>
                 </tr>
                 	</c:forEach>
                 </tbody>
