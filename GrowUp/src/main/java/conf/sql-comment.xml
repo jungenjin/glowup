@@ -36,10 +36,12 @@
              , CO.USER_COMMENT
              , CO.COMMENT_DATE
          FROM   TB_COMMENT CO
+         INNER JOIN TB_QNA TBQNA
+         ON CO.QNA_NO = TBQNA.QNA_NO
          INNER JOIN TB_COM_USER TBUSER
          ON CO.USER_CODE = TBUSER.USER_CODE
          WHERE  1=1 
-         AND    (CO.QNA_NO = #{qaNo}	AND    CO.USER_CODE =  #{userCode})
+         AND    (CO.QNA_NO = #{qaNo}	AND    TBQNA.QNA_NO =  #{qaNo})
 
       ]]>
    </select>

@@ -10,6 +10,7 @@
 <meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Q &#38; A | 내용보기</title>
+	<script src="${context}/js/jquery-1.9.1.js"></script>
 	<script  type="text/javascript">
 	$(document).ready(function() {
 		function fn_qnaList(){
@@ -28,7 +29,7 @@
 			var qaNo = '${dsQnA.QNA_NO}';
 	
 			location.href = "${context}/work/board/qnaModify.do?qaNo=" + qaNo;
-		}
+		} 
 		
 		
 		}	
@@ -171,18 +172,16 @@ if('${dsProduct.PRODUCT_COUNT}' == 0){
 </div>
 	<div class="container">
 		<c:forEach items="${dsComment}" var="dsComment">
+	<c:if test='${sessionScope.grade == "M"}'>
 			<div class="row" style="border-top: 1px solid #D7D8DA; padding:34px 0;">
 				<div class="col-xs-8 col-md-10 text-start">
 					<h4>
-						${dsComment.NAME}<small class="text-muted"><span class="vr mx-3"></span>${dsComment.COMMENT_DATE}</span>${dsReplyList.REPLY_DATE}</small>&nbsp;&nbsp;&nbsp;
+						${dsComment.NAME}<small class="text-muted"><span class="vr mx-3"></span>${dsComment.COMMENT_DATE}</small>&nbsp;&nbsp;&nbsp;
 					</h4>
 				</div>
-				<div class="col-xs-4 col-md-2 text-end">
-					<c:if test="${sessionScope.userCode == dsComment.USER_CODE}">
-	            	</c:if>
 	            </div>
 				<div class="col-xs-12 text-left">${dsComment.USER_COMMENT}</div>
-			</div>
+		</c:if>
 		</c:forEach>
 		</div>
 	<!-- 답글 목록 end -->
